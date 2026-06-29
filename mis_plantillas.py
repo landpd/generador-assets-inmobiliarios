@@ -1,3 +1,6 @@
+from config import DATA_DIR, OUTPUT_DIR, FOTOS_DIR, LOGOS_DIR
+
+
 def disenio_vertical_3fotos(datos):
     """ Plantilla Clásica: 1080 x 1350 con 3 fotos """
     return f"""

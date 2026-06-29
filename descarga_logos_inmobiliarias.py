@@ -1,44 +1,25 @@
 # ==========================================
-# CELDA 2: DESCARGA DE LOGOTIPOS DE INMOBILIARIAS (DESDE GOOGLE SHEETS)
+# DESCARGA DE LOGOTIPOS DE INMOBILIARIAS (VERSIÓN LOCAL)
 # ==========================================
 
-import os
 import re
 import io
 import requests
 import pandas as pd
 from PIL import Image
-from google.colab import drive, auth
-from google.auth import default
-import gspread
 
-# 1. Montar Google Drive
-drive.mount('/content/drive')
+from config import DATA_DIR, LOGOS_DIR
 
-# 2. Autenticar para poder leer el Google Sheet por su ID
-print("Autenticando usuario para acceder a Google Sheets...")
-auth.authenticate_user()
-creds, _ = default()
-gc = gspread.authorize(creds)
+# --- 1. Crear la carpeta destino si no existe ---
+LOGOS_DIR.mkdir(parents=True, exist_ok=True)
 
-# 3. Definir las rutas y el ID del archivoa
-SHEET_ID = "1c-Fn8oKREJc1bJpRg4JVQYNgSfTAee-m0qtrDmsvnIQ"
-RUTA_LOGOS = "/content/drive/MyDrive/Nuevos proyectos/Logos Inmobiliarias"
-
-# Crear la carpeta destino si no existe
-os.makedirs(RUTA_LOGOS, exist_ok=True)
-
-# 4. Función para descargar y guardar el logo en PNG
+# --- 2. Función para descargar y guardar el logo en PNG ---
 def download_and_save_logo(url, save_path):
     try:
-        # Descargar la imagen
         response = requests.get(url, timeout=15)
         response.raise_for_status()
 
-        # Abrir imagen con Pillow para asegurar que el formato sea procesado correctamente
         img = Image.open(io.BytesIO(response.content))
-
-        # Guardar forzosamente como PNG (conservando transparencias originales)
         img.save(save_path, format="PNG")
         return True
 
@@ -46,46 +27,50 @@ def download_and_save_logo(url, save_path):
         print(f"     [!] Error procesando {url}: {e}")
         return False
 
-# 5. Leer los datos desde Google Sheets
-print(f"Conectando al archivo de Sheets con ID: {SHEET_ID}...\n")
-worksheet = gc.open_by_key(SHEET_ID).sheet1 # Abre la primera pestaña
-data = worksheet.get_all_values()
 
-# Convertir los datos a un DataFrame de Pandas (la fila 0 son los encabezados)
-df = pd.DataFrame(data[1:], columns=data[0])
+# --- 3. Leer los datos desde el CSV en DATA_DIR ---
+csv_files = sorted(DATA_DIR.glob("logos_inmobiliarias*.csv"))
+if not csv_files:
+    raise FileNotFoundError(
+        f"No se encontró ningún archivo CSV de logos en: {DATA_DIR}\n"
+        f"Exporta tu Google Sheet como CSV y colócalo en esa carpeta "
+        f"(ej. logos_inmobiliarias.csv)"
+    )
 
-# 6. Procesar filas y descargar ambos logos
+latest_csv = csv_files[-1]
+print(f"Archivo CSV de logos detectado: {latest_csv.name}\n")
+df = pd.read_csv(latest_csv)
+
+# --- 4. Procesar filas y descargar ambos logos ---
 for index, row in df.iterrows():
-    # Obtener valores por nombre de columna
     raw_name = str(row.get('Nombre Inmobiliaria', '')).strip()
     url_inmo = str(row.get('logo_inmo', '')).strip()
     url_colab = str(row.get('logo_colab', '')).strip()
 
-    # Ignorar si no hay datos de nombre o está vacío
+    # Ignorar si no hay nombre o está vacío
     if not raw_name or raw_name.lower() == 'nan':
         continue
 
     # Limpiar el nombre para quitar caracteres no válidos en archivos
     safe_name = re.sub(r'[\\/*?:"<>|]', "", raw_name)
 
-    # --- PROCESAR LOGO COLAB (Columna 3) ---
+    # --- PROCESAR LOGO COLAB ---
     if url_colab and url_colab.lower() != 'nan' and url_colab.startswith('http'):
         filename_colab = f"{safe_name}_imagotipo_colab_negro.png"
-        save_path_colab = os.path.join(RUTA_LOGOS, filename_colab)
+        save_path_colab = LOGOS_DIR / filename_colab
 
-        if not os.path.exists(save_path_colab):
+        if not save_path_colab.exists():
             print(f"Descargando logo_colab de: {raw_name}...")
             download_and_save_logo(url_colab, save_path_colab)
         else:
             print(f"    -> El logo_colab de {raw_name} ya existe. Omitiendo...")
 
-    # --- PROCESAR LOGO INMO LIMPIO (Columna 2) ---
+    # --- PROCESAR LOGO INMO LIMPIO ---
     if url_inmo and url_inmo.lower() != 'nan' and url_inmo.startswith('http'):
-        # Se añade .png al final ya que Pillow siempre lo guardará como imagen PNG
         filename_inmo = f"{safe_name}_imagotipo_negro.png"
-        save_path_inmo = os.path.join(RUTA_LOGOS, filename_inmo)
+        save_path_inmo = LOGOS_DIR / filename_inmo
 
-        if not os.path.exists(save_path_inmo):
+        if not save_path_inmo.exists():
             print(f"Descargando logo_inmo de: {raw_name}...")
             download_and_save_logo(url_inmo, save_path_inmo)
         else:
