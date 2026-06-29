@@ -63,9 +63,6 @@ ipython_config.py
 # pyenv
 .python-version
 
-# uv (Python package manager)
-uv.lock
-
 # PEP 582
 __pypackages__/
 
@@ -106,7 +103,8 @@ dmypy.json
 .DS_Store
 
 # Carpetas de salida de imágenes generadas
-disenios_generados/
-imagenes_generadas/
 output/
-salida/
+
+# Assets pesados que se descargan con scripts locales
+assets/fotos/
+assets/logos/
