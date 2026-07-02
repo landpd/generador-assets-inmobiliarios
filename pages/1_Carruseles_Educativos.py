@@ -52,6 +52,30 @@ estilo = st.sidebar.selectbox(
     ),
 )
 
+st.sidebar.markdown("---")
+st.sidebar.markdown("### 🌓 Tema de Color")
+tema_color = st.sidebar.radio(
+    "Tema de Color",
+    ["Modo Oscuro", "Modo Claro"],
+    index=0,
+)
+
+# Mapear modo a paleta de design tokens
+if tema_color == "Modo Oscuro":
+    paleta = {
+        "fondo": "#212322",
+        "texto": "#FAFAFA",
+        "acento": "#F6BE00",
+        "secundario": "#009A9A",
+    }  # Pulppo Dark
+else:
+    paleta = {
+        "fondo": "#FAFAFA",
+        "texto": "#212322",
+        "acento": "#F6BE00",
+        "secundario": "#C11A00",
+    }  # Pulppo Light
+
 # =====================================================================
 # ENTRADA DE TEXTO CRUDO DESDE LA UI PRINCIPAL
 # =====================================================================
@@ -124,31 +148,59 @@ if "json_carrusel" in st.session_state:
     datos_json = st.session_state["json_carrusel"]
     estilo_actual = st.session_state.get("estilo_elegido", estilo)
 
+    # =================================================================
+    # MODO EDITOR: modificar textos del carrusel antes de renderizar
+    # =================================================================
+    with st.expander("✏️ Editar Textos del Carrusel", expanded=False):
+        import copy
+
+        json_editado = copy.deepcopy(st.session_state["json_carrusel"])
+
+        for i, slide in enumerate(json_editado):
+            st.markdown(f"**Slide {i + 1}**")
+            slide["titulo"] = st.text_input(
+                f"Título {i + 1}",
+                value=slide.get("titulo", ""),
+                key=f"editor_t_{i}",
+            )
+            slide["texto"] = st.text_area(
+                f"Texto {i + 1}",
+                value=slide.get("texto", ""),
+                key=f"editor_txt_{i}",
+            )
+            st.divider()
+
+        if st.button("🔄 Actualizar Previsualización"):
+            st.session_state["json_carrusel"] = json_editado
+            st.rerun()
+
     st.markdown("### 👁️ Previsualización en Vivo")
 
     if "Panorámico" in estilo_actual:
         # Regenerar HTML panorámico
         if "Básico" in estilo_actual:
-            html_crudo = plantilla_panoramica_educativa(datos_json)
+            html_crudo = plantilla_panoramica_educativa(datos_json, paleta)
         elif "Cinematográfico" in estilo_actual:
-            html_crudo = plantilla_pano_cinematografica(datos_json)
+            html_crudo = plantilla_pano_cinematografica(datos_json, paleta)
         else:
-            html_crudo = plantilla_pano_halftone(datos_json)
+            html_crudo = plantilla_pano_halftone(datos_json, paleta)
 
-        width_total = 1080 * len(datos_json)
-        altura = 1350
+        width_total = 1080 * len(st.session_state['json_carrusel'])
         escala = 0.3
-        html_con_escala = (
-            f"<div style='transform: scale({escala}); "
-            f"transform-origin: top left; "
-            f"width: {width_total}px; height: {altura}px;'>{html_crudo}</div>"
-        )
-        components.html(
-            html_con_escala,
-            width=min(1000, width_total),
-            height=int(altura * escala) + 20,
-            scrolling=True,
-        )
+
+        # HACK: Reemplazar el overflow:hidden temporalmente para que el iframe permita scroll
+        html_preview = html_crudo.replace('overflow: hidden;', 'overflow: auto;')
+
+        # Envolver en un contenedor restrictivo para que el scroll horizontal se adapte perfectamente al tamaño escalado
+        html_con_escala = f'''
+        <div style="width: {width_total * escala}px; height: {1350 * escala}px; overflow: hidden;">
+            <div style="transform: scale({escala}); transform-origin: top left; width: {width_total}px; height: 1350px;">
+                {html_preview}
+            </div>
+        </div>
+        '''
+
+        components.html(html_con_escala, height=int(1350 * escala) + 20, scrolling=True)
 
     elif "Individual" in estilo_actual:
         total_slides = len(datos_json)
@@ -157,15 +209,15 @@ if "json_carrusel" in st.session_state:
             with cols[i]:
                 if "Editorial" in estilo_actual:
                     html_crudo = plantilla_individual_editorial(
-                        slide_data, i, total_slides
+                        slide_data, i, total_slides, paleta
                     )
                 elif "Collage" in estilo_actual:
                     html_crudo = plantilla_indiv_collage(
-                        slide_data, i, total_slides
+                        slide_data, i, total_slides, paleta
                     )
                 else:
                     html_crudo = plantilla_indiv_tecnica(
-                        slide_data, i, total_slides
+                        slide_data, i, total_slides, paleta
                     )
 
                 escala = 0.3
@@ -199,13 +251,11 @@ if "json_carrusel" in st.session_state:
             if "Panorámico" in estilo_actual:
                 # Regenerar HTML panorámico completo
                 if "Básico" in estilo_actual:
-                    html_crudo = plantilla_panoramica_educativa(datos_json)
+                    html_crudo = plantilla_panoramica_educativa(datos_json, paleta)
                 elif "Cinematográfico" in estilo_actual:
-                    html_crudo = plantilla_pano_cinematografica(datos_json)
+                    html_crudo = plantilla_pano_cinematografica(datos_json, paleta)
                 else:
-                    html_crudo = plantilla_pano_halftone(datos_json)
-
-                # Renderizar master panorámico
+                    html_crudo = plantilla_pano_halftone(datos_json, paleta)
                 width_total = 1080 * len(datos_json)
                 hti.screenshot(
                     html_str=html_crudo,
@@ -229,15 +279,15 @@ if "json_carrusel" in st.session_state:
                 for i, slide_data in enumerate(datos_json):
                     if "Editorial" in estilo_actual:
                         html_crudo = plantilla_individual_editorial(
-                            slide_data, i, total_slides
+                            slide_data, i, total_slides, paleta
                         )
                     elif "Collage" in estilo_actual:
                         html_crudo = plantilla_indiv_collage(
-                            slide_data, i, total_slides
+                            slide_data, i, total_slides, paleta
                         )
                     else:
                         html_crudo = plantilla_indiv_tecnica(
-                            slide_data, i, total_slides
+                            slide_data, i, total_slides, paleta
                         )
 
                     hti.screenshot(

@@ -1,20 +1,21 @@
 from recursos_graficos import TEXTURAS, SVGS
 
 
-def plantilla_panoramica_educativa(datos_array):
+def plantilla_panoramica_educativa(datos_array, paleta):
     """
     Genera un carrusel panorámico educativo con fondo oscuro,
     textura pizarra_rayones y efecto seamless con SVG llave en cada unión.
 
     datos_array: lista de dicts con llaves 'titulo', 'texto' (y opcional 'etiqueta').
+    paleta: dict con claves 'fondo', 'texto', 'acento', 'secundario'.
     """
     textura = TEXTURAS.get("pizarra_rayones", "") or ""
     total_slides = len(datos_array)
     ancho_total = total_slides * 1080
-    bg_color = "#212322"
-    texto_color = "#FAFAFA"
-    accent_color = "#009A9A"
-    indicador_color = "#F6BE00"
+    bg_color = paleta['fondo']
+    texto_color = paleta['texto']
+    accent_color = paleta['acento']
+    secundario_color = paleta['secundario']
     tamano_titulo_normal = "text-[110px]"
     tamano_titulo_portada = "text-[140px]"
 
@@ -25,7 +26,7 @@ def plantilla_panoramica_educativa(datos_array):
         seamless_svgs += (
             SVGS['llave'].format(
                 clases=(
-                    f'w-[700px] h-[700px] text-[{accent_color}] '
+                    f'w-[700px] h-[700px] text-[{secundario_color}] '
                     f'opacity-10 absolute top-[300px] left-[{left_px}px] z-10'
                 )
             )
@@ -68,9 +69,9 @@ def plantilla_panoramica_educativa(datos_array):
 
       {f'''
       <div class="absolute bottom-[80px] right-[80px] flex items-center gap-3">
-        <span class="font-nunito text-[{indicador_color}] text-[20px] font-light tracking-widest uppercase">{"Guarda este post" if es_cta else "Desliza"}</span>
+        <span class="font-nunito text-[{accent_color}] text-[20px] font-light tracking-widest uppercase">{"Guarda este post" if es_cta else "Desliza"}</span>
         <svg width="40" height="16" viewBox="0 0 40 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M39.7071 8.70711C40.0976 8.31658 40.0976 7.68342 39.7071 7.29289L33.3431 0.928932C32.9526 0.538408 32.3195 0.538408 31.9289 0.928932C31.5384 1.31946 31.5384 1.95262 31.9289 2.34315L37.5858 8L31.9289 13.6569C31.5384 14.0474 31.5384 14.6805 31.9289 15.0711C32.3195 15.4616 32.9526 15.4616 33.3431 15.0711L39.7071 8.70711ZM0 9H39V7H0V9Z" fill="{indicador_color}"/>
+          <path d="M39.7071 8.70711C40.0976 8.31658 40.0976 7.68342 39.7071 7.29289L33.3431 0.928932C32.9526 0.538408 32.3195 0.538408 31.9289 0.928932C31.5384 1.31946 31.5384 1.95262 31.9289 2.34315L37.5858 8L31.9289 13.6569C31.5384 14.0474 31.5384 14.6805 31.9289 15.0711C32.3195 15.4616 32.9526 15.4616 33.3431 15.0711L39.7071 8.70711ZM0 9H39V7H0V9Z" fill="{accent_color}"/>
         </svg>
       </div>
       ''' if not es_portada else ''}
@@ -119,7 +120,7 @@ def plantilla_panoramica_educativa(datos_array):
 </html>'''
 
 
-def plantilla_indiv_collage(datos, index=0, total=1):
+def plantilla_indiv_collage(datos, index, total, paleta):
     """
     Genera un único slide en estilo collage/polaroid con marco central.
     Usa fondo claro y textura de marco polaroid con mix-blend-multiply.
@@ -127,8 +128,14 @@ def plantilla_indiv_collage(datos, index=0, total=1):
     Si index == 0 (PORTADA): diseño minimalista, sin 'Desliza', título colosal.
     Si index == total - 1 (CTA): decoracion_estrellas, 'Guarda este post'.
     Caso contrario (CONTENIDO): diseño normal con número de slide y 'Desliza'.
+
+    paleta: dict con claves 'fondo', 'texto', 'acento', 'secundario'.
     """
     textura = TEXTURAS.get("marco_polaroid", "") or ""
+    bg_color = paleta['fondo']
+    texto_color = paleta['texto']
+    accent_color = paleta['acento']
+    secundario_color = paleta['secundario']
 
     es_portada = index == 0
     es_cta = index == total - 1
@@ -136,23 +143,23 @@ def plantilla_indiv_collage(datos, index=0, total=1):
     tamano_titulo = "text-[140px]" if es_portada else "text-[100px]"
 
     if es_portada:
-        logo = SVGS['logo_pulppo_full'].format(clases='w-[180px] text-[#212322] absolute top-[80px] left-1/2 -translate-x-1/2 z-30')
+        logo = SVGS['logo_pulppo_full'].format(clases=f'w-[180px] text-[{texto_color}] absolute top-[80px] left-1/2 -translate-x-1/2 z-30')
     else:
-        logo = SVGS['logo_pulppo_isotipo'].format(clases='w-[60px] h-[60px] text-[#212322] absolute top-[80px] left-1/2 -translate-x-1/2 z-30')
+        logo = SVGS['logo_pulppo_isotipo'].format(clases=f'w-[60px] h-[60px] text-[{texto_color}] absolute top-[80px] left-1/2 -translate-x-1/2 z-30')
 
     # Bloques condicionales pre-computados
     bloque_estrellas = ''
     if es_cta:
-        bloque_estrellas = '<div class="mb-10">' + SVGS['decoracion_estrellas'].format(clases='w-[80px] h-[80px] text-[#009A9A]') + '</div>'
+        bloque_estrellas = '<div class="mb-10">' + SVGS['decoracion_estrellas'].format(clases=f'w-[80px] h-[80px] text-[{secundario_color}]') + '</div>'
 
     bloque_indicador = ''
     if not es_portada:
         bloque_indicador = f'''
     <!-- ===== INDICADOR DE SWIPE ===== -->
     <div class="absolute bottom-[80px] right-[80px] flex items-center gap-3 z-10">
-      <span class="font-nunito text-[#F6BE00] text-[20px] font-light tracking-widest uppercase">{indicador_texto}</span>
+      <span class="font-nunito text-[{accent_color}] text-[20px] font-light tracking-widest uppercase">{indicador_texto}</span>
       <svg width="40" height="16" viewBox="0 0 40 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M39.7071 8.70711C40.0976 8.31658 40.0976 7.68342 39.7071 7.29289L33.3431 0.928932C32.9526 0.538408 32.3195 0.538408 31.9289 0.928932C31.5384 1.31946 31.5384 1.95262 31.9289 2.34315L37.5858 8L31.9289 13.6569C31.5384 14.0474 31.5384 14.6805 31.9289 15.0711C32.3195 15.4616 32.9526 15.4616 33.3431 15.0711L39.7071 8.70711ZM0 9H39V7H0V9Z" fill="#F6BE00"/>
+        <path d="M39.7071 8.70711C40.0976 8.31658 40.0976 7.68342 39.7071 7.29289L33.3431 0.928932C32.9526 0.538408 32.3195 0.538408 31.9289 0.928932C31.5384 1.31946 31.5384 1.95262 31.9289 2.34315L37.5858 8L31.9289 13.6569C31.5384 14.0474 31.5384 14.6805 31.9289 15.0711C32.3195 15.4616 32.9526 15.4616 33.3431 15.0711L39.7071 8.70711ZM0 9H39V7H0V9Z" fill="{accent_color}"/>
       </svg>
     </div>
 '''
@@ -178,11 +185,11 @@ def plantilla_indiv_collage(datos, index=0, total=1):
   </script>
   <style>
     * {{ margin: 0; padding: 0; box-sizing: border-box; }}
-    body {{ overflow: hidden; background: #FAFAFA; }}
+    body {{ overflow: hidden; background: {bg_color}; }}
   </style>
 </head>
 <body>
-  <div class="w-[1080px] h-[1350px] relative overflow-hidden bg-[#FAFAFA] flex items-center justify-center">
+  <div class="w-[1080px] h-[1350px] relative overflow-hidden bg-[{bg_color}] flex items-center justify-center">
 
     <!-- ===== LOGO PULPPO ===== -->
     {logo}
@@ -194,12 +201,12 @@ def plantilla_indiv_collage(datos, index=0, total=1):
       {bloque_estrellas}
 
       <!-- Título principal -->
-      <h1 class="font-garamond text-[#212322] {tamano_titulo} leading-[0.95] font-bold text-center mb-12">
+      <h1 class="font-garamond text-[{texto_color}] {tamano_titulo} leading-[0.95] font-bold text-center mb-12">
         {datos['titulo']}
       </h1>
 
       <!-- Texto del cuerpo -->
-      <p class="font-nunito text-[#212322] text-[36px] font-light leading-[1.4] text-center max-w-[700px] opacity-80">
+      <p class="font-nunito text-[{texto_color}] text-[36px] font-light leading-[1.4] text-center max-w-[700px] opacity-80">
         {datos['texto']}
       </p>
 
@@ -212,7 +219,7 @@ def plantilla_indiv_collage(datos, index=0, total=1):
 </html>'''
 
 
-def plantilla_indiv_tecnica(datos, index=0, total=1):
+def plantilla_indiv_tecnica(datos, index, total, paleta):
     """
     Genera un único slide en estilo técnico/check-list con fondo oscuro.
     Textura de papel oscuro, check grande y composición alineada a la izquierda.
@@ -220,8 +227,14 @@ def plantilla_indiv_tecnica(datos, index=0, total=1):
     Si index == 0 (PORTADA): diseño minimalista, sin 'Desliza', título colosal.
     Si index == total - 1 (CTA): decoracion_estrellas, 'Guarda este post'.
     Caso contrario (CONTENIDO): diseño normal con check_circulo y 'Desliza'.
+
+    paleta: dict con claves 'fondo', 'texto', 'acento', 'secundario'.
     """
     textura = TEXTURAS.get("papel_oscuro", "") or ""
+    bg_color = paleta['fondo']
+    texto_color = paleta['texto']
+    accent_color = paleta['acento']
+    secundario_color = paleta['secundario']
 
     es_portada = index == 0
     es_cta = index == total - 1
@@ -229,25 +242,25 @@ def plantilla_indiv_tecnica(datos, index=0, total=1):
     tamano_titulo = "text-[140px]" if es_portada else "text-[110px]"
 
     if es_portada:
-        logo = SVGS['logo_pulppo_full'].format(clases='w-[180px] text-[#FAFAFA] absolute top-[80px] left-[80px] z-30')
+        logo = SVGS['logo_pulppo_full'].format(clases=f'w-[180px] text-[{texto_color}] absolute top-[80px] left-[80px] z-30')
     else:
-        logo = SVGS['logo_pulppo_isotipo'].format(clases='w-[60px] h-[60px] text-[#FAFAFA] absolute top-[80px] left-[80px] z-30')
+        logo = SVGS['logo_pulppo_isotipo'].format(clases=f'w-[60px] h-[60px] text-[{texto_color}] absolute top-[80px] left-[80px] z-30')
 
     # Bloques condicionales pre-computados
     bloque_icono = ''
     if es_cta:
-        bloque_icono = '<div class="mb-10">' + SVGS['decoracion_estrellas'].format(clases='w-[150px] h-[150px] text-[#F6BE00]') + '</div>'
+        bloque_icono = '<div class="mb-10">' + SVGS['decoracion_estrellas'].format(clases=f'w-[150px] h-[150px] text-[{accent_color}]') + '</div>'
     elif not es_portada:
-        bloque_icono = '<div class="mb-10">' + SVGS['check_circulo'].format(clases='w-[150px] h-[150px] text-[#F6BE00]') + '</div>'
+        bloque_icono = '<div class="mb-10">' + SVGS['check_circulo'].format(clases=f'w-[150px] h-[150px] text-[{accent_color}]') + '</div>'
 
     bloque_indicador = ''
     if not es_portada:
         bloque_indicador = f'''
       <!-- Indicador de swipe -->
       <div class="absolute bottom-[80px] right-[80px] flex items-center gap-3">
-        <span class="font-nunito text-[#F6BE00] text-[20px] font-light tracking-widest uppercase">{indicador_texto}</span>
+        <span class="font-nunito text-[{accent_color}] text-[20px] font-light tracking-widest uppercase">{indicador_texto}</span>
         <svg width="40" height="16" viewBox="0 0 40 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M39.7071 8.70711C40.0976 8.31658 40.0976 7.68342 39.7071 7.29289L33.3431 0.928932C32.9526 0.538408 32.3195 0.538408 31.9289 0.928932C31.5384 1.31946 31.5384 1.95262 31.9289 2.34315L37.5858 8L31.9289 13.6569C31.5384 14.0474 31.5384 14.6805 31.9289 15.0711C32.3195 15.4616 32.9526 15.4616 33.3431 15.0711L39.7071 8.70711ZM0 9H39V7H0V9Z" fill="#F6BE00"/>
+          <path d="M39.7071 8.70711C40.0976 8.31658 40.0976 7.68342 39.7071 7.29289L33.3431 0.928932C32.9526 0.538408 32.3195 0.538408 31.9289 0.928932C31.5384 1.31946 31.5384 1.95262 31.9289 2.34315L37.5858 8L31.9289 13.6569C31.5384 14.0474 31.5384 14.6805 31.9289 15.0711C32.3195 15.4616 32.9526 15.4616 33.3431 15.0711L39.7071 8.70711ZM0 9H39V7H0V9Z" fill="{accent_color}"/>
         </svg>
       </div>
 '''
@@ -273,11 +286,11 @@ def plantilla_indiv_tecnica(datos, index=0, total=1):
   </script>
   <style>
     * {{ margin: 0; padding: 0; box-sizing: border-box; }}
-    body {{ overflow: hidden; background: #212322; }}
+    body {{ overflow: hidden; background: {bg_color}; }}
   </style>
 </head>
 <body>
-  <div class="w-[1080px] h-[1350px] relative overflow-hidden bg-[#212322]">
+  <div class="w-[1080px] h-[1350px] relative overflow-hidden bg-[{bg_color}]">
 
     <!-- ===== TEXTURA GLOBAL: Papel Oscuro ===== -->
     <div class="absolute inset-0 z-0 mix-blend-overlay opacity-60"
@@ -292,12 +305,12 @@ def plantilla_indiv_tecnica(datos, index=0, total=1):
       {bloque_icono}
 
       <!-- Título principal -->
-      <h1 class="font-garamond text-[#FAFAFA] {tamano_titulo} leading-[0.95] font-bold mb-10 max-w-[900px]">
+      <h1 class="font-garamond text-[{texto_color}] {tamano_titulo} leading-[0.95] font-bold mb-10 max-w-[900px]">
         {datos['titulo']}
       </h1>
 
       <!-- Texto del cuerpo -->
-      <p class="font-nunito text-[#FAFAFA] text-[36px] font-light leading-[1.4] max-w-[800px] opacity-85">
+      <p class="font-nunito text-[{texto_color}] text-[36px] font-light leading-[1.4] max-w-[800px] opacity-85">
         {datos['texto']}
       </p>
 
@@ -310,7 +323,7 @@ def plantilla_indiv_tecnica(datos, index=0, total=1):
 </html>'''
 
 
-def plantilla_individual_editorial(datos, index=0, total=1):
+def plantilla_individual_editorial(datos, index, total, paleta):
     """
     Genera un único slide educativo en estilo editorial / collage.
     Usa fondo claro, composición asimétrica con franja vertical,
@@ -323,8 +336,14 @@ def plantilla_individual_editorial(datos, index=0, total=1):
     logo_pulppo_isotipo.
     Caso contrario (CONTENIDO): diseño normal con etiqueta, número de slide,
     'Desliza' y flecha_larga.
+
+    paleta: dict con claves 'fondo', 'texto', 'acento', 'secundario'.
     """
     textura = TEXTURAS.get("ruido_plata", "") or ""
+    bg_color = paleta['fondo']
+    texto_color = paleta['texto']
+    accent_color = paleta['acento']
+    secundario_color = paleta['secundario']
 
     es_portada = index == 0
     es_cta = index == total - 1
@@ -332,9 +351,9 @@ def plantilla_individual_editorial(datos, index=0, total=1):
     tamano_titulo = "text-[140px]" if es_portada else "text-[110px]"
 
     if es_portada:
-        logo = SVGS['logo_pulppo_full'].format(clases='w-[180px] text-[#212322] absolute top-[80px] left-[360px] z-30')
+        logo = SVGS['logo_pulppo_full'].format(clases=f'w-[180px] text-[{texto_color}] absolute top-[80px] left-[360px] z-30')
     else:
-        logo = SVGS['logo_pulppo_isotipo'].format(clases='w-[60px] h-[60px] text-[#212322] absolute top-[80px] right-[80px] z-30')
+        logo = SVGS['logo_pulppo_isotipo'].format(clases=f'w-[60px] h-[60px] text-[{texto_color}] absolute top-[80px] right-[80px] z-30')
 
     # Bloques condicionales pre-computados
     bloque_numero_slide = ''
@@ -342,8 +361,8 @@ def plantilla_individual_editorial(datos, index=0, total=1):
         numero_slide_str = str(index + 1).zfill(2)
         bloque_numero_slide = f'''
     <!-- ===== MARCO INFERIOR CON NÚMERO GIGANTE ===== -->
-    <div class="absolute bottom-0 left-[40px] w-[200px] h-[250px] border-l-[4px] border-b-[4px] border-[#212322] z-20 flex items-end pb-[20px] pl-[20px]">
-      <span class="font-garamond text-[#212322] text-[180px] font-bold leading-none opacity-30">{numero_slide_str}</span>
+    <div class="absolute bottom-0 left-[40px] w-[200px] h-[250px] border-l-[4px] border-b-[4px] border-[{texto_color}] z-20 flex items-end pb-[20px] pl-[20px]">
+      <span class="font-garamond text-[{texto_color}] text-[180px] font-bold leading-none opacity-30">{numero_slide_str}</span>
     </div>
 '''
 
@@ -351,30 +370,30 @@ def plantilla_individual_editorial(datos, index=0, total=1):
     if not es_portada:
         bloque_etiqueta = f'''
       <!-- Etiqueta / Categoría -->
-      <span class="font-nunito text-[28px] font-bold uppercase tracking-wider text-[#F6BE00] mb-6 border-b-[1px] border-[#F6BE00] pb-4 inline-block">
+      <span class="font-nunito text-[28px] font-bold uppercase tracking-wider text-[{accent_color}] mb-6 border-b-[1px] border-[{accent_color}] pb-4 inline-block">
         {datos['etiqueta']}
       </span>
 '''
 
     bloque_estrellas = ''
     if es_cta:
-        bloque_estrellas = '<div class="mb-10">' + SVGS['decoracion_estrellas'].format(clases='w-[80px] h-[80px] text-[#009A9A]') + '</div>'
+        bloque_estrellas = '<div class="mb-10">' + SVGS['decoracion_estrellas'].format(clases=f'w-[80px] h-[80px] text-[{secundario_color}]') + '</div>'
 
     bloque_indicador = ''
     if not es_portada:
         bloque_indicador = f'''
     <!-- ===== INDICADOR DE SWIPE ===== -->
     <div class="absolute bottom-[80px] right-[80px] flex items-center gap-3 z-20">
-      <span class="font-nunito text-[#F6BE00] text-[20px] font-light tracking-widest uppercase">{indicador_texto}</span>
+      <span class="font-nunito text-[{accent_color}] text-[20px] font-light tracking-widest uppercase">{indicador_texto}</span>
       <svg width="40" height="16" viewBox="0 0 40 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M39.7071 8.70711C40.0976 8.31658 40.0976 7.68342 39.7071 7.29289L33.3431 0.928932C32.9526 0.538408 32.3195 0.538408 31.9289 0.928932C31.5384 1.31946 31.5384 1.95262 31.9289 2.34315L37.5858 8L31.9289 13.6569C31.5384 14.0474 31.5384 14.6805 31.9289 15.0711C32.3195 15.4616 32.9526 15.4616 33.3431 15.0711L39.7071 8.70711ZM0 9H39V7H0V9Z" fill="#F6BE00"/>
+        <path d="M39.7071 8.70711C40.0976 8.31658 40.0976 7.68342 39.7071 7.29289L33.3431 0.928932C32.9526 0.538408 32.3195 0.538408 31.9289 0.928932C31.5384 1.31946 31.5384 1.95262 31.9289 2.34315L37.5858 8L31.9289 13.6569C31.5384 14.0474 31.5384 14.6805 31.9289 15.0711C32.3195 15.4616 32.9526 15.4616 33.3431 15.0711L39.7071 8.70711ZM0 9H39V7H0V9Z" fill="{accent_color}"/>
       </svg>
     </div>
 '''
 
     bloque_flecha = ''
     if not es_portada:
-        bloque_flecha = '\n    ' + SVGS['flecha_larga'].format(clases='w-[100px] text-[#F6BE00] absolute bottom-[80px] right-[150px] z-20')
+        bloque_flecha = '\n    ' + SVGS['flecha_larga'].format(clases=f'w-[100px] text-[{accent_color}] absolute bottom-[80px] right-[150px] z-20')
 
     return f'''<!DOCTYPE html>
 <html lang="es">
@@ -397,11 +416,11 @@ def plantilla_individual_editorial(datos, index=0, total=1):
   </script>
   <style>
     * {{ margin: 0; padding: 0; box-sizing: border-box; }}
-    body {{ overflow: hidden; }}
+    body {{ overflow: hidden; background: {bg_color}; }}
   </style>
 </head>
 <body>
-  <div class="w-[1080px] h-[1350px] relative overflow-hidden bg-[#FAFAFA]">
+  <div class="w-[1080px] h-[1350px] relative overflow-hidden bg-[{bg_color}]">
 
     <!-- ===== TEXTURA GLOBAL: Ruido Plata (look revista impresa) ===== -->
     <div class="absolute inset-0 z-0 opacity-30 mix-blend-multiply"
@@ -411,7 +430,7 @@ def plantilla_individual_editorial(datos, index=0, total=1):
     {logo}
 
     <!-- ===== BANNER LATERAL IZQUIERDO ===== -->
-    <div class="absolute left-0 top-0 w-[324px] h-full bg-[#009A9A] z-10"></div>
+    <div class="absolute left-0 top-0 w-[324px] h-full bg-[{secundario_color}] z-10"></div>
 
     {bloque_numero_slide}
 
@@ -423,12 +442,12 @@ def plantilla_individual_editorial(datos, index=0, total=1):
       {bloque_estrellas}
 
       <!-- Título principal -->
-      <h1 class="font-garamond text-[#212322] {tamano_titulo} leading-[0.95] font-bold mb-12">
+      <h1 class="font-garamond text-[{texto_color}] {tamano_titulo} leading-[0.95] font-bold mb-12">
         {datos['titulo']}
       </h1>
 
       <!-- Texto del cuerpo -->
-      <p class="font-nunito text-[#212322] text-[38px] font-light leading-[1.4] max-w-[700px]">
+      <p class="font-nunito text-[{texto_color}] text-[38px] font-light leading-[1.4] max-w-[700px]">
         {datos['texto']}
       </p>
 
@@ -443,20 +462,21 @@ def plantilla_individual_editorial(datos, index=0, total=1):
 </html>'''
 
 
-def plantilla_pano_cinematografica(datos_array):
+def plantilla_pano_cinematografica(datos_array, paleta):
     """
     Genera un carrusel panorámico en estilo cinematográfico/cultural con textura de polvo
     y efecto seamless de comillas en cada unión entre slides.
 
     datos_array: lista de dicts con llaves 'titulo', 'texto' (y opcional 'etiqueta').
+    paleta: dict con claves 'fondo', 'texto', 'acento', 'secundario'.
     """
     textura = TEXTURAS.get("polvo_blanco", "") or ""
     total_slides = len(datos_array)
     ancho_total = total_slides * 1080
-    bg_color = "#212322"
-    texto_color = "#FAFAFA"
-    accent_color = "#009A9A"
-    indicador_color = "#F6BE00"
+    bg_color = paleta['fondo']
+    texto_color = paleta['texto']
+    accent_color = paleta['acento']
+    secundario_color = paleta['secundario']
     tamano_titulo_normal = "text-[110px]"
     tamano_titulo_portada = "text-[140px]"
 
@@ -467,7 +487,7 @@ def plantilla_pano_cinematografica(datos_array):
         seamless_svgs += (
             SVGS['comillas'].format(
                 clases=(
-                    f'w-[600px] h-[600px] text-[{accent_color}] '
+                    f'w-[600px] h-[600px] text-[{secundario_color}] '
                     f'opacity-20 absolute top-[100px] left-[{left_px}px] z-10'
                 )
             )
@@ -510,9 +530,9 @@ def plantilla_pano_cinematografica(datos_array):
 
       {f'''
       <div class="absolute bottom-[80px] right-[80px] flex items-center gap-3">
-        <span class="font-nunito text-[{indicador_color}] text-[20px] font-light tracking-widest uppercase">{"Guarda este post" if es_cta else "Desliza"}</span>
+        <span class="font-nunito text-[{accent_color}] text-[20px] font-light tracking-widest uppercase">{"Guarda este post" if es_cta else "Desliza"}</span>
         <svg width="40" height="16" viewBox="0 0 40 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M39.7071 8.70711C40.0976 8.31658 40.0976 7.68342 39.7071 7.29289L33.3431 0.928932C32.9526 0.538408 32.3195 0.538408 31.9289 0.928932C31.5384 1.31946 31.5384 1.95262 31.9289 2.34315L37.5858 8L31.9289 13.6569C31.5384 14.0474 31.5384 14.6805 31.9289 15.0711C32.3195 15.4616 32.9526 15.4616 33.3431 15.0711L39.7071 8.70711ZM0 9H39V7H0V9Z" fill="{indicador_color}"/>
+          <path d="M39.7071 8.70711C40.0976 8.31658 40.0976 7.68342 39.7071 7.29289L33.3431 0.928932C32.9526 0.538408 32.3195 0.538408 31.9289 0.928932C31.5384 1.31946 31.5384 1.95262 31.9289 2.34315L37.5858 8L31.9289 13.6569C31.5384 14.0474 31.5384 14.6805 31.9289 15.0711C32.3195 15.4616 32.9526 15.4616 33.3431 15.0711L39.7071 8.70711ZM0 9H39V7H0V9Z" fill="{accent_color}"/>
         </svg>
       </div>
       ''' if not es_portada else ''}
@@ -561,20 +581,21 @@ def plantilla_pano_cinematografica(datos_array):
 </html>'''
 
 
-def plantilla_pano_halftone(datos_array):
+def plantilla_pano_halftone(datos_array, paleta):
     """
     Genera un carrusel panorámico en estilo promocional/pop con textura de halftone amarillo.
     Incluye flechas seamless que cruzan cada unión entre slides.
 
     datos_array: lista de dicts con llaves 'titulo', 'texto' (y opcional 'etiqueta').
+    paleta: dict con claves 'fondo', 'texto', 'acento', 'secundario'.
     """
     textura = TEXTURAS.get("halftone_amarillo", "") or ""
     total_slides = len(datos_array)
     ancho_total = total_slides * 1080
-    bg_color = "#FAFAFA"
-    texto_color = "#212322"
-    accent_color = "#F6BE00"
-    indicador_color = "#F6BE00"
+    bg_color = paleta['fondo']
+    texto_color = paleta['texto']
+    accent_color = paleta['acento']
+    secundario_color = paleta['secundario']
     tamano_titulo_normal = "text-[110px]"
     tamano_titulo_portada = "text-[140px]"
 
@@ -628,9 +649,9 @@ def plantilla_pano_halftone(datos_array):
 
       {f'''
       <div class="absolute bottom-[80px] right-[80px] flex items-center gap-3">
-        <span class="font-nunito text-[{indicador_color}] text-[20px] font-light tracking-widest uppercase">{"Guarda este post" if es_cta else "Desliza"}</span>
+        <span class="font-nunito text-[{accent_color}] text-[20px] font-light tracking-widest uppercase">{"Guarda este post" if es_cta else "Desliza"}</span>
         <svg width="40" height="16" viewBox="0 0 40 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M39.7071 8.70711C40.0976 8.31658 40.0976 7.68342 39.7071 7.29289L33.3431 0.928932C32.9526 0.538408 32.3195 0.538408 31.9289 0.928932C31.5384 1.31946 31.5384 1.95262 31.9289 2.34315L37.5858 8L31.9289 13.6569C31.5384 14.0474 31.5384 14.6805 31.9289 15.0711C32.3195 15.4616 32.9526 15.4616 33.3431 15.0711L39.7071 8.70711ZM0 9H39V7H0V9Z" fill="{indicador_color}"/>
+          <path d="M39.7071 8.70711C40.0976 8.31658 40.0976 7.68342 39.7071 7.29289L33.3431 0.928932C32.9526 0.538408 32.3195 0.538408 31.9289 0.928932C31.5384 1.31946 31.5384 1.95262 31.9289 2.34315L37.5858 8L31.9289 13.6569C31.5384 14.0474 31.5384 14.6805 31.9289 15.0711C32.3195 15.4616 32.9526 15.4616 33.3431 15.0711L39.7071 8.70711ZM0 9H39V7H0V9Z" fill="{accent_color}"/>
         </svg>
       </div>
       ''' if not es_portada else ''}
