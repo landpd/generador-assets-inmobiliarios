@@ -2,6 +2,7 @@ import streamlit as st
 import streamlit.components.v1 as components
 import json
 import re
+import html
 from pathlib import Path
 from openai import OpenAI
 from html2image import Html2Image
@@ -135,7 +136,6 @@ if st.button("🪄 Generar Copy y Previsualizar"):
             else:
                 # Guardar en session state para persistencia y renderizado posterior
                 st.session_state["json_carrusel"] = datos_json
-                st.session_state["estilo_elegido"] = estilo
                 st.success("¡Copy generado exitosamente!")
 
         except Exception as e:
@@ -145,8 +145,6 @@ if st.button("🪄 Generar Copy y Previsualizar"):
 # PREVISUALIZACIÓN EN VIVO (desde session state)
 # =====================================================================
 if "json_carrusel" in st.session_state:
-    datos_json = st.session_state["json_carrusel"]
-    estilo_actual = st.session_state.get("estilo_elegido", estilo)
 
     # =================================================================
     # MODO EDITOR: modificar textos del carrusel antes de renderizar
@@ -176,62 +174,29 @@ if "json_carrusel" in st.session_state:
 
     st.markdown("### 👁️ Previsualización en Vivo")
 
-    if "Panorámico" in estilo_actual:
-        # Regenerar HTML panorámico
-        if "Básico" in estilo_actual:
-            html_crudo = plantilla_panoramica_educativa(datos_json, paleta)
-        elif "Cinematográfico" in estilo_actual:
-            html_crudo = plantilla_pano_cinematografica(datos_json, paleta)
-        else:
-            html_crudo = plantilla_pano_halftone(datos_json, paleta)
+    datos_array = st.session_state['json_carrusel']
 
-        width_total = 1080 * len(st.session_state['json_carrusel'])
-        escala = 0.3
+    # Rutear a la función correcta según el estilo (todas son panorámicas)
+    if "Básico" in estilo:
+        html_crudo = plantilla_panoramica_educativa(datos_array, paleta)
+    elif "Cinematográfico" in estilo:
+        html_crudo = plantilla_pano_cinematografica(datos_array, paleta)
+    elif "Halftone" in estilo:
+        html_crudo = plantilla_pano_halftone(datos_array, paleta)
+    elif "Editorial" in estilo:
+        html_crudo = plantilla_individual_editorial(datos_array, paleta)
+    elif "Collage" in estilo:
+        html_crudo = plantilla_indiv_collage(datos_array, paleta)
+    else:
+        html_crudo = plantilla_indiv_tecnica(datos_array, paleta)
 
-        # HACK: Reemplazar el overflow:hidden temporalmente para que el iframe permita scroll
-        html_preview = html_crudo.replace('overflow: hidden;', 'overflow: auto;')
-
-        # Envolver en un contenedor restrictivo para que el scroll horizontal se adapte perfectamente al tamaño escalado
-        html_con_escala = f'''
-        <div style="width: {width_total * escala}px; height: {1350 * escala}px; overflow: hidden;">
-            <div style="transform: scale({escala}); transform-origin: top left; width: {width_total}px; height: 1350px;">
-                {html_preview}
-            </div>
-        </div>
-        '''
-
-        components.html(html_con_escala, height=int(1350 * escala) + 20, scrolling=True)
-
-    elif "Individual" in estilo_actual:
-        total_slides = len(datos_json)
-        cols = st.columns(total_slides)
-        for i, slide_data in enumerate(datos_json):
-            with cols[i]:
-                if "Editorial" in estilo_actual:
-                    html_crudo = plantilla_individual_editorial(
-                        slide_data, i, total_slides, paleta
-                    )
-                elif "Collage" in estilo_actual:
-                    html_crudo = plantilla_indiv_collage(
-                        slide_data, i, total_slides, paleta
-                    )
-                else:
-                    html_crudo = plantilla_indiv_tecnica(
-                        slide_data, i, total_slides, paleta
-                    )
-
-                escala = 0.3
-                html_con_escala = (
-                    f"<div style='transform: scale({escala}); "
-                    f"transform-origin: top left; "
-                    f"width: 1080px; height: 1350px;'>{html_crudo}</div>"
-                )
-                components.html(
-                    html_con_escala,
-                    width=350,
-                    height=int(1350 * escala) + 10,
-                    scrolling=False,
-                )
+    width_total = 1080 * len(datos_array)
+    escala = 0.3
+    # HACK: Reemplazar overflow:hidden para que el iframe permita scroll
+    html_preview = html_crudo.replace('overflow: hidden;', 'overflow: auto;')
+    # Envolver en contenedor restrictivo para scroll horizontal
+    html_con_escala = f'''<div style="width: {width_total * escala}px; height: {1350 * escala}px; overflow: hidden;"><div style="transform: scale({escala}); transform-origin: top left; width: {width_total}px; height: 1350px;">{html_preview}</div></div>'''
+    components.html(html_con_escala, height=int(1350 * escala) + 20, scrolling=True)
 
     # =================================================================
     # BOTÓN: RENDERIZAR Y GUARDAR JPEGs
@@ -248,53 +213,37 @@ if "json_carrusel" in st.session_state:
         hti.output_path = str(ruta_salida)
 
         with st.spinner("Renderizando imágenes..."):
-            if "Panorámico" in estilo_actual:
-                # Regenerar HTML panorámico completo
-                if "Básico" in estilo_actual:
-                    html_crudo = plantilla_panoramica_educativa(datos_json, paleta)
-                elif "Cinematográfico" in estilo_actual:
-                    html_crudo = plantilla_pano_cinematografica(datos_json, paleta)
-                else:
-                    html_crudo = plantilla_pano_halftone(datos_json, paleta)
-                width_total = 1080 * len(datos_json)
-                hti.screenshot(
-                    html_str=html_crudo,
-                    save_as="pano_master.jpg",
-                    size=(width_total, 1350),
-                )
-
-                # Cortar el master en slides individuales
-                img_pano = Image.open(ruta_salida / "pano_master.jpg")
-                for i in range(len(datos_json)):
-                    corte = (i * 1080, 0, (i + 1) * 1080, 1350)
-                    slide_img = img_pano.crop(corte)
-                    slide_img.save(
-                        ruta_salida / f"slide_{i+1}.jpg",
-                        quality=95,
-                    )
-
+            # Rutear a la función correcta (todas devuelven HTML panorámico)
+            if "Básico" in estilo:
+                html_crudo = plantilla_panoramica_educativa(datos_array, paleta)
+            elif "Cinematográfico" in estilo:
+                html_crudo = plantilla_pano_cinematografica(datos_array, paleta)
+            elif "Halftone" in estilo:
+                html_crudo = plantilla_pano_halftone(datos_array, paleta)
+            elif "Editorial" in estilo:
+                html_crudo = plantilla_individual_editorial(datos_array, paleta)
+            elif "Collage" in estilo:
+                html_crudo = plantilla_indiv_collage(datos_array, paleta)
             else:
-                # Individual: renderizar cada slide por separado
-                total_slides = len(datos_json)
-                for i, slide_data in enumerate(datos_json):
-                    if "Editorial" in estilo_actual:
-                        html_crudo = plantilla_individual_editorial(
-                            slide_data, i, total_slides, paleta
-                        )
-                    elif "Collage" in estilo_actual:
-                        html_crudo = plantilla_indiv_collage(
-                            slide_data, i, total_slides, paleta
-                        )
-                    else:
-                        html_crudo = plantilla_indiv_tecnica(
-                            slide_data, i, total_slides, paleta
-                        )
+                html_crudo = plantilla_indiv_tecnica(datos_array, paleta)
 
-                    hti.screenshot(
-                        html_str=html_crudo,
-                        save_as=f"slide_{i+1}.jpg",
-                        size=(1080, 1350),
-                    )
+            # Renderizar master panorámico
+            width_total = 1080 * len(datos_array)
+            hti.screenshot(
+                html_str=html_crudo,
+                save_as="pano_master.jpg",
+                size=(width_total, 1350),
+            )
+
+            # Cortar el master en slides individuales
+            img_pano = Image.open(ruta_salida / "pano_master.jpg")
+            for i in range(len(datos_array)):
+                corte = (i * 1080, 0, (i + 1) * 1080, 1350)
+                slide_img = img_pano.crop(corte)
+                slide_img.save(
+                    ruta_salida / f"slide_{i+1}.jpg",
+                    quality=95,
+                )
 
         st.success(f"¡Imágenes guardadas exitosamente en: {ruta_salida}")
         st.balloons()
