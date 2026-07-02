@@ -1,0 +1,25 @@
+TIENES DISPONIBLE UNA BIBLIOTECA DE RECURSOS GRÁFICOS (TEXTURAS Y SVGS).
+Para usarlos en tus funciones de plantillas, debes importar los diccionarios al inicio del archivo:
+`from recursos_graficos import TEXTURAS, SVGS`
+
+1. TEXTURAS DE FONDO (Variables Base64):
+Puedes usarlas como imagen de fondo o capa superpuesta usando Tailwind. 
+Las texturas disponibles son:
+- TEXTURAS["marco_polaroid"]
+- TEXTURAS["borde_roto"]
+- TEXTURAS["pizarra_rayones"]
+- TEXTURAS["polvo_blanco"] (Ideal con clase Tailwind `mix-blend-screen` o `mix-blend-color-dodge` sobre fondos oscuros).
+- TEXTURAS["cristal_azul"]
+- TEXTURAS["papel_oscuro"]
+- TEXTURAS["ruido_plata"] (Ideal con `mix-blend-multiply` o `opacity-20` sobre fondos claros).
+- TEXTURAS["halftone_amarillo"] (Ideal con `mix-blend-multiply`).
+
+Ejemplo de uso en HTML:
+<div class="absolute inset-0 bg-cover bg-center mix-blend-screen opacity-50" style="background-image: url('{TEXTURAS['polvo_blanco']}');"></div>
+
+2. SVGS INLINE:
+Se inyectan directo en el HTML. DEBES pasarle la variable {clases} con código Tailwind para darles color y tamaño.
+Disponibles: "flecha_larga", "casa", "llave", "comillas", "check_circulo", "decoracion_estrellas", "logo_pulppo_full", "logo_pulppo_isotipo".
+
+Ejemplo de uso en HTML:
+{SVGS["comillas"].format(clases="w-[120px] h-[120px] text-[#F6BE00] opacity-30 absolute top-[50px] left-[50px]")}
