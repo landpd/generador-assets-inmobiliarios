@@ -11,7 +11,7 @@ from config import OUTPUT_DIR
 from plantillas_educativas import (
     plantilla_panoramica_educativa,
     plantilla_pano_cinematografica,
-    plantilla_pano_halftone,
+    plantilla_pano_geometrica,
     plantilla_individual_editorial,
     plantilla_indiv_collage,
     plantilla_indiv_tecnica,
@@ -46,7 +46,7 @@ estilo = st.sidebar.selectbox(
     (
         "Panorámico: Básico (Oscuro)",
         "Panorámico: Cinematográfico (Textura Polvo)",
-        "Panorámico: Pop/Promocional (Halftone)",
+        "Panorámico: Geométrico / Imagen de Stock",
         "Individual: Editorial Asimétrico",
         "Individual: Collage (Marco Polaroid)",
         "Individual: Ficha Técnica (Papel Oscuro)",
@@ -106,15 +106,16 @@ if st.button("🪄 Generar Copy y Previsualizar"):
     else:
         client = OpenAI(base_url="https://openrouter.ai/api/v1", api_key=api_key)
         system_msg = (
-            "Actúa como un Copywriter experto en Real Estate Inmobiliario. "
-            "Genera un array JSON puro sin formato Markdown (sin ```json ni ```). "
-            "Cada elemento del array debe tener exactamente estas llaves: "
-            "etiqueta, titulo, texto, numero_slide. "
-            f"Genera EXACTAMENTE {num_slides} slides. "
-            "El Slide 1 DEBE ser un título gancho (Portada). "
-            "Los slides intermedios son el desarrollo del contenido. "
-            "El ÚLTIMO slide DEBE ser una Conclusión y Call to Action (CTA). "
-            "Devuelve ESTRICTAMENTE solo el JSON array, nada más."
+            "Actúa como un Copywriter experto en storytelling y redes sociales, especializado en el sector inmobiliario y de proptech. "
+            "Objetivo: transformar la información cruda proporcionada en un guion de carrusel atractivo, emocional y persuasivo. "
+            "ESTILO Y TONO: Persuasivo, de autoridad y empático. Conecta el valor financiero con el impacto de vida del cliente. Lenguaje directo y minimalista. "
+            "GRAMÁTICA (ESTRICTO): Usa reglas del español. NO uses mayúsculas después de dos puntos (:) a menos que sea nombre propio. NO uses 'Title Case' (no capitalices la primera letra de cada palabra en los títulos). "
+            "FORMATO MARKDOWN: Usa **negritas** dentro del contenido de la llave 'texto' para resaltar las palabras o frases más impactantes. "
+            f"ESTRUCTURA: Genera EXACTAMENTE {num_slides} slides. "
+            "1. Slide 1 (Portada): El 'titulo' DEBE ser un gancho persuasivo usando figuras retóricas (metáfora, hipérbole, pregunta) que despierte curiosidad. "
+            "2. Slides intermedios: Desarrollo del contenido, 1 o 2 párrafos cortos por slide. "
+            "3. Último Slide (CTA): Conclusión de valor. El llamado a la acción DEBE invitar explícitamente a 'guardar este post' y 'seguirnos' para más contenido. "
+            "FORMATO DE ENTREGA: Devuelve ESTRICTAMENTE un array JSON puro, sin formato Markdown (sin ```json), donde cada objeto tenga exactamente las llaves: etiqueta, titulo, texto, numero_slide."
         )
         try:
             with st.spinner("Generando copy con IA..."):
@@ -181,8 +182,8 @@ if "json_carrusel" in st.session_state:
         html_crudo = plantilla_panoramica_educativa(datos_array, paleta)
     elif "Cinematográfico" in estilo:
         html_crudo = plantilla_pano_cinematografica(datos_array, paleta)
-    elif "Halftone" in estilo:
-        html_crudo = plantilla_pano_halftone(datos_array, paleta)
+    elif "Geométrico" in estilo:
+        html_crudo = plantilla_pano_geometrica(datos_array, paleta)
     elif "Editorial" in estilo:
         html_crudo = plantilla_individual_editorial(datos_array, paleta)
     elif "Collage" in estilo:
@@ -218,8 +219,8 @@ if "json_carrusel" in st.session_state:
                 html_crudo = plantilla_panoramica_educativa(datos_array, paleta)
             elif "Cinematográfico" in estilo:
                 html_crudo = plantilla_pano_cinematografica(datos_array, paleta)
-            elif "Halftone" in estilo:
-                html_crudo = plantilla_pano_halftone(datos_array, paleta)
+            elif "Geométrico" in estilo:
+                html_crudo = plantilla_pano_geometrica(datos_array, paleta)
             elif "Editorial" in estilo:
                 html_crudo = plantilla_individual_editorial(datos_array, paleta)
             elif "Collage" in estilo:

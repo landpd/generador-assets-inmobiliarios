@@ -1,56 +1,59 @@
-### REGLAS GLOBALES DE ESTRUCTURA Y NAVEGACIÓN
-Estas reglas aplican transversalmente a casi todas las piezas para asegurar la legibilidad y la interacción del usuario.
+====================================================================
+MANUAL DE REGLAS VISUALES Y ARQUITECTURA DE CÓDIGO (PULPPO B2C)
+====================================================================
+Este documento es la "Biblia" de diseño y desarrollo. Al crear nuevas plantillas HTML/Tailwind, DEBES acatar estrictamente estas reglas estructurales y estéticas para garantizar compatibilidad con nuestro motor en Python.
 
-1.  **Jerarquía Tipográfica Estricta:**
-    *   **Titulares (H1):** Deben ocupar al menos un 25-30% del espacio visual. Trazos ultragruesos (Black/Bold) o tipografías condensadas para generar impacto.
-    *   **Cuerpo de texto (Body):** Uso de pesos regulares o ligeros. El tamaño debe ser al menos un 60% más pequeño que el titular.
-    *   **Regla de contraste:** Nunca usar el mismo peso tipográfico para el título y el cuerpo.
-2.  **Indicadores de Carrusel (Navegación):**
-    *   Es imperativo el uso de **flechas minimalistas** (líneas finas, sin relleno) ubicadas en la mitad derecha o en la esquina inferior derecha para incentivar el "swipe" (deslizar).
-3.  **Uso del Espacio Negativo (Aire):**
-    *   Los márgenes perimetrales deben ser amplios (mínimo un 10% del lienzo). El texto nunca debe tocar los bordes de la imagen.
-    *   Agrupar elementos lógicos (Título + Subtítulo) y separarlos visualmente de las imágenes o iconos mediante espacio vacío.
+--- PARTE 1: ARQUITECTURA PANORÁMICA Y ESTRUCTURA NARRATIVA ---
+Todas las plantillas DEBEN ser un único lienzo panorámico (`flex-row`) que contiene múltiples slides de 1080x1350px.
 
----
+ESTRUCTURA DE 3 ACTOS OBLIGATORIA (Evaluada mediante el index `i` y `total_slides`):
+1. PORTADA (i == 0): 
+   - Objetivo: Alto impacto visual.
+   - Componentes obligatorios: Fotografía de fondo (`obtener_foto_random_b64()`) con un div de overlay (`bg-[{bg_color}]/80`) para garantizar legibilidad.
+   - Textos: Título gigante (`text-[130px]` o superior). Etiqueta en una caja de contraste.
+   - Identidad: `logo_pulppo_full` en la parte superior.
+   - PROHIBIDO: Usar números de slide o indicadores de "Desliza".
 
-### ARQUETIPOS DE PLANTILLAS (Estructuras de Diseño)
-Basado en las imágenes, se pueden desarrollar **4 arquetipos de plantillas** distintos.
+2. CONTENIDO (i > 0 y i < total_slides - 1):
+   - Objetivo: Lectura dinámica y retención.
+   - Diseño: Alternancia asimétrica (Ej: slide impar con texto a la izquierda y gráficos a la derecha, slide par a la inversa). NUNCA pegar el texto a los bordes superior/inferior; usar `flex-col justify-center h-full px-[100px]`.
+   - Textos: Uso estricto de la función `formatear_texto_html(slide.get('texto', ''), paleta['acento'])` para procesar Markdown y viñetas automáticamente.
+   - Identidad: Indicador inferior de "Desliza" acompañado de `{SVGS['flecha_larga']}`.
 
-#### Plantilla Tipo 1: Estilo Editorial / Collage (Ref. "La Jornada", "No todo el mundo")
-*Estructura ideal para noticias, citas (quotes) y finanzas.*
-*   **Fondo:** Uso obligatorio de texturas sutiles (papel arrugado, papel reciclado con porosidad, ruido/grano). No usar blancos puros.
-*   **Composición Asimétrica:** Dividir la pantalla vertical u horizontalmente.
-    *   *Opción A:* Texto gigante a la izquierda, bloque de imagen (con bordes curvos o marcos) a la derecha.
-    *   *Opción B:* Bloque de color sólido central para el texto, imagen silueteada en la base.
-*   **Silueteado (Cut-outs):** Uso de personajes u objetos recortados (sin fondo) que se superponen a los bloques de color o al texto de fondo, creando un efecto 3D y de profundidad.
-*   **Bloques de Contención:** Utilizar rectángulos de colores sólidos (rojo, ocre, azul) para enmarcar frases clave o actuar como base para el texto.
+3. CTA / CIERRE (i == total_slides - 1):
+   - Objetivo: Conversión y conclusión.
+   - Componentes: Diseño centrado perfecto, limpio.
+   - Identidad: Mensaje "Guarda este post" acompañado de `{SVGS['bookmark']}`. Uso de `logo_pulppo_isotipo`.
 
-#### Plantilla Tipo 2: Corporativo Minimalista de Listas (Ref. "Colliers", "1. Ubicación")
-*Estructura ideal para datos duros, pasos, factores y contenido B2B.*
-*   **El Número como Héroe:** Los números de las listas (1, 2, 3...) deben ser gigantes, ocupando un lugar protagónico (esquina superior izquierda o alineados a la izquierda).
-*   **Fondos:** Dos variantes:
-    *   Color sólido vibrante (ej. Azul corporativo) en el 100% del lienzo.
-    *   Fondo blanco puro o gris muy claro.
-*   **Cajas Flotantes (Cards):** Si el fondo es una fotografía, el texto debe ir dentro de una caja de color sólido con opacidad al 100% (sin transparencias) que cubra el 60-70% del diseño para asegurar legibilidad.
-*   **Iconografía:** Uso de iconos de línea (line-art) del mismo color que el texto principal, ubicados estratégicamente para equilibrar el peso visual del texto.
+--- PARTE 2: CÓDIGO HTML, TAILWIND Y ANTIALUCINACIONES ---
+Para evitar romper el renderizado, el esqueleto del código devuelto DEBE ser exactamente este:
 
-#### Plantilla Tipo 3: Cinematográfico / Cultural (Ref. "1984", "Filmmakerlife", "Películas que parecen poesía")
-*Estructura ideal para arte, reseñas, cine y literatura.*
-*   **Fondo a Sangre (Full Bleed):** La fotografía o ilustración debe ocupar el 100% del lienzo.
-*   **Tratamiento de Imagen:** Uso intenso de ruido visual (grano de película), viñetas oscuras en los bordes y bajo contraste.
-*   **Texto sobre Imagen:** El texto principal suele ubicarse centrado en la parte superior o inferior. Se deben usar tipografías que evoquen poesía o historia (Serif elegantes o Sans-serif muy pesadas, estilo cartelera).
-*   **Recursos Geométricos Inserción:** Si hay dos elementos visuales, uno es el fondo y el otro se inserta dentro de una forma geométrica (ej. un círculo perfecto en una esquina superior) enmarcado con una línea delgada.
+1. El `<head>` debe incluir Tailwind CSS por CDN y las Google Fonts (EB Garamond y Nunito Sans), configurando `tailwind.config` con `fontFamily: { garamond: ..., nunito: ... }`.
+2. Contenedor Maestro: `<div class="w-[{ancho_total}px] h-[1350px] flex flex-row relative overflow-hidden bg-[{bg_color}]">`
+3. Cada Slide (dentro de un bucle for): `<div class="w-[1080px] h-full shrink-0 relative p-[80px] flex flex-col justify-center z-20">`
+4. Paleta de Colores Dinámica: NUNCA usar colores fijos (como `#FAFAFA` o `#000`). Siempre extraer y usar: `bg_color`, `texto_color`, `accent_color`, `secundario_color` del diccionario `paleta`. (Ej. `text-[{texto_color}]`).
+5. Tipografías: Títulos siempre en `font-garamond font-normal leading-[0.95]`. Cuerpo siempre en `font-nunito font-light text-[32px] leading-[1.4]`.
 
-#### Plantilla Tipo 4: Promocional de Producto (Ref. "Giant")
-*Estructura ideal para e-commerce y lanzamientos.*
-*   **Fondo Monocromático:** Color plano vibrante (ej. Verde menta) que contraste con el producto.
-*   **Tipografía Invasiva:** El titular principal ("NO ESPERES...") está alineado a la izquierda, en mayúsculas, y se come gran parte del espacio vertical.
-*   **Marca de Agua / Superposición:** Uso de elementos gráficos gigantes (ej. el símbolo "%") en el fondo, con baja opacidad o el mismo color del fondo pero con diferente tono, actuando como textura.
-*   **El Producto:** Recortado perfectamente, escalado a gran tamaño, interrumpiendo o sobreponiéndose ligeramente a los elementos gráficos de fondo.
+--- PARTE 3: BIBLIOTECA DE RECURSOS DINÁMICOS ---
+Tienes disponibles estas herramientas desde Python (debes inyectarlas en los f-strings):
+1. Fotos de Stock: Usa `obtener_foto_random_b64()` para obtener una imagen Base64 y usarla como `<div style="background-image: url('{foto}');">`.
+2. Texturas: Usa `TEXTURAS["nombre"]` (Opciones: marco_polaroid, borde_roto, pizarra_rayones, polvo_blanco, cristal_azul, papel_oscuro, ruido_plata, halftone_amarillo). Usa clases mix-blend de Tailwind para fusionarlas.
+3. SVGs Inline: Usa `{SVGS['nombre'].format(clases='tu-clase-tailwind')}`. (Opciones: flecha_larga, casa, llave, comillas, check_circulo, decoracion_estrellas, bookmark, logo_pulppo_full, logo_pulppo_isotipo).
 
----
+--- PARTE 4: ARQUETIPOS DE DISEÑO (ESTILOS VISUALES) ---
+Al crear plantillas, inspírate en uno de estos 5 arquetipos:
 
-### PALETA DE COLOR Y TEXTURAS (Reglas de Implementación)
-*   **Contraste Alto:** Textos oscuros (Azul marino, Negro, Gris carbón) sobre fondos claros, o Textos blancos sobre fondos oscuros o saturados (Azul cobalto, Rojo, Negro). Evitar grises medios para textos.
-*   **Paleta Limitada:** Cada diseño no debe utilizar más de 3 colores principales (Ej: Blanco, Azul Corporativo y un color de acento para la flecha o líneas).
-*   **Texturas como elemento gráfico:** Incorporar una biblioteca de texturas (papel, grano fotográfico) para aplicarlas en modo de fusión (Multiplicar o Superponer) con opacidad entre el 10% y el 30% en las plantillas tipo Editorial/Cultural.
+A. Estilo Editorial Grunge (Protesta / Revista):
+   Uso de texturas de papel arrugado, cajas de color sólido detrás de los títulos (rotadas ligeramente con `-rotate-2`), elementos gráficos superpuestos y fuentes gigantes. Contraste muy agresivo.
+
+B. Geometría Corporativa Limpia (Estilo Seguro/App):
+   Uso de formas geométricas puras cortadas por los bordes (cuartos de círculo gigantes de color `bg-[{secundario_color}]` en las esquinas). Fotografías con filtros monocromáticos, mucha luz, aire y limpieza extrema.
+
+C. Impacto Brutalista (Estilo Billboard):
+   Tipografía colosal que casi se sale del lienzo. Uso agresivo del contraste oscuro/neón (`fondo` vs `acento`). Líneas de cuadrícula delgadas (`border-[{texto_color}]/20`) separando secciones. Números indicadores masivos (ej. 01, 02) en el fondo.
+
+D. Corporativo de Listas (Tarjetas Flotantes):
+   El número de slide es el héroe (gigante en opacidad baja en el fondo). El contenido vive dentro de "cajas" (Cards) con bordes sólidos y sombras pesadas (`shadow-2xl`) superpuestas sobre fotos o texturas.
+
+E. Cinematográfico (Full Bleed):
+   Fotografías a pantalla completa o texturas de ruido de película. Viñetas oscuras. Textos centrados y elegantes simulando los créditos o subtítulos de un film clásico.
