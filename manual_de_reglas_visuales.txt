@@ -32,7 +32,9 @@ Para evitar romper el renderizado, el esqueleto del código devuelto DEBE ser ex
 2. Contenedor Maestro: `<div class="w-[{ancho_total}px] h-[1350px] flex flex-row relative overflow-hidden bg-[{bg_color}]">`
 3. Cada Slide (dentro de un bucle for): `<div class="w-[1080px] h-full shrink-0 relative p-[80px] flex flex-col justify-center z-20">`
 4. Paleta de Colores Dinámica: NUNCA usar colores fijos (como `#FAFAFA` o `#000`). Siempre extraer y usar: `bg_color`, `texto_color`, `accent_color`, `secundario_color` del diccionario `paleta`. (Ej. `text-[{texto_color}]`).
-5. Tipografías: Títulos siempre en `font-garamond font-normal leading-[0.95]`. Cuerpo siempre en `font-nunito font-light text-[32px] leading-[1.4]`.
+5. REGLA ESTRICTA DE COLOR SECUNDARIO: El único color secundario permitido para cualquier detalle, ícono o forma geométrica es el Teal (#009A9A). Queda estrictamente prohibido el uso de colores rojos u otros tonos no especificados en la paleta base.
+6. REGLA ESTRICTA DE CONTRASTE AMARILLO (PULPPO YELLOW): Siempre que se utilice el color de acento Amarillo Pulppo (#F6BE00 o accent_color) como COLOR DE FONDO para una caja de texto o etiqueta (ej. `bg-[{accent_color}]`), el color del texto en su interior DEBE SER ESTRICTAMENTE BLANCO (#FAFAFA). Queda absolutamente prohibido usar texto negro o carbón sobre fondos amarillos. El código HTML siempre debe ser `bg-[{accent_color}] text-[#FAFAFA]`.
+7. Tipografías: Títulos siempre en `font-garamond font-normal leading-[0.95]`. Cuerpo siempre en `font-nunito font-light text-[32px] leading-[1.4]`.
 
 --- PARTE 3: BIBLIOTECA DE RECURSOS DINÁMICOS ---
 Tienes disponibles estas herramientas desde Python (debes inyectarlas en los f-strings):

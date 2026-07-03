@@ -66,7 +66,7 @@ else:
         "fondo": "#FAFAFA",
         "texto": "#212322",
         "acento": "#F6BE00",
-        "secundario": "#C11A00",
+        "secundario": "#009A9A",
     }  # Pulppo Light
 
 # =====================================================================
@@ -101,7 +101,8 @@ if st.button("🪄 Generar Copy y Previsualizar"):
             "Actúa como un Copywriter experto en storytelling y redes sociales, especializado en el sector inmobiliario y de proptech. "
             "Objetivo: transformar la información cruda proporcionada en un guion de carrusel atractivo, emocional y persuasivo. "
             "ESTILO Y TONO: Persuasivo, de autoridad y empático. Conecta el valor financiero con el impacto de vida del cliente. Lenguaje directo y minimalista. "
-            "GRAMÁTICA (ESTRICTO): Usa reglas del español. NO uses mayúsculas después de dos puntos (:) a menos que sea nombre propio. NO uses 'Title Case' (no capitalices la primera letra de cada palabra en los títulos). "
+            "ENFOQUE DE MARCA (PULPPO): Si el tema involucra procesos, comisiones o asesores inmobiliarios, DEBES posicionar al asesor como un aliado estratégico indispensable. Habla siempre de forma sumamente positiva de los brokers profesionales y de la red de Pulppo, incentivando al cliente a buscar su asesoría para evitar riesgos. NUNCA los presentes como un gasto negativo o evitable. "
+            "GRAMÁTICA (ESTRICTO): Usa reglas del español. TODA oración y título DEBE iniciar con mayúscula. NO uses mayúsculas después de dos puntos (:) a menos que sea nombre propio. NO uses 'Title Case' (no capitalices la primera letra de cada palabra en los títulos). "
             "FORMATO MARKDOWN: Usa **negritas** dentro del contenido de la llave 'texto' para resaltar las palabras o frases más impactantes. "
             f"ESTRUCTURA: Genera EXACTAMENTE {num_slides} slides. "
             "1. Slide 1 (Portada): El 'titulo' DEBE ser un gancho persuasivo usando figuras retóricas (metáfora, hipérbole, pregunta) que despierte curiosidad. "
@@ -130,6 +131,12 @@ if st.button("🪄 Generar Copy y Previsualizar"):
             else:
                 # Guardar en session state para persistencia y renderizado posterior
                 st.session_state["json_carrusel"] = datos_json
+
+                # Limpiar caché de los widgets del editor para evitar textos "fantasma" de generaciones anteriores
+                for key in list(st.session_state.keys()):
+                    if key.startswith("editor_e_") or key.startswith("editor_t_") or key.startswith("editor_txt_"):
+                        del st.session_state[key]
+
                 st.success("¡Copy generado exitosamente!")
 
         except Exception as e:
@@ -198,51 +205,55 @@ if "json_carrusel" in st.session_state:
     components.html(html_con_escala, height=int(1350 * escala) + 20, scrolling=True)
 
     # =================================================================
-    # BOTÓN: RENDERIZAR Y GUARDAR JPEGs
+    # BOTÓN: RENDERIZAR Y GUARDAR PNGs
     # =================================================================
-    if st.button("💾 Renderizar y Guardar JPEGs", type="primary"):
+    if st.button("💾 Renderizar y Guardar PNGs", type="primary"):
         hti = Html2Image(custom_flags=["--disable-gpu", "--hide-scrollbars"])
 
-        # Crear carpeta de salida basada en el título del primer slide
-        titulo_limpio = re.sub(
-            r"[^A-Za-z0-9]+", "_", st.session_state["json_carrusel"][0]["titulo"]
-        )
-        ruta_salida = OUTPUT_DIR / f"Carrusel_{titulo_limpio}"
+        # Extraer componentes del nombre (eliminamos el título)
+        arquetipo_str = estilo.split(':')[0].strip().replace(' ', '_').lower()
+        tema_str = "dark" if tema_color == "Modo Oscuro" else "light"
+        etiqueta_cruda = str(st.session_state["json_carrusel"][0].get("etiqueta", "carrusel"))
+
+        # Limpiar string
+        etiqueta_limpia = re.sub(r"[^A-Za-z0-9]+", "_", etiqueta_cruda).strip('_')
+
+        # Construir nombre base para carpeta y archivos
+        nombre_base = f"{arquetipo_str}_{tema_str}_{etiqueta_limpia}"
+
+        ruta_salida = OUTPUT_DIR / nombre_base
         ruta_salida.mkdir(parents=True, exist_ok=True)
         hti.output_path = str(ruta_salida)
 
-        with st.spinner("Renderizando imágenes..."):
-            # Rutear a la función correcta
-            if "Geometría Limpia" in estilo:
-                html_crudo = plantilla_geometria_limpia(datos_array, paleta)
-            elif "Editorial Grunge" in estilo:
-                html_crudo = plantilla_editorial_grunge(datos_array, paleta)
-            elif "Impacto Brutalista" in estilo:
-                html_crudo = plantilla_impacto_brutalista(datos_array, paleta)
-            elif "Corporativo Listas" in estilo:
-                html_crudo = plantilla_corporativo_listas(datos_array, paleta)
-            elif "Cinematográfico" in estilo:
-                html_crudo = plantilla_cinematografica(datos_array, paleta)
-            else:
-                html_crudo = plantilla_geometria_limpia(datos_array, paleta)
+        with st.spinner("Renderizando imágenes en alta calidad..."):
+            # Determinar qué plantilla usar
+            if "Básico" in estilo: html_crudo = plantilla_panoramica_educativa(datos_array, paleta)
+            elif "Cinematográfico" in estilo: html_crudo = plantilla_cinematografica(datos_array, paleta)
+            elif "Pop" in estilo or "Halftone" in estilo or "Geometría" in estilo: html_crudo = plantilla_geometria_limpia(datos_array, paleta)
+            elif "Editorial" in estilo or "Grunge" in estilo: html_crudo = plantilla_editorial_grunge(datos_array, paleta)
+            elif "Listas" in estilo or "Corporativo" in estilo: html_crudo = plantilla_corporativo_listas(datos_array, paleta)
+            elif "Brutalista" in estilo or "Impacto" in estilo: html_crudo = plantilla_impacto_brutalista(datos_array, paleta)
+            else: html_crudo = plantilla_panoramica_educativa(datos_array, paleta) # Fallback
 
-            # Renderizar master panorámico
             width_total = 1080 * len(datos_array)
+
+            # Guardar el master con el nuevo nombre base
+            nombre_master = f"{nombre_base}_master.png"
             hti.screenshot(
                 html_str=html_crudo,
-                save_as="pano_master.jpg",
+                save_as=nombre_master,
                 size=(width_total, 1350),
             )
 
-            # Cortar el master en slides individuales
-            img_pano = Image.open(ruta_salida / "pano_master.jpg")
+            # Cortar el master en slides individuales con la nueva nomenclatura
+            img_pano = Image.open(ruta_salida / nombre_master)
             for i in range(len(datos_array)):
                 corte = (i * 1080, 0, (i + 1) * 1080, 1350)
                 slide_img = img_pano.crop(corte)
-                slide_img.save(
-                    ruta_salida / f"slide_{i+1}.jpg",
-                    quality=95,
-                )
+
+                # Guardar individual sin compresión (PNG)
+                nombre_slide = f"{nombre_base}_{i+1}.png"
+                slide_img.save(ruta_salida / nombre_slide)
 
         st.success(f"¡Imágenes guardadas exitosamente en: {ruta_salida}")
         st.balloons()

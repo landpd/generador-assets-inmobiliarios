@@ -77,7 +77,7 @@ def plantilla_geometria_limpia(datos_array, paleta):
       <div class="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-[120px]">
 
         <!-- Etiqueta -->
-        <div class="bg-[{accent_color}] text-[{bg_color}] px-6 py-2 inline-block font-nunito font-bold text-[24px] tracking-widest uppercase mb-8">
+        <div class="bg-[{accent_color}] text-[#FAFAFA] px-6 py-2 inline-block font-nunito font-bold text-[24px] tracking-widest uppercase mb-8">
           {etiqueta or 'GUÍA INMOBILIARIA'}
         </div>
 
@@ -233,7 +233,7 @@ def plantilla_editorial_grunge(datos_array, paleta):
         es_cta = i == total_slides - 1
 
         if es_portada:
-            # ===== PORTADA: Mitad izquierda (texto) + Mitad derecha (foto) =====
+            # ===== PORTADA: Foto 60% derecha + contenido flotando a la izquierda =====
             foto_fondo = obtener_foto_random_b64()
             slides_html += f"""
     <!-- ========================= PORTADA {i+1} ========================= -->
@@ -244,21 +244,21 @@ def plantilla_editorial_grunge(datos_array, paleta):
         {SVGS['logo_pulppo_full'].format(clases=f'w-[200px] text-[{texto_color}]')}
       </div>
 
-      <!-- Mitad derecha: Foto de stock -->
-      <div class="absolute top-0 right-0 w-[540px] h-full bg-cover bg-center z-0"
+      <!-- Foto de stock: 60% derecho -->
+      <div class="absolute right-0 top-0 bottom-0 w-[60%] bg-cover bg-center z-0"
            style="background-image: url('{foto_fondo}');"></div>
 
-      <!-- Mitad izquierda: Contenido -->
-      <div class="absolute top-0 left-0 w-[540px] h-full flex flex-col justify-center px-[80px] z-20">
+      <!-- Contenido flotante (se superpone a la foto) -->
+      <div class="absolute left-[80px] top-[250px] z-20 max-w-[800px]">
 
         <!-- Etiqueta -->
-        <span class="font-nunito text-[24px] font-bold uppercase tracking-widest text-[{accent_color}] mb-6">
+        <span class="font-nunito text-[24px] font-bold uppercase tracking-widest text-[{accent_color}] mb-6 block">
           {etiqueta or 'GUÍA INMOBILIARIA'}
         </span>
 
         <!-- Título en caja rotada -->
-        <div class="bg-[{accent_color}] text-[{bg_color}] p-8 -rotate-2 inline-block z-20">
-          <h1 class="font-garamond font-normal text-[110px] leading-none">
+        <div class="bg-[{accent_color}] text-[#FAFAFA] p-8 -rotate-2 inline-block">
+          <h1 class="font-garamond font-normal text-[95px] leading-none">
             {titulo}
           </h1>
         </div>
@@ -583,10 +583,18 @@ def plantilla_impacto_brutalista(datos_array, paleta):
         es_cta = i == total_slides - 1
 
         if es_portada:
-            # ===== PORTADA: Minimalismo extremo =====
+            # ===== PORTADA: Foto de fondo + overlay + minimalismo extremo =====
+            foto = obtener_foto_random_b64()
             slides_html += f"""
     <!-- ========================= PORTADA {i+1} ========================= -->
     <div class="w-[1080px] h-full shrink-0 relative overflow-hidden z-20">
+
+      <!-- Foto de fondo -->
+      <div class="absolute inset-0 bg-cover bg-center z-0"
+           style="background-image: url('{foto}');"></div>
+
+      <!-- Overlay de color -->
+      <div class="absolute inset-0 bg-[{bg_color}]/90 z-10"></div>
 
       <!-- Logo full -->
       <div class="absolute top-[80px] left-[80px] z-30">
@@ -605,7 +613,7 @@ def plantilla_impacto_brutalista(datos_array, paleta):
         <div class="w-full h-[2px] bg-[{texto_color}]/20 mb-8"></div>
 
         <!-- Título colosal -->
-        <h1 class="font-garamond font-normal text-[150px] leading-[0.85] text-[{texto_color}] uppercase tracking-tighter max-w-[900px]">
+        <h1 class="font-garamond font-normal text-[150px] leading-[0.85] text-[{texto_color}] tracking-tighter max-w-[900px]">
           {titulo}
         </h1>
 
@@ -628,7 +636,7 @@ def plantilla_impacto_brutalista(datos_array, paleta):
       <div class="absolute inset-0 z-20 flex flex-col justify-center px-[80px]">
 
         <!-- Título colosal -->
-        <h1 class="font-garamond font-normal text-[130px] leading-[0.85] text-[{texto_color}] uppercase tracking-tighter mb-10">
+        <h1 class="font-garamond font-normal text-[130px] leading-[0.85] text-[{texto_color}] tracking-tighter mb-10">
           {titulo}
         </h1>
 
@@ -671,7 +679,7 @@ def plantilla_impacto_brutalista(datos_array, paleta):
         <div class="border-r-4 border-[{accent_color}] pr-8">
 
           <!-- Título -->
-          <h1 class="font-garamond text-[{texto_color}] text-[100px] leading-[0.95] font-normal uppercase mb-8">
+          <h1 class="font-garamond text-[{texto_color}] text-[100px] leading-[0.95] font-normal mb-8">
             {titulo}
           </h1>
 
@@ -816,7 +824,7 @@ def plantilla_corporativo_listas(datos_array, paleta):
 """
         else:
             # ===== CONTENIDO: Número gigante de fondo + tarjeta =====
-            num_str = str(i + 1).zfill(2)
+            num_str = str(i + 1)
             es_impar = i % 2 == 1
             cargo_numero = '-right-[250px] -top-[200px]' if es_impar else '-left-[250px] -bottom-[200px]'
             slides_html += f"""
