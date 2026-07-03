@@ -8,14 +8,7 @@ from openai import OpenAI
 from html2image import Html2Image
 from PIL import Image
 from config import OUTPUT_DIR
-from plantillas_educativas import (
-    plantilla_panoramica_educativa,
-    plantilla_pano_cinematografica,
-    plantilla_pano_geometrica,
-    plantilla_individual_editorial,
-    plantilla_indiv_collage,
-    plantilla_indiv_tecnica,
-)
+from plantillas_educativas import formatear_texto_html, plantilla_geometria_limpia, plantilla_editorial_grunge, plantilla_cinematografica, plantilla_impacto_brutalista, plantilla_corporativo_listas
 
 st.set_page_config(page_title="Carruseles Educativos", layout="wide")
 
@@ -44,12 +37,11 @@ st.sidebar.markdown("### 🎨 Estilo del Carrusel")
 estilo = st.sidebar.selectbox(
     "Selecciona el estilo:",
     (
-        "Panorámico: Básico (Oscuro)",
-        "Panorámico: Cinematográfico (Textura Polvo)",
-        "Panorámico: Geométrico / Imagen de Stock",
-        "Individual: Editorial Asimétrico",
-        "Individual: Collage (Marco Polaroid)",
-        "Individual: Ficha Técnica (Papel Oscuro)",
+        "Arquetipo A: Editorial Grunge",
+        "Arquetipo B: Geometría Limpia",
+        "Arquetipo C: Impacto Brutalista",
+        "Arquetipo D: Corporativo Listas",
+        "Arquetipo E: Cinematográfico",
     ),
 )
 
@@ -115,6 +107,7 @@ if st.button("🪄 Generar Copy y Previsualizar"):
             "1. Slide 1 (Portada): El 'titulo' DEBE ser un gancho persuasivo usando figuras retóricas (metáfora, hipérbole, pregunta) que despierte curiosidad. "
             "2. Slides intermedios: Desarrollo del contenido, 1 o 2 párrafos cortos por slide. "
             "3. Último Slide (CTA): Conclusión de valor. El llamado a la acción DEBE invitar explícitamente a 'guardar este post' y 'seguirnos' para más contenido. "
+            "Para la llave 'etiqueta', NUNCA uses palabras genéricas como 'Portada', 'Slide' o 'Introducción'. Genera siempre un micro-título conceptual, llamativo y en mayúsculas (ej. 'CONSEJO FINANCIERO', 'EL MITO DE VENDER', 'ESTRATEGIA CLAVE'). "
             "FORMATO DE ENTREGA: Devuelve ESTRICTAMENTE un array JSON puro, sin formato Markdown (sin ```json), donde cada objeto tenga exactamente las llaves: etiqueta, titulo, texto, numero_slide."
         )
         try:
@@ -157,6 +150,11 @@ if "json_carrusel" in st.session_state:
 
         for i, slide in enumerate(json_editado):
             st.markdown(f"**Slide {i + 1}**")
+            slide["etiqueta"] = st.text_input(
+                f"Etiqueta {i + 1}",
+                value=slide.get("etiqueta", ""),
+                key=f"editor_e_{i}",
+            )
             slide["titulo"] = st.text_input(
                 f"Título {i + 1}",
                 value=slide.get("titulo", ""),
@@ -177,19 +175,19 @@ if "json_carrusel" in st.session_state:
 
     datos_array = st.session_state['json_carrusel']
 
-    # Rutear a la función correcta según el estilo (todas son panorámicas)
-    if "Básico" in estilo:
-        html_crudo = plantilla_panoramica_educativa(datos_array, paleta)
+    # Rutear a la función correcta según el estilo
+    if "Geometría Limpia" in estilo:
+        html_crudo = plantilla_geometria_limpia(datos_array, paleta)
+    elif "Editorial Grunge" in estilo:
+        html_crudo = plantilla_editorial_grunge(datos_array, paleta)
+    elif "Impacto Brutalista" in estilo:
+        html_crudo = plantilla_impacto_brutalista(datos_array, paleta)
+    elif "Corporativo Listas" in estilo:
+        html_crudo = plantilla_corporativo_listas(datos_array, paleta)
     elif "Cinematográfico" in estilo:
-        html_crudo = plantilla_pano_cinematografica(datos_array, paleta)
-    elif "Geométrico" in estilo:
-        html_crudo = plantilla_pano_geometrica(datos_array, paleta)
-    elif "Editorial" in estilo:
-        html_crudo = plantilla_individual_editorial(datos_array, paleta)
-    elif "Collage" in estilo:
-        html_crudo = plantilla_indiv_collage(datos_array, paleta)
+        html_crudo = plantilla_cinematografica(datos_array, paleta)
     else:
-        html_crudo = plantilla_indiv_tecnica(datos_array, paleta)
+        html_crudo = plantilla_geometria_limpia(datos_array, paleta)
 
     width_total = 1080 * len(datos_array)
     escala = 0.3
@@ -214,19 +212,19 @@ if "json_carrusel" in st.session_state:
         hti.output_path = str(ruta_salida)
 
         with st.spinner("Renderizando imágenes..."):
-            # Rutear a la función correcta (todas devuelven HTML panorámico)
-            if "Básico" in estilo:
-                html_crudo = plantilla_panoramica_educativa(datos_array, paleta)
+            # Rutear a la función correcta
+            if "Geometría Limpia" in estilo:
+                html_crudo = plantilla_geometria_limpia(datos_array, paleta)
+            elif "Editorial Grunge" in estilo:
+                html_crudo = plantilla_editorial_grunge(datos_array, paleta)
+            elif "Impacto Brutalista" in estilo:
+                html_crudo = plantilla_impacto_brutalista(datos_array, paleta)
+            elif "Corporativo Listas" in estilo:
+                html_crudo = plantilla_corporativo_listas(datos_array, paleta)
             elif "Cinematográfico" in estilo:
-                html_crudo = plantilla_pano_cinematografica(datos_array, paleta)
-            elif "Geométrico" in estilo:
-                html_crudo = plantilla_pano_geometrica(datos_array, paleta)
-            elif "Editorial" in estilo:
-                html_crudo = plantilla_individual_editorial(datos_array, paleta)
-            elif "Collage" in estilo:
-                html_crudo = plantilla_indiv_collage(datos_array, paleta)
+                html_crudo = plantilla_cinematografica(datos_array, paleta)
             else:
-                html_crudo = plantilla_indiv_tecnica(datos_array, paleta)
+                html_crudo = plantilla_geometria_limpia(datos_array, paleta)
 
             # Renderizar master panorámico
             width_total = 1080 * len(datos_array)
