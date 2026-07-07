@@ -74,15 +74,15 @@ def disenio_landscape_5fotos(datos):
     <!-- ========================= SLIDE 1: PORTADA ========================= -->
     <div class="w-[1080px] h-full shrink-0 relative flex flex-col justify-center px-[100px] z-20">
       
-      <!-- Etiqueta de Operación (Amarillo) -->
-      <div class="mb-10 inline-block">
-        <span class="font-nunito font-bold text-[24px] tracking-[0.2em] text-[{accent_color}] uppercase">
-          [ {tipo_operacion} ]
-        </span>
+      <!-- Etiqueta de Operación (Corchetes en acento, texto en color texto) -->
+      <div class="mb-10 inline-block font-nunito font-bold text-[24px] tracking-[0.2em] uppercase">
+        <span class="text-[{accent_color}]">[</span>
+        <span class="text-[{text_color}]"> {tipo_operacion} </span>
+        <span class="text-[{accent_color}]">]</span>
       </div>
 
       <!-- Título Principal (Nombre de la calle) -->
-      <h1 class="font-garamond text-[140px] leading-[0.9] font-normal mb-8 max-w-[800px] uppercase">
+      <h1 class="font-garamond text-[140px] leading-[0.9] font-normal mb-8 max-w-[800px]">
         {calle}
       </h1>
       
@@ -103,7 +103,7 @@ def disenio_landscape_5fotos(datos):
       <div class="w-full h-full bg-cover bg-center shadow-2xl rounded-sm" style="background-image: url('{img1}');"></div>
       
       <!-- Texto GIGANTE que atraviesa el slide por detrás -->
-      <span class="absolute top-[50%] -translate-y-1/2 -left-[200px] font-garamond text-[350px] text-[{text_color}]/5 whitespace-nowrap z-[-1] pointer-events-none uppercase">
+      <span class="absolute top-[50%] -translate-y-1/2 -left-[200px] font-garamond text-[350px] text-[{text_color}]/5 whitespace-nowrap z-[-1] pointer-events-none">
         {calle}
       </span>
     </div>
@@ -111,10 +111,10 @@ def disenio_landscape_5fotos(datos):
     <!-- ========================= SLIDE 3: FICHA TÉCNICA ========================= -->
     <div class="w-[1080px] h-full shrink-0 relative flex flex-col justify-center px-[120px] z-20">
       
-      <div class="flex flex-row h-[900px] gap-16">
+      <div class="flex flex-row h-[900px] gap-10">
         
         <!-- Columna Izquierda: Datos (Atributos) -->
-        <div class="w-[45%] flex flex-col justify-center">
+        <div class="w-[50%] flex flex-col justify-center">
             <h2 class="font-nunito font-bold text-[24px] tracking-[0.2em] text-[{accent_color}] uppercase mb-12">
               Características
             </h2>
@@ -124,7 +124,7 @@ def disenio_landscape_5fotos(datos):
         </div>
 
         <!-- Columna Derecha: Foto de detalle -->
-        <div class="w-[55%] h-full bg-cover bg-center shadow-lg" style="background-image: url('{img2}');"></div>
+        <div class="w-[50%] h-full bg-cover bg-center shadow-lg" style="background-image: url('{img2}');"></div>
       
       </div>
 
@@ -146,7 +146,7 @@ def disenio_landscape_5fotos(datos):
       
       <!-- Etiqueta de Precio -->
       <span class="font-nunito font-bold text-[28px] tracking-[0.1em] text-[{text_color}]/50 uppercase mb-4">
-        Valor de Inversión
+        Valor de esta propiedad
       </span>
       
       <!-- Precio Masivo -->
@@ -154,16 +154,13 @@ def disenio_landscape_5fotos(datos):
         {precio}
       </h2>
 
-      <!-- CTA Botón (Cumpliendo regla estricta: Fondo Acento -> Texto Blanco) -->
-      <div class="bg-[{accent_color}] text-[#FAFAFA] px-[80px] py-[30px] font-nunito text-[32px] font-bold uppercase tracking-widest shadow-xl mb-24">
+      <!-- CTA Botón (Texto sobre fondo claro) -->
+      <div class="bg-[{text_color}] text-[#FAFAFA] px-[80px] py-[30px] font-nunito text-[32px] font-bold uppercase tracking-widest shadow-xl mb-24">
         Agenda tu visita
       </div>
 
-      <!-- Logo Final y Despedida -->
-      <img src="{logo}" alt="Logo Inmobiliaria" class="max-h-[120px] max-w-[400px] object-contain mb-8 filter grayscale brightness-0">
-      <p class="font-nunito text-[24px] font-light text-[{text_color}]/60 tracking-widest">
-        WWW.PULPPO.COM
-      </p>
+      <!-- Logo Final -->
+      <img src="{logo}" alt="Logo Inmobiliaria" class="max-h-[120px] max-w-[400px] object-contain filter grayscale brightness-0">
 
     </div>
 

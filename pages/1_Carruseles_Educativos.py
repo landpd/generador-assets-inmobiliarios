@@ -132,10 +132,8 @@ if st.button("🪄 Generar Copy y Previsualizar"):
                 # Guardar en session state para persistencia y renderizado posterior
                 st.session_state["json_carrusel"] = datos_json
 
-                # Limpiar caché de los widgets del editor para evitar textos "fantasma" de generaciones anteriores
-                for key in list(st.session_state.keys()):
-                    if key.startswith("editor_e_") or key.startswith("editor_t_") or key.startswith("editor_txt_"):
-                        del st.session_state[key]
+                # Incrementar el ID de generación para forzar a Streamlit a crear nuevos widgets
+                st.session_state["gen_id"] = st.session_state.get("gen_id", 0) + 1
 
                 st.success("¡Copy generado exitosamente!")
 
@@ -160,17 +158,17 @@ if "json_carrusel" in st.session_state:
             slide["etiqueta"] = st.text_input(
                 f"Etiqueta {i + 1}",
                 value=slide.get("etiqueta", ""),
-                key=f"editor_e_{i}",
+                key=f"editor_e_{i}_{st.session_state.get('gen_id', 0)}",
             )
             slide["titulo"] = st.text_input(
                 f"Título {i + 1}",
                 value=slide.get("titulo", ""),
-                key=f"editor_t_{i}",
+                key=f"editor_t_{i}_{st.session_state.get('gen_id', 0)}",
             )
             slide["texto"] = st.text_area(
                 f"Texto {i + 1}",
                 value=slide.get("texto", ""),
-                key=f"editor_txt_{i}",
+                key=f"editor_txt_{i}_{st.session_state.get('gen_id', 0)}",
             )
             st.divider()
 
@@ -226,14 +224,13 @@ if "json_carrusel" in st.session_state:
         hti.output_path = str(ruta_salida)
 
         with st.spinner("Renderizando imágenes en alta calidad..."):
-            # Determinar qué plantilla usar
-            if "Básico" in estilo: html_crudo = plantilla_panoramica_educativa(datos_array, paleta)
+            # Rutear a la función correcta según el estilo
+            if "Geometría Limpia" in estilo: html_crudo = plantilla_geometria_limpia(datos_array, paleta)
+            elif "Editorial Grunge" in estilo: html_crudo = plantilla_editorial_grunge(datos_array, paleta)
+            elif "Impacto Brutalista" in estilo: html_crudo = plantilla_impacto_brutalista(datos_array, paleta)
+            elif "Corporativo Listas" in estilo: html_crudo = plantilla_corporativo_listas(datos_array, paleta)
             elif "Cinematográfico" in estilo: html_crudo = plantilla_cinematografica(datos_array, paleta)
-            elif "Pop" in estilo or "Halftone" in estilo or "Geometría" in estilo: html_crudo = plantilla_geometria_limpia(datos_array, paleta)
-            elif "Editorial" in estilo or "Grunge" in estilo: html_crudo = plantilla_editorial_grunge(datos_array, paleta)
-            elif "Listas" in estilo or "Corporativo" in estilo: html_crudo = plantilla_corporativo_listas(datos_array, paleta)
-            elif "Brutalista" in estilo or "Impacto" in estilo: html_crudo = plantilla_impacto_brutalista(datos_array, paleta)
-            else: html_crudo = plantilla_panoramica_educativa(datos_array, paleta) # Fallback
+            else: html_crudo = plantilla_geometria_limpia(datos_array, paleta)
 
             width_total = 1080 * len(datos_array)
 

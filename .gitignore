@@ -26,6 +26,10 @@ share/python-wheels/
 *.egg
 MANIFEST
 
+# Credenciales y Tokens de API
+credentials.json
+token.json
+
 # PyInstaller
 *.manifest
 *.spec
@@ -84,6 +88,9 @@ venv.bak/
 
 # mkdocs documentation
 /site
+
+# Historial temproal
+output/historial_publicaciones.csv
 
 # mypy
 .mypy_cache/
