@@ -1,0 +1,1527 @@
+InternalId,Company: Name,Address: Street,Address: Neighborhood: Name,Address: City: Name,Listing: Price: Price,Listing: Price: Currency,Type,Quality,QualityScore,Listing: Operation
+CAE-014,5a Avenida Real Estate,Calzada de las Águilas 1885,Villa Verdún,Alvaro Obregón,"14,490,000",MXN,Casa,medium,2,sale
+CAE-624,5a Avenida Real Estate,Leandro Valle 36,San Ángel,Alvaro Obregón,"43,000,000",MXN,Casa,medium,2,sale
+CAG-741,5a Avenida Real Estate,Frontera 89,Tizapan,Alvaro Obregón,"15,500,000",MXN,Casa,medium,2,sale
+CAN-543,5a Avenida Real Estate,Laguna 21-1,Las Águilas,Alvaro Obregón,"12,800,000",MXN,Casa,medium,2,sale
+CAS-674,5a Avenida Real Estate,Rancho San Francisco 28,San Bartolo Ameyalco,Alvaro Obregón,"37,000,000",MXN,Casa,medium,2,sale
+CAW-716,5a Avenida Real Estate,Aida 47,San Ángel,Alvaro Obregón,"18,950,000",MXN,Casa,medium,2,sale
+CCL-727,5a Avenida Real Estate,"Circuito San Francisco #87, Rancho San Francisco Pueblo de San Bartolo Ameyalco",San Bartolo Ameyalco,Alvaro Obregón,"28,000,000",MXN,Casa,medium,2,sale
+CCQ-701,5a Avenida Real Estate,La Escondida 102,Jardines de Ahuatepec,Cuernavaca,"29,900,000",MXN,Casa,medium,2,sale
+CFP-096,5a Avenida Real Estate,Avenida Hidalgo 148,San Bartolo Ameyalco,Alvaro Obregón,"16,500,000",MXN,Casa,medium,2,sale
+CGH-356,5a Avenida Real Estate,Avenida Picacho 140,Jardines del Pedregal,Alvaro Obregón,"29,900,000",MXN,Casa,medium,2,sale
+CHG-277,5a Avenida Real Estate,Villa Versalles 1,Lomas de las Palmas,Huixquilucan,"11,390,000",MXN,Casa,high,3,sale
+CHG-832,5a Avenida Real Estate,Fuente del Pescador,Lomas de Tecamachalco,Huixquilucan,"12,800,000",MXN,Casa,medium,2,sale
+CHU-109,5a Avenida Real Estate,Cerrada Rosaleda 51,Lomas Altas,Miguel Hidalgo,"20,900,000",MXN,Casa,medium,2,sale
+CKJ-031,5a Avenida Real Estate,Agua 151,Jardines del Pedregal,Alvaro Obregón,"35,000,000",MXN,Casa,medium,2,sale
+CLP-964,5a Avenida Real Estate,Versalles 34B,Villa Verdún,Alvaro Obregón,"17,000,000",MXN,Casa,medium,2,sale
+CNG-353,5a Avenida Real Estate,Fuente de Diana 3,Lomas de Tecamachalco,Naucalpan de Juárez,"14,900,000",MXN,Casa,medium,2,sale
+CPG-361,5a Avenida Real Estate,Bosques de la Reforma 303,Bosque de las Lomas,Miguel Hidalgo,"2,300,000",USD,Casa,medium,2,sale
+CPO-415,5a Avenida Real Estate,Monte Albán 10,Fraccionamiento Lomas de Cocoyoc,Atlatlahucan,"6,500,000",MXN,Casa,medium,2,sale
+CRO-517,5a Avenida Real Estate,Rincón Tlacopac 12,Las Águilas,Alvaro Obregón,"24,500,000",MXN,Casa en condominio,medium,2,sale
+CRW-439,5a Avenida Real Estate,Bosque de Sauces 487,Bosque de las Lomas,Miguel Hidalgo,"39,500,000",MXN,Casa,medium,2,sale
+CSG-353,5a Avenida Real Estate,Tlalixcoyan 22,Barrio San Francisco,La Magdalena Contreras,"19,500,000",MXN,Casa,medium,2,sale
+CSJ-353,5a Avenida Real Estate,Carretera Picacho-Ajusco 1143,Miguel Hidalgo 3A Sección,Tlalpan,"11,000,000",MXN,Casa,medium,2,sale
+CTM-795,5a Avenida Real Estate,Granaditas 1,Barrio La Magdalena,Tequisquiapan,"3,400,000",MXN,Casa,medium,2,sale
+CTX-686,5a Avenida Real Estate,Amatenango 33,Cuchilla de Padierna,Tlalpan,"11,500,000",MXN,Casa,medium,2,sale
+DAC-939,5a Avenida Real Estate,Periférico 900,San Pedro de los Pinos,Alvaro Obregón,"4,557,506",MXN,Departamento,medium,2,sale
+DAJ-807,5a Avenida Real Estate,"Av. Santa Fe 456, Santa Fe Cuajimalpa, Cuajimalpa de Morelos",Santa Fe Cuajimalpa,Cuajimalpa de Morelos,"10,200,000",MXN,Departamento,medium,2,sale
+DAK-323,5a Avenida Real Estate,Av. Loma Alta 780,Bosque Real,Huixquilucan,"15,600,000",MXN,Departamento,medium,2,sale
+DAT-056,5a Avenida Real Estate,Avenida Loma Alta 780,Bosque Real,Huixquilucan,"9,930,000",MXN,Departamento,medium,2,sale
+DAT-232,5a Avenida Real Estate,Periférico 900,San Pedro de los Pinos,Alvaro Obregón,"9,201,901",MXN,Departamento,medium,2,sale
+DAX-616,5a Avenida Real Estate,Avenida Loma Alta 780,Bosque Real,Huixquilucan,"10,350,000",MXN,Departamento,medium,2,sale
+DBC-959,5a Avenida Real Estate,Avenida Río Mixcoac 336,Acacias,Benito Juárez,"6,533,222",MXN,Departamento,medium,2,sale
+DBX-258,5a Avenida Real Estate,Gabriel Ramos Millán 117,Niños Héroes,Benito Juárez,"3,795,000",MXN,Departamento,medium,2,sale
+DBY-149,5a Avenida Real Estate,Avenida Río Mixcoac 336,Acacias,Benito Juárez,"7,634,424",MXN,Departamento,medium,2,sale
+DBZ-296,5a Avenida Real Estate,Calle Fresas 21,Tlacoquemecatl,Benito Juárez,"17,500,000",MXN,Departamento,medium,2,sale
+DCE-756,5a Avenida Real Estate,Vía Orquídea 1,Villa Florence,Huixquilucan,"8,300,000",MXN,Departamento,medium,2,sale
+DCT-831,5a Avenida Real Estate,CUMBRES DE SANTA FE,San Mateo Tlaltenango,Cuajimalpa de Morelos,"25,300,000",MXN,Departamento,medium,2,sale
+DEZ-066,5a Avenida Real Estate,Colima 49,Roma Norte,Cuauhtémoc,"13,000,000",MXN,Departamento,medium,2,sale
+DKC-303,5a Avenida Real Estate,Quintana Roo 17,Roma Sur,Cuauhtémoc,"6,000,000",MXN,Departamento,medium,2,sale
+DMD-654,5a Avenida Real Estate,Blvd. Adolfo López Mateos 2113,Los Alpes,Alvaro Obregón,"7,700,000",MXN,Departamento,medium,2,sale
+DMJ-386,5a Avenida Real Estate,Rubén Darío 43,Polanco,Miguel Hidalgo,"28,000,000",MXN,Departamento,medium,2,sale
+DMX-757,5a Avenida Real Estate,Av del Tiburón 2104,Fraccionamiento Palmas del Sol,Mazatlán,"5,049,752",MXN,Departamento,medium,2,sale
+DQT-888,5a Avenida Real Estate,Periferico Sur 4421,Parque del Pedregal,Tlalpan,"7,895,000",MXN,Departamento,medium,2,sale
+DSG-108,5a Avenida Real Estate,Panabá 327,Pedregal de San Nicolás,Tlalpan,"3,495,000",MXN,Departamento,medium,2,sale
+DSN-711,5a Avenida Real Estate,Lomas de juriquilla,Lomas de Juriquilla,Querétaro,"4,530,439",MXN,Departamento,medium,2,sale
+DTN-876,5a Avenida Real Estate,Carr. México - Toluca 5454,Santa Fe Cuajimalpa,Cuajimalpa de Morelos,"5,980,000",MXN,Departamento,medium,2,sale
+DTQ-206,5a Avenida Real Estate,Calle de Empresa 121,Insurgentes Mixcoac,Benito Juárez,"4,980,000",MXN,Departamento,medium,2,sale
+DXE-258,5a Avenida Real Estate,Av. Homero 613-402,Polanco,Miguel Hidalgo,"19,000,000",MXN,Departamento,medium,2,sale
+EMP-117,5a Avenida Real Estate,Gobernador Luis G. Vieyra 73,San Miguel Chapultepec,Miguel Hidalgo,"35,000,000",MXN,Edificio,medium,2,sale
+FUD-828,5a Avenida Real Estate,Xalatlaco,Xalatlaco,Xalatlaco,"9,800,000",USD,Finca,medium,2,sale
+PAU-907,5a Avenida Real Estate,Alcázar de Toledo 170,Lomas de Reforma,Miguel Hidalgo,"50,000,000",MXN,Departamento,medium,2,sale
+TIT-164,5a Avenida Real Estate,Orilla del Río y Zapote S/N,Pueblo El Maye,Ixmiquilpan,"16,000,000",MXN,Terreno residencial,medium,2,sale
+TJL-396,5a Avenida Real Estate,El Macehual,Rancho o rancheria Atotonilco,San Miguel de Allende,"750,000",MXN,Terreno residencial,medium,2,sale
+TLU-026,5a Avenida Real Estate,Lomas Quebradas 144,San Jerónimo Lídice,La Magdalena Contreras,"13,520,000",MXN,Terreno residencial,medium,2,sale
+CCA-408,Andina Real Estate,Fuente del Castillo 33,Lomas de Tecamachalco,Naucalpan de Juárez,"14,800,000",MXN,Casa,high,3,sale
+CCA-574,Andina Real Estate,Lomas de Tlapexco 113,Lomas de Vista Hermosa,Cuajimalpa de Morelos,"17,300,000",MXN,Casa,medium,2,sale
+CCB-147,Andina Real Estate,Julián Adame 137,Lomas de Vista Hermosa,Cuajimalpa de Morelos,"13,700,000",MXN,Casa,medium,2,sale
+CCC-015,Andina Real Estate,Loma de Vista Hermosa 20,Lomas de Vista Hermosa,Cuajimalpa de Morelos,"11,500,000",MXN,Casa,high,3,sale
+CCJ-084,Andina Real Estate,Fuente de Diana 203,Lomas de Tecamachalco,Naucalpan de Juárez,"11,990,000",MXN,Casa,medium,2,sale
+CCL-175,Andina Real Estate,Julián Adame 137,Lomas de Vista Hermosa,Cuajimalpa de Morelos,"19,300,000",MXN,Casa en condominio,high,3,sale
+CCM-723,Andina Real Estate,Condominio Abedules,Fraccionamiento Real del Bosque,Corregidora,"4,750,000",MXN,Casa,medium,2,sale
+CEJ-808,Andina Real Estate,Circuito Economistas 35,Ciudad Satélite,Naucalpan de Juárez,"7,750,000",MXN,Casa,medium,2,sale
+CHA-762,Andina Real Estate,Calzada Desierto de los Leones 5290,Tetelpan,Alvaro Obregón,"14,000,000",MXN,Casa,high,3,sale
+CHG-607,Andina Real Estate,Av. Club de Golf Lomas 14,Lomas Country Club,Naucalpan de Juárez,"15,000,000",MXN,Casa,medium,2,sale
+CJR-944,Andina Real Estate,Capital Sur,Capital Sur,El Marqués,"3,699,000",MXN,Casa,medium,2,sale
+CMI-183,Andina Real Estate,Bosque Real,Bosque Real,Huixquilucan,"17,600,000",MXN,Casa,high,3,sale
+CNG-888,Andina Real Estate,Bosque de Limas,Bosques de las Lomas,Cuajimalpa de Morelos,"48,000,000",MXN,Casa,medium,2,sale
+CQC-435,Andina Real Estate,Paseo Ahuehuetes Norte 286,Bosque de las Lomas,Miguel Hidalgo,"21,900,000",MXN,Casa,medium,2,sale
+CQK-834,Andina Real Estate,Lafontaine 315,Polanco,Miguel Hidalgo,"50,000,000",MXN,Casa,medium,2,sale
+CQY-809,Andina Real Estate,Hacienda La Antigua 17,Hacienda de las Palmas,Huixquilucan,"13,225,000",MXN,Casa,medium,2,sale
+CUP-373,Andina Real Estate,Guadalupana 10,Mineral de Pozos,San Luis de la Paz,"4,000,000",MXN,Casa,medium,2,sale
+CVN-623,Andina Real Estate,Fontana Bella 14,Avándaro,Valle de Bravo,"20,200,000",MXN,Casa,medium,2,sale
+CVP-548,Andina Real Estate,Fraccionamiento Cañadas del Lago,Fraccionamiento Cañadas del Lago,Corregidora,"7,950,000",MXN,Casa,medium,2,sale
+CWA-017,Andina Real Estate,Avenida 5 Poniente 538,Centro,Puebla,"20,000,000",MXN,Edificio,high,3,sale
+CXU-665,Andina Real Estate,Francisco Peñuñuri 27,Del Carmen,Coyoacán,"18,500,000",MXN,Casa,medium,2,sale
+CYS-184,Andina Real Estate,Av. José María Castorena 585,El Molino,Cuajimalpa de Morelos,"12,490,000",MXN,Casa,medium,2,sale
+DAA-286,Andina Real Estate,Av Bernardo Quintana 90,Santa Fe La Loma,Alvaro Obregón,"12,500,000",MXN,Departamento,high,3,sale
+DAB-965,Andina Real Estate,Segunda Cerrada del Moral 29,Tetelpan,Alvaro Obregón,"5,380,000",MXN,Departamento,medium,2,sale
+DAC-048,Andina Real Estate,Gutiérrez Zamora 252,Ampliación Alpes,Alvaro Obregón,"19,900,000",MXN,Departamento,high,3,sale
+DAF-084,Andina Real Estate,Torre Vista del Campo,Santa Fe Cuajimalpa,Cuajimalpa de Morelos,"21,000,000",MXN,Departamento,high,3,sale
+DAN-715,Andina Real Estate,Revo 1386,Guadalupe Inn,Alvaro Obregón,"6,500,000",MXN,Departamento,high,3,sale
+DBD-998,Andina Real Estate,Av. Coyoacán 910 ,Del Valle Centro,Benito Juárez,"8,520,000",MXN,Departamento,medium,2,sale
+DBF-674,Andina Real Estate,Nápoles 86,Juárez,Cuauhtémoc,"3,087,622",MXN,Departamento,medium,2,sale
+DCB-389,Andina Real Estate,Bosques de la Reforma 1592,Cumbres Reforma,Cuajimalpa de Morelos,"1,200,000",USD,Departamento,high,3,sale
+DCC-967,Andina Real Estate,Altavista 61,Santa Fe Cuajimalpa,Cuajimalpa de Morelos,"15,950,000",MXN,Departamento,high,3,sale
+DCE-238,Andina Real Estate,Nápoles 86,Juárez,Cuauhtémoc,"5,934,313",MXN,Departamento,high,3,sale
+DCG-615,Andina Real Estate,Avenida Ejército Nacional Mexicano 769,Polanco,Miguel Hidalgo,"11,500,000",MXN,Departamento,medium,2,sale
+DCN-113,Andina Real Estate,Carr. México-Toluca 5454,El Yaqui,Cuajimalpa de Morelos,"7,000,000",MXN,Departamento,medium,2,sale
+DCO-364,Andina Real Estate,Av. P.º de la Reforma 150,Juárez,Cuauhtémoc,"12,633,598",MXN,Departamento,medium,2,sale
+DCP-533,Andina Real Estate,Altavista 61,Santa Fe Cuajimalpa,Cuajimalpa de Morelos,"21,000,000",MXN,Departamento,high,3,sale
+DCQ-667,Andina Real Estate,Av. Baja California 246,Hipódromo,Cuauhtémoc,"7,300,000",MXN,Departamento,high,3,sale
+DCT-926,Andina Real Estate,"José María Iglesias 59, Tabacalera, Ciudad de México, CDMX, México ",Tabacalera,Cuauhtémoc,"4,100,000",MXN,Departamento,high,3,sale
+DCU-469,Andina Real Estate,Av Nuevo León 219,Hipódromo Condesa,Cuauhtémoc,"8,300,000",MXN,Departamento,high,3,sale
+DCV-222,Andina Real Estate,Avenida Homero 1925,Polanco,Miguel Hidalgo,"11,900,000",MXN,Departamento,medium,2,sale
+DCV-338,Andina Real Estate,Julián Adame 91,Jardines de la Palma,Cuajimalpa de Morelos,"8,450,000",MXN,Departamento,high,3,sale
+DDF-342,Andina Real Estate,Emerson 239,Polanco,Miguel Hidalgo,"15,500,000",MXN,Departamento,medium,2,sale
+DDI-231,Andina Real Estate,Rubén Darío 225,Polanco,Miguel Hidalgo,"82,308,027",MXN,Departamento,medium,2,sale
+DDV-857,Andina Real Estate,Calle Lago Zurich 168,Ampliación Granada,Miguel Hidalgo,"9,500,000",MXN,Departamento,medium,2,sale
+DDV-898,Andina Real Estate,Avenida Jaime Balmes 62,Polanco,Miguel Hidalgo,"9,800,000",MXN,Departamento,medium,2,sale
+DDX-473,Andina Real Estate,Schiller 317,Polanco,Miguel Hidalgo,"17,900,000",MXN,Departamento,medium,2,sale
+DEB-972,Andina Real Estate,Ferrocarril de Cuernavaca 307,Los Manzanos,Miguel Hidalgo,"3,100,000",MXN,Departamento,medium,2,sale
+DED-158,Andina Real Estate,Calle General Francisco Murguía,Escandón I Sección,Miguel Hidalgo,"8,900,000",MXN,Departamento,medium,2,sale
+DFX-857,Andina Real Estate,Blvd. Adolfo López Mateos 2100,Los Alpes,Alvaro Obregón,"6,800,000",MXN,Departamento,medium,2,sale
+DHD-974,Andina Real Estate,Avenida Sudermann 329,Polanco,Miguel Hidalgo,"14,250,000",MXN,Departamento,medium,2,sale
+DHO-267,Andina Real Estate,Antiguo Camino a Tecamachalco,El Olivo,Huixquilucan,"9,000,000",MXN,Departamento,high,3,sale
+DID-489,Andina Real Estate,Platón 339,Polanco,Miguel Hidalgo,"21,500,000",MXN,Departamento,medium,2,sale
+DJE-843,Andina Real Estate,Galileo 331,Polanco,Miguel Hidalgo,"23,000,000",MXN,Departamento,high,3,sale
+DJL-485,Andina Real Estate,Fuente de La Alegría,Lomas de Tecamachalco,Naucalpan de Juárez,"7,900,000",MXN,Departamento,medium,2,sale
+DJW-346,Andina Real Estate,Av Nuevo León 219,Hipódromo Condesa,Cuauhtémoc,"13,900,000",MXN,Departamento,medium,2,sale
+DKQ-093,Andina Real Estate,Rubén Darío 225,Polanco,Miguel Hidalgo,"93,813,970",MXN,Departamento,medium,2,sale
+DMA-017,Andina Real Estate,Calle Arquímedes 11,Polanco,Miguel Hidalgo,"1,890,000",USD,Departamento,high,3,sale
+DMA-171,Andina Real Estate,Calle Arquímedes 50,Polanco,Miguel Hidalgo,"1,650,000",USD,Departamento,high,3,sale
+DMA-543,Andina Real Estate,Av. Ejército Nacional Mexicano 769,Ampliación Granada,Miguel Hidalgo,"59,000,000",MXN,Departamento,high,3,sale
+DMB-080,Andina Real Estate,A. Musset 326,Polanco,Miguel Hidalgo,"32,000,000",MXN,Departamento,high,3,sale
+DMB-473,Andina Real Estate,Rosedal 9,Lomas de Chapultepec,Miguel Hidalgo,"20,000,000",MXN,Departamento,high,3,sale
+DMB-661,Andina Real Estate,Goldsmith 214,Polanco,Miguel Hidalgo,"43,500,000",MXN,Departamento,medium,2,sale
+DMC-109,Andina Real Estate,Galileo 119,Polanco,Miguel Hidalgo,"2,580,000",USD,Departamento,high,3,sale
+DMD-464,Andina Real Estate,Calle Arquímedes 11,Polanco,Miguel Hidalgo,"25,000,000",MXN,Departamento,high,3,sale
+DMI-444,Andina Real Estate,Campos Elíseos,Polanco,Miguel Hidalgo,"35,000,000",MXN,Departamento,high,3,sale
+DMJ-628,Andina Real Estate,Calle Lago Zurich 243,Ampliación Granada,Miguel Hidalgo,"9,950,000",MXN,Departamento,medium,2,sale
+DML-316,Andina Real Estate,Lago Andromaco 1,Ampliación Granada,Miguel Hidalgo,"6,950,000",MXN,Departamento,high,3,sale
+DML-367,Andina Real Estate,Calle Arquímedes 87,Polanco,Miguel Hidalgo,"14,000,000",MXN,Departamento,medium,2,sale
+DMM-729,Andina Real Estate,C. Lago Filt 7,Granada,Miguel Hidalgo,"8,800,000",MXN,Departamento,medium,2,sale
+DMN-265,Andina Real Estate,Rincón del Bosque 47,Polanco,Miguel Hidalgo,"25,000,000",MXN,Departamento,high,3,sale
+DMQ-041,Andina Real Estate,Rincón del Bosque 47,Polanco,Miguel Hidalgo,"26,500,000",MXN,Departamento,high,3,sale
+DMQ-298,Andina Real Estate,Paseo de Los Ahuehuetes Norte 768,Bosque de las Lomas,Miguel Hidalgo,"10,800,000",MXN,Departamento,high,3,sale
+DMQ-894,Andina Real Estate,Goldsmith 345,Polanco,Miguel Hidalgo,"22,500,000",MXN,Departamento,high,3,sale
+DMR-427,Andina Real Estate,Rincón del Bosque 47,Polanco,Miguel Hidalgo,"24,000,000",MXN,Departamento,medium,2,sale
+DMR-781,Andina Real Estate,Rincón del Bosque 47,Polanco,Miguel Hidalgo,"36,000,000",MXN,Departamento,medium,2,sale
+DMS-482,Andina Real Estate,Calle Monte Elbruz 148,Polanco,Miguel Hidalgo,"16,000,000",MXN,Departamento,high,3,sale
+DMT-462,Andina Real Estate,Lago Iseo 532,Anáhuac I Sección,Miguel Hidalgo,"21,000,000",MXN,Departamento,medium,2,sale
+DMU-943,Andina Real Estate,Blvd. Miguel de Cervantes Saavedra 388,Irrigación,Miguel Hidalgo,"9,500,000",MXN,Departamento,medium,2,sale
+DMV-088,Andina Real Estate,Bosque de Abetos 101,Bosque de las Lomas,Miguel Hidalgo,"10,000,000",MXN,Departamento,high,3,sale
+DMW-952,Andina Real Estate,Presa Pabellón 58,Irrigación,Miguel Hidalgo,"15,552,547",MXN,Departamento,high,3,sale
+DMX-517,Andina Real Estate,Rincón del Bosque 47,Polanco,Miguel Hidalgo,"36,500,000",MXN,Departamento,high,3,sale
+DMX-947,Andina Real Estate,Tennyson 352,Polanco,Miguel Hidalgo,"15,500,000",MXN,Departamento,medium,2,sale
+DND-735,Andina Real Estate,Avenida Eugenia 1016,Del Valle Centro,Benito Juárez,"7,060,000",MXN,Departamento,medium,2,sale
+DNO-593,Andina Real Estate,Av Lomas del Rio Ote,Lomas del Río,Naucalpan de Juárez,"9,900,000",MXN,Departamento,high,3,sale
+DNQ-697,Andina Real Estate,Fuente de Las Águilas 30,Lomas de Tecamachalco,Naucalpan de Juárez,"14,000,000",MXN,Departamento,medium,2,sale
+DNS-906,Andina Real Estate,Avenida Eugenia 1016,Del Valle Centro,Benito Juárez,"4,609,000",MXN,Departamento,medium,2,sale
+DOJ-908,Andina Real Estate,Calle Sócrates 109,Polanco,Miguel Hidalgo,"15,500,000",MXN,Departamento,medium,2,sale
+DOU-907,Andina Real Estate,"Av P de la Reforma 2679, Lomas de Bezares, Miguel Hidalgo, CDMX",Lomas de Bezares,Miguel Hidalgo,"30,000,000",MXN,Departamento,medium,2,sale
+DPA-314,Andina Real Estate,San Isidro 30,Reforma Social,Miguel Hidalgo,"3,800,000",MXN,Departamento,medium,2,sale
+DPJ-861,Andina Real Estate,Av. Secretaría de Marina 700,Lomas del Chamizal,Cuajimalpa de Morelos,"17,900,000",MXN,Departamento,medium,2,sale
+DPZ-485,Andina Real Estate,Cto Interior Avenida Río Churubusco 601,Xoco,Benito Juárez,"6,750,000",MXN,Departamento,medium,2,sale
+DPZ-515,Andina Real Estate,Edgar Allan Poe 327,Polanco,Miguel Hidalgo,"52,783,415",MXN,Departamento,medium,2,sale
+DQD-807,Andina Real Estate,Avenida Cordillera del Himalaya manzana 5 lote 9 Lomas de Juriquilla ,Lomas de Juriquilla,Querétaro,"4,313,454",MXN,Departamento,medium,2,sale
+DQJ-994,Andina Real Estate,Avenida Cordillera del Himalaya manzana 5 lote 9 Lomas de Juriquilla ,Lomas de Juriquilla,Querétaro,"3,550,904",MXN,Departamento,medium,2,sale
+DQP-912,Andina Real Estate,"Cordillera de Himalaya, lomas de juriquilla Queretaro  ",Lomas de Juriquilla,Querétaro,"3,562,014",MXN,Departamento,medium,2,sale
+DQT-319,Andina Real Estate,Avenida Licenciado Manuel Rojas 174,Huixquilucan de Degollado Centro,Huixquilucan,"5,500,000",MXN,Departamento,high,3,sale
+DQV-334,Andina Real Estate,Av. Constituyentes Ote. 40,Villas del Sol,Querétaro,"4,800,000",MXN,Departamento,high,3,sale
+DQZ-971,Andina Real Estate,Avenida Cuauhtémoc 997,Narvarte Poniente,Benito Juárez,"7,000,000",MXN,Departamento,medium,2,sale
+DRV-757,Andina Real Estate,Avenida Sudermann 225,Polanco,Miguel Hidalgo,"15,800,000",MXN,Departamento,medium,2,sale
+DRY-839,Andina Real Estate,Blum Residencial Santa Fe,Santa Fe,Alvaro Obregón,"4,274,133",MXN,Departamento,high,3,sale
+DSK-028,Andina Real Estate,Aristóteles 131,Polanco,Miguel Hidalgo,"20,600,000",MXN,Departamento,medium,2,sale
+DSP-825,Andina Real Estate,Sierra Chalchihui 235,Lomas de Chapultepec,Miguel Hidalgo,"17,900,000",MXN,Departamento,medium,2,sale
+DTL-339,Andina Real Estate,Nápoles 86,Juárez,Cuauhtémoc,"7,169,166",MXN,Departamento,medium,2,sale
+DTL-941,Andina Real Estate,San Isidro 17,Lomas de Chapultepec,Miguel Hidalgo,"6,800,000",MXN,Departamento,medium,2,sale
+DTY-769,Andina Real Estate,Blvd. Adolfo López Mateos 2100,Los Alpes,Alvaro Obregón,"7,700,000",MXN,Departamento,medium,2,sale
+DWV-688,Andina Real Estate,Av. Baja California Sur 67,Roma Sur,Cuauhtémoc,"4,100,000",MXN,Departamento,medium,2,sale
+DWV-925,Andina Real Estate,Lamartine 125,Polanco,Miguel Hidalgo,"14,000,000",MXN,Departamento,medium,2,sale
+DXO-671,Andina Real Estate,Blvd. Adolfo López Mateos 2100,Los Alpes,Alvaro Obregón,"10,700,000",MXN,Departamento,medium,2,sale
+DXQ-122,Andina Real Estate,Aristóteles 131,Polanco,Miguel Hidalgo,"24,900,000",MXN,Departamento,medium,2,sale
+DYE-226,Andina Real Estate,Edgar Allan Poe 327,Polanco,Miguel Hidalgo,"38,283,418",MXN,Departamento,medium,2,sale
+DYH-873,Andina Real Estate,C. Dr. Enrique González Martínez 237,Santa María la Ribera,Cuauhtémoc,"4,396,125",MXN,Departamento,medium,2,sale
+OAA-167,Andina Real Estate,Prolongación Paseo de la Reforma 39,Santa Fe,Alvaro Obregón,"4,500,000",MXN,Oficina,medium,2,sale
+OME-107,Andina Real Estate,Av. P.º de la Reforma 2608,Lomas Altas,Miguel Hidalgo,"10,490,000",MXN,Oficina,medium,2,sale
+OMM-341,Andina Real Estate,Calz. Gral. Mariano Escobedo 710,Anzures,Miguel Hidalgo,"14,000,000",MXN,Oficina,medium,2,sale
+OVZ-085,Andina Real Estate,Mario Pani 750,Santa Fe Cuajimalpa,Cuajimalpa de Morelos,"11,000,000",MXN,Oficina,high,3,sale
+PFQ-232,Andina Real Estate,Boulevard Bosque Real 17,Bosque Real,Huixquilucan,"23,924,288",MXN,PH,high,3,sale
+PHW-811,Andina Real Estate,Privada de la Cumbre 10,Bosque Real,Huixquilucan,"12,600,000",MXN,PH,medium,2,sale
+PMM-544,Andina Real Estate,Jorge Bernard Shaw 50,Polanco,Miguel Hidalgo,"15,000,000",MXN,Departamento,medium,2,sale
+PXB-632,Andina Real Estate,Avenida Sudermann 225,Polanco,Miguel Hidalgo,"15,800,000",MXN,PH,medium,2,sale
+PXK-311,Andina Real Estate,Jorge Bernard Shaw 30,Polanco,Miguel Hidalgo,"15,000,000",MXN,Departamento,medium,2,sale
+TCK-486,Andina Real Estate,Celaya-Dolores Hidalgo 51,San Miguel Tres Cruces,San Miguel de Allende,"3,500,000",MXN,Terreno residencial,high,3,sale
+TNJ-499,Andina Real Estate,Avenida Lomas del Rio Oriente 84,Lomas del Río,Naucalpan de Juárez,"5,900,000",MXN,Terreno residencial,high,3,sale
+TNN-169,Andina Real Estate,Antiguo camino a Huimilpan S/N,Rancho o rancheria Apapataro,Huimilpan,"31,500,000",MXN,Terreno residencial,medium,2,sale
+TXI-675,Andina Real Estate,Interceptor Poniente,Cuautitlán Izcalli Centro Urbano,Cuautitlán Izcalli,"126,000,000",MXN,Terreno industrial,medium,2,sale
+CDA-326,Arpa - Arquitectura y Patrimonio,Aristóteles 340,Polanco,Miguel Hidalgo,"35,000,000",MXN,Terreno residencial,medium,2,sale
+CGA-569,Arpa - Arquitectura y Patrimonio,Av. Tanforan,Lomas Hipódromo,Naucalpan de Juárez,"30,000,000",MXN,Casa,medium,2,sale
+CJF-295,Arpa - Arquitectura y Patrimonio,Retorno San Jorge,La Alteña II,Naucalpan de Juárez,"8,600,000",MXN,Casa,medium,2,sale
+CKS-564,Arpa - Arquitectura y Patrimonio,Av. Tanforan,Lomas Hipódromo,Naucalpan de Juárez,"30,000,000",MXN,Casa,medium,2,sale
+CLZ-074,Arpa - Arquitectura y Patrimonio,Hombres Ilustres 70,Evolución Poniente,Nezahualcóyotl,"3,550,000",MXN,Casa,medium,2,sale
+CMQ-132,Arpa - Arquitectura y Patrimonio,Aristóteles 340,Polanco,Miguel Hidalgo,"35,000,000",MXN,Terreno residencial,medium,2,sale
+CMU-926,Arpa - Arquitectura y Patrimonio,Presa Don Martín,Irrigación,Miguel Hidalgo,"19,500,000",MXN,Casa,medium,2,sale
+CMW-005,Arpa - Arquitectura y Patrimonio,Boulevard de los Virreyes 520,Lomas de Chapultepec,Miguel Hidalgo,"53,000,000",MXN,Casa,high,3,sale
+CNM-144,Arpa - Arquitectura y Patrimonio,Avenida Mexico 5651,Huichapan,Xochimilco,"5,900,000",MXN,Casa,high,3,sale
+CUP-561,Arpa - Arquitectura y Patrimonio,José Luis Cuevas,Ciudad Satélite,Naucalpan de Juárez,"10,300,000",MXN,Casa,medium,2,sale
+DBD-972,Arpa - Arquitectura y Patrimonio,Río Danubio,Cuauhtémoc,Cuauhtémoc,"9,700,000",MXN,Departamento,medium,2,sale
+DCF-209,Arpa - Arquitectura y Patrimonio,Av Chapultepec 430,Roma Norte,Cuauhtémoc,"5,310,000",MXN,Departamento,medium,2,sale
+DCH-954,Arpa - Arquitectura y Patrimonio,Salamanca 11,Roma Norte,Cuauhtémoc,"4,609,681",MXN,Departamento,medium,2,sale
+DCW-181,Arpa - Arquitectura y Patrimonio,Rubén Darío 43,Polanco,Miguel Hidalgo,"35,197,200",MXN,Departamento,medium,2,sale
+DDR-113,Arpa - Arquitectura y Patrimonio,Calle Pitágoras 349,Narvarte Poniente,Benito Juárez,"7,700,000",MXN,Departamento,medium,2,sale
+DEE-274,Arpa - Arquitectura y Patrimonio,Avenida Ricardo Flores Magón 98,Guerrero,Cuauhtémoc,"3,720,450",MXN,Departamento,medium,2,sale
+DES-228,Arpa - Arquitectura y Patrimonio,Séneca 139,Polanco,Miguel Hidalgo,"18,500,000",MXN,Departamento,medium,2,sale
+DFB-595,Arpa - Arquitectura y Patrimonio,Cerrada Salamanca 11,Roma Norte,Cuauhtémoc,"4,876,160",MXN,Departamento,medium,2,sale
+DHX-145,Arpa - Arquitectura y Patrimonio,Avenida Homero 1702,Polanco,Miguel Hidalgo,"8,200,000",MXN,Departamento,medium,2,sale
+DHZ-994,Arpa - Arquitectura y Patrimonio,Hacienda Las Golondrinas 27,Hacienda de las Palmas,Huixquilucan,"8,900,000",MXN,Departamento,medium,2,sale
+DIH-877,Arpa - Arquitectura y Patrimonio,Fray Angelico 34,Santa María Nonoalco,Benito Juárez,"6,106,070",MXN,Departamento,medium,2,sale
+DJH-188,Arpa - Arquitectura y Patrimonio,Avenida Lomas Verdes 77,Santa Cruz ácatlán,Naucalpan de Juárez,"6,800,000",MXN,Departamento,medium,2,sale
+DKH-625,Arpa - Arquitectura y Patrimonio,Galileo 110,Polanco,Miguel Hidalgo,"1,320,000",USD,Departamento,medium,2,sale
+DMF-776,Arpa - Arquitectura y Patrimonio,Avenida Ingenieros Militares 152,San Lorenzo Tlaltenango,Miguel Hidalgo,"4,200,000",MXN,Departamento,medium,2,sale
+DMJ-295,Arpa - Arquitectura y Patrimonio,Calle Lago Mayor 82,Los Manzanos,Miguel Hidalgo,"6,779,000",MXN,Departamento,high,3,sale
+DMS-731,Arpa - Arquitectura y Patrimonio,Avenida Homero 1604,Polanco,Miguel Hidalgo,"9,300,000",MXN,Departamento,medium,2,sale
+DOF-686,Arpa - Arquitectura y Patrimonio,RIO GRIJALVA 35,Cuauhtémoc,Cuauhtémoc,"6,950,000",MXN,Departamento,medium,2,sale
+DOK-759,Arpa - Arquitectura y Patrimonio,Hacienda de Palmas no.14,Hacienda de las Palmas,Huixquilucan,"9,020,000",MXN,Departamento,medium,2,sale
+DOV-524,Arpa - Arquitectura y Patrimonio,Polanco V Sección,Polanco,Miguel Hidalgo,"21,900,000",MXN,Departamento,medium,2,sale
+DQH-654,Arpa - Arquitectura y Patrimonio,Mapimí 41,Valle Gómez,Cuauhtémoc,"3,281,145",MXN,Departamento,medium,2,sale
+DUK-472,Arpa - Arquitectura y Patrimonio,Calle de Chiapas 13,Roma Norte,Cuauhtémoc,"11,700,000",MXN,Departamento,medium,2,sale
+DUY-924,Arpa - Arquitectura y Patrimonio,Calle Escollo 67,Ampliación las Águilas,Alvaro Obregón,"3,200,000",MXN,Departamento,medium,2,sale
+DVT-155,Arpa - Arquitectura y Patrimonio,Tabacalera,Tabacalera,Cuauhtémoc,"9,500,000",MXN,Departamento,medium,2,sale
+DWH-072,Arpa - Arquitectura y Patrimonio,Mier y Pesado,Del Valle Norte,Benito Juárez,"10,200,000",MXN,Departamento,high,3,sale
+DWP-582,Arpa - Arquitectura y Patrimonio,Avenida Revolución 1905,San Ángel,Alvaro Obregón,"5,600,000",MXN,Departamento,medium,2,sale
+DWZ-769,Arpa - Arquitectura y Patrimonio,Séneca 139,Polanco,Miguel Hidalgo,"26,850,000",MXN,Departamento,medium,2,sale
+DXI-081,Arpa - Arquitectura y Patrimonio,Laguna de Mayran 166,Anáhuac I Sección,Miguel Hidalgo,"4,850,000",MXN,Departamento,medium,2,sale
+EMD-499,Arpa - Arquitectura y Patrimonio,Avenida Ejército Nacional 430,Polanco,Miguel Hidalgo,"140,000,000",MXN,Edificio,high,3,sale
+ENC-054,Arpa - Arquitectura y Patrimonio,Avenida Ejército Nacional 430,Polanco,Miguel Hidalgo,"140,000,000",MXN,Edificio,high,3,sale
+LXF-162,Arpa - Arquitectura y Patrimonio,Av Chapultepec 430,Roma Norte,Cuauhtémoc,"19,612,000",MXN,Local,medium,2,sale
+OWI-836,Arpa - Arquitectura y Patrimonio,Laguna de Términos 221,Granada,Miguel Hidalgo,"7,000,000",MXN,Oficina,medium,2,sale
+PML-431,Arpa - Arquitectura y Patrimonio,Emerson 124,Polanco,Miguel Hidalgo,"12,800,000",MXN,PH,medium,2,sale
+TAX-948,Arpa - Arquitectura y Patrimonio,Rio de la Magdalena 180 Bis,La Otra Banda,Alvaro Obregón,"9,000,000",MXN,Terreno residencial,medium,2,sale
+TJU-596,Arpa - Arquitectura y Patrimonio,Carretera Toluca - México KM 17.5,Lomas de Vista Hermosa,Cuajimalpa de Morelos,"120,000,000",MXN,Casa,high,3,sale
+TOD-812,Arpa - Arquitectura y Patrimonio,Amanali Country Club & Nautica,Tepeji de Ocampo Centro,Tepeji del Río de Ocampo,"2,200,000",MXN,Terreno residencial,medium,2,sale
+TYP-727,Arpa - Arquitectura y Patrimonio,Rio de la Magdalena 180 Bis,La Otra Banda,Alvaro Obregón,"9,000,000",MXN,Terreno residencial,medium,2,sale
+TYX-211,Arpa - Arquitectura y Patrimonio,División del Norte 56A,Ampliación Los Reyes,La Paz,"8,800,000",MXN,Terreno residencial,medium,2,sale
+CBV-656,Bloco Bienes Raices,Calle General Antonio León 39,San Miguel Chapultepec,Miguel Hidalgo,"16,000,000",MXN,Casa en condominio,medium,2,sale
+CMH-076,Bloco Bienes Raices,Lomas de Bezares,Lomas de Bezares,Miguel Hidalgo,"40,000,000",MXN,Casa en condominio,medium,2,sale
+CVN-523,Bloco Bienes Raices,Avandaro,Avándaro,Valle de Bravo,"20,000,000",MXN,Casa,medium,2,sale
+DAE-296,Bloco Bienes Raices,Anillo Periférico,Los Alpes,Alvaro Obregón,"10,695,220",MXN,Departamento,medium,2,sale
+DAW-989,Bloco Bienes Raices,Anillo Periférico,Los Alpes,Alvaro Obregón,"6,870,344",MXN,Departamento,medium,2,sale
+DBV-799,Bloco Bienes Raices,Illinois,Ciudad de los Deportes,Benito Juárez,"10,660,560",MXN,Departamento,medium,2,sale
+DBW-608,Bloco Bienes Raices,Calle Concepción Beistegui,Del Valle Centro,Benito Juárez,"16,565,100",MXN,Departamento,medium,2,sale
+DBX-046,Bloco Bienes Raices,Illinois,Ciudad de los Deportes,Benito Juárez,"8,670,000",MXN,Departamento,medium,2,sale
+DCO-711,Bloco Bienes Raices,Avenida Chapultepec 430,Roma Norte,Cuauhtémoc,"4,350,000",MXN,Departamento,medium,2,sale
+DCX-679,Bloco Bienes Raices,Calle de Chiapas,Roma Norte,Cuauhtémoc,"4,569,595",MXN,Departamento,high,3,sale
+DMQ-327,Bloco Bienes Raices,Rubén Darío 43,Polanco,Miguel Hidalgo,"35,197,200",MXN,Departamento,medium,2,sale
+BLT-242,Casane Properties,"México 3, Ejido de San Juan coapanoaya rio hondito municipio de ocoyoacac",Río Hondito,Ocoyoacac,"100,000,000",MXN,Bodega comercial,medium,2,sale
+CAA-212,Casane Properties,Calle El Risco 351,Jardines del Pedregal,Alvaro Obregón,"92,000,000",MXN,Casa,medium,2,sale
+CAF-424,Casane Properties,VILLAS PARAISO PRINCESS,Fraccionamiento Puerto Marqués,Acapulco de Juárez,"6,200,000",MXN,Casa en condominio,medium,2,sale
+CAO-867,Casane Properties,Avenida Monte Blanco 740,Lomas de Chapultepec,Miguel Hidalgo,"26,000,000",MXN,Casa,medium,2,sale
+CAX-323,Casane Properties,Encino Grande 61,Tetelpan,Alvaro Obregón,"20,950,000",MXN,Casa en condominio,medium,2,sale
+CBG-446,Casane Properties,Calle Arbolada Norte 1,Cancún,Benito Juárez,"5,600,000",MXN,Casa,medium,2,sale
+CCU-509,Casane Properties,Loma Bonita 25,Lomas de Vista Hermosa,Cuajimalpa de Morelos,"42,264,180",MXN,Departamento,high,3,sale
+CCX-127,Casane Properties,Loma Bonita 25,Lomas de Vista Hermosa,Cuajimalpa de Morelos,"57,500,000",MXN,Departamento,medium,2,sale
+CCY-702,Casane Properties,Bosque de Limas 55,Bosques de las Lomas,Ciudad de México,"45,000,000",MXN,Casa,medium,2,sale
+CDM-749,Casane Properties,Bosque de Castaños 162,Bosque de las Lomas,Miguel Hidalgo,"19,100,000",MXN,Casa,medium,2,sale
+CGN-126,Casane Properties,Cumbres de Acultzingo 220,Lomas Altas,Miguel Hidalgo,"76,000,000",MXN,Casa,medium,2,sale
+CHC-377,Casane Properties,San Francisco 2,San Miguel de Allende Centro,San Miguel de Allende,"29,000,000",MXN,Casa en condominio,medium,2,sale
+CHS-906,Casane Properties,Privada de la Floresta 39 real del acueducto bosques real,Bosque Real,Huixquilucan,"34,000,000",MXN,Casa,medium,2,sale
+CJD-652,Casane Properties,Rosaleda 43,Lomas Altas,Miguel Hidalgo,"62,000,000",MXN,Casa en condominio,medium,2,sale
+CKG-647,Casane Properties,Hacienda Cerro Viejo 12,Hacienda de las Palmas,Huixquilucan,"10,900,000",MXN,Casa en condominio,medium,2,sale
+CMA-712,Casane Properties,Bosque de Tecas 43,Bosque de las Lomas,Miguel Hidalgo,"70,000,000",MXN,Casa,high,3,sale
+CMG-776,Casane Properties,Lomas de Bezares,Lomas de Bezares,Miguel Hidalgo,"32,000,000",MXN,Casa,medium,2,sale
+CMI-664,Casane Properties,Privada de Ladera 11,Lomas de Bezares,Miguel Hidalgo,"35,500,000",MXN,Casa en condominio,high,3,sale
+CMR-264,Casane Properties,Lafayette 135,Anzures,Miguel Hidalgo,"27,500,000",MXN,Casa,medium,2,sale
+CMZ-862,Casane Properties,Calle 49 481B,Merida Centro,Mérida,"11,000,000",MXN,Casa,medium,2,sale
+CUP-259,Casane Properties,Yautepec,Yautepec Centro,Yautepec,"2,750,000",MXN,Casa,medium,2,sale
+CVA-037,Casane Properties,Arete lote 9 A,Avándaro,Valle de Bravo,"23,799,000",MXN,Casa en condominio,high,3,sale
+CVA-078,Casane Properties,Rancho Avándaro Country Club,Tenantongo,Valle de Bravo,"23,800,000",MXN,Casa en condominio,high,3,sale
+CYU-886,Casane Properties,Rocas 122,Jardines del Pedregal,Alvaro Obregón,"52,000,000",MXN,Casa,medium,2,sale
+DAG-536,Casane Properties,Av. San Jerónimo 369,Tizapan,Alvaro Obregón,"16,000,000",MXN,Departamento,medium,2,sale
+DAL-935,Casane Properties,Loma de Vista Hermosa 44,Santa Fe,Alvaro Obregón,"26,900,000",MXN,Departamento,medium,2,sale
+DCA-854,Casane Properties,Boulevard Reforma 5392,Santa Fe Cuajimalpa,Cuajimalpa de Morelos,"8,990,000",MXN,Departamento,high,3,sale
+DCA-859,Casane Properties,Contabilidad 16,Parques de la Herradura,Huixquilucan,"16,500,000",MXN,Departamento,high,3,sale
+DCA-860,Casane Properties,Contabilidad 16,Parques de la Herradura,Huixquilucan,"16,490,000",MXN,Departamento,high,3,sale
+DCB-119,Casane Properties,Secretaria de marina 516,Lomas del Chamizal,Cuajimalpa de Morelos,"8,400,000",MXN,Departamento,medium,2,sale
+DCB-477,Casane Properties,Av. Tamaulipas 460,Santa Fe Cuajimalpa,Cuajimalpa de Morelos,"89,900,000",MXN,Departamento,high,3,sale
+DCN-633,Casane Properties,Bosque de Tabachines 327,Bosques de las Lomas,Cuajimalpa de Morelos,"25,000,000",MXN,Departamento,medium,2,sale
+DCX-402,Casane Properties,Sierra Tezonco 180,Lomas de Chapultepec,Miguel Hidalgo,"10,900,000",MXN,Departamento,high,3,sale
+DCY-978,Casane Properties,Be Grand® Reforma (acceso residencial),Tabacalera,Cuauhtémoc,"9,500,000",MXN,Departamento,high,3,sale
+DDV-223,Casane Properties,Antiguo Camino a Tecamachalco 100,El Olivar,Naucalpan de Juárez,"8,500,000",MXN,Departamento,medium,2,sale
+DFB-582,Casane Properties,Calle Indiana 43,Nápoles,Benito Juárez,"5,495,000",MXN,Departamento,medium,2,sale
+DJV-482,Casane Properties,Blvrd Bosque Real 43-torre 4,Bosque Real,Huixquilucan,"27,800,000",MXN,Departamento,medium,2,sale
+DJY-627,Casane Properties,Goldsmith 140 ,Polanco,Miguel Hidalgo,"45,000,000",MXN,Departamento,medium,2,sale
+DKI-578,Casane Properties,Calzada de Leandro Valle Oriente 202,Miraval,Cuernavaca,"4,000,000",MXN,Departamento,medium,2,sale
+DLC-175,Casane Properties,Uptown Interlomas,Jesús del Monte,Huixquilucan,"8,850,000",MXN,Departamento,medium,2,sale
+DLM-688,Casane Properties,Avenida Club de Golf Lomas Oeste 111,Lomas Country Club,Naucalpan de Juárez,"24,700,000",MXN,Departamento,medium,2,sale
+DME-487,Casane Properties,Ruben Dario 225 RD225,Polanco,Miguel Hidalgo,"149,400,000",MXN,Departamento,high,3,sale
+DMF-807,Casane Properties,Rubén Darío 115,Polanco,Miguel Hidalgo,"3,000,000",USD,Departamento,medium,2,sale
+DMJ-523,Casane Properties,Campos Elíseos,Polanco,Miguel Hidalgo,"48,000,000",MXN,Departamento,medium,2,sale
+DML-489,Casane Properties,Lamartine 128,Polanco,Miguel Hidalgo,"23,000,000",MXN,Departamento,high,3,sale
+DMN-459,Casane Properties,Aristóteles 320,Polanco,Miguel Hidalgo,"27,000,000",MXN,Departamento,high,3,sale
+DMV-451,Casane Properties,Rubén Darío 239,Polanco,Miguel Hidalgo,"55,000,000",MXN,Departamento,medium,2,sale
+DMV-575,Casane Properties,Rubén Darío 225,Polanco,Miguel Hidalgo,"4,900,000",USD,Departamento,medium,2,sale
+DMY-135,Casane Properties,Temístocles 242,Polanco,Miguel Hidalgo,"12,650,000",MXN,Departamento,medium,2,sale
+DMZ-378,Casane Properties,Campos Elíseos 75,Polanco,Miguel Hidalgo,"55,000,000",MXN,Departamento,high,3,sale
+DNK-394,Casane Properties,Paseo de los Laureles 444,Lomas de Vista Hermosa,Cuajimalpa de Morelos,"20,000,000",MXN,Departamento,medium,2,sale
+DNM-921,Casane Properties,Avenida Lomas del Rio Oriente 123,Lomas del Río,Naucalpan de Juárez,"10,500,000",MXN,Departamento,high,3,sale
+DNP-863,Casane Properties,Avenida Lomas del Rio Oriente 123,Lomas del Río,Naucalpan de Juárez,"10,500,000",MXN,Departamento,high,3,sale
+DPS-054,Casane Properties,Rubén Darío 225,Polanco,Miguel Hidalgo,"6,100,000",USD,Departamento,medium,2,sale
+DSA-425,Casane Properties,Boulevard Benito Juárez 20,Zona Hotelera Tangolunda,Santa María Huatulco,"4,760,760",MXN,Departamento,high,3,sale
+DSK-626,Casane Properties,Agustín González de Cossío 21A,Del Valle Norte,Benito Juárez,"9,490,000",MXN,Departamento,medium,2,sale
+DST-652,Casane Properties,Boulevard Benito Juárez 20,Zona Hotelera Tangolunda,Santa María Huatulco,"5,771,500",MXN,Departamento,high,3,sale
+DSY-314,Casane Properties,Bosques de la Reforma 1455,Bosques de las Lomas,Cuajimalpa de Morelos,"14,450,000",MXN,Departamento,medium,2,sale
+DTA-636,Casane Properties,Calle 12 Sur,Tulum,Tulum,"550,000",USD,Departamento,high,3,sale
+DTY-198,Casane Properties,PLAYAMAR TRES CANTOS,Plan de los Amates,Acapulco de Juárez,"15,500,000",MXN,Departamento,medium,2,sale
+DUF-182,Casane Properties,Av. Vasco de Quiroga 3833,Santa Fe Cuajimalpa,Cuajimalpa de Morelos,"16,000,000",MXN,Departamento,medium,2,sale
+DVP-493,Casane Properties,Sierra Guadarrama 65,Lomas de Chapultepec,Miguel Hidalgo,"11,500,000",MXN,Departamento,high,3,sale
+DXP-677,Casane Properties,Av. Secretaría de Marina 92,Lomas del Chamizal,Cuajimalpa de Morelos,"40,000,000",MXN,Departamento,high,3,sale
+DZA-063,Casane Properties,Marea Beachfront Villas,Marina Ixtapa,Zihuatanejo de Azueta,"395,000",USD,Departamento,high,3,sale
+DZB-485,Casane Properties,Tintoreto 18,Santa María Nonoalco,Benito Juárez,"5,850,000",MXN,Departamento,medium,2,sale
+EBA-009,Casane Properties,Louisiana 203,Nápoles,Benito Juárez,"59,900,000",MXN,Edificio,high,3,sale
+ECA-514,Casane Properties,Calle Río Tiber 42,Cuauhtémoc,Cuauhtémoc,"39,500,000",MXN,Edificio,high,3,sale
+EGN-241,Casane Properties,Calle Pitágoras 1236,Del Valle Centro,Benito Juárez,"35,000,000",MXN,Edificio,medium,2,sale
+PBJ-706,Casane Properties,Calle Río Elba 13,Cuauhtémoc,Cuauhtémoc,"8,390,000",MXN,PH,medium,2,sale
+PGU-404,Casane Properties,Av. Stim 28,Bosque de las Lomas,Miguel Hidalgo,"5,000,000",USD,PH,medium,2,sale
+TMI-735,Casane Properties,Residencial La Reserva,Hacienda Canicab,Acanceh,"1,300,000",MXN,Terreno residencial,medium,2,sale
+TML-063,Casane Properties,Calle S/S y S/N Llano Grande S/N Metepec,Bosques de Metepec,Metepec,"42,000,000",MXN,Terreno residencial,medium,2,sale
+TMS-753,Casane Properties,Cumbres de Acultzingo 129,Lomas Altas,Miguel Hidalgo,"1,625,000",USD,Terreno residencial,high,3,sale
+CAJ-427,Covein Bienes Raices,Altavista 43,Paseo de las Lomas,Alvaro Obregón,"14,000,000",MXN,Casa en condominio,medium,2,sale
+CCO-963,Covein Bienes Raices,Bosque de Palmito,Lomas de Bezares,Miguel Hidalgo,"69,750,000",MXN,Casa,medium,2,sale
+CEA-409,Covein Bienes Raices,Bosque Real,Paseos del Bosque,Naucalpan de Juárez,"26,800,000",MXN,Casa,medium,2,sale
+CIM-837,Covein Bienes Raices,Huizaches 62,Rancho los Colorines,Tlalpan,"7,500,000",MXN,Casa,medium,2,sale
+CMZ-113,Covein Bienes Raices,Doctor Nabor Carrillo 155,Olivar de los Padres,Alvaro Obregón,"9,500,000",MXN,Casa,medium,2,sale
+CXU-467,Covein Bienes Raices,Los Alpes,Los Alpes,Alvaro Obregón,"3,980,000",MXN,Departamento,medium,2,sale
+CYC-496,Covein Bienes Raices,Manuel José Othón 145,San Pedro,Iztacalco,"9,950,000",MXN,Casa,medium,2,sale
+CYZ-117,Covein Bienes Raices,Bosque Real,Bosque Real,Huixquilucan,"18,700,000",MXN,Casa en condominio,medium,2,sale
+DAU-076,Covein Bienes Raices,21 de Marzo 66,Cuajimalpa,Cuajimalpa de Morelos,"5,390,000",MXN,Departamento,high,3,sale
+DCB-635,Covein Bienes Raices,Salamanca 11 ,Roma Norte,Cuauhtémoc,"4,900,000",MXN,Departamento,medium,2,sale
+DCB-979,Covein Bienes Raices,Carretera San Mateo Santa Rosa 99,Santa Fe Cuajimalpa,Cuajimalpa de Morelos,"11,456,573",MXN,Departamento,medium,2,sale
+DCJ-801,Covein Bienes Raices,Origina Santa Fe,Santa Fe Cuajimalpa,Cuajimalpa de Morelos,"10,448,348",MXN,Departamento,medium,2,sale
+DCL-717,Covein Bienes Raices,Origina Santa Fe,Santa Fe Cuajimalpa,Cuajimalpa de Morelos,"10,843,942",MXN,Departamento,medium,2,sale
+DCV-126,Covein Bienes Raices,Carretera San Mateo Santa Rosa 99,Santa Fe Cuajimalpa,Cuajimalpa de Morelos,"11,252,107",MXN,Departamento,medium,2,sale
+DCX-331,Covein Bienes Raices,Origina Santa Fe,Santa Fe Cuajimalpa,Cuajimalpa de Morelos,"11,741,495",MXN,Departamento,medium,2,sale
+DKH-466,Covein Bienes Raices,Urbano Town,Los Alpes,Alvaro Obregón,"4,350,000",MXN,Departamento,medium,2,sale
+DKH-568,Covein Bienes Raices,Av. México Coyoacán 194,Santa Cruz Atoyac,Benito Juárez,"5,900,000",MXN,Departamento,medium,2,sale
+DML-016,Covein Bienes Raices,Avenida Homero 1837B,Polanco,Miguel Hidalgo,"11,600,000",MXN,Departamento,medium,2,sale
+DOV-705,Covein Bienes Raices,Gabriel Mancera 609,Del Valle Norte,Benito Juárez,"5,600,000",MXN,Departamento,medium,2,sale
+DSA-326,Covein Bienes Raices,Icon San Ángel,Los Alpes,Alvaro Obregón,"5,200,000",MXN,Departamento,medium,2,sale
+EAJ-292,Covein Bienes Raices,Avenida Insurgentes Sur 2384,Chimalistac,Alvaro Obregón,"53,000,000",MXN,Edificio,medium,2,sale
+LDZ-504,Covein Bienes Raices,Avenida Candiles 307-local 22,Colinas del Sur,Querétaro,"4,200,000",MXN,Local en centro comercial,medium,2,sale
+OAE-898,Covein Bienes Raices,Anillo Periférico 3580,San Jerónimo Aculco,Alvaro Obregón,"3,980,000",MXN,Oficina,medium,2,sale
+OCW-819,Covein Bienes Raices,Downtown® Reforma,Tabacalera,Cuauhtémoc,"12,500,000",MXN,Oficina,high,3,sale
+TBL-966,Covein Bienes Raices,Camino Real a Cocoyoc,Pueblo Itzamatitlán,Yautepec,"5,750,000",MXN,Terreno comercial,medium,2,sale
+CAA-379,Degohouse,Pino 54,Barrio Santa Catarina,Coyoacán,"24,900,000",MXN,Casa,high,3,sale
+CAF-186,Degohouse,Av Toluca 893,San José del Olivar,Alvaro Obregón,"14,500,000",MXN,Casa en condominio,high,3,sale
+CAU-829,Degohouse,Lluvia 244,Jardines del Pedregal,Alvaro Obregón,"59,500,000",MXN,Casa,high,3,sale
+CAX-692,Degohouse,Boulevard del Arco 39,Condado de Sayavedra,Atizapán de Zaragoza,"10,960,000",MXN,Casa,medium,2,sale
+CCE-576,Degohouse,Calle Prolongación Hidalgo 235,Cuajimalpa,Cuajimalpa de Morelos,"6,050,500",MXN,Casa en condominio,high,3,sale
+CCE-682,Degohouse,calle prolongación hidalgo 235,Cuajimalpa,Cuajimalpa de Morelos,"8,990,000",MXN,Casa en condominio,high,3,sale
+CCK-942,Degohouse,EL BUEN VECINO,El Ébano,Cuajimalpa de Morelos,"3,950,000",MXN,Casa,high,3,sale
+CHP-147,Degohouse,Privada del Acueducto 12,Bosque Real,Huixquilucan,"22,000,000",MXN,Casa en condominio,medium,2,sale
+CHX-382,Degohouse,Real de Amapolas,Bosque Real,Huixquilucan,"15,300,000",MXN,Casa,medium,2,sale
+CLK-858,Degohouse,Maritage Residencial,Llano Grande,Metepec,"7,350,000",MXN,Casa en condominio,medium,2,sale
+CLT-564,Degohouse,Calle Fuente de La Juventud 69,Lomas de Tecamachalco,Naucalpan de Juárez,"18,000,000",MXN,Casa,high,3,sale
+CLZ-615,Degohouse,Calle Seminario 155,Lomas de la Herradura,Huixquilucan,"18,200,000",MXN,Casa en condominio,medium,2,sale
+CMD-279,Degohouse,Paseo de Los Ahuehuetes Norte 593,Bosque de las Lomas,Miguel Hidalgo,"20,500,000",MXN,Casa,medium,2,sale
+CMS-841,Degohouse,Sierra Nevada,Lomas de Chapultepec,Miguel Hidalgo,"3,800,000",USD,Casa,medium,2,sale
+CNA-140,Degohouse,Av. de los Bosques 40,Lomas de Tecamachalco,Naucalpan de Juárez,"16,900,000",MXN,Casa,high,3,sale
+CNC-082,Degohouse,Alhambra 1113,Portales Norte,Benito Juárez,"7,785,000",MXN,Casa en condominio,medium,2,sale
+CTN-965,Degohouse,Monte de Aripo 30,Jardines en la Montaña,Tlalpan,"19,000,000",MXN,Casa,high,3,sale
+CVO-087,Degohouse,Privada Acacias,Cuajimalpa,Cuajimalpa de Morelos,"5,200,000",MXN,Casa en condominio,medium,2,sale
+CVR-525,Degohouse,Cacamatzin 4,Arenal,Venustiano Carranza,"10,500,000",MXN,Casa,high,3,sale
+CWP-085,Degohouse,Avenida Jesús del Monte 75,Jesús del Monte,Huixquilucan,"5,200,000",MXN,Casa,high,3,sale
+CWP-647,Degohouse,Avenida Jesús del Monte 75,Jesús del Monte,Huixquilucan,"5,400,000",MXN,Casa,medium,2,sale
+CYO-074,Degohouse,Odisea 48,Lomas Axomiatla,Alvaro Obregón,"9,500,000",MXN,Casa,high,3,sale
+CZQ-923,Degohouse,"Praderas de la Asunción, Sección Santa Rita",San Salvador Tizatlalli,Metepec,"4,881,000",MXN,Casa,high,3,sale
+CZU-959,Degohouse,Retorno del Arroyo 4,Club de Golf Bellavista,Atizapán de Zaragoza,"20,000,000",MXN,Casa en condominio,high,3,sale
+DAA-796,Degohouse,Avenida Cuitláhuac 3125,Obrero Popular,Azcapotzalco,"3,905,000",MXN,PH,high,3,sale
+DAA-802,Degohouse,Blvd. Bellavista,Adolfo López Mateos,Atizapán de Zaragoza,"13,044,380",MXN,Departamento,medium,2,sale
+DAC-907,Degohouse,Av Bernardo Quintana 105,Santa Fe La Loma,Alvaro Obregón,"10,000,000",MXN,Departamento,high,3,sale
+DAK-967,Degohouse,Blvd. Adolfo López Mateos 2113,Los Alpes,Alvaro Obregón,"6,694,249",MXN,Departamento,medium,2,sale
+DBB-435,Degohouse,Xola 621,Del Valle Norte,Benito Juárez,"4,593,750",MXN,Departamento,medium,2,sale
+DBE-283,Degohouse,San Lorenzo 1009,Del Valle Sur,Benito Juárez,"6,489,000",MXN,Departamento,high,3,sale
+DBH-563,Degohouse,Eje 3 Pte 1849,Acacias,Benito Juárez,"6,705,300",MXN,Departamento,high,3,sale
+DBM-241,Degohouse,Cumbres de Maltrata 362,Narvarte Poniente,Benito Juárez,"6,353,292",MXN,Departamento,medium,2,sale
+DBM-599,Degohouse,Avenida Nuevo León 215,Hipódromo,Cuauhtémoc,"9,214,400",MXN,Departamento,high,3,sale
+DCB-715,Degohouse,Sadi Carnot 56,San Rafael,Cuauhtémoc,"7,129,070",MXN,Departamento,high,3,sale
+DCB-743,Degohouse,ÚNICO Privée,Santa Cruz Atoyac,Benito Juárez,"4,988,474",MXN,Departamento,high,3,sale
+DCC-417,Degohouse,San Luis Potosí 134,Roma Norte,Cuauhtémoc,"9,650,000",MXN,Departamento,high,3,sale
+DCC-426,Degohouse,Londres 91,Juárez,Cuauhtémoc,"4,955,957",MXN,Departamento,high,3,sale
+DCD-652,Degohouse,Avenida Benjamín Franklin 95,Hipódromo,Cuauhtémoc,"7,800,000",MXN,Departamento,medium,2,sale
+DCE-148,Degohouse,Prolongación Paseo de la Reforma 1232,Bosques de las Lomas,Cuajimalpa de Morelos,"13,000,000",MXN,Departamento,medium,2,sale
+DCF-278,Degohouse,Ocelotl 14,Pueblo de San Pablo Tepetlapa,Coyoacán,"5,543,000",MXN,Departamento,high,3,sale
+DCG-239,Degohouse,Avenida Chapultepec 336,Roma Norte,Cuauhtémoc,"3,849,187",MXN,Departamento,high,3,sale
+DCM-313,Degohouse,San Luis Potosí 134,Roma Norte,Cuauhtémoc,"8,950,000",MXN,Departamento,high,3,sale
+DCN-368,Degohouse,Calle Salamanca 11,Roma Norte,Cuauhtémoc,"5,200,000",MXN,Departamento,high,3,sale
+DCO-697,Degohouse,Calle Alfonso Herrera 51,San Rafael,Cuauhtémoc,"4,900,000",MXN,Departamento,medium,2,sale
+DCR-309,Degohouse,Avenida José Vasconcelos 107,Hipódromo Condesa,Cuauhtémoc,"4,858,588",MXN,Departamento,high,3,sale
+DCY-313,Degohouse,Calle Jose Rosas Moreno 85,San Rafael,Cuauhtémoc,"3,542,710",MXN,Departamento,high,3,sale
+DDE-025,Degohouse,Paseo Lomas del Sol 117,Lomas del Sol,Huixquilucan,"7,000,000",MXN,Departamento,medium,2,sale
+DFC-446,Degohouse,Avenida Paseo de las Palmas 515,Lomas de Chapultepec,Miguel Hidalgo,"24,000,000",MXN,Departamento,medium,2,sale
+DHA-992,Degohouse,Hacienda el Ciervo 16,Interlomas,Huixquilucan,"6,450,000",MXN,Departamento,high,3,sale
+DHB-011,Degohouse,Av. Loma Alta 780,Bosque Real,Huixquilucan,"6,301,000",MXN,Terreno residencial,medium,2,sale
+DHB-022,Degohouse,Avenida Loma Alta 780,Bosque Real,Huixquilucan,"10,350,000",MXN,Departamento,medium,2,sale
+DHB-023,Degohouse,Vialidad de la Barranca 1,Hacienda de las Palmas,Huixquilucan,"10,881,200",MXN,Departamento,medium,2,sale
+DHF-703,Degohouse,Central Park Bosque Real,Bosque Real,Huixquilucan,"6,800,000",MXN,Departamento,medium,2,sale
+DHL-155,Degohouse,Blvrd. Interlomas 1,Bosques de las Palmas,Huixquilucan,"8,042,500",MXN,Departamento,medium,2,sale
+DHU-181,Degohouse,Avenida Jesús del Monte 163,Jesús del Monte,Huixquilucan,"7,000,400",MXN,Departamento,high,3,sale
+DHU-506,Degohouse,Av. Jesús del Monte 268,Jesús del Monte,Huixquilucan,"5,990,000",MXN,Departamento,medium,2,sale
+DHY-938,Degohouse,Tivé Baume,Bosque Real,Huixquilucan,"7,300,000",MXN,Departamento,high,3,sale
+DLS-615,Degohouse,Valle Real 11,Valle de las Palmas,Huixquilucan,"8,700,000",MXN,Departamento,medium,2,sale
+DMC-309,Degohouse,General Salvador Alvarado 45,Escandón I Sección,Miguel Hidalgo,"6,419,795",MXN,Departamento,high,3,sale
+DME-756,Degohouse,Residencial Oldenbourg,Villa Florence,Huixquilucan,"7,900,000",MXN,Departamento,high,3,sale
+DMQ-312,Degohouse,Calle Monte Elbruz 145,Polanco,Miguel Hidalgo,"13,800,000",MXN,Departamento,high,3,sale
+DNJ-094,Degohouse,Privilege Interlomas,Interlomas,Huixquilucan,"9,500,000",MXN,Departamento,medium,2,sale
+DNW-767,Degohouse,Palomas,Reforma Social,Miguel Hidalgo,"12,900,000",MXN,Departamento,medium,2,sale
+DOM-034,Degohouse,Boulevard Bosque Real 32,Bosque Real,Huixquilucan,"9,300,000",MXN,Departamento,medium,2,sale
+DQX-384,Degohouse,Cofre de Perote 279,Lomas de Chapultepec,Miguel Hidalgo,"11,500,000",MXN,Departamento,medium,2,sale
+DRL-074,Degohouse,Prolongación San Antonio 169,San Pedro de los Pinos,Alvaro Obregón,"3,490,000",MXN,Departamento,medium,2,sale
+DTU-197,Degohouse,Reserva Territorial Atlixcáyotl,Reserva Territorial Atlixcáyotl,San Andrés Cholula,"4,650,000",MXN,Departamento,medium,2,sale
+DUA-012,Degohouse,Avenida Jesús del Monte 268,Jesús del Monte,Huixquilucan,"12,490,000",MXN,Departamento,high,3,sale
+DUB-856,Degohouse,Avenida de Las Flores 27,Lomas Country Club,Huixquilucan,"6,840,000",MXN,Departamento,medium,2,sale
+DUE-298,Degohouse,Fábrica de Cartuchos 58,Lomas del Chamizal,Cuajimalpa de Morelos,"5,525,000",MXN,Departamento,high,3,sale
+DUL-452,Degohouse,Fábrica de Cartuchos 58,Lomas del Chamizal,Cuajimalpa de Morelos,"5,200,000",MXN,Departamento,high,3,sale
+DVI-276,Degohouse,Boulevard Juan Herrera y Piña 121,Valle de Bravo,Valle de Bravo,"10,000,000",MXN,Casa en condominio,medium,2,sale
+DWQ-455,Degohouse,Avenida Jesús del Monte 42,Hacienda de las Palmas,Huixquilucan,"9,800,000",MXN,Departamento,high,3,sale
+DXA-291,Degohouse,Boulevard Adolfo López Mateos 1753,Merced Gómez,Benito Juárez,"3,885,399",MXN,Departamento,high,3,sale
+DXF-865,Degohouse,Av. Coyoacán 1849,Acacias,Benito Juárez,"7,745,600",MXN,Departamento,medium,2,sale
+DXJ-444,Degohouse,Avenida Jesús del Monte 163,Jesús del Monte,Huixquilucan,"8,334,850",MXN,Departamento,medium,2,sale
+DYF-436,Degohouse,Avenida de las Torres 805,Olivar de los Padres,Alvaro Obregón,"3,451,000",MXN,Departamento,high,3,sale
+DYK-977,Degohouse,Avenida Popocatépetl 164,Portales Norte,Benito Juárez,"5,161,113",MXN,Departamento,medium,2,sale
+ECA-049,Degohouse,Julián Adame 173,San José de los Cedros,Cuajimalpa de Morelos,"32,000,000",MXN,Edificio,high,3,sale
+NPZ-915,Degohouse,Calle San Juan 20,San Lucas Tepetlacalco,Cuautitlán Izcalli,"82,000,000",MXN,Nave industrial,medium,2,sale
+OCA-297,Degohouse,Calle Madrid 125,Del Carmen,Coyoacán,"33,000,000",MXN,Casa,high,3,sale
+OVC-034,Degohouse,Hidalgo 84,Peñón de los Baños,Venustiano Carranza,"30,000,000",MXN,Oficina,medium,2,sale
+THP-167,Degohouse,Hacienda de las Palmas lt 8,Hacienda de las Palmas,Huixquilucan,"7,700,000",MXN,Terreno residencial,high,3,sale
+TJO-524,Degohouse,Playa Escondida,Pueblo Tequesquitengo,Jojutla,"2,300,000",MXN,Terreno residencial,medium,2,sale
+CAY-123,Diamond House,Fresnos 28,Tlacopac,Alvaro Obregón,"5,000,000",USD,Casa,medium,2,sale
+CBG-147,Diamond House,Fuente de la Acequia ,Lomas de las Palmas,Huixquilucan,"12,900,000",MXN,Casa,medium,2,sale
+CBK-346,Diamond House,Bosque de Pinos,Bosque de las Lomas,Miguel Hidalgo,"28,000,000",MXN,Casa,medium,2,sale
+CCA-017,Diamond House,Cda Cerro del Hombre 11 (MR),Romero de Terreros,Coyoacán,"17,950,000",MXN,Casa,high,3,sale
+CCA-019,Diamond House,Lomas de la Palma 313 casa en venta (AO),Lomas de Vista Hermosa,Cuajimalpa de Morelos,"21,000,000",MXN,Casa,high,3,sale
+CCD-208,Diamond House,Av. Monte de las Cruces 548,San Lorenzo Acopilco,Cuajimalpa de Morelos,"10,900,000",MXN,Casa en condominio,high,3,sale
+CCD-676,Diamond House,Jacarandas 313,Jardines de Delicias,Cuernavaca,"8,300,000",MXN,Casa,medium,2,sale
+CCH-662,Diamond House,Bosque de Jacarandas 174,Bosque de las Lomas,Miguel Hidalgo,"22,000,000",MXN,Casa,medium,2,sale
+CCO-296,Diamond House,Fuente Cleo 36,Lomas de Tecamachalco,Naucalpan de Juárez,"12,000,000",MXN,Casa,high,3,sale
+CCT-098,Diamond House,Paseo Centenario del Ejército Mexicano,El Marqués Queretano,Querétaro,"5,950,000",MXN,Casa en condominio,medium,2,sale
+CCU-186,Diamond House,Av. Palmira,Fraccionamiento Las Garzas,Cuernavaca,"17,900,000",MXN,Casa,high,3,sale
+CCX-174,Diamond House,Bosque de Ocotes,Bosques de las Lomas,Cuajimalpa de Morelos,"18,000,000",MXN,Casa,high,3,sale
+CDO-043,Diamond House,Av lomas country club 10 casa 11,Lomas Country Club,Huixquilucan,"12,900,000",MXN,Casa,medium,2,sale
+CEA-163,Diamond House,Ernest J. Piper 146,Santa Fe,Alvaro Obregón,"16,550,000",MXN,Casa,high,3,sale
+CEB-644,Diamond House,Bosque de Bugambilias 314,Bosques de las Lomas,Cuajimalpa de Morelos,"21,000,000",MXN,Casa,medium,2,sale
+CEF-031,Diamond House,Fuente de Salto del Agua 14,Lomas de Tecamachalco,Naucalpan de Juárez,"20,000,000",MXN,Casa,high,3,sale
+CEF-235,Diamond House,Burgos Bugambilias,Ampliación 3 de Mayo,Emiliano Zapata,"10,900,000",MXN,Casa en condominio,high,3,sale
+CEL-067,Diamond House,1a. Cda 120,El Campanario,Querétaro,"38,500,000",MXN,Casa,high,3,sale
+CEV-702,Diamond House,El Mayorazgo Residencial Querétaro,Cerro Prieto,El Marqués,"6,500,000",MXN,Casa en condominio,medium,2,sale
+CGT-277,Diamond House,Paseo Bosque de la Reforma 303,Bosque de las Lomas,Miguel Hidalgo,"2,300,000",USD,Casa,medium,2,sale
+CHF-917,Diamond House,Bosque de Palmito 14,Bosque de las Lomas,Miguel Hidalgo,"69,700,000",MXN,Casa en condominio,medium,2,sale
+CHI-146,Diamond House,Fuente de Emmanuel No 21 (SL) ,Lomas de Tecamachalco,Huixquilucan,"13,000,000",MXN,Casa,high,3,sale
+CHQ-664,Diamond House,Interlomas retorno valle real 1 b ,Hacienda de las Palmas,Huixquilucan,"8,200,000",MXN,Casa,high,3,sale
+CHQ-774,Diamond House,Fuente de Acueducto 15,Lomas de Tecamachalco,Naucalpan de Juárez,"20,000,000",MXN,Casa en condominio,medium,2,sale
+CHR-777,Diamond House,Bosque de Quiroga,Bosques de la Herradura,Huixquilucan,"9,800,000",MXN,Casa,high,3,sale
+CHV-945,Diamond House,Heriberto Enríquez 247,Maravillas,Nezahualcóyotl,"6,500,000",MXN,Casa,medium,2,sale
+CKC-772,Diamond House,Valle de Malaga 1 ,Hacienda de las Palmas,Huixquilucan,"9,800,000",MXN,Casa,medium,2,sale
+CKW-396,Diamond House,Av. Club de Golf Lomas,Bosques de las Palmas,Huixquilucan,"12,490,000",MXN,Casa en condominio,medium,2,sale
+CLZ-814,Diamond House,Fuente del Pescador 18,Lomas de Tecamachalco,Naucalpan de Juárez,"10,800,000",MXN,Casa en condominio,medium,2,sale
+CMA-601,Diamond House,Lafontaine 340,Polanco,Miguel Hidalgo,"39,000,000",MXN,Casa,medium,2,sale
+CMA-746,Diamond House,Bosque de Colorines,Bosque de las Lomas,Miguel Hidalgo,"1,450,000",USD,Casa,high,3,sale
+CME-091,Diamond House,Bosque de Encinos 95,Bosque de las Lomas,Miguel Hidalgo,"2,500,000",USD,Casa en condominio,medium,2,sale
+CMT-481,Diamond House,Bosque de Sauces 304,Bosque de las Lomas,Miguel Hidalgo,"35,000,000",MXN,Casa,high,3,sale
+CMV-259,Diamond House,Bosque de Cerezos 68,Bosque de las Lomas,Miguel Hidalgo,"72,000,000",MXN,Casa,high,3,sale
+CMV-315,Diamond House,Paseo Bosque de la Reforma 1177,Bosques de las Lomas,Miguel Hidalgo,"30,000,000",MXN,Casa,medium,2,sale
+CNA-003,Diamond House,Fuente de Prometeo 29 ,Lomas de Tecamachalco,Naucalpan de Juárez,"17,000,000",MXN,Casa,medium,2,sale
+CNI-527,Diamond House,Fuente de Santo Tomas,Lomas de Tecamachalco,Naucalpan de Juárez,"13,000,000",MXN,Casa,medium,2,sale
+CNJ-622,Diamond House,Avenida de las Fuentes,Lomas de Tecamachalco,Naucalpan de Juárez,"18,000,000",MXN,Casa,medium,2,sale
+CNP-614,Diamond House,Abelardo Menchaca,Lomas del Huizachal,Naucalpan de Juárez,"7,750,000",MXN,Casa,high,3,sale
+COI-916,Diamond House,Calle de Geologia 21,Lomas AnAhuac,Naucalpan de Juárez,"15,000,000",MXN,Casa,high,3,sale
+COP-716,Diamond House,Bosque de Olivos 431,Bosque de las Lomas,Miguel Hidalgo,"16,900,000",MXN,Casa,medium,2,sale
+CPS-895,Diamond House,Santiago 474,San Jerónimo Lídice,La Magdalena Contreras,"13,200,000",MXN,Casa,medium,2,sale
+CQA-263,Diamond House,Lago Atotonilco,Juriquilla,Querétaro,"5,999,999",MXN,Casa,medium,2,sale
+CQX-916,Diamond House,Bosque de Naranjos 74,Bosque de las Lomas,Miguel Hidalgo,"25,000,000",MXN,Casa,medium,2,sale
+CSA-782,Diamond House,Fuente de Ra,Lomas de Tecamachalco,Huixquilucan,"38,000,000",MXN,Casa,medium,2,sale
+CSY-194,Diamond House,Fuente de Las Burbujas 6,Lomas de Tecamachalco,Huixquilucan,"12,000,000",MXN,Casa,high,3,sale
+CUJ-054,Diamond House,Avenida Cruz Azul 137,Industrial,Gustavo A. Madero,"5,850,000",MXN,Casa,medium,2,sale
+CUT-635,Diamond House,Bosque del Secreto 90,La Herradura,Huixquilucan,"11,500,000",MXN,Casa,high,3,sale
+CVV-161,Diamond House,Fuentes Cantos,Rincón del Pedregal,Tlalpan,"16,850,000",MXN,Casa,medium,2,sale
+CWF-138,Diamond House,Hacienda de Valle Escondido,Hacienda de Valle Escondido,Atizapán de Zaragoza,"32,000,000",MXN,Casa,medium,2,sale
+DAA-519,Diamond House,Calle Floresta 196,Del Recreo,Azcapotzalco,"4,300,000",MXN,Departamento,high,3,sale
+DBF-612,Diamond House,Av. del Silencio 20,Bosque Real,Huixquilucan,"9,600,000",MXN,Departamento,high,3,sale
+DBQ-465,Diamond House,San Francisco 338,Del Valle Norte,Benito Juárez,"6,400,000",MXN,Departamento,medium,2,sale
+DCA-164,Diamond House,Bosque de Toronjos 37 depto 3 (AO),Bosques de las Lomas,Cuajimalpa de Morelos,"12,800,000",MXN,Departamento,high,3,sale
+DCB-366,Diamond House,Bosque de Canelos 101,Bosques de las Lomas,Cuajimalpa de Morelos,"10,650,000",MXN,Departamento,high,3,sale
+DCB-386,Diamond House,Carretera México-Toluca 2822,Bosques de las Lomas,Cuajimalpa de Morelos,"16,400,000",MXN,Departamento,medium,2,sale
+DCC-883,Diamond House,Paseo de los Tamarindos 130,Bosques de las Lomas,Cuajimalpa de Morelos,"14,500,000",MXN,Departamento,high,3,sale
+DCI-165,Diamond House,Paseo de los Laureles 444,Bosques de las Lomas,Cuajimalpa de Morelos,"13,800,000",MXN,Departamento,high,3,sale
+DCL-749,Diamond House,Prolongación Paseo de la Reforma 215,Santa Fe Cuajimalpa,Cuajimalpa de Morelos,"7,300,000",MXN,Departamento,high,3,sale
+DCM-167,Diamond House,Avenida Paseo de la Reforma,Juárez,Cuauhtémoc,"6,900,000",MXN,Departamento,high,3,sale
+DCM-416,Diamond House,Privada de Tamarindos,Bosques de las Lomas,Cuajimalpa de Morelos,"12,800,000",MXN,Departamento,medium,2,sale
+DCP-301,Diamond House,Eje 3 sur 74 A,Obrera,Cuauhtémoc,"3,087,000",MXN,Departamento,medium,2,sale
+DCP-859,Diamond House,Av. de los Bosques 1516,Lomas del Chamizal,Cuajimalpa de Morelos,"9,990,000",MXN,Departamento,high,3,sale
+DCV-266,Diamond House,Calle secretaria de la Marina 700,Lomas del Chamizal,Cuajimalpa de Morelos,"17,900,000",MXN,Departamento,medium,2,sale
+DCV-474,Diamond House,Bosques de la Reforma 1507,Bosques de las Lomas,Cuajimalpa de Morelos,"11,900,000",MXN,Departamento,medium,2,sale
+DCW-287,Diamond House,Carretera México-Toluca 5804,Contadero,Cuajimalpa de Morelos,"4,100,000",MXN,Departamento,medium,2,sale
+DCX-511,Diamond House,Tepozanes 908,Club de Golf Bosques de Santa Fe,Cuajimalpa de Morelos,"48,000,000",MXN,Departamento,medium,2,sale
+DDB-093,Diamond House,Hacienda del ciervo 34,Hacienda de las Palmas,Huixquilucan,"6,200,000",MXN,Departamento,medium,2,sale
+DDZ-371,Diamond House,Palma Criolla 9,Bosques de las Palmas,Huixquilucan,"5,950,000",MXN,Departamento,medium,2,sale
+DEA-349,Diamond House,Royal View,Zibatá,El Marqués,"15,550,000",MXN,Departamento,high,3,sale
+DEC-315,Diamond House,Royal View,Zibatá,El Marqués,"7,750,000",MXN,Departamento,high,3,sale
+DFF-463,Diamond House,Residencial Avivia,Lomas del Chamizal,Cuajimalpa de Morelos,"14,500,000",MXN,Departamento,medium,2,sale
+DGO-612,Diamond House,Boulevard Bosque Real 7100,Bosque Real,Huixquilucan,"7,250,000",MXN,Departamento,medium,2,sale
+DHA-014,Diamond House,Avenida Porton de las Flores 36,Lomas Country Club,Huixquilucan,"7,700,000",MXN,Departamento,high,3,sale
+DHA-087,Diamond House,Vía Magna 6 (SL) ,Bosques de las Palmas,Huixquilucan,"6,552,000",MXN,Departamento,medium,2,sale
+DHA-120,Diamond House,Avenida Club de Golf 17,Lomas Country Club,Huixquilucan,"12,000,000",MXN,Departamento,medium,2,sale
+DHA-148,Diamond House,"Hacienda del Ciervo 27, Residencial Capri 303 (SL)",Hacienda de las Palmas,Huixquilucan,"7,795,000",MXN,Departamento,high,3,sale
+DHA-163,Diamond House,Hacienda Campo Bravo 20,Hacienda de las Palmas,Huixquilucan,"9,617,000",MXN,Departamento,high,3,sale
+DHA-169,Diamond House,Hacienda Campo Bravo 20,Hacienda de las Palmas,Huixquilucan,"9,484,000",MXN,Departamento,high,3,sale
+DHA-171,Diamond House,Hacienda Campo Bravo 20,Hacienda de las Palmas,Huixquilucan,"9,830,000",MXN,Departamento,high,3,sale
+DHA-172,Diamond House,Hacienda Campo Bravo 20,Hacienda de las Palmas,Huixquilucan,"12,664,000",MXN,Departamento,high,3,sale
+DHA-173,Diamond House,Hacienda Campo Bravo 20,Hacienda de las Palmas,Huixquilucan,"9,723,000",MXN,Departamento,high,3,sale
+DHA-259,Diamond House,Eucalipto 22,Jesús del Monte,Huixquilucan,"5,200,000",MXN,Departamento,high,3,sale
+DHA-449,Diamond House,Vía Orquídea No 1 Villa Florence ,Hacienda de las Palmas,Huixquilucan,"7,450,000",MXN,Departamento,high,3,sale
+DHA-451,Diamond House,Antiguo Camino a Huixquilucan,Loma del Carmen,Huixquilucan,"2,350,000",MXN,Departamento,high,3,sale
+DHA-462,Diamond House,Av Lomas del Rio Ote 82,Bosques de la Herradura,Huixquilucan,"8,500,000",MXN,Departamento,high,3,sale
+DHA-654,Diamond House,Av. Club de Golf Lomas Oeste 186,Lomas Country Club,Huixquilucan,"17,500,000",MXN,Departamento,medium,2,sale
+DHA-685,Diamond House,Hacienda el CIervo No. 12,Hacienda de las Palmas,Huixquilucan,"7,950,000",MXN,Departamento,high,3,sale
+DHA-766,Diamond House,Avenida Lomas del Encanto 32,Lomas Country Club,Huixquilucan,"16,000,000",MXN,Departamento,medium,2,sale
+DHA-787,Diamond House,Avenida Vista Real MZ No 15 (SL)  ,Hacienda de las Palmas,Huixquilucan,"13,500,000",MXN,Departamento,high,3,sale
+DHA-852,Diamond House,Privada de Los Alamos 32,Lomas del Sol,Huixquilucan,"9,000,000",MXN,Departamento,high,3,sale
+DHA-914,Diamond House,Hda. Santa Teresa 1,Hacienda de las Palmas,Huixquilucan,"8,490,000",MXN,Departamento,medium,2,sale
+DHA-968,Diamond House,Hacienda de las Golondrinas 25,Hacienda de las Palmas,Huixquilucan,"9,000,000",MXN,Departamento,high,3,sale
+DHB-851,Diamond House,"Av Lomas Anahuac 133, Fracc Lomas Anahuac, Huixquilucan",Lomas AnAhuac,Huixquilucan,"10,550,000",MXN,Departamento,high,3,sale
+DHE-182,Diamond House,Av. Jesús del Monte 32,Hacienda de las Palmas,Huixquilucan,"6,990,000",MXN,Departamento,high,3,sale
+DHI-373,Diamond House,Avenida de los Bosques 138,Lomas de Tecamachalco,Huixquilucan,"9,750,000",MXN,Departamento,medium,2,sale
+DHM-475,Diamond House,Palma Criolla No 11,Hacienda de las Palmas,Huixquilucan,"4,650,000",MXN,Departamento,medium,2,sale
+DHR-462,Diamond House,Circuito Empresarial 6,Bosques de las Palmas,Huixquilucan,"4,600,000",MXN,Departamento,medium,2,sale
+DHR-608,Diamond House,Hacienda Las Golondrinas 27,Hacienda de las Palmas,Huixquilucan,"8,000,000",MXN,Departamento,high,3,sale
+DHR-732,Diamond House,Real del Contry 34,Lomas Country Club,Huixquilucan,"10,500,000",MXN,Departamento,high,3,sale
+DHS-236,Diamond House,Hacienda Las Golondrinas 27,Hacienda de las Palmas,Huixquilucan,"8,200,000",MXN,Departamento,high,3,sale
+DHU-306,Diamond House,Hacienda el Ciervo 7a,Hacienda de las Palmas,Huixquilucan,"8,200,000",MXN,Departamento,high,3,sale
+DHU-443,Diamond House,Vasco de Quiroga 3835,Santa Fe Cuajimalpa,Cuajimalpa de Morelos,"12,000,000",MXN,Departamento,medium,2,sale
+DHV-077,Diamond House,Av. de los Bosques 198,Lomas de Tecamachalco,Huixquilucan,"9,300,000",MXN,Departamento,high,3,sale
+DHV-723,Diamond House,Hacienda Campo Bravo 20,Hacienda de las Palmas,Huixquilucan,"10,725,000",MXN,Departamento,high,3,sale
+DHV-742,Diamond House,Hacienda de las Golondrinas No 27,Hacienda de las Palmas,Huixquilucan,"7,950,000",MXN,Departamento,high,3,sale
+DHW-205,Diamond House,Antia Exclusive Living,Hacienda de las Palmas,Huixquilucan,"11,387,000",MXN,Departamento,high,3,sale
+DHX-485,Diamond House,Av. Jesús del Monte 32,Jesús del Monte,Huixquilucan,"7,400,000",MXN,Departamento,high,3,sale
+DHX-516,Diamond House,Av. de los Bosques 1516,Lomas de Tecamachalco,Huixquilucan,"10,990,000",MXN,Departamento,high,3,sale
+DHZ-483,Diamond House,AVIVIA Bosque Real (Torres A,Bosque Real,Huixquilucan,"10,700,000",MXN,Departamento,medium,2,sale
+DIJ-882,Diamond House,Calzada Desierto de los Leones 5390,Santa Rosa Xochiac,Alvaro Obregón,"5,500,000",MXN,Departamento,medium,2,sale
+DIV-019,Diamond House,Goldsmith 55,Polanco,Miguel Hidalgo,"24,900,000",MXN,Departamento,medium,2,sale
+DIV-682,Diamond House,hacienda del ciervo 26,Hacienda de las Palmas,Huixquilucan,"6,000,000",MXN,Departamento,medium,2,sale
+DJB-293,Diamond House,Zibatá,Zibatá,El Marqués,"4,870,000",MXN,Departamento,medium,2,sale
+DJJ-489,Diamond House,Jesús del Monte,Jesús del Monte,Huixquilucan,"5,800,000",MXN,Departamento,medium,2,sale
+DJT-688,Diamond House,Secretaría de la marina 92,Conjunto Urbano El Bosque,Huixquilucan,"12,800,000",MXN,Departamento,medium,2,sale
+DKJ-044,Diamond House,Secretaría de la Marina 840,Lomas del Chamizal,Cuajimalpa de Morelos,"9,280,000",MXN,Departamento,medium,2,sale
+DKO-316,Diamond House,Boulevard Bosque Real 86,Bosque Real,Huixquilucan,"9,900,000",MXN,Departamento,medium,2,sale
+DKT-669,Diamond House,Parque Residencial Vidalta,Lomas del Chamizal,Cuajimalpa de Morelos,"19,000,000",MXN,Departamento,medium,2,sale
+DKT-862,Diamond House,Noche Buena 23,Granjas Navidad,Cuajimalpa de Morelos,"3,000,000",MXN,Departamento,high,3,sale
+DKU-425,Diamond House,Avenida Horacio,Polanco,Miguel Hidalgo,"15,500,000",MXN,Departamento,medium,2,sale
+DKV-797,Diamond House,Maranta Bosques,Lomas de Vista Hermosa,Cuajimalpa de Morelos,"7,700,000",MXN,Departamento,medium,2,sale
+DKW-102,Diamond House,Bosque Real,Bosque Real,Huixquilucan,"17,000,000",MXN,Departamento,medium,2,sale
+DKW-181,Diamond House,Contabilidad 16,Lomas AnAhuac,Huixquilucan,"32,000,000",MXN,Departamento,medium,2,sale
+DKX-723,Diamond House,Sierra Chalchihui 235,Lomas de Chapultepec,Miguel Hidalgo,"17,900,000",MXN,Departamento,medium,2,sale
+DKY-331,Diamond House,Adolfo López Mateos 57 ,Jesús del Monte,Huixquilucan,"2,900,000",MXN,Departamento,medium,2,sale
+DLI-815,Diamond House,Bosque de Tabachines 327,Bosques de las Lomas,Cuajimalpa de Morelos,"24,000,000",MXN,Departamento,high,3,sale
+DLW-866,Diamond House,Sor Juana Inés de la Cruz 280,San Lorenzo,Tlalnepantla de Baz,"3,600,000",MXN,Departamento,medium,2,sale
+DMA-039,Diamond House,Goldsmith 222 Polanco ,Polanco,Miguel Hidalgo,"22,500,000",MXN,Departamento,medium,2,sale
+DMA-248,Diamond House,Anatole France 354  depto 102  (DM),Polanco,Miguel Hidalgo,"19,000,000",MXN,Departamento,medium,2,sale
+DMB-398,Diamond House,Avenida Horacio 1609,Polanco,Miguel Hidalgo,"7,500,000",MXN,Departamento,medium,2,sale
+DMF-757,Diamond House,Galileo 228,Polanco,Miguel Hidalgo,"13,800,000",MXN,Departamento,high,3,sale
+DMG-369,Diamond House,Manuel Avila Camacho 571 Vistas del Bosque 1701 (DM),Periodista,Miguel Hidalgo,"4,280,000",MXN,Departamento,medium,2,sale
+DMI-524,Diamond House,José Luis Lagrange 137,Polanco,Miguel Hidalgo,"14,000,000",MXN,Departamento,medium,2,sale
+DMM-094,Diamond House,Avenida Horacio 1825,Polanco,Miguel Hidalgo,"11,900,000",MXN,Departamento,medium,2,sale
+DMN-178,Diamond House,Avenida Horacio 1739,Polanco,Miguel Hidalgo,"19,000,000",MXN,Departamento,medium,2,sale
+DMR-095,Diamond House,Juan Racine 120,Polanco,Miguel Hidalgo,"9,500,000",MXN,Departamento,medium,2,sale
+DMS-113,Diamond House,José Luis Lagrange 137,Polanco,Miguel Hidalgo,"10,500,000",MXN,Departamento,medium,2,sale
+DMT-513,Diamond House,Cofre de Perote 305,Lomas de Chapultepec,Miguel Hidalgo,"17,000,000",MXN,Departamento,high,3,sale
+DNA-781,Diamond House,Av. de los Bosques,Lomas de Tecamachalco,Huixquilucan,"11,300,000",MXN,Departamento,medium,2,sale
+DNB-613,Diamond House,Palma Criolla No 10 ,Bosques de las Palmas,Huixquilucan,"4,800,000",MXN,Departamento,medium,2,sale
+DNF-178,Diamond House,Fuente de Templanza 2,Lomas de Tecamachalco,Naucalpan de Juárez,"7,200,000",MXN,Departamento,medium,2,sale
+DNJ-208,Diamond House,Boulevard Miguel de Cervantes Saavedra 171,Granada,Miguel Hidalgo,"6,000,000",MXN,Departamento,medium,2,sale
+DNJ-356,Diamond House,Fraccionamiento Lomas del Río 57,Lomas del Río,Naucalpan de Juárez,"10,000,000",MXN,Departamento,high,3,sale
+DNL-065,Diamond House,Avenida Jesús del Monte 32A,Jesús del Monte,Huixquilucan,"13,800,000",MXN,Departamento,medium,2,sale
+DNM-734,Diamond House,Privada de Las Fuentes 2,Lomas de Tecamachalco,Naucalpan de Juárez,"7,350,000",MXN,Departamento,high,3,sale
+DNO-537,Diamond House,AVIVIA Bosque Real 7 (Torres D,Bosque Real,Naucalpan de Juárez,"10,500,000",MXN,Departamento,medium,2,sale
+DOO-733,Diamond House,Avenida Jesús del Monte 32A,Hacienda de las Palmas,Huixquilucan,"11,400,000",MXN,Departamento,medium,2,sale
+DOU-799,Diamond House,Julián Adame 91,Lomas de Vista Hermosa,Cuajimalpa de Morelos,"8,500,000",MXN,Departamento,medium,2,sale
+DQE-174,Diamond House,Avenida Horacio 1739,Polanco,Miguel Hidalgo,"15,500,000",MXN,Departamento,medium,2,sale
+DQN-593,Diamond House,Av. Lomas del Encanto 32,Lomas Country Club,Naucalpan de Juárez,"15,990,000",MXN,Departamento,medium,2,sale
+DQP-203,Diamond House,Residencial grand living,Juriquilla Santa Fe,Querétaro,"4,350,000",MXN,Departamento,high,3,sale
+DRO-071,Diamond House,Av. 16 de Septiembre no. 27,San Bartolo Naucalpan (Naucalpan Centro),Naucalpan de Juárez,"2,400,000",MXN,Departamento,medium,2,sale
+DRZ-242,Diamond House,Av Colinas del Cimatario 63,Colinas del Cimatario,Querétaro,"3,600,000",MXN,Departamento,medium,2,sale
+DSF-698,Diamond House,Fuente de Molinos 68,Lomas de Tecamachalco,Naucalpan de Juárez,"11,980,000",MXN,Departamento,medium,2,sale
+DTV-313,Diamond House,Noche Buena 23,Granjas Navidad,Cuajimalpa de Morelos,"3,200,000",MXN,Departamento,high,3,sale
+DUR-539,Diamond House,Monte Chimborazo,Lomas de Chapultepec,Miguel Hidalgo,"9,400,000",MXN,Departamento,medium,2,sale
+DVQ-427,Diamond House,Secretaria de la marina 840 Lomas de chamizal,Lomas del Chamizal,Cuajimalpa de Morelos,"12,500,000",MXN,Departamento,medium,2,sale
+DWT-544,Diamond House,Residencial El Risco,Lomas Verdes,Naucalpan de Juárez,"4,200,000",MXN,Departamento,high,3,sale
+DXC-938,Diamond House,Avenida Porton de las Flores 36,Lomas Country Club,Huixquilucan,"8,500,000",MXN,Departamento,medium,2,sale
+DXW-568,Diamond House,Av. Jesús del Monte 32,Jesús del Monte,Huixquilucan,"11,800,000",MXN,Departamento,medium,2,sale
+DYI-106,Diamond House,Amsterdam 322,Hipódromo,Cuauhtémoc,"22,000,000",MXN,Departamento,medium,2,sale
+DZD-004,Diamond House,Royal View,Zibatá,El Marqués,"11,500,000",MXN,Departamento,medium,2,sale
+DZE-383,Diamond House,Aurea Residences,Interlomas,Huixquilucan,"15,000,000",MXN,Departamento,medium,2,sale
+DZS-484,Diamond House,Avenida Patria 1936,Santa Isabel,Zapopan,"10,700,000",MXN,Departamento,medium,2,sale
+EMV-584,Diamond House,Presa Angostura 8,Irrigación,Miguel Hidalgo,"30,000,000",MXN,Oficina,medium,2,sale
+EUV-008,Diamond House,Puente de Alvarado 102,Tabacalera,Cuauhtémoc,"45,000,000",MXN,Edificio,medium,2,sale
+FCJ-635,Diamond House,"Zona Urbana, Puerto Morelos",Puerto Morelos,Puerto Morelos,"14,980,000",MXN,Casa,medium,2,sale
+LMQ-747,Diamond House,Melchor Ocampo 193 local e 12 (DM),Verónica Anzures,Miguel Hidalgo,"5,900,000",MXN,Local en centro comercial,high,3,sale
+OCA-005,Diamond House,Av. Santa Fe 428,Contadero,Cuajimalpa de Morelos,"29,000,000",MXN,Oficina,medium,2,sale
+OCD-198,Diamond House,Avenida Insurgentes Sur 319,Hipódromo Condesa,Cuauhtémoc,"21,000,000",MXN,Oficina,medium,2,sale
+OHA-004,Diamond House,Fuente de Las Pirámides 1,Lomas de Tecamachalco,Huixquilucan,"5,380,000",MXN,Oficina,medium,2,sale
+OME-176,Diamond House,Sierra Santa Rosa 99,Reforma Social,Miguel Hidalgo,"24,500,000",MXN,Oficina,medium,2,sale
+OQA-001,Diamond House,C. Francisco I. Madero 208,Centro,Querétaro,"11,000,000",MXN,Edificio,high,3,sale
+OVX-896,Diamond House,Alpes,Lomas de Chapultepec,Miguel Hidalgo,"5,000,000",USD,Casa,medium,2,sale
+PCA-008,Diamond House,Paseo de Las Primaveras 19,Bosques de las Lomas,Cuajimalpa de Morelos,"2,600,000",USD,Casa en condominio,medium,2,sale
+PHS-777,Diamond House,Avenida Lomas del Encanto 8,Lomas Country Club,Huixquilucan,"24,800,000",MXN,Departamento,medium,2,sale
+PJV-223,Diamond House,hacienda del ciervo 5,Hacienda de las Palmas,Huixquilucan,"9,950,000",MXN,Departamento,medium,2,sale
+TAA-110,Diamond House,Apodaca - Dr.Gonzalez,Agua Fría,Apodaca,"65,500,000",MXN,Terreno industrial,high,3,sale
+TCK-028,Diamond House,Chalco,Chalco de Díaz Covarrubias Centro,Chalco,"63,000,000",MXN,Terreno residencial,high,3,sale
+TEB-218,Diamond House,Loma Linda 134 Terreno (JS),Lomas de Vista Hermosa,Cuajimalpa de Morelos,"8,000,000",MXN,Terreno residencial,medium,2,sale
+TFS-776,Diamond House,Callejón del Rosal 14,Tetelpan,Alvaro Obregón,"145,000,000",MXN,Terreno residencial,medium,2,sale
+THA-033,Diamond House,SAN CRISTOBAL TEXCALUCAN HUIX. MEX.,San Cristóbal Texcalucan,Huixquilucan,"33,177,000",MXN,Terreno residencial,high,3,sale
+TJA-036,Diamond House,Hacienda San Gaspar,Club de golf San Gaspar,Jiutepec,"3,158,000",MXN,Terreno residencial,medium,2,sale
+TNY-876,Diamond House,Hidalgo 68,San Ángel,Alvaro Obregón,"17,000,000",MXN,Terreno residencial,medium,2,sale
+TSB-231,Diamond House,Terra Serena,Arteaga Centro,Arteaga,"7,200,000",MXN,Terreno residencial,high,3,sale
+TTM-902,Diamond House,Aire Puro,San Andrés Totoltepec,Tlalpan,"8,850,000",MXN,Terreno residencial,high,3,sale
+TTX-658,Diamond House,"Ciprés Lt 16, Residencial Colón y Col Ciprés, 50120 Toluca, Estado de México ",Ciprés,Toluca,"7,807,380",MXN,Terreno residencial,medium,2,sale
+BOP-276,Finver Inmobiliaria,"Alpes 509, Loma Bonita, Santiago de Querétaro, Qro., México",Loma Bonita,Querétaro,"5,100,000",MXN,Bodega comercial,medium,2,sale
+CAL-995,Finver Inmobiliaria,Ceiba 2,Zibatá,El Marqués,"6,485,000",MXN,Casa en condominio,high,3,sale
+CAN-686,Finver Inmobiliaria,Lomas de Cocoyoc,Fraccionamiento Lomas de Cocoyoc,Atlatlahucan,"12,600,000",MXN,Casa,high,3,sale
+CLZ-156,Finver Inmobiliaria,XANADÚ RESIDENCIAL ZIBATÁ,Zibatá,El Marqués,"3,300,000",MXN,Casa,medium,2,sale
+COT-702,Finver Inmobiliaria,Palma reclinata 763,Ladera de San José el Alto Oriente,Querétaro,"2,900,000",MXN,Casa,medium,2,sale
+CQY-757,Finver Inmobiliaria,Lago Ostión 160,Fraccionamiento Cumbres del Lago,Querétaro,"5,500,000",MXN,Casa en condominio,medium,2,sale
+CYJ-565,Finver Inmobiliaria,Anillo Vial Fray Junípero Serra 12300,Fraccionamiento Residencial El Refugio,Querétaro,"4,000,000",MXN,Casa,medium,2,sale
+DAZ-775,Finver Inmobiliaria,"Prol. Josefa Ortiz de Domínguez 150, El Pueblito, 76900 El Pueblito, Qro.",Las Fuentes,Querétaro,"3,140,000",MXN,Departamento,medium,2,sale
+DNC-695,Finver Inmobiliaria,"Av. Campanario Norte 1201, 76146 Santiago de Querétaro, Qro.",El Campanario,Querétaro,"6,084,637",MXN,Departamento,medium,2,sale
+DSG-283,Finver Inmobiliaria,La Vista Residencial,La Vista Residencial,Querétaro,"3,170,000",MXN,Departamento,medium,2,sale
+DVE-867,Finver Inmobiliaria,"Prol. Josefa Ortiz de Domínguez 150, El Pueblito, 76900 El Pueblito, Qro.",Las Fuentes,Querétaro,"2,808,000",MXN,Departamento,medium,2,sale
+LLE-806,Finver Inmobiliaria,Av. Antea 1130,Jurica,Querétaro,"24,507,973",MXN,Local,medium,2,sale
+OMP-459,Finver Inmobiliaria,av antea 1130,Jurica,Querétaro,"2,700,000",MXN,Oficina,medium,2,sale
+OTA-267,Finver Inmobiliaria,av antea 1130,Jurica,Querétaro,"2,850,000",MXN,Oficina,medium,2,sale
+TBR-313,Finver Inmobiliaria,Fraccionamiento Lomas de Cocoyoc,Fraccionamiento Lomas de Cocoyoc,Atlatlahucan,"4,123,000",MXN,Terreno residencial,medium,2,sale
+TCK-459,Finver Inmobiliaria,cto malaya 17,Zibatá,El Marqués,"2,785,000",MXN,Terreno residencial,high,3,sale
+TCU-586,Finver Inmobiliaria,"Camino a la Noria a 600 m del Blvd. Metropolitano, Corregidora Querétaro.",Pueblo Arroyo Hondo,Corregidora,"1,851,009",MXN,Terreno residencial,medium,2,sale
+TGZ-303,Finver Inmobiliaria,"La Purísima de la Cueva, Corregidora, Querétaro",La Cueva,Corregidora,"450,000",MXN,Terreno residencial,medium,2,sale
+THM-873,Finver Inmobiliaria,Laztana residencial,La Condesa,Querétaro,"1,900,000",MXN,Terreno residencial,medium,2,sale
+TIJ-652,Finver Inmobiliaria,"Camino a la Noria a 600 m del Blvd. Metropolitano, Corregidora Querétaro.",Pueblo Arroyo Hondo,Corregidora,"1,284,512",MXN,Terreno residencial,medium,2,sale
+TQZ-809,Finver Inmobiliaria,"Camino a la Noria a 600 m del Blvd. Metropolitano, Corregidora Querétaro.",Pueblo Arroyo Hondo,Corregidora,"1,630,696",MXN,Terreno residencial,medium,2,sale
+TYZ-033,Finver Inmobiliaria,Lago de Juriquilla,Fraccionamiento Cumbres del Lago,Querétaro,"4,149,876",MXN,Terreno residencial,medium,2,sale
+TZQ-386,Finver Inmobiliaria,"Lote 84 del condominio Manzano, Ciudad Maderas Sur II, Apaseo el Alto, Gto.",Condominio Residencial Bosques,Querétaro,"370,000",MXN,Terreno residencial,medium,2,sale
+CAE-239,Fortanza Inmobiliaria,Espíritu Santo 113,Lomas de Valle Escondido,Atizapán de Zaragoza,"13,400,000",MXN,Casa,high,3,sale
+CCP-163,Fortanza Inmobiliaria,Francia 1924 12,Olímpica,Coyoacán,"13,000,000",MXN,Casa,high,3,sale
+COY-062,Fortanza Inmobiliaria,Medicina 24,Lomas AnAhuac,Huixquilucan,"20,000,000",MXN,Casa en condominio,high,3,sale
+CRV-505,Fortanza Inmobiliaria,Abadejos 155,Lomas de las Aguilas,Alvaro Obregón,"10,900,000",MXN,Casa en condominio,medium,2,sale
+DAF-395,Fortanza Inmobiliaria,Cerrada 4 Jardín 348,Del Gas,Azcapotzalco,"3,997,855",MXN,Departamento,medium,2,sale
+DAK-063,Fortanza Inmobiliaria,Berlín 16,Juárez,Cuauhtémoc,"3,750,000",MXN,Departamento,medium,2,sale
+DDT-934,Fortanza Inmobiliaria,Altata 15,Hipódromo,Cuauhtémoc,"11,000,000",MXN,Departamento,medium,2,sale
+DFM-456,Fortanza Inmobiliaria,Altata 15,Hipódromo,Cuauhtémoc,"9,550,000",MXN,Departamento,medium,2,sale
+DHH-881,Fortanza Inmobiliaria,Hda. Sta. Teresa 1,Hacienda de las Palmas,Huixquilucan,"8,490,000",MXN,Departamento,high,3,sale
+DIA-687,Fortanza Inmobiliaria,Calle Alfonso Herrera 51,San Rafael,Cuauhtémoc,"4,150,000",MXN,Departamento,medium,2,sale
+DIB-926,Fortanza Inmobiliaria,Calle 1 18,Acacias,Benito Juárez,"5,249,999",MXN,Departamento,high,3,sale
+DIT-423,Fortanza Inmobiliaria,Fuente de La Juventud,Lomas de Tecamachalco,Naucalpan de Juárez,"8,500,000",MXN,Departamento,medium,2,sale
+DLV-368,Fortanza Inmobiliaria,Calzada de los Leones 158,Los Alpes,Alvaro Obregón,"4,350,000",MXN,Departamento,high,3,sale
+DMM-546,Fortanza Inmobiliaria,Hares Prestige. Vive Polanco,Anáhuac I Sección,Miguel Hidalgo,"6,500,000",MXN,Departamento,high,3,sale
+DMV-137,Fortanza Inmobiliaria,Berlín 16,Juárez,Cuauhtémoc,"3,950,000",MXN,Departamento,medium,2,sale
+DMW-664,Fortanza Inmobiliaria,Calle Alfonso Herrera 51,San Rafael,Cuauhtémoc,"4,900,000",MXN,Departamento,medium,2,sale
+DNO-496,Fortanza Inmobiliaria,Altata 15,Hipódromo,Cuauhtémoc,"9,800,000",MXN,Departamento,medium,2,sale
+DUV-798,Fortanza Inmobiliaria,Aguascalientes 69,Roma Sur,Cuauhtémoc,"6,900,000",MXN,Departamento,medium,2,sale
+DVH-411,Fortanza Inmobiliaria,Calle Alfonso Herrera 51,San Rafael,Cuauhtémoc,"7,350,000",MXN,Departamento,medium,2,sale
+DVP-615,Fortanza Inmobiliaria,Berlín 16,Juárez,Cuauhtémoc,"3,750,000",MXN,Departamento,high,3,sale
+DWI-787,Fortanza Inmobiliaria,Calle Alfonso Herrera 51,San Rafael,Cuauhtémoc,"3,900,000",MXN,Departamento,medium,2,sale
+DXJ-752,Fortanza Inmobiliaria,Berlín 16,Juárez,Cuauhtémoc,"4,000,000",MXN,Departamento,medium,2,sale
+CAJ-317,Habitanza,Av. Revolución 1434,Guadalupe Inn,Alvaro Obregón,"32,900,000",MXN,Local,high,3,sale
+CAN-505,Habitanza,Hacienda de Casboncua 7,Hacienda de Valle Escondido,Atizapán de Zaragoza,"29,900,000",MXN,Casa,high,3,sale
+CAQ-399,Habitanza,Hda. de Axapusco 14,Hacienda de Valle Escondido,Atizapán de Zaragoza,"34,000,000",MXN,Casa,high,3,sale
+CAX-089,Habitanza,Espíritu Santo 75,Lomas de Valle Escondido,Atizapán de Zaragoza,"12,590,000",MXN,Casa,high,3,sale
+CAY-069,Habitanza,Calzada de Los Llorones 54,Zona Esmeralda,Atizapán de Zaragoza,"15,490,000",MXN,Casa,high,3,sale
+CAY-875,Habitanza,Calle 59 553,Merida Centro,Mérida,"37,000,000",MXN,Casa,high,3,sale
+CAZ-272,Habitanza,Circuito del Valle Azul 49,Lomas de Valle Escondido,Atizapán de Zaragoza,"16,950,000",MXN,Casa,high,3,sale
+CCB-568,Habitanza,Coyotepec 4,Lomas de Cortes,Cuernavaca,"8,900,000",MXN,Casa,high,3,sale
+CMS-655,Habitanza,Residencial Aminadah,Temozón Norte,Mérida,"5,390,000",MXN,Casa,high,3,sale
+CNL-635,Habitanza,Antonio de Labastida y Davalos,Lomas Verdes 6ta sección,Naucalpan de Juárez,"13,400,000",MXN,Casa,high,3,sale
+CVK-252,Habitanza,Avenida Jesús del Monte 75,Jesús del Monte,Huixquilucan,"5,200,000",MXN,Casa,high,3,sale
+DAJ-081,Habitanza,Av. Bosque Esmeralda Ote.,Bosque Esmeralda,Atizapán de Zaragoza,"8,200,000",MXN,Departamento,medium,2,sale
+DBT-278,Habitanza,Hacienda del Ciervo 4,Hacienda de las Palmas,Huixquilucan,"7,500,000",MXN,Departamento,medium,2,sale
+DEO-238,Habitanza,Priv. del Romance 27-v mz 010,Bosque Real,Huixquilucan,"11,700,000",MXN,Departamento,medium,2,sale
+DHW-576,Habitanza,Boulevard Bosque Real 43-1 g7,Bosque Real,Huixquilucan,"27,800,000",MXN,Departamento,high,3,sale
+DLL-072,Habitanza,Avenida de las Flores 28,Lomas Country Club,Huixquilucan,"12,600,000",MXN,Departamento,medium,2,sale
+DMN-501,Habitanza,Av. Horacio 1739,Polanco,Miguel Hidalgo,"15,500,000",MXN,Departamento,high,3,sale
+LTL-894,Habitanza,Avenida de los Deportes 26,Las Arboledas,Tlalnepantla de Baz,"12,450,000",MXN,Edificio,high,3,sale
+TAC-805,Habitanza,Castillo de Nottingham,Condado de Sayavedra,Atizapán de Zaragoza,"4,567,000",MXN,Terreno residencial,high,3,sale
+TAP-307,Habitanza,Cedrelas,Rancho San Juan,Atizapán de Zaragoza,"44,900,000",MXN,Casa,high,3,sale
+TAZ-393,Habitanza,Castillo de Nottingham,Condado de Sayavedra,Atizapán de Zaragoza,"3,800,000",MXN,Terreno residencial,high,3,sale
+TNA-022,Habitanza,Los Emperadores,Lomas Verdes,Naucalpan de Juárez,"2,500,000",MXN,Terreno residencial,high,3,sale
+TXJ-575,Habitanza,Castillo de Nottingham,Condado de Sayavedra,Atizapán de Zaragoza,"6,900,000",MXN,Terreno residencial,high,3,sale
+CAD-303,Habitare Luxury Living,Avenida Independencia 20,Pueblo Chiconcuac,Xochitepec,"12,350,000",MXN,Casa,high,3,sale
+CAD-536,Habitare Luxury Living,Residencial AMAILÁ,Real Santa Fe,Xochitepec,"3,633,700",MXN,Casa en condominio,medium,2,sale
+CAQ-915,Habitare Luxury Living,Residencial AMAILÁ,Real Santa Fe,Xochitepec,"3,115,035",MXN,Casa en condominio,medium,2,sale
+CAS-282,Habitare Luxury Living,Desierto de los Leones 4694,Olivar de los Padres,Alvaro Obregón,"8,900,000",MXN,Casa en condominio,high,3,sale
+CBH-805,Habitare Luxury Living,Calle Juan Sánchez Azcona 1510,Del Valle Sur,Benito Juárez,"26,000,000",MXN,Casa,medium,2,sale
+CCM-513,Habitare Luxury Living,Rufino Tamayo 38,San Miguel Acapantzingo,Cuernavaca,"9,990,000",MXN,Casa,high,3,sale
+CCQ-204,Habitare Luxury Living,Herradura 3,Fraccionamiento La Herradura,Cuernavaca,"3,700,000",MXN,Casa en condominio,high,3,sale
+CCS-558,Habitare Luxury Living,Acceso a La Rinconada Chulavista 9,Chulavista,Cuernavaca,"12,000,000",MXN,Casa,high,3,sale
+CEA-395,Habitare Luxury Living,Paseo de las flores 40 Mz 22 Lt 66 Paraiso Country Club,Fraccionamiento Paraíso Country Club,Emiliano Zapata,"12,400,000",MXN,Casa,high,3,sale
+CED-074,Habitare Luxury Living,Cerrada de Tlaloc,Contadero,Cuajimalpa de Morelos,"59,700,000",MXN,Casa,medium,2,sale
+CJK-395,Habitare Luxury Living,Colinas del Lago Tequesquintengo,Pueblo Tequesquitengo,Jojutla,"4,990,000",MXN,Casa en condominio,high,3,sale
+CJY-627,Habitare Luxury Living,Recodo de la Hondonada 8,Club de golf San Gaspar,Jiutepec,"8,963,100",MXN,Casa,high,3,sale
+CQA-533,Habitare Luxury Living,Alejandría 15,Bugambilias,Temixco,"8,500,000",MXN,Casa,medium,2,sale
+CSK-584,Habitare Luxury Living,Calle Jalisco,Punta de Zicatela,Santa María Colotepec,"7,494,460",MXN,Casa,medium,2,sale
+CSZ-263,Habitare Luxury Living,San Francisco Lachigoló,Pueblo San Francisco Lachigolo,San Francisco Lachigoló,"14,999,999",MXN,Casa,medium,2,sale
+CTA-422,Habitare Luxury Living,Alejandría 221,Fraccionamiento Burgos Bugambilias,Temixco,"7,950,000",MXN,Casa,medium,2,sale
+CWK-278,Habitare Luxury Living,Río Usumacinta 1105,Vista Hermosa,Cuernavaca,"7,980,000",MXN,Casa,high,3,sale
+DAS-447,Habitare Luxury Living,Club Playa Mar II,Plan de los Amates,Acapulco de Juárez,"10,899,999",MXN,Departamento,medium,2,sale
+DCA-199,Habitare Luxury Living,Materiales de guerra 2,Lomas del Chamizal,Cuajimalpa de Morelos,"4,999,999",MXN,Departamento,medium,2,sale
+DCA-641,Habitare Luxury Living,Carr. San Mateo Sta. Rosa 99,Contadero,Cuajimalpa de Morelos,"9,336,190",MXN,Departamento,medium,2,sale
+DCN-478,Habitare Luxury Living,Mítikah Torre Residencial,Xoco,Benito Juárez,"30,298,110",MXN,Departamento,medium,2,sale
+DCV-058,Habitare Luxury Living,Avenida Chapultepec 230,Roma Norte,Cuauhtémoc,"9,850,000",MXN,Departamento,high,3,sale
+DCY-734,Habitare Luxury Living,Materiales de Guerra 16,Bosques de las Lomas,Cuajimalpa de Morelos,"5,999,000",MXN,Departamento,high,3,sale
+DHD-756,Habitare Luxury Living,Parque de Cádiz 86,Parques de la Herradura,Huixquilucan,"9,650,000",MXN,Departamento,high,3,sale
+DLC-762,Habitare Luxury Living,Calle Niños Heroes,Ildefonso Green,Los Cabos,"3,176,000",MXN,Departamento,high,3,sale
+DLI-086,Habitare Luxury Living,Calle Niños Heroes,Ildefonso Green,Los Cabos,"11,254,000",MXN,Departamento,high,3,sale
+DLK-664,Habitare Luxury Living,Calle Niños Heroes,Ildefonso Green,Los Cabos,"9,350,000",MXN,Departamento,high,3,sale
+DLO-688,Habitare Luxury Living,Vista Vela III,El Tezal,Los Cabos,"14,000,000",MXN,Departamento,high,3,sale
+DLP-121,Habitare Luxury Living,Calle Niños Heroes,Ildefonso Green,Los Cabos,"7,499,000",MXN,Departamento,high,3,sale
+DLY-675,Habitare Luxury Living,Miró Los Cabos,Lomas del Cabo,Los Cabos,"5,700,000",MXN,Departamento,high,3,sale
+DMA-177,Habitare Luxury Living,Schiller 317,Polanco,Miguel Hidalgo,"17,800,000",MXN,Departamento,high,3,sale
+DMA-183,Habitare Luxury Living,Schiller 317,Polanco,Miguel Hidalgo,"17,900,000",MXN,Departamento,high,3,sale
+DMA-193,Habitare Luxury Living,Schiller 317,Polanco,Miguel Hidalgo,"19,200,000",MXN,Departamento,medium,2,sale
+DMC-036,Habitare Luxury Living,Rincón del Bosque 47,Polanco,Miguel Hidalgo,"25,000,000",MXN,Departamento,high,3,sale
+DMC-086,Habitare Luxury Living,Lago Andromaco 1,Ampliación Granada,Miguel Hidalgo,"7,065,900",MXN,Departamento,medium,2,sale
+DMD-971,Habitare Luxury Living,Rincón del Bosque 47,Polanco,Miguel Hidalgo,"26,500,000",MXN,Departamento,high,3,sale
+DMF-171,Habitare Luxury Living,Rincón del Bosque 47,Polanco,Miguel Hidalgo,"24,000,000",MXN,Departamento,high,3,sale
+DMH-178,Habitare Luxury Living,Privada Veracruz 117,Jesús del Monte,Huixquilucan,"4,650,000",MXN,Departamento,high,3,sale
+DML-104,Habitare Luxury Living,Rincón del Bosque 47,Polanco,Miguel Hidalgo,"36,000,000",MXN,Departamento,high,3,sale
+DMO-338,Habitare Luxury Living,Rincón del Bosque 47,Polanco,Miguel Hidalgo,"25,000,000",MXN,Departamento,high,3,sale
+DOA-006,Habitare Luxury Living,Hama Beach Condo by Jsphogares,Mahahual,Othón P. Blanco,"6,656,000",MXN,Departamento,high,3,sale
+DSA-185,Habitare Luxury Living,C. 1 Sur 175,Playa del Carmen,Solidaridad,"220,000",USD,Departamento,high,3,sale
+DSA-441,Habitare Luxury Living,HOM Holistic Living,Lomas de Angelópolis,San Andrés Cholula,"2,820,000",MXN,Departamento,high,3,sale
+DTA-586,Habitare Luxury Living,Macondo Tulum,Tulum,Tulum,"3,259,403",MXN,Departamento,high,3,sale
+DWL-476,Habitare Luxury Living,Av. Santa Fe 498,Contadero,Cuajimalpa de Morelos,"17,400,000",MXN,Departamento,medium,2,sale
+NXT-984,Habitare Luxury Living,Calle la Soledad 3,La Colonia,Teteles de Avila Castillo,"14,999,999",MXN,Nave industrial,high,3,sale
+TBO-031,Habitare Luxury Living,Paseo de Maule,Cancún,Benito Juárez,"54,999,000",MXN,Terreno residencial,high,3,sale
+TCA-006,Habitare Luxury Living,Camino a chalma y jacarandas s/n ,Lomas de Tetela,Cuernavaca,"26,999,000",MXN,Terreno residencial,medium,2,sale
+TCK-948,Habitare Luxury Living,Oaxaca,Unidad habitacional Morelos,Cuernavaca,"8,956,500",MXN,Terreno comercial,medium,2,sale
+TCV-005,Habitare Luxury Living,La Herradura,Fraccionamiento La Herradura,Cuernavaca,"6,500,000",MXN,Terreno residencial,medium,2,sale
+TSC-134,Habitare Luxury Living,Carretera Federal 200 & Séptima Oriente,Reforma,San Pedro Mixtepec -Dto. 22 -,"35,000,000",MXN,Terreno comercial,medium,2,sale
+TSO-282,Habitare Luxury Living,El Puertecito,Pueblo San Miguel Del Puerto,San Miguel del Puerto,"1,650,000",MXN,Terreno residencial,medium,2,sale
+TTA-300,Habitare Luxury Living,Dos Ojos,Tulum,Tulum,"1,500,000",MXN,Terreno residencial,high,3,sale
+TXF-726,Habitare Luxury Living,ALMANTA,Real Santa Fe,Xochitepec,"748,800",MXN,Terreno residencial,medium,2,sale
+TXH-337,Habitare Luxury Living,Residencial AMAILÁ,Real Santa Fe,Xochitepec,"2,780,000",MXN,Casa en condominio,medium,2,sale
+TXV-697,Habitare Luxury Living,ALMANTA,Real Santa Fe,Xochitepec,"870,400",MXN,Terreno residencial,medium,2,sale
+CIQ-893,Harza Real Estate,Tajín 143,Narvarte Oriente,Benito Juárez,"11,000,000",MXN,Terreno residencial,high,3,sale
+CLT-122,Harza Real Estate,Tuxpan 114,San Jerónimo Aculco,La Magdalena Contreras,"17,450,000",MXN,Casa,high,3,sale
+CZU-935,Harza Real Estate,Las Palmas 585,El Molino,Cuajimalpa de Morelos,"12,500,000",MXN,Casa,high,3,sale
+DFA-512,Harza Real Estate,Toltecas 166,Tolteca,Alvaro Obregón,"3,600,000",MXN,Departamento,medium,2,sale
+DGP-918,Harza Real Estate,Toltecas 166,Tolteca,Alvaro Obregón,"3,700,000",MXN,Departamento,medium,2,sale
+DHF-808,Harza Real Estate,Av. de los Bosques 263,Lomas de Tecamachalco,Huixquilucan,"12,000,000",MXN,Departamento,medium,2,sale
+DPB-843,Harza Real Estate,Alfonso Reyes 53,Hipódromo Condesa,Cuauhtémoc,"14,200,000",MXN,Departamento,medium,2,sale
+DUO-863,Harza Real Estate,Alpes 34,Los Alpes,Alvaro Obregón,"4,700,000",MXN,Departamento,high,3,sale
+DWS-672,Harza Real Estate,Alfonso Reyes 53,Hipódromo Condesa,Cuauhtémoc,"13,990,000",MXN,Departamento,medium,2,sale
+DXY-255,Harza Real Estate,Alfonso Reyes 53,Hipódromo Condesa,Cuauhtémoc,"20,800,000",MXN,Departamento,medium,2,sale
+CAF-886,Haz Inmobiliaria,"Privada de las Pérgolas, Bosque Real, Naucalpan de Juárez, Estado de México, México",Bosque Real,Huixquilucan,"42,000,000",MXN,Casa,high,3,sale
+CAT-593,Haz Inmobiliaria,Altavista,Paseo de las Lomas,Alvaro Obregón,"24,950,000",MXN,Casa,medium,2,sale
+CAT-934,Haz Inmobiliaria,Bosque Real,Bosque Real,Huixquilucan,"18,950,000",MXN,Casa,high,3,sale
+CCE-445,Haz Inmobiliaria,"Bosque de Palmitos, Bosques de las Lomas, Ciudad de México",Lomas de Bezares,Miguel Hidalgo,"69,700,000",MXN,Casa en condominio,high,3,sale
+CCJ-739,Haz Inmobiliaria,Cerrada del Potosi,Parques de la Herradura,Huixquilucan,"35,000,000",MXN,Casa,medium,2,sale
+CCS-494,Haz Inmobiliaria,Paseo de Las Primaveras,Bosques de las Lomas,Cuajimalpa de Morelos,"2,400,000",USD,Casa,medium,2,sale
+CCV-513,Haz Inmobiliaria,Prolongación Reforma,Cuajimalpa,Cuajimalpa de Morelos,"6,990,000",MXN,Casa en condominio,high,3,sale
+CFC-769,Haz Inmobiliaria,De las Vegas 16,AvAndaro,Valle de Bravo,"16,000,000",MXN,Casa,medium,2,sale
+CFL-494,Haz Inmobiliaria,Lomas Country Club,Lomas Country Club,Huixquilucan,"49,000,000",MXN,Casa,medium,2,sale
+CFS-631,Haz Inmobiliaria,Fuente del Pescador 40,Lomas de Tecamachalco,Naucalpan de Juárez,"11,200,000",MXN,Casa,high,3,sale
+CHA-486,Haz Inmobiliaria,Av. Club de Golf,Lomas Country Club,Huixquilucan,"40,000,000",MXN,Casa,medium,2,sale
+CHC-054,Haz Inmobiliaria,Fuente de Las Águilas,Lomas de Tecamachalco,Naucalpan de Juárez,"15,000,000",MXN,Casa,medium,2,sale
+CHD-374,Haz Inmobiliaria,Bosque de la Conquista 93,La Herradura,Huixquilucan,"16,900,000",MXN,Casa,medium,2,sale
+CHT-059,Haz Inmobiliaria,Circuito Balcones 102,Juriquilla,Querétaro,"7,500,000",MXN,Casa en condominio,medium,2,sale
+CHV-559,Haz Inmobiliaria,Av. Club de Golf,Lomas Country Club,Huixquilucan,"27,900,000",MXN,Casa,high,3,sale
+CHX-162,Haz Inmobiliaria,Parque de Cádiz,Parques de la Herradura,Huixquilucan,"11,900,000",MXN,Casa,high,3,sale
+CHZ-495,Haz Inmobiliaria,Avenida Club de Golf 2,Lomas Country Club,Huixquilucan,"9,900,000",MXN,Casa,medium,2,sale
+CMC-924,Haz Inmobiliaria,Bosque de Ocozoles,Bosque de las Lomas,Miguel Hidalgo,"40,000,000",MXN,Casa,medium,2,sale
+CMF-382,Haz Inmobiliaria,Juan Vicente de Güémez 120,Lomas de Chapultepec,Miguel Hidalgo,"1,450,000",USD,Casa,high,3,sale
+CMF-421,Haz Inmobiliaria,Bosque de Olivos 27,Bosque de las Lomas,Miguel Hidalgo,"29,000,000",MXN,Casa,high,3,sale
+CMJ-807,Haz Inmobiliaria,"Plan de Barrancas, Lomas de Chapultepec, Miguel Hidalgo, CDMX, México",Lomas de Reforma,Miguel Hidalgo,"38,540,000",MXN,Casa,high,3,sale
+CMQ-465,Haz Inmobiliaria,Sierra Vertientes 340,Lomas de Chapultepec,Miguel Hidalgo,"4,000,000",USD,Casa,medium,2,sale
+CMU-481,Haz Inmobiliaria,Paseo de Las Primaveras,Lomas de Vista Hermosa,Cuajimalpa de Morelos,"56,000,000",MXN,Casa en condominio,high,3,sale
+CMY-946,Haz Inmobiliaria,Bosque de Colorines 30,Bosque de las Lomas,Miguel Hidalgo,"1,450,000",USD,Casa,medium,2,sale
+CNB-833,Haz Inmobiliaria,Mármol 50,Paseos del Bosque,Naucalpan de Juárez,"17,900,000",MXN,Casa,medium,2,sale
+CNH-125,Haz Inmobiliaria,Fuente de Santa Cecilia,Lomas de Tecamachalco,Huixquilucan,"21,000,000",MXN,Casa,medium,2,sale
+CNS-659,Haz Inmobiliaria,Fuente de Cibeles,Lomas de Tecamachalco,Naucalpan de Juárez,"16,300,000",MXN,Casa en condominio,medium,2,sale
+CNZ-718,Haz Inmobiliaria,Fuente de Cibeles,Lomas de Tecamachalco,Naucalpan de Juárez,"17,000,000",MXN,Casa en condominio,medium,2,sale
+CPI-577,Haz Inmobiliaria,Paseo Anahuac 112,Bosques de las Palmas,Naucalpan de Juárez,"7,200,000",MXN,Casa,medium,2,sale
+CVH-861,Haz Inmobiliaria,Cerrada de La Amargura 126,Lomas de la Herradura,Naucalpan de Juárez,"13,000,000",MXN,Casa,medium,2,sale
+CVL-716,Haz Inmobiliaria,Lomas Country Club,Lomas Country Club,Huixquilucan,"49,900,000",MXN,Casa en condominio,medium,2,sale
+CXM-694,Haz Inmobiliaria,"Guaycura S/N zona 3 Mz 99 Constancia, 78430, Soledad de Lt 4, C.P. 23300 La Poza, Graciano Sánchez, S.L.",Guaycura,La Paz,"1,950,000",USD,Casa,medium,2,sale
+CZF-799,Haz Inmobiliaria,Vega del Río,AvAndaro,Valle de Bravo,"13,500,000",MXN,Casa,medium,2,sale
+DAJ-091,Haz Inmobiliaria,"Club de Golf Bosques de Santa Fe, Cuajimalpa de Morelos, CDMX, Méx.",Lomas de Santa Fe,Alvaro Obregón,"45,000,000",MXN,Departamento,medium,2,sale
+DAN-743,Haz Inmobiliaria,Residence torre 3 y 4,Bosque Real,Huixquilucan,"27,800,000",MXN,Departamento,medium,2,sale
+DAN-753,Haz Inmobiliaria,Stampa Residencial,Santa Fe Cuajimalpa,Cuajimalpa de Morelos,"6,000,000",MXN,Departamento,medium,2,sale
+DAQ-286,Haz Inmobiliaria,Interlomas,Interlomas,Huixquilucan,"4,995,000",MXN,Departamento,medium,2,sale
+DAT-412,Haz Inmobiliaria,Frondoso 1,Lomas AnAhuac,Huixquilucan,"10,550,000",MXN,Departamento,high,3,sale
+DBO-424,Haz Inmobiliaria,Boulevard Bosque Real 7100,Bosque Real,Naucalpan de Juárez,"7,250,000",MXN,Departamento,medium,2,sale
+DBY-604,Haz Inmobiliaria,"Av. San Lorenzo, Del Valle, Benito Juárez, Ciudad de México",Del Valle Sur,Benito Juárez,"6,300,000",MXN,Departamento,medium,2,sale
+DCC-264,Haz Inmobiliaria,Condominio Lo Alto Bosque Real,Bosque Real,Huixquilucan,"10,200,000",MXN,Departamento,medium,2,sale
+DCD-462,Haz Inmobiliaria,Av. de los Bosques 1515,Bosques de las Lomas,Cuajimalpa de Morelos,"15,990,000",MXN,Departamento,high,3,sale
+DCE-221,Haz Inmobiliaria,Privada de Tamarindos,Bosques de las Lomas,Cuajimalpa de Morelos,"13,500,000",MXN,Departamento,medium,2,sale
+DCG-635,Haz Inmobiliaria,Av. Secretaría de Marina,Lomas del Chamizal,Cuajimalpa de Morelos,"12,500,000",MXN,Departamento,medium,2,sale
+DCP-203,Haz Inmobiliaria,Antiguo Camino a Tecamachalco 280,El Olivo,Naucalpan de Juárez,"21,900,000",MXN,Departamento,medium,2,sale
+DCS-786,Haz Inmobiliaria,"Camino a Santa Fe, El Cuernito, Álvaro Obregón, Ciudad de México",Santa Fe,Alvaro Obregón,"3,400,000",MXN,Departamento,medium,2,sale
+DCX-348,Haz Inmobiliaria,Sierra Chalchihui 215,Lomas de Chapultepec,Miguel Hidalgo,"14,500,000",MXN,Departamento,high,3,sale
+DDJ-014,Haz Inmobiliaria,Avenida Presidente Masaryk 510,Polanco,Miguel Hidalgo,"20,500,000",MXN,Departamento,medium,2,sale
+DER-274,Haz Inmobiliaria,Rio Rhin,Cuauhtémoc,Cuauhtémoc,"7,100,000",MXN,Departamento,medium,2,sale
+DES-668,Haz Inmobiliaria,Interlomas,Interlomas,Huixquilucan,"4,660,000",MXN,Departamento,medium,2,sale
+DFH-195,Haz Inmobiliaria,Avenida Santa Fe 443,Santa Fe Cuajimalpa,Cuajimalpa de Morelos,"4,600,000",MXN,Departamento,medium,2,sale
+DFI-643,Haz Inmobiliaria,Avenida Secretaría de Marina 90-92,Lomas del Chamizal,Cuajimalpa de Morelos,"12,480,000",MXN,Departamento,medium,2,sale
+DGF-414,Haz Inmobiliaria,Eucalipto 22,Jesús del Monte,Huixquilucan,"6,000,000",MXN,Departamento,medium,2,sale
+DHB-656,Haz Inmobiliaria,Av. Club de Golf 217,Lomas Country Club,Huixquilucan,"18,888,000",MXN,PH,high,3,sale
+DHD-719,Haz Inmobiliaria,Av. Jesús del Monte 163,Jesús del Monte,Cuajimalpa de Morelos,"17,800,000",MXN,Departamento,medium,2,sale
+DHD-868,Haz Inmobiliaria,Av. Lomas del Encanto 32,Lomas Country Club,Huixquilucan,"20,000,000",MXN,Departamento,medium,2,sale
+DHF-708,Haz Inmobiliaria,Av. Jesús del Monte 32a,Interlomas,Huixquilucan,"8,855,000",MXN,Departamento,high,3,sale
+DHF-806,Haz Inmobiliaria,Aquario,Jesús del Monte,Huixquilucan,"4,500,000",MXN,Departamento,medium,2,sale
+DHI-194,Haz Inmobiliaria,Avenida Club de Golf 2,Lomas Country Club,Huixquilucan,"6,495,000",MXN,Departamento,medium,2,sale
+DHJ-955,Haz Inmobiliaria,Hacienda de las Palmas 20,Hacienda de las Palmas,Huixquilucan,"12,000,000",MXN,Departamento,medium,2,sale
+DHK-019,Haz Inmobiliaria,Hacienda el Ciervo,Hacienda de las Palmas,Huixquilucan,"9,000,000",MXN,Departamento,medium,2,sale
+DHK-624,Haz Inmobiliaria,Av. Club de Golf Lomas 217,Interlomas,Huixquilucan,"12,000,000",MXN,Departamento,high,3,sale
+DHK-706,Haz Inmobiliaria,"Av. Jesús del Monte, Jesús del Monte, Huixquilucan, Edo Mex",Jesús del Monte,Huixquilucan,"7,300,000",MXN,Departamento,medium,2,sale
+DHL-065,Haz Inmobiliaria,Av. Club de Golf,Lomas Country Club,Huixquilucan,"8,300,000",MXN,Departamento,medium,2,sale
+DHL-319,Haz Inmobiliaria,Av. Club de Golf,Lomas Country Club,Huixquilucan,"17,500,000",MXN,Departamento,high,3,sale
+DHO-828,Haz Inmobiliaria,Parque Interlomas,Interlomas,Huixquilucan,"6,500,000",MXN,Departamento,high,3,sale
+DHP-436,Haz Inmobiliaria,Avenida Club de Golf Lomas Este 8,Lomas Country Club,Huixquilucan,"14,500,000",MXN,Departamento,high,3,sale
+DHP-578,Haz Inmobiliaria,Av. Jesús del Monte,Jesús del Monte,Huixquilucan,"16,500,000",MXN,Departamento,high,3,sale
+DHT-816,Haz Inmobiliaria,Fuente Azul 18,Lomas del Chamizal,Cuajimalpa de Morelos,"9,300,000",MXN,Departamento,medium,2,sale
+DHY-392,Haz Inmobiliaria,Avenida Club de Golf 14,Lomas Country Club,Naucalpan de Juárez,"6,990,000",MXN,Departamento,medium,2,sale
+DHZ-329,Haz Inmobiliaria,Av. Lomas del Encanto 32,Lomas Country Club,Huixquilucan,"17,800,000",MXN,Departamento,high,3,sale
+DHZ-377,Haz Inmobiliaria,Hacienda de las Palmas,Hacienda de las Palmas,Huixquilucan,"8,500,000",MXN,Departamento,high,3,sale
+DHZ-384,Haz Inmobiliaria,Av. de los Bosques,Lomas del Chamizal,Cuajimalpa de Morelos,"12,000,000",MXN,Departamento,high,3,sale
+DHZ-953,Haz Inmobiliaria,Av. de los Bosques,Lomas del Chamizal,Cuajimalpa de Morelos,"12,499,000",MXN,Departamento,high,3,sale
+DID-667,Haz Inmobiliaria,Fuente de Molinos 48,Lomas de Tecamachalco,Naucalpan de Juárez,"8,500,000",MXN,Departamento,medium,2,sale
+DIJ-851,Haz Inmobiliaria,Avenida Club de Golf 14,Interlomas,Huixquilucan,"13,950,000",MXN,Departamento,high,3,sale
+DJO-194,Haz Inmobiliaria,Chihuahua 132,Roma Norte,Cuauhtémoc,"9,800,000",MXN,Departamento,medium,2,sale
+DKC-756,Haz Inmobiliaria,Av. Jesús del Monte 34,Jesús del Monte,Huixquilucan,"10,000,000",MXN,Departamento,medium,2,sale
+DKV-181,Haz Inmobiliaria,Avenida Paseo de la Reforma 2679,Lomas de Chapultepec,Miguel Hidalgo,"32,000,000",MXN,Departamento,medium,2,sale
+DMD-672,Haz Inmobiliaria,Fuente Azul 18,Lomas de Tecamachalco,Huixquilucan,"7,950,000",MXN,Departamento,medium,2,sale
+DME-146,Haz Inmobiliaria,Avenida Paseo de la Reforma 2501-4,Real de las Lomas,Miguel Hidalgo,"2,785,000",USD,Departamento,high,3,sale
+DME-285,Haz Inmobiliaria,Cofre de Perote 371,Lomas de Chapultepec,Miguel Hidalgo,"19,000,000",MXN,Departamento,medium,2,sale
+DME-398,Haz Inmobiliaria,Parque Residencial Vidalta,Bosques de las Lomas,Cuajimalpa de Morelos,"35,000,000",MXN,Departamento,medium,2,sale
+DMH-898,Haz Inmobiliaria,Bosques de la Reforma 1539,Bosques de las Lomas,Cuajimalpa de Morelos,"1,400,000",USD,Departamento,high,3,sale
+DMK-502,Haz Inmobiliaria,Parque Residencial Vidalta,Bosques de las Lomas,Cuajimalpa de Morelos,"20,000,000",MXN,Departamento,high,3,sale
+DML-967,Haz Inmobiliaria,Blas Pascal 106,Polanco,Miguel Hidalgo,"8,900,000",MXN,Departamento,medium,2,sale
+DMM-392,Haz Inmobiliaria,"Ahuehuetes Norte, Bosques de las Lomas, Miguel Hidalgo, CDMX",Bosque de las Lomas,Miguel Hidalgo,"11,000,000",MXN,Departamento,high,3,sale
+DMN-044,Haz Inmobiliaria,Eugenio Sue 342,Polanco,Miguel Hidalgo,"13,900,000",MXN,Departamento,medium,2,sale
+DMS-257,Haz Inmobiliaria,Cofre de Perote 279,Lomas de Chapultepec,Miguel Hidalgo,"14,600,000",MXN,Departamento,high,3,sale
+DMV-177,Haz Inmobiliaria,Avenida Tecamachalco 65,Reforma Social,Miguel Hidalgo,"8,400,000",MXN,Departamento,high,3,sale
+DMX-194,Haz Inmobiliaria,Sierra Chalchihui 175,Lomas de Chapultepec,Miguel Hidalgo,"28,500,000",MXN,Departamento,medium,2,sale
+DOJ-615,Haz Inmobiliaria,C. Palma Criolla 9,Interlomas,Huixquilucan,"4,500,000",MXN,Departamento,high,3,sale
+DOX-257,Haz Inmobiliaria,Eucalipto 22,Jesús del Monte,Huixquilucan,"5,500,000",MXN,Departamento,medium,2,sale
+DOY-301,Haz Inmobiliaria,Economía 17,Lomas AnAhuac,Naucalpan de Juárez,"11,560,000",MXN,Departamento,medium,2,sale
+DRC-257,Haz Inmobiliaria,Av. Club de Golf 80,Lomas Country Club,Naucalpan de Juárez,"14,950,000",MXN,Departamento,medium,2,sale
+DSD-912,Haz Inmobiliaria,Calle Guillermo Gonzalez Camarena 900,Santa Fe,Alvaro Obregón,"9,000,000",MXN,Departamento,medium,2,sale
+DUC-842,Haz Inmobiliaria,Interlomas,Interlomas,Huixquilucan,"4,800,000",MXN,Departamento,medium,2,sale
+DVL-965,Haz Inmobiliaria,"Av. Palma de Dátil 11, Bosque de las Palmas, Naucalpan de Juárez, Edo Méx",Interlomas,Huixquilucan,"5,531,000",MXN,Departamento,medium,2,sale
+DVN-583,Haz Inmobiliaria,Sierra Chalchihui 215,Lomas de Chapultepec,Miguel Hidalgo,"16,500,000",MXN,Departamento,medium,2,sale
+DWI-106,Haz Inmobiliaria,Platón 434,Polanco,Miguel Hidalgo,"25,000,000",MXN,Departamento,medium,2,sale
+DXD-259,Haz Inmobiliaria,Avenida Secretaría de Marina 92,Lomas del Chamizal,Cuajimalpa de Morelos,"36,500,000",MXN,Departamento,medium,2,sale
+DXJ-032,Haz Inmobiliaria,Central Park Bosque Real,Bosque Real,Huixquilucan,"6,350,000",MXN,Departamento,medium,2,sale
+DXJ-365,Haz Inmobiliaria,Economía 17,Lomas AnAhuac,Naucalpan de Juárez,"9,000,000",MXN,Departamento,medium,2,sale
+ECV-915,Haz Inmobiliaria,Avenida Ricardo Flores Magón 90,Buenavista,Cuauhtémoc,"23,000,000",MXN,Edificio,high,3,sale
+OHM-118,Haz Inmobiliaria,Pje. Interlomas 39,Bosques de las Palmas,Huixquilucan,"5,500,000",MXN,Oficina,high,3,sale
+OMO-141,Haz Inmobiliaria,Gutenberg 39,Verónica Anzures,Miguel Hidalgo,"6,850,000",MXN,Oficina,medium,2,sale
+OMW-423,Haz Inmobiliaria,Gutenberg 39,Verónica Anzures,Miguel Hidalgo,"7,300,000",MXN,Oficina,high,3,sale
+OXQ-733,Haz Inmobiliaria,prolongación paseo  de la reforma 799,Santa Fe,Alvaro Obregón,"11,000,000",MXN,Oficina,medium,2,sale
+PLU-829,Haz Inmobiliaria,Av portón de las flores 36 Lomas Country Club La Enramada Torre E,Lomas Country Club,Huixquilucan,"15,000,000",MXN,PH,medium,2,sale
+PUL-186,Haz Inmobiliaria,Avenida Club de Golf 11,Interlomas,Huixquilucan,"11,000,000",MXN,PH,medium,2,sale
+TAM-017,Haz Inmobiliaria,"privada de ensue;o , lote 2, mz V1, bosque real",Bosque Real,Huixquilucan,"11,950,000",MXN,Terreno residencial,medium,2,sale
+TCR-121,Haz Inmobiliaria,16 de septiembre null,Contadero,Cuajimalpa de Morelos,"6,000,000",USD,Terreno residencial,medium,2,sale
+CAA-478,HsVision,blvd capri 36 lomas estrella 1ra seccion ,Lomas Estrella,Iztapalapa,"7,700,000",MXN,Casa,high,3,sale
+CCJ-249,HsVision,Miguel Angel 171,Moderna,Ciudad de México,"7,000,000",MXN,Casa,medium,2,sale
+CFO-666,HsVision,Londres 35,Del Carmen,Coyoacán,"20,000,000",MXN,Casa,medium,2,sale
+CNZ-983,HsVision,Av. Sudamérica 96,Las Américas,Naucalpan de Juárez,"10,500,000",MXN,Casa,medium,2,sale
+DDB-396,HsVision,Irolo 73,Del Carmen,Benito Juárez,"4,100,000",MXN,Departamento,high,3,sale
+DMI-417,HsVision,LIV Petrel,Milenio III,Querétaro,"6,167,000",MXN,Departamento,medium,2,sale
+DSJ-888,HsVision,Calle General Juan Cano 98,San Miguel Chapultepec,Miguel Hidalgo,"5,500,000",MXN,Departamento,high,3,sale
+BMY-007,INMOShop,Mártires de La Conquista 26,Tacubaya,Miguel Hidalgo,"11,500,000",MXN,Bodega comercial,high,3,sale
+DLJ-455,INMOShop,Residencial Altura,Cancún,Cancún,"6,500,000",MXN,Departamento,medium,2,sale
+CAD-942,Inmobiliaria 24Siete,Av. Tamaulipas,Santa Fe,Alvaro Obregón,"8,400,000",MXN,Casa en condominio,medium,2,sale
+CAJ-801,Inmobiliaria 24Siete,Calle Sur 132,Las Américas,Alvaro Obregón,"2,690,900",MXN,Departamento,high,3,sale
+CBR-726,Inmobiliaria 24Siete,Fuentes de Tepepan,Fuentes de Tepepan,Tlalpan,"5,500,000",MXN,Casa en condominio,medium,2,sale
+CCU-856,Inmobiliaria 24Siete,Santa Fe,Santa Lucia,Alvaro Obregón,"8,400,000",MXN,Casa en condominio,medium,2,sale
+CHC-328,Inmobiliaria 24Siete,Paseo Lomas del Sol,Lomas del Sol,Huixquilucan,"10,800,000",MXN,Casa,medium,2,sale
+CHD-394,Inmobiliaria 24Siete,Paseo de la Herradura,Parques de la Herradura,Naucalpan de Juárez,"14,990,000",MXN,Casa,high,3,sale
+CHM-203,Inmobiliaria 24Siete,La Vista 18 Bosque Real,Bosque Real,Huixquilucan,"22,500,000",MXN,Casa,medium,2,sale
+CHP-503,Inmobiliaria 24Siete,RIVERSIDE,Bosque Real,Huixquilucan,"17,500,000",MXN,Casa en condominio,medium,2,sale
+CMA-718,Inmobiliaria 24Siete,Paseo de Los Ahuehuetes Sur,Bosque de las Lomas,Miguel Hidalgo,"16,500,000",MXN,Casa,high,3,sale
+CTO-847,Inmobiliaria 24Siete,Residencial Hacienda Yexthó,Rancho o rancheria Yextho Chico,Tecozautla,"2,900,000",MXN,Casa en condominio,medium,2,sale
+CXF-488,Inmobiliaria 24Siete,Lomas del Sol,Lomas del Sol,Huixquilucan,"8,200,000",MXN,Casa,medium,2,sale
+DAD-175,Inmobiliaria 24Siete,Calle Sur 132,Las Américas,Alvaro Obregón,"3,010,000",MXN,Departamento,medium,2,sale
+DAM-932,Inmobiliaria 24Siete,Bosque Real Towers,Bosque Real,Huixquilucan,"7,800,000",MXN,Departamento,medium,2,sale
+DAV-427,Inmobiliaria 24Siete,Av. Rómulo O'Farril 468,Olivar de los Padres,Alvaro Obregón,"6,300,000",MXN,Departamento,medium,2,sale
+DBL-426,Inmobiliaria 24Siete,Uxmal 117,Esperanza,Benito Juárez,"6,200,000",MXN,Departamento,high,3,sale
+DBV-402,Inmobiliaria 24Siete,Mier y Pesado,Del Valle Norte,Benito Juárez,"9,488,745",MXN,Departamento,medium,2,sale
+DCJ-492,Inmobiliaria 24Siete,Calle Gabriel Mancera,Del Valle Sur,Benito Juárez,"7,809,731",MXN,Departamento,medium,2,sale
+DCS-794,Inmobiliaria 24Siete,Av. Homero 1880,Polanco,Miguel Hidalgo,"11,850,000",MXN,Departamento,medium,2,sale
+DCT-064,Inmobiliaria 24Siete,Camino a Santa Fe 606,Cuevitas,Alvaro Obregón,"4,400,000",MXN,Departamento,medium,2,sale
+DDC-562,Inmobiliaria 24Siete,Sáyabes,Bosque Real,Naucalpan de Juárez,"6,300,000",MXN,Departamento,medium,2,sale
+DHA-916,Inmobiliaria 24Siete,BR Five - Torre A,Bosque Real,Huixquilucan,"7,800,000",MXN,Departamento,high,3,sale
+DHE-866,Inmobiliaria 24Siete,"Hacienda del ciervo, Hacienda de las Palmas,Huixquilucan, Eda de México",Hacienda de las Palmas,Huixquilucan,"8,490,000",MXN,Departamento,medium,2,sale
+DHH-082,Inmobiliaria 24Siete,Isola Bosque Real,Bosque Real,Huixquilucan,"7,650,000",MXN,Departamento,high,3,sale
+DHJ-004,Inmobiliaria 24Siete,Blvrd Bosque Real 52774,Bosque Real,Huixquilucan,"9,290,000",MXN,Departamento,medium,2,sale
+DHP-535,Inmobiliaria 24Siete,Carretera México-Toluca 5095,El Yaqui,Cuajimalpa de Morelos,"3,360,000",MXN,Departamento,medium,2,sale
+DIS-935,Inmobiliaria 24Siete,Av. Jesús del Monte 44,Jesús del Monte,Huixquilucan,"8,200,000",MXN,Departamento,medium,2,sale
+DMK-446,Inmobiliaria 24Siete,Villa del Lago,Jesús del Monte,Huixquilucan,"4,995,000",MXN,Departamento,medium,2,sale
+DNE-058,Inmobiliaria 24Siete,"Av del Silencio Mz 001, Bosque Real",Bosque Real,Huixquilucan,"6,950,000",MXN,Departamento,medium,2,sale
+DNV-184,Inmobiliaria 24Siete,Sáyabes,Bosque Real,Naucalpan de Juárez,"11,500,000",MXN,Departamento,medium,2,sale
+DNZ-467,Inmobiliaria 24Siete,Sáyabes,Bosque Real,Naucalpan de Juárez,"14,000,000",MXN,Departamento,medium,2,sale
+DPN-726,Inmobiliaria 24Siete,Carretera México-Toluca 5095,Contadero,Cuajimalpa de Morelos,"4,600,000",MXN,Departamento,medium,2,sale
+DQV-453,Inmobiliaria 24Siete,Avenida Club de Golf Lomas Este 80,Lomas Country Club,Huixquilucan,"14,950,000",MXN,Departamento,medium,2,sale
+DUJ-284,Inmobiliaria 24Siete,Carretera México-Toluca 5095,Contadero,Cuajimalpa de Morelos,"6,500,000",MXN,Departamento,medium,2,sale
+DUP-396,Inmobiliaria 24Siete,Central Park Bosque Real,Bosque Real,Huixquilucan,"6,950,000",MXN,Departamento,medium,2,sale
+DVV-514,Inmobiliaria 24Siete,Blvrd Bosque Real,Bosque Real,Huixquilucan,"11,800,000",MXN,Departamento,medium,2,sale
+DXB-215,Inmobiliaria 24Siete,Orbis,Jesús del Monte,Huixquilucan,"2,090,000",MXN,Departamento,medium,2,sale
+THJ-079,Inmobiliaria 24Siete,Reserva By Grupo Bosque Real,Bosque Real,Huixquilucan,"7,700,000",MXN,Terreno residencial,medium,2,sale
+THM-673,Inmobiliaria 24Siete,"Privada Loma Alta S/N 115A, Bosque Real ",Bosque Real,Huixquilucan,"8,400,000",MXN,Terreno residencial,high,3,sale
+TQU-871,Inmobiliaria 24Siete,Ambar,Bosque Real,Naucalpan de Juárez,"7,200,000",MXN,Terreno residencial,medium,2,sale
+TSL-167,Inmobiliaria 24Siete,Lemans 70,Villa Verdún,Alvaro Obregón,"6,232,500",MXN,Terreno residencial,medium,2,sale
+TTA-293,Inmobiliaria 24Siete,"Tlazala de Fabela, Méx., México ",Tlazala,Isidro Fabela,"2,618,000",MXN,Terreno residencial,medium,2,sale
+TTA-299,Inmobiliaria 24Siete,"Region 8 Tulum, Quintana Roo ",Villas Tulum,Tulum,"400,000",USD,Terreno residencial,medium,2,sale
+TZL-806,Inmobiliaria 24Siete,Carretera Toluca - Naucalpan 44,Santa María Zolotepec,Xonacatlán,"10,000,000",MXN,Terreno industrial,medium,2,sale
+CAD-675,Kaax Real Estate,La Peña,Valle de Bravo,Valle de Bravo,"1,500,000",USD,Casa,medium,2,sale
+CDM-867,Kaax Real Estate,Del Parque,AvAndaro,Valle de Bravo,"9,400,000",MXN,Casa,medium,2,sale
+CEA-423,Kaax Real Estate,San Gabriel Ixtla,San Gabriel Ixtla,Valle de Bravo,"11,000,000",MXN,Casa,medium,2,sale
+CED-091,Kaax Real Estate,Valle de Bravo,San Simón el Alto,Valle de Bravo,"17,500,000",MXN,Casa,medium,2,sale
+CEF-467,Kaax Real Estate,Santa María Ahuacatlan,Santa María Ahuacatlan,Valle de Bravo,"11,750,000",MXN,Casa en condominio,medium,2,sale
+CEP-077,Kaax Real Estate,Fontana Pura,Avándaro,Valle de Bravo,"7,600,000",MXN,Casa en condominio,medium,2,sale
+CFA-411,Kaax Real Estate,Fontana Pura,Avándaro,Valle de Bravo,"29,700,000",MXN,Casa en condominio,medium,2,sale
+CFT-639,Kaax Real Estate,Tizates,Otumba,Valle de Bravo,"8,500,000",MXN,Casa en condominio,medium,2,sale
+CFZ-011,Kaax Real Estate,Camino a Cerro Gordo,Avándaro,Valle de Bravo,"13,500,000",MXN,Casa,medium,2,sale
+CFZ-253,Kaax Real Estate,Privada Rincón del Bosque 101,Avándaro,Valle de Bravo,"18,000,000",MXN,Casa,medium,2,sale
+CGB-863,Kaax Real Estate,FONTANA ALTA,Avándaro,Valle de Bravo,"17,900,000",MXN,Casa,medium,2,sale
+CGR-866,Kaax Real Estate,Cda. del Artista 209,Santa María Ahuacatlan,Valle de Bravo,"13,500,000",MXN,Casa en condominio,medium,2,sale
+CHT-482,Kaax Real Estate,Privada Rincón del Bosque 101,Avándaro,Valle de Bravo,"20,200,000",MXN,Casa,medium,2,sale
+CIT-355,Kaax Real Estate,Fontana Linda,AvAndaro,Valle de Bravo,"31,000,000",MXN,Terreno residencial,medium,2,sale
+CJI-185,Kaax Real Estate,Camino a Cerro Gordo,Cerro Gordo,Valle de Bravo,"12,000,000",MXN,Casa,medium,2,sale
+CJR-236,Kaax Real Estate,Valle de Bravo,Valle de Bravo,Valle de Bravo,"10,500,000",MXN,Casa,medium,2,sale
+CKS-031,Kaax Real Estate,Fontana Rosa,AvAndaro,Valle de Bravo,"6,300,000",MXN,Casa en condominio,medium,2,sale
+CKU-072,Kaax Real Estate,Acatitlan,Valle de Bravo,Valle de Bravo,"19,500,000",MXN,Casa,medium,2,sale
+CKX-505,Kaax Real Estate,Camino a Cerro Gordo 800,Cerro Gordo,Valle de Bravo,"30,000,000",MXN,Casa en condominio,medium,2,sale
+CKZ-764,Kaax Real Estate,Rancho Avándaro Country Club,Tenantongo,Valle de Bravo,"27,899,000",MXN,Casa,medium,2,sale
+CLC-024,Kaax Real Estate,Cerrada Colibri,Monte Alto,Valle de Bravo,"14,000,000",MXN,Casa,medium,2,sale
+CNB-222,Kaax Real Estate,"Vega del bosque, avandaro",Avándaro,Valle de Bravo,"25,500,000",MXN,Casa,medium,2,sale
+CNC-289,Kaax Real Estate,"la laguna, Valle de Bravo",La Laguna,Valle de Bravo,"9,200,000",MXN,Casa,medium,2,sale
+CNE-152,Kaax Real Estate,Punto Central,Valle de Bravo,Valle de Bravo,"17,500,000",MXN,Casa,medium,2,sale
+CON-013,Kaax Real Estate,Vega del Valle,AvAndaro,Valle de Bravo,"55,000,000",MXN,Casa,medium,2,sale
+COX-024,Kaax Real Estate,La Peña,Valle de Bravo,Valle de Bravo,"25,000,000",MXN,Casa,medium,2,sale
+CPZ-545,Kaax Real Estate,Privada Rincón del Bosque 101,Avándaro,Valle de Bravo,"17,500,000",MXN,Casa,medium,2,sale
+CQC-963,Kaax Real Estate,Rancho Avándaro Country Club,Tenantongo,Valle de Bravo,"23,799,000",MXN,Casa,medium,2,sale
+CQY-827,Kaax Real Estate,La joya,Sin Nombre,Valle de Bravo,"8,500,000",MXN,Casa,medium,2,sale
+CQY-985,Kaax Real Estate,La Peña,La Peña,Valle de Bravo,"18,000,000",MXN,Casa en condominio,medium,2,sale
+CQZ-147,Kaax Real Estate,Fray Gregorio Jimenez de la Cuenca,Valle de Bravo,Valle de Bravo,"11,000,000",MXN,Casa,medium,2,sale
+CSF-654,Kaax Real Estate,Cerrada del Manguito MZ 032,Monte Alto,Valle de Bravo,"8,500,000",MXN,Casa en condominio,medium,2,sale
+CSQ-068,Kaax Real Estate,Talo mountain cerro gordo,AvAndaro,Valle de Bravo,"9,700,000",MXN,Casa,medium,2,sale
+CTG-894,Kaax Real Estate,Camino a Cerro Gordo,Avándaro,Valle de Bravo,"24,000,000",MXN,Casa en condominio,medium,2,sale
+CVC-893,Kaax Real Estate,Fontana Cuca,AvAndaro,Valle de Bravo,"17,724,000",MXN,Casa,medium,2,sale
+CVE-517,Kaax Real Estate,La Peña,Valle de Bravo,Valle de Bravo,"1,600,000",USD,Casa,medium,2,sale
+CWL-526,Kaax Real Estate,Cerrada Colibri,Monte Alto,Valle de Bravo,"7,000,000",MXN,Casa,medium,2,sale
+CXB-533,Kaax Real Estate,Camino a Cerro Gordo,AvAndaro,Valle de Bravo,"13,500,000",MXN,Casa,medium,2,sale
+CYI-734,Kaax Real Estate,"Ameyal 179, Santa Maria Ahuacatlan, Valle de Bravo, Méx., México",Santa María Ahuacatlan,Valle de Bravo,"14,900,000",MXN,Casa en condominio,medium,2,sale
+CZL-525,Kaax Real Estate,FONTANA ALTA,Avándaro,Valle de Bravo,"26,500,000",MXN,Casa,medium,2,sale
+CZR-278,Kaax Real Estate,Rancho Avandaro Country,Tenantongo,Valle de Bravo,"23,800,000",MXN,Casa,medium,2,sale
+DBB-348,Kaax Real Estate,San Gaspar,San Gaspar,Valle de Bravo,"13,900,000",MXN,Casa,medium,2,sale
+DMO-272,Kaax Real Estate,Twin Towers,Bosques de la Herradura,Naucalpan de Juárez,"10,000,000",MXN,Departamento,medium,2,sale
+DPB-848,Kaax Real Estate,Filadelfia 20,Nápoles,Benito Juárez,"11,500,000",MXN,Departamento,medium,2,sale
+EEB-206,Kaax Real Estate,"calle del manguito, monte alto, valle de bravo",Monte Alto,Valle de Bravo,"11,000,000",MXN,Edificio,medium,2,sale
+TAM-352,Kaax Real Estate,Fontana Zarca,AvAndaro,Valle de Bravo,"3,600,000",MXN,Terreno residencial,medium,2,sale
+TBL-327,Kaax Real Estate,Valle de Bravo,San Simón el Alto,Valle de Bravo,"11,000,000",MXN,Terreno residencial,medium,2,sale
+TCI-252,Kaax Real Estate,Privada Rincón del Bosque 101,Avándaro,Valle de Bravo,"4,270,000",MXN,Terreno residencial,medium,2,sale
+TDH-041,Kaax Real Estate,Fontana Zarca,AvAndaro,Valle de Bravo,"5,800,000",MXN,Terreno residencial,medium,2,sale
+TDW-685,Kaax Real Estate,Vega del Valle,AvAndaro,Valle de Bravo,"9,800,000",MXN,Terreno residencial,medium,2,sale
+TFN-744,Kaax Real Estate,Fontana Pura,AvAndaro,Valle de Bravo,"11,560,000",MXN,Terreno residencial,medium,2,sale
+TGJ-164,Kaax Real Estate,Punto Central,Sin Nombre,Valle de Bravo,"4,500,000",MXN,Terreno residencial,medium,2,sale
+TGX-664,Kaax Real Estate,La Peña,Valle de Bravo,Valle de Bravo,"3,650,000",MXN,Terreno residencial,medium,2,sale
+TII-729,Kaax Real Estate,Valle de Bravo,San Simón el Alto,Valle de Bravo,"7,900,000",MXN,Terreno residencial,medium,2,sale
+TIO-452,Kaax Real Estate,Circuito Avandaro,AvAndaro,Valle de Bravo,"19,185,000",MXN,Terreno residencial,medium,2,sale
+TJB-883,Kaax Real Estate,San Antonio,Valle de Bravo,Valle de Bravo,"5,500,000",MXN,Terreno residencial,medium,2,sale
+TKX-612,Kaax Real Estate,Temascaltepec,Centro Umán,Temascaltepec,"16,500,000",MXN,Terreno residencial,medium,2,sale
+TMB-013,Kaax Real Estate,Las Joyas,Avándaro,Valle de Bravo,"6,200,000",MXN,Terreno residencial,medium,2,sale
+TMZ-769,Kaax Real Estate,Monte Alto,Monte Alto,Valle de Bravo,"24,850,000",MXN,Terreno residencial,medium,2,sale
+TNB-317,Kaax Real Estate,San Mateo Acatitlán,Valle de Bravo,Valle de Bravo,"3,800,000",MXN,Terreno residencial,medium,2,sale
+TPP-674,Kaax Real Estate,Avándaro,Avándaro,Valle de Bravo,"9,840,000",MXN,Terreno residencial,medium,2,sale
+TRC-187,Kaax Real Estate,Valle de Bravo,San Simón el Alto,Valle de Bravo,"1,700,000",MXN,Terreno residencial,medium,2,sale
+TRD-818,Kaax Real Estate,"Vega del bosque, avandaro, valle de bravo",Avándaro,Valle de Bravo,"10,900,000",MXN,Terreno residencial,medium,2,sale
+TRI-087,Kaax Real Estate,Valle de Bravo,Valle de Bravo,Valle de Bravo,"17,000,000",MXN,Terreno residencial,medium,2,sale
+TSP-494,Kaax Real Estate,Fontana Zarca,Avándaro,Valle de Bravo,"4,200,000",MXN,Terreno residencial,medium,2,sale
+TYR-881,Kaax Real Estate,Circuito Avandaro,Avándaro,Valle de Bravo,"9,800,000",MXN,Terreno residencial,medium,2,sale
+TYY-455,Kaax Real Estate,Las Joyas,Avándaro,Valle de Bravo,"21,000,000",MXN,Terreno residencial,medium,2,sale
+CAS-808,Luxurium Realty,1a. Cerrada Floresta,Clavería,Azcapotzalco,"10,500,000",MXN,Casa,high,3,sale
+CIY-885,Luxurium Realty,Vallarta 33,Villa Coyoacán,Coyoacán,"29,966,700",MXN,Casa,medium,2,sale
+CNA-909,Luxurium Realty,Calle 3 139,Las Lomas de los Ángeles,Alvaro Obregón,"11,500,000",MXN,Casa,medium,2,sale
+CNB-091,Luxurium Realty,Benito Juárez 63,Miguel Hidalgo 1A Seccion,Tlalpan,"4,580,000",MXN,Casa en condominio,medium,2,sale
+CPA-913,Luxurium Realty,Calle Concepción Beistegui 1962,Narvarte Oriente,Benito Juárez,"12,900,000",MXN,Casa,medium,2,sale
+DBI-573,Luxurium Realty,Calzada de Tlalpan 1437,Portales Norte,Benito Juárez,"4,633,952",MXN,Departamento,medium,2,sale
+DIF-656,Luxurium Realty,Av. Popocatépetl 173,Portales Sur,Benito Juárez,"4,200,000",MXN,Departamento,medium,2,sale
+DNS-214,Luxurium Realty,arquimedes 221,Polanco,Miguel Hidalgo,"13,990,000",MXN,Departamento,high,3,sale
+DOB-808,Luxurium Realty,Encinos 63,Miguel Hidalgo 3A Sección,Tlalpan,"3,300,000",MXN,Departamento,high,3,sale
+DTY-385,Luxurium Realty,Circuito Fuentes del Pedregal 424,Fuentes del Pedregal,Tlalpan,"6,800,000",MXN,Departamento,medium,2,sale
+CFA-328,MM Vitanova,Avenida de los Bosques,Lomas de Tecamachalco,Naucalpan de Juárez,"36,523,400",MXN,Casa,medium,2,sale
+CHG-558,MM Vitanova,Av. Contreras,San Jerónimo Lídice,La Magdalena Contreras,"23,000,000",MXN,Casa,medium,2,sale
+CHV-838,MM Vitanova,Fuente del Pescador 70,Lomas de Tecamachalco,Naucalpan de Juárez,"12,300,000",MXN,Casa,medium,2,sale
+CIL-777,MM Vitanova,Santa Úrsula Xitla,Santa Úrsula Xitla,Tlalpan,"5,700,000",MXN,Casa,medium,2,sale
+CKR-096,MM Vitanova,Fontana Rosa,AvAndaro,Valle de Bravo,"45,000,000",MXN,Casa,medium,2,sale
+CKY-985,MM Vitanova,Sierra Vertientes 670,Lomas de Chapultepec,Miguel Hidalgo,"42,000,000",MXN,Casa,medium,2,sale
+CLB-178,MM Vitanova,Cerrada de Agua Caliente 15,Lomas Hipódromo,Naucalpan de Juárez,"7,300,000",MXN,Casa,medium,2,sale
+CMY-517,MM Vitanova,Bosque de Granados 600,Bosque de las Lomas,Miguel Hidalgo,"18,000,000",MXN,Casa en condominio,medium,2,sale
+CND-819,MM Vitanova,Avenida de las Fuentes 148,Lomas de Tecamachalco,Naucalpan de Juárez,"9,750,000",MXN,Casa,medium,2,sale
+CNR-655,MM Vitanova,"Privada Santa Fe no 7712a, Santa Cruz Buenavista Norte, Santa Cruz Buenavista, Heroica Puebla de Zaragoza, Pue., México",Santa Cruz Buenavista,Puebla,"5,500,000",MXN,Casa,medium,2,sale
+COL-371,MM Vitanova,Bosque del Rayo,La Herradura,Huixquilucan,"13,850,000",MXN,Casa,medium,2,sale
+CQQ-603,MM Vitanova,Villas Princess,Fraccionamiento Princess del Marqués,Acapulco de Juárez,"5,900,000",MXN,Casa en condominio,medium,2,sale
+CVS-333,MM Vitanova,Calle 13 Norte 1208,Solares Chicos,Atlixco,"3,900,000",MXN,Casa,high,3,sale
+CXS-981,MM Vitanova,Avenida Homero 100,Polanco,Miguel Hidalgo,"3,100,000",USD,Casa,medium,2,sale
+CZL-723,MM Vitanova,Rancho Calichal 68,Nueva Oriental Coapa,Tlalpan,"5,800,000",MXN,Casa,medium,2,sale
+DCJ-133,MM Vitanova,Av. P.º de la Reforma 150,Juárez,Cuauhtémoc,"21,000,000",MXN,Departamento,medium,2,sale
+DDE-511,MM Vitanova,"Hacienda del Ciervo 38, Col. Hacienda de las Palmas , Edo Mex",Hacienda de las Palmas,Huixquilucan,"7,600,000",MXN,Departamento,medium,2,sale
+DDI-426,MM Vitanova,Calle Canarias 301,Portales Norte,Benito Juárez,"2,350,000",MXN,Departamento,medium,2,sale
+DDW-661,MM Vitanova,Avenida Bonampak,Cancún,Cancún,"5,695,000",MXN,Departamento,medium,2,sale
+DGK-866,MM Vitanova,Pablo Ucello 8,San Juan de Aragón,Benito Juárez,"7,500,000",MXN,Departamento,medium,2,sale
+DGR-878,MM Vitanova,Blvd. Palmas Hills L1,Hacienda de las Palmas,Naucalpan de Juárez,"18,300,000",MXN,Departamento,medium,2,sale
+DID-785,MM Vitanova,Av. Club de Golf,Country Club,Naucalpan de Juárez,"25,000,000",MXN,Departamento,medium,2,sale
+DII-666,MM Vitanova,Calle Camino a las Minas 6,Ampliación Palo Solo,Huixquilucan,"4,770,000",MXN,Departamento,medium,2,sale
+DLE-716,MM Vitanova,Galileo 20,Polanco,Miguel Hidalgo,"20,000,000",MXN,Departamento,medium,2,sale
+DMM-329,MM Vitanova,Alfredo de Musset 357,Polanco,Miguel Hidalgo,"6,900,000",MXN,Departamento,medium,2,sale
+DOW-224,MM Vitanova,Lomas del Sol,Lomas del Sol,Huixquilucan,"7,000,000",MXN,Departamento,medium,2,sale
+DPG-713,MM Vitanova,Carretera México-Toluca 5804,Contadero,Cuajimalpa de Morelos,"6,200,000",MXN,Departamento,medium,2,sale
+DWQ-471,MM Vitanova,Equipamiento Periférico Picacho Ajusco Canal 13,Fuentes del Pedregal,Tlalpan,"14,244,927",MXN,Departamento,medium,2,sale
+DYE-427,MM Vitanova,Topógrafos 7,Escandón I Sección,Miguel Hidalgo,"7,000,000",MXN,Departamento,medium,2,sale
+EBA-531,MM Vitanova,P.º Cristóbal Colón 1158,Ocho Cedros,Toluca,"7,500,000",MXN,Edificio,medium,2,sale
+EPY-574,MM Vitanova,Presa Salinillas 178,Irrigación,Miguel Hidalgo,"35,000,000",MXN,Edificio,medium,2,sale
+TCG-606,MM Vitanova,Mateo Herrera 15,San José Insurgentes,Benito Juárez,"11,500,000",MXN,Casa,medium,2,sale
+THZ-269,MM Vitanova,Calle del Dr. José María Barragán 188,Doctores,Cuauhtémoc,"90,000,000",MXN,Terreno comercial,medium,2,sale
+TTF-772,MM Vitanova,Carretera a Huasca de Ocampo,Huasca de Ocampo Centro,Huasca de Ocampo,"12,874,000",MXN,Terreno residencial,medium,2,sale
+CMA-706,Malgram International,granada 17 ,La Providencia,Metepec,"49,900,000",MXN,Casa,medium,2,sale
+CMM-133,Malgram International,Casa del Agua Metepec,Llano Grande,Metepec,"6,250,000",MXN,Casa,high,3,sale
+CMZ-696,Malgram International,Conjunto Rubí,Real de Arcos,Metepec,"8,000,000",MXN,Casa,medium,2,sale
+CTH-082,Malgram International,"Felipe Berriozabal 906, Emiliano Zapata, Toluca de Lerdo, Méx., México",Emiliano Zapata,Toluca,"4,600,000",MXN,Casa,medium,2,sale
+DCB-135,Malgram International,Nezahualcóyotl 237 ,Centro,Toluca,"2,900,000",MXN,Departamento,medium,2,sale
+DTA-641,Malgram International,"Nezahualcóyotl 237, San Sebastian ",Centro,Toluca,"2,900,000",MXN,Departamento,high,3,sale
+DZX-557,Malgram International,Avenida 16 de Septiembre,De San Miguel,Zinacantepec,"2,990,000",MXN,Departamento,high,3,sale
+TIL-174,Malgram International,Gran Reserva Golf Resort & Country Club,San Gaspar,Ixtapan de la Sal,"2,100,000",MXN,Terreno residencial,medium,2,sale
+TZI-121,Malgram International,Alejandrina,Zamarrero,Zinacantepec,"2,200,000",MXN,Terreno residencial,high,3,sale
+BFN-973,Mercatecnia,De Los Rompeolas 36,Acueducto de Guadalupe,Gustavo A. Madero,"78,000,000",MXN,Bodega comercial,medium,2,sale
+BLD-267,Mercatecnia,Avenida Chignahuapan,Santa Cruz Chignahuapan,Lerma,"29,000,000",MXN,Bodega comercial,medium,2,sale
+CAP-557,Mercatecnia,Circuito Valle del Carmen 41,Lomas de Valle Escondido,Atizapán de Zaragoza,"19,500,000",MXN,Casa,high,3,sale
+CCA-590,Mercatecnia,Calle Terremote 21,Bellavista,Cuautitlán Izcalli,"3,700,000",MXN,Casa,high,3,sale
+CCI-049,Mercatecnia,Calle Pitágoras 830,Narvarte Poniente,Benito Juárez,"10,500,000",MXN,Casa,medium,2,sale
+CCL-814,Mercatecnia,Texcoco 162,Ciudad Azteca,Ecatepec de Morelos,"2,400,000",MXN,Casa,high,3,sale
+CCU-486,Mercatecnia,Cuernavaca 40,Condesa,Cuauhtémoc,"22,500,000",MXN,Casa,high,3,sale
+CDJ-309,Mercatecnia,ZENARA,Cholul,Mérida,"5,100,000",MXN,Casa,medium,2,sale
+CEA-479,Mercatecnia,El Sol de México 1001,Prensa Nacional,Tlalnepantla de Baz,"6,500,000",MXN,Casa,medium,2,sale
+CEE-137,Mercatecnia,Camino Real de Carretas 488,Milenio III,Querétaro,"5,980,000",MXN,Casa,medium,2,sale
+CEU-729,Mercatecnia,MOR 2,Yautepec Centro,Yautepec,"4,200,000",MXN,Casa,high,3,sale
+CEV-356,Mercatecnia,Durango 80,Roma Norte,Cuauhtémoc,"6,500,000",MXN,Casa en condominio,medium,2,sale
+CFC-069,Mercatecnia,ZENARA,Cholul,Mérida,"4,600,000",MXN,Casa,medium,2,sale
+CGH-943,Mercatecnia,Ayacucho 50,Torres Lindavista,Gustavo A. Madero,"22,000,000",MXN,Casa,high,3,sale
+CHA-728,Mercatecnia,Parque de Asturias 20,Parques de la Herradura,Huixquilucan,"13,650,000",MXN,Casa,medium,2,sale
+CKP-924,Mercatecnia,Calle de Chiapas 154,Roma Norte,Cuauhtémoc,"16,500,000",MXN,Casa,medium,2,sale
+CMS-687,Mercatecnia,Mar de Banda 47,Popotla,Miguel Hidalgo,"8,000,000",MXN,Casa,high,3,sale
+CNH-055,Mercatecnia,Avenida Villa Alpina,El Guardita,Naucalpan de Juárez,"3,750,000",MXN,Casa,high,3,sale
+CPE-805,Mercatecnia,BOSCARA Privada Residencial,Sitpach,Mérida,"680,000",MXN,Terreno residencial,high,3,sale
+CQZ-843,Mercatecnia,Fuente de Las Pirámides 267,Lomas de Tecamachalco,Naucalpan de Juárez,"11,000,000",MXN,Casa,medium,2,sale
+CRA-716,Mercatecnia,Calle Los Cedros,San Lorenzo Cuauhtenco,Zinacantepec,"3,200,000",MXN,Casa en condominio,high,3,sale
+CRI-112,Mercatecnia,16 de Septiembre,Avándaro,Valle de Bravo,"19,800,000",MXN,Casa,medium,2,sale
+CTT-849,Mercatecnia,Valle del Sena 105,Plazas de Aragón,Nezahualcóyotl,"2,200,000",MXN,Casa,high,3,sale
+CUG-762,Mercatecnia,Calle 35,Fraccionamiento San Antonio Cucul,Mérida,"5,950,000",MXN,Casa en condominio,medium,2,sale
+CUQ-514,Mercatecnia,Morelia 125 colonia lazaro cardenas Cuautla,Lázaro Cárdenas,Cuautla,"7,950,000",MXN,Casa,high,3,sale
+CUX-274,Mercatecnia,San Nicolás Tetelco,San Nicolás Tetelco,Tláhuac,"3,450,000",MXN,Casa,medium,2,sale
+CWF-737,Mercatecnia,Isla Magdalena 5,Prado Vallejo,Tlalnepantla de Baz,"5,300,000",MXN,Casa,medium,2,sale
+CXY-087,Mercatecnia,Excelsior 83,Industrial,Gustavo A. Madero,"16,000,000",MXN,Casa,high,3,sale
+CZU-429,Mercatecnia,Residencial Parque Esmeralda,Ex Haciendas Pablo,Dolores Hidalgo Cuna de la Independencia Nacional,"2,900,000",MXN,Casa,medium,2,sale
+DAA-535,Mercatecnia,Calle Coporo,Atizapán,Atizapán de Zaragoza,"3,200,000",MXN,Departamento,medium,2,sale
+DAQ-916,Mercatecnia,Tetelpan,Tetelpan,Alvaro Obregón,"7,300,000",MXN,Departamento,medium,2,sale
+DBT-551,Mercatecnia,San Luis Potosí 11,Roma Norte,Cuauhtémoc,"4,500,000",MXN,Departamento,medium,2,sale
+DCQ-006,Mercatecnia,Viaducto Miguel Alemán 679,Roma Sur,Cuauhtémoc,"5,500,000",MXN,Departamento,high,3,sale
+DCZ-823,Mercatecnia,Tetelpan,Tetelpan,Alvaro Obregón,"7,300,000",MXN,Departamento,medium,2,sale
+DHT-224,Mercatecnia,"Blvrd. Bosque Real, Bosque Real, 52770 Huixquilucan, Edo de México. ",Bosque Real,Huixquilucan,"480,000",USD,Departamento,medium,2,sale
+DHT-823,Mercatecnia,Privada del Romance 27 V ,Bosque Real,Huixquilucan,"480,000",USD,Departamento,medium,2,sale
+DIK-373,Mercatecnia,Reforma 222,Juárez,Cuauhtémoc,"8,500,000",MXN,Departamento,medium,2,sale
+DJM-711,Mercatecnia,Calle Lago Zurich 219,Ampliación Granada,Miguel Hidalgo,"9,900,000",MXN,Departamento,medium,2,sale
+DLP-766,Mercatecnia,Gutemberg 126,Anzures,Miguel Hidalgo,"11,000,000",MXN,Departamento,medium,2,sale
+DMI-794,Mercatecnia,Alfredo de Musset 222,Polanco,Miguel Hidalgo,"32,000,000",MXN,Departamento,medium,2,sale
+DOI-612,Mercatecnia,Condominio Veleta Acapulco,Pueblo Cayaco,Acapulco de Juárez,"1,285,000",MXN,Departamento,medium,2,sale
+DOV-178,Mercatecnia,Lago Andromaco 1,Ampliación Granada,Miguel Hidalgo,"7,500,000",MXN,Departamento,medium,2,sale
+DVN-507,Mercatecnia,Nonoalco Tlatelolco,Nonoalco Tlatelolco,Cuauhtémoc,"1,200,000",MXN,Departamento,medium,2,sale
+DYO-969,Mercatecnia,Calle Manzanillo 57,Roma Sur,Cuauhtémoc,"6,500,000",MXN,Departamento,high,3,sale
+ENP-796,Mercatecnia,Av. Dr. Gustavo Baz 60,Hacienda de Echegaray,Naucalpan de Juárez,"10,600,000",MXN,Edificio,medium,2,sale
+LLH-858,Mercatecnia,Avenida Lourdes,Miguel Hidalgo,Ecatepec de Morelos,"3,650,000",MXN,Local,medium,2,sale
+NQU-688,Mercatecnia,SPARTEK Industrial Park,Rancho o rancheria Palo Alto,El Marqués,"7,574,282",MXN,Nave industrial,medium,2,sale
+PQM-155,Mercatecnia,Alfonso Reyes 216,Hipódromo Condesa,Cuauhtémoc,"16,800,000",MXN,Departamento,medium,2,sale
+TAM-747,Mercatecnia,Tequesquitengo,Pueblo Tequesquitengo,Jojutla,"1,448,000",MXN,Terreno residencial,high,3,sale
+TAR-531,Mercatecnia,Av Constituyentes,Lomas Altas,Miguel Hidalgo,"124,999,000",MXN,Terreno comercial,medium,2,sale
+TBG-646,Mercatecnia,Soletta,Pueblo Chicxulub Puerto,Chicxulub Pueblo,"830,000",MXN,Terreno residencial,medium,2,sale
+TCH-493,Mercatecnia,Mar de China 4,Popotla,Miguel Hidalgo,"20,000,000",MXN,Terreno comercial,medium,2,sale
+TEV-777,Mercatecnia,Mérida,Merida Centro,Mérida,"935,000",MXN,Terreno comercial,medium,2,sale
+TFN-162,Mercatecnia,La Soledad del Sur 21,Lázaro Cárdenas,Chiconcuac,"10,000,000",MXN,Casa,medium,2,sale
+TGF-927,Mercatecnia,Ciudad Maderas Corregidora,Ciudad Maderas Residencial,El Marqués,"649,999",MXN,Terreno residencial,medium,2,sale
+THJ-891,Mercatecnia,Preserve Sur,Pueblo Arroyo Hondo,Corregidora,"1,195,000",MXN,Terreno residencial,high,3,sale
+THU-236,Mercatecnia,Isla del Bosque L24 ,Bosque Real,Huixquilucan,"1,145,000",USD,Terreno residencial,high,3,sale
+TMB-166,Mercatecnia,Magueycitos,Magueycitos,Jilotepec,"4,600,000",MXN,Terreno residencial,medium,2,sale
+TMQ-145,Mercatecnia,"Lote 19 Colonia Agrícola Ganadera “ACALPA I” ubicada en el Municipio de Moloacán, Veracruz",Pueblo Moloacan,Moloacán,"800,000,000",MXN,Terreno industrial,medium,2,sale
+TQN-718,Mercatecnia,Chicxulub,Pueblo Chicxulub,Chicxulub Pueblo,"830,000",MXN,Terreno residencial,medium,2,sale
+TSB-364,Mercatecnia,Ciudad Maderas Corregidora,Ciudad Maderas Residencial,El Marqués,"500,000",MXN,Terreno residencial,medium,2,sale
+TZL-777,Mercatecnia,Calle de los Farallones 51,Residencial Acueducto de Guadalupe,Gustavo A. Madero,"3,950,000",MXN,Terreno residencial,high,3,sale
+CCB-034,Monroy Properties Real Estate,Calzada de los Leones 17,Las Águilas,Alvaro Obregón,"13,500,000",MXN,Casa,medium,2,sale
+CCD-894,Monroy Properties Real Estate,Ruta del Bosque 352,Avándaro,Valle de Bravo,"39,900,000",MXN,Casa,medium,2,sale
+CDW-911,Monroy Properties Real Estate,Desierto de los Leones 1414,Tetelpan,Alvaro Obregón,"13,500,000",MXN,Casa en condominio,medium,2,sale
+CTJ-702,Monroy Properties Real Estate,Glorieta Norte 45,La Joya,Tlalpan,"15,500,000",MXN,Casa en condominio,medium,2,sale
+DCE-771,Monroy Properties Real Estate,Prolongación Paseo de la Reforma 307,Santa Fe,Alvaro Obregón,"5,500,000",MXN,Departamento,medium,2,sale
+DSU-781,Monroy Properties Real Estate,Lago Chiem,Reforma Pensil,Miguel Hidalgo,"3,400,000",MXN,Departamento,medium,2,sale
+DTM-314,Monroy Properties Real Estate,Av Toluca 985,San José del Olivar,Alvaro Obregón,"3,580,000",MXN,Departamento,medium,2,sale
+OEW-525,Monroy Properties Real Estate,Anillo Perif. 2165,Los Alpes,Alvaro Obregón,"5,439,880",MXN,Oficina,medium,2,sale
+OIC-471,Monroy Properties Real Estate,Anillo Perif. 2165,Los Alpes,Alvaro Obregón,"15,643,935",MXN,Oficina,medium,2,sale
+OPY-828,Monroy Properties Real Estate,Anillo Perif. 2165,Los Alpes,Alvaro Obregón,"7,806,720",MXN,Oficina,medium,2,sale
+OSN-622,Monroy Properties Real Estate,Anillo Perif. 2165,Los Alpes,Alvaro Obregón,"7,861,290",MXN,Oficina,medium,2,sale
+CAR-368,Mood inmobiliario,Av. Luis Cabrera 233,San Jerónimo Lídice,Ciudad de México,"10,450,000",MXN,Casa en condominio,medium,2,sale
+CCX-841,Mood inmobiliario,Centinela no. 8,Emiliano Zapata,Cuautla,"36,000,000",MXN,Casa uso de suelo,high,3,sale
+CCY-307,Mood inmobiliario,Serranía 94,Jardines del Pedregal de San Angel,Coyoacán,"26,000,000",MXN,Casa,medium,2,sale
+CGE-321,Mood inmobiliario,Abel Quezada 14,Miguel Hidalgo 3A Sección,Tlalpan,"4,900,000",MXN,Casa en condominio,medium,2,sale
+CJN-905,Mood inmobiliario,Calzada de las Águilas 670,Ampliación Alpes,Alvaro Obregón,"9,850,000",MXN,Casa,medium,2,sale
+CKF-052,Mood inmobiliario,Tlacojalpan,Barrio San Francisco,La Magdalena Contreras,"13,300,000",MXN,Casa,medium,2,sale
+CLA-331,Mood inmobiliario,Puente Cuadritos ,San Nicolás Totolapan,La Magdalena Contreras,"4,750,000",MXN,Casa en condominio,high,3,sale
+CLA-514,Mood inmobiliario,Avenida San Bernabé 641,San Jerónimo Lídice,La Magdalena Contreras,"8,100,000",MXN,Casa en condominio,high,3,sale
+CLX-402,Mood inmobiliario,San Bernabé Ocotepec,San Bernabé Ocotepec,La Magdalena Contreras,"8,750,000",MXN,Casa en condominio,medium,2,sale
+CLZ-351,Mood inmobiliario,Camino a Samoral ,Rancho o rancheria La Posta,La Antigua,"19,000,000",MXN,Casa,medium,2,sale
+CSR-604,Mood inmobiliario,Calzada Desierto de los Leones 5228,Tetelpan,Alvaro Obregón,"12,200,000",MXN,Casa en condominio,medium,2,sale
+CST-266,Mood inmobiliario,Santiago 200,San Jerónimo Lídice,La Magdalena Contreras,"16,000,000",MXN,Casa en condominio,high,3,sale
+CTM-955,Mood inmobiliario,Tercer Calle Carril de Alfalfares,Ex Hacienda Coapa,Tlalpan,"9,200,000",MXN,Casa en condominio,medium,2,sale
+CTY-173,Mood inmobiliario,Teticpac ,La Magdalena Petlacalco,Tlalpan,"7,790,000",MXN,Casa,medium,2,sale
+CUP-836,Mood inmobiliario,San Juan 15,Olivar de los Padres,Alvaro Obregón,"9,500,000",MXN,Casa en condominio,medium,2,sale
+CXM-715,Mood inmobiliario,Coahuila 320,Cuajimalpa,Cuajimalpa de Morelos,"6,500,000",MXN,Casa en condominio,medium,2,sale
+CXN-126,Mood inmobiliario,Calle Asunción 63,San Jerónimo Lídice,La Magdalena Contreras,"13,200,000",MXN,Casa,medium,2,sale
+DAT-353,Mood inmobiliario,Avenida Bernardo Quintana 400,Santa Fe La Loma,Alvaro Obregón,"14,100,000",MXN,Departamento,high,3,sale
+DBB-351,Mood inmobiliario,Av. Coyoacán 1849,Acacias,Benito Juárez,"6,324,200",MXN,Departamento,high,3,sale
+DBL-264,Mood inmobiliario,San Lorenzo 1009,Del Valle Sur,Benito Juárez,"7,030,000",MXN,Departamento,high,3,sale
+DBO-906,Mood inmobiliario,Viaducto Tlalpan 1171,La Joya,Tlalpan,"4,390,000",MXN,Departamento,medium,2,sale
+DBQ-555,Mood inmobiliario,Av. Coyoacán 1849,Acacias,Benito Juárez,"8,120,000",MXN,Departamento,high,3,sale
+DCF-855,Mood inmobiliario,Río Atoyac 57,Cuauhtémoc,Cuauhtémoc,"5,100,000",MXN,Departamento,high,3,sale
+DCV-145,Mood inmobiliario,Blvd. Adolfo López Mateos 2113,Los Alpes,Ciudad de México,"6,870,344",MXN,Departamento,high,3,sale
+DLZ-269,Mood inmobiliario,Lago Neuchatel 12,Granada,Miguel Hidalgo,"7,400,000",MXN,Departamento,medium,2,sale
+DMC-324,Mood inmobiliario,Avenida Horacio 1425,Polanco,Miguel Hidalgo,"13,750,000",MXN,Departamento,high,3,sale
+DOW-577,Mood inmobiliario,Ámsterdam 191,Hipódromo,Cuauhtémoc,"35,000,000",MXN,Departamento,medium,2,sale
+DSA-537,Mood inmobiliario,"Enciso #4, Torre Angelus Dpto 604 Lomas de la Toscana, Lomas de Angelópolis,  San Andrés Cholula Puebla ",Lomas de Angelópolis,San Andrés Cholula,"6,500,000",MXN,Departamento,high,3,sale
+DSH-765,Mood inmobiliario,Luis Carracci 61,San Juan,Benito Juárez,"4,500,000",MXN,Departamento,medium,2,sale
+DSR-788,Mood inmobiliario,Clavel 14,La Candelaria,Coyoacán,"2,500,000",MXN,Departamento,medium,2,sale
+DSX-884,Mood inmobiliario,We Santa Fe Skyhomes,El Yaqui,Cuajimalpa de Morelos,"6,250,000",MXN,Departamento,medium,2,sale
+DTF-445,Mood inmobiliario,Enrique Rébsamen 1138,Del Valle Centro,Benito Juárez,"7,600,000",MXN,Departamento,medium,2,sale
+ETN-949,Mood inmobiliario,Aldea Zama,Tulum,Tulum,"16,000,000",MXN,Edificio,medium,2,sale
+TAD-569,Mood inmobiliario,Callot  ,Santa María Nonoalco,Alvaro Obregón,"19,300,000",MXN,Terreno residencial,medium,2,sale
+TCN-168,Mood inmobiliario,Carretera toluca- mexico km 44+800 ,Ortiz Rubio (Jajalpa),Ocoyoacac,"1,800",MXN,Terreno residencial,medium,2,sale
+TEF-058,Mood inmobiliario,"prolongacion constituyentes 534, z 11, p 1/2 ",Villas la Cañada,El Marqués,"18,890,000",MXN,Terreno residencial,high,3,sale
+TQA-056,Mood inmobiliario,Eyipantla,Fraccionamiento Real de Juriquilla,Querétaro,"2,100,000",MXN,Terreno residencial,high,3,sale
+TQI-392,Mood inmobiliario,Eyipantla,Fraccionamiento Real de Juriquilla,Querétaro,"2,350,000",MXN,Terreno residencial,high,3,sale
+TTM-961,Mood inmobiliario,2a. Cerrada de Terrazas,San Andrés Totoltepec,Tlalpan,"2,400,000",MXN,Terreno residencial,high,3,sale
+CCN-288,Morare,Calle Camino a Chamixto no. 27,Loma del Padre,Cuajimalpa de Morelos,"9,500,000",MXN,Casa,medium,2,sale
+CEC-301,Morare,MZ 013,San Francisco,San Mateo Atenco,"4,290,000",MXN,Casa en condominio,medium,2,sale
+CID-053,Morare,"Ignacio Zaragoza 604 Malinalco, Estado de Mexico",Malinalco,Malinalco,"4,500,000",MXN,Casa,medium,2,sale
+CMI-358,Morare,Paseo de los Sauces,Casa Blanca,Metepec,"5,800,000",MXN,Casa,medium,2,sale
+COG-646,Morare,Condado de Sayavedra,Condado de Sayavedra,Atizapán de Zaragoza,"23,700,000",MXN,Casa,medium,2,sale
+CRQ-348,Morare,Las Aguilas 1885 luis glz,Villa Verdún,Alvaro Obregón,"14,490,000",MXN,Casa,medium,2,sale
+CSK-191,Morare,Fénix Residencial,San Francisco,San Mateo Atenco,"5,200,000",MXN,Casa en condominio,medium,2,sale
+CXJ-742,Morare,Av. del Conscripto no. 99,Lomas Manuel Avila Camacho,Naucalpan de Juárez,"10,500,000",MXN,Casa,medium,2,sale
+CZH-755,Morare,Bosque Real Country Club,Bosque Real,Naucalpan de Juárez,"20,500,000",MXN,Casa en condominio,medium,2,sale
+DLA-147,Morare,Departamentos Bosques Lerma Residencial,Lerma de Villada Centro,Lerma,"3,530,000",MXN,Departamento,high,3,sale
+DND-084,Morare,Bosque Real,Bosque Real,Huixquilucan,"11,750,000",MXN,Departamento,medium,2,sale
+DXW-412,Morare,Departamentos Bosques Lerma Residencial,El Panteón,Lerma,"2,675,000",MXN,Departamento,high,3,sale
+TIH-506,Morare,"Ignacio Zaragoza 604 Malinalco, Estado de Mexico",Malinalco,Malinalco,"1,781,400",MXN,Terreno residencial,medium,2,sale
+TKO-105,Morare,Circuito El Arenal 35,San Bartolomé Tlaltelulco,Metepec,"6,600,000",MXN,Terreno comercial,medium,2,sale
+TMH-774,Morare,"Sor Juana Inés de la Cruz , Mexicaltzingo ",Mexicaltzingo,Mexicaltzingo,"5,418,000",MXN,Terreno comercial,medium,2,sale
+TMR-044,Morare,"Privada del Tejocote, Col. Casa Blanca, Metepec",Lázaro Cárdenas,Metepec,"8,880,000",MXN,Terreno residencial,medium,2,sale
+TNT-896,Morare,"Calle del panteón y camino a Tlecuilco S/N, San Juan, 52440 Malinalco, Méx., México",San Juan de Aragón,Gustavo A. Madero,"38,058,000",MXN,Terreno comercial,medium,2,sale
+TPO-586,Morare,Avenida J. M. Morelos Y P. 904,San Bernardino,Toluca,"23,500,000",MXN,Terreno comercial,medium,2,sale
+TTI-381,Morare,Circuito El Arenal 35,San Bartolomé Tlaltelulco,Metepec,"2,860,000",MXN,Terreno comercial,medium,2,sale
+TTJ-883,Morare,Santiago Tlacotepec,El Refugio,Toluca,"2,200,000",MXN,Terreno comercial,medium,2,sale
+CAF-218,Opcion Inmobiliaria,Plaza Federico Gamboa (antes Chimalistac) 30,Chimalistac,Alvaro Obregón,"35,000,000",MXN,Casa,high,3,sale
+CAJ-895,Opcion Inmobiliaria,General Marcial Lazcano no. 18-b,San Angel Inn,Alvaro Obregón,"30,000,000",MXN,Casa,high,3,sale
+CAK-272,Opcion Inmobiliaria,Laja 123,Jardines del Pedregal,Alvaro Obregón,"23,900,000",MXN,Casa,high,3,sale
+CCE-919,Opcion Inmobiliaria,AHUATENCO 158,Ahuatenco,Cuajimalpa de Morelos,"9,700,000",MXN,Casa en condominio,high,3,sale
+CGP-465,Opcion Inmobiliaria,Hacienda Cerro Viejo 12,Hacienda de las Palmas,Huixquilucan,"11,900,000",MXN,Casa,medium,2,sale
+CHN-147,Opcion Inmobiliaria,Hacienda Cerro Viejo 12,Hacienda de las Palmas,Huixquilucan,"10,900,000",MXN,Casa,high,3,sale
+CJV-645,Opcion Inmobiliaria,Tula 31,Condesa,Cuauhtémoc,"13,500,000",MXN,Casa,medium,2,sale
+CZA-437,Opcion Inmobiliaria,"Parque De Los Pirineos 8, Parques de la Herradura, Méx., México",Parques de la Herradura,Huixquilucan,"13,500,000",MXN,Casa,high,3,sale
+DAU-815,Opcion Inmobiliaria,BERNARDO QUINTANA 57 B,Santa Fe La Loma,Alvaro Obregón,"34,000,000",MXN,Departamento,high,3,sale
+DCD-192,Opcion Inmobiliaria,Flamencos 35,San José Insurgentes,Benito Juárez,"21,035,000",MXN,Departamento,high,3,sale
+DCF-321,Opcion Inmobiliaria,Av. Santa Fe 425,Santa Fe Cuajimalpa,Cuajimalpa de Morelos,"23,500,000",MXN,Departamento,high,3,sale
+DFG-183,Opcion Inmobiliaria,Avenida Paseo de la Reforma 150,Juárez,Cuauhtémoc,"12,972,000",MXN,Departamento,medium,2,sale
+DHD-825,Opcion Inmobiliaria,Blvrd. Interlomas 1,Bosques de las Palmas,Huixquilucan,"5,931,000",MXN,Departamento,high,3,sale
+DHH-482,Opcion Inmobiliaria,Boulevard Interlomas 1,Bosques de las Palmas,Huixquilucan,"12,650,000",MXN,Departamento,high,3,sale
+DHI-813,Opcion Inmobiliaria,Avenida Vista Real 15,Bosque Real,Huixquilucan,"28,179,100",MXN,Departamento,high,3,sale
+DHM-685,Opcion Inmobiliaria,Hacienda del Ciervo 14 y 14a Huxquilucan,Hacienda de las Palmas,Huixquilucan,"9,200,000",MXN,Departamento,high,3,sale
+DHO-847,Opcion Inmobiliaria,Blvrd. Interlomas 1,Bosques de las Palmas,Huixquilucan,"8,042,500",MXN,Departamento,high,3,sale
+DHS-906,Opcion Inmobiliaria,Hacienda del Ciervo 14 y 14a Huixquilucan,Hacienda de las Palmas,Huixquilucan,"15,464,000",MXN,Departamento,high,3,sale
+DHT-511,Opcion Inmobiliaria,Hacienda del Ciervo 14 y 14a Huixquilucan,Hacienda de las Palmas,Huixquilucan,"16,310,000",MXN,Departamento,high,3,sale
+DMN-307,Opcion Inmobiliaria,Rubén Darío 43,Polanco,Miguel Hidalgo,"37,908,000",MXN,Departamento,high,3,sale
+DMN-358,Opcion Inmobiliaria,PETRARCA ,Polanco,Miguel Hidalgo,"11,000,000",MXN,Departamento,high,3,sale
+DMO-384,Opcion Inmobiliaria,Rubén Darío 43,Polanco,Miguel Hidalgo,"35,197,200",MXN,Departamento,high,3,sale
+DNK-864,Opcion Inmobiliaria,Fuente de Trevi 19,Lomas de Tecamachalco,Naucalpan de Juárez,"7,500,000",MXN,Departamento,high,3,sale
+DNW-724,Opcion Inmobiliaria,Fuente de Trevi 19,Lomas de Tecamachalco,Naucalpan de Juárez,"7,500,000",MXN,Departamento,high,3,sale
+DRI-976,Opcion Inmobiliaria,Calzada de Tlalpan 998,Nativitas,Benito Juárez,"3,400,000",MXN,Departamento,medium,2,sale
+DXJ-345,Opcion Inmobiliaria,Circuito Fuentes del Pedregal 428,Fuentes del Pedregal,Tlalpan,"8,400,000",MXN,Departamento,high,3,sale
+EML-478,Opcion Inmobiliaria,Avenida Paseo Tollocan 5,San Jerónimo Chicahualco,Metepec,"90,000,000",MXN,Edificio,high,3,sale
+PBW-639,Opcion Inmobiliaria,Avenida Eugenia 35,Ampliación Nápoles,Benito Juárez,"10,200,000",MXN,PH,high,3,sale
+TAO-967,Opcion Inmobiliaria,CERRADA DE POTRERO ,La Joyita del Pueblo Tetelpan,Alvaro Obregón,"5,000,000",MXN,Terreno residencial,high,3,sale
+TCU-306,Opcion Inmobiliaria,97345 Yuc.,Pueblo Conkal,Conkal,"950,000",MXN,Terreno residencial,medium,2,sale
+TQE-764,Opcion Inmobiliaria,Rincón del Bosque 9,Rincón del Bosque,Puebla,"45,000,000",MXN,Terreno residencial,high,3,sale
+TXY-454,Opcion Inmobiliaria,Cabo Marqués,Fraccionamiento Playa Diamante,Acapulco de Juárez,"23,000,000",MXN,Terreno residencial,high,3,sale
+BEJ-118,Proyecto,Calle san pedro,Santa Rosa de Lima,Cuautitlán Izcalli,"2,990,000",MXN,Bodega comercial,medium,2,sale
+CGB-371,Proyecto,Paseo de Los Halcones,Mayorazgos de los Gigantes,Atizapán de Zaragoza,"6,800,000",MXN,Casa,medium,2,sale
+CHE-241,Proyecto,Cerrada Bosque de Zitacuaro 26,Bosques de la Herradura,Huixquilucan,"15,900,000",MXN,Casa,high,3,sale
+CHV-221,Proyecto,Parque de Valencia 24,Parques de la Herradura,Huixquilucan,"12,990,000",MXN,Casa,high,3,sale
+CLN-813,Proyecto,Acueducto Jurica 9,Paseos del Bosque,Naucalpan de Juárez,"8,950,000",MXN,Casa,medium,2,sale
+CMX-021,Proyecto,Avenida Progreso 95,Escandón I Sección,Miguel Hidalgo,"7,400,000",MXN,Casa en condominio,high,3,sale
+CQX-831,Proyecto,Rancho Avándaro Country Club,Avándaro,Valle de Bravo,"45,000,000",MXN,Casa,medium,2,sale
+CSV-213,Proyecto,"Av Cisnes, Lote 35 Mz. 12-A",Bosques del Lago,Cuautitlán Izcalli,"12,000,000",MXN,Casa en condominio,medium,2,sale
+CTZ-077,Proyecto,Calle de la Bola 22,El Dorado,Tlalnepantla de Baz,"6,195,000",MXN,Casa,medium,2,sale
+CUT-337,Proyecto,Llanura 341,Insurgentes Cuicuilco,Coyoacán,"23,000,000",MXN,Casa,medium,2,sale
+CVC-901,Proyecto,Torres de Gales 35,Condado de Sayavedra,Atizapán de Zaragoza,"5,300,000",MXN,Terreno residencial,medium,2,sale
+CZC-976,Proyecto,Tierra Arbolada 60,Sección Parques,Cuautitlán Izcalli,"2,900,000",MXN,Casa,high,3,sale
+CZG-546,Proyecto,Av. Luis Cabrera 138,San Jerónimo Aculco,La Magdalena Contreras,"11,990,000",MXN,Casa en condominio,medium,2,sale
+DAL-819,Proyecto,Avenida Bernardo Quintana 400,Santa Fe La Loma,Alvaro Obregón,"18,000,000",MXN,Departamento,high,3,sale
+DBO-437,Proyecto,Mier y Pesado 218,Del Valle Norte,Benito Juárez,"9,500,000",MXN,Departamento,high,3,sale
+DBW-533,Proyecto,Actipan 36,Insurgentes Mixcoac,Benito Juárez,"6,500,000",MXN,Departamento,medium,2,sale
+DCC-982,Proyecto,Avenida Secretaría de Marina 700,Lomas del Chamizal,Cuajimalpa de Morelos,"15,500,000",MXN,Departamento,high,3,sale
+DDL-362,Proyecto,Lago Garda,Zona Esmeralda,Atizapán de Zaragoza,"3,250,000",MXN,Departamento,medium,2,sale
+DEF-835,Proyecto,Chicontepec 57,Hipódromo Condesa,Cuauhtémoc,"7,800,000",MXN,Departamento,medium,2,sale
+DGW-169,Proyecto,"Avenida Palo Solo #140, en el fraccionamiento Paradise, Departamento K2, CP 52783",Ampliación Palo Solo,Huixquilucan,"3,500,000",MXN,Departamento,medium,2,sale
+DHZ-907,Proyecto,Privada de Los Alamos 28,Lomas del Sol,Huixquilucan,"9,000,000",MXN,Departamento,high,3,sale
+DIM-617,Proyecto,Subida del Calvario 18,El Calvario,Atizapán de Zaragoza,"4,900,000",MXN,Departamento,medium,2,sale
+DIW-645,Proyecto,Avenida México 363,Manzanastitla,Cuajimalpa de Morelos,"3,400,000",MXN,Departamento,medium,2,sale
+DMG-585,Proyecto,Lago Neuchatel 12,Ampliación Granada,Miguel Hidalgo,"9,450,000",MXN,Departamento,high,3,sale
+DMI-265,Proyecto,Lope de Vega 149,Polanco,Miguel Hidalgo,"12,000,000",MXN,Departamento,medium,2,sale
+DMK-536,Proyecto,Calle Pitágoras,Narvarte Poniente,Benito Juárez,"9,000,000",MXN,Departamento,medium,2,sale
+DML-516,Proyecto,Calle Arquímedes 11,Polanco,Miguel Hidalgo,"22,900,000",MXN,Departamento,high,3,sale
+DMU-293,Proyecto,Alejandro Dumas,Polanco,Miguel Hidalgo,"14,696,310",MXN,Departamento,medium,2,sale
+DMY-317,Proyecto,Alejandro Dumas 341  ,Polanco,Miguel Hidalgo,"13,938,750",MXN,Departamento,high,3,sale
+DNH-196,Proyecto,Mirabella II,Lomas del Río,Naucalpan de Juárez,"6,199,000",MXN,Departamento,high,3,sale
+DPV-676,Proyecto,Juan de la Barrera 38,Condesa,Cuauhtémoc,"10,000,000",MXN,Departamento,medium,2,sale
+DSI-749,Proyecto,Lomas Country Club,Lomas Country Club,Huixquilucan,"23,500,000",MXN,Departamento,medium,2,sale
+PAF-044,Proyecto,Paseo de las Aves 471,Valle Dorado,Tlalnepantla de Baz,"7,480,000",MXN,Departamento,medium,2,sale
+TAF-285,Proyecto,Privada de Chester 3a,Condado de Sayavedra,Atizapán de Zaragoza,"4,900,000",MXN,Terreno residencial,medium,2,sale
+TAN-564,Proyecto,Privada de Chester,Condado de Sayavedra,Atizapán de Zaragoza,"4,900,000",MXN,Terreno residencial,medium,2,sale
+TEW-584,Proyecto,Avenida Norte 22,San Andrés Atenco,Tlalnepantla de Baz,"3,400,000",MXN,Terreno comercial,medium,2,sale
+XNP-508,Proyecto,Avenida Club de Golf 193,Lomas Country Club,Huixquilucan,"15,000,000",MXN,Departamento,medium,2,sale
+XXL-164,Proyecto,Blvd. Adolfo Ruiz Cortines 3580,San Jerónimo Aculco,Alvaro Obregón,"7,300,000",MXN,Departamento,high,3,sale
+CCP-515,Quatre Bienes Raices,Circuito Fuentes del Pedregal 633,Fuentes del Pedregal,Tlalpan,"17,400,000",MXN,Casa,medium,2,sale
+CCZ-967,Quatre Bienes Raices,Patinadores,Parque San Andrés,Coyoacán,"15,880,000",MXN,Casa,medium,2,sale
+CGE-401,Quatre Bienes Raices,Residencial Las Palmas,Pueblo Tequesquitengo,Jojutla,"15,500,000",MXN,Casa,medium,2,sale
+CGW-374,Quatre Bienes Raices,Avenida Mazatlan 121,Condesa,Cuauhtémoc,"15,700,000",MXN,Casa,medium,2,sale
+CPO-857,Quatre Bienes Raices,Cañada 176,Jardines del Pedregal,Alvaro Obregón,"24,850,000",MXN,Casa,medium,2,sale
+CRU-135,Quatre Bienes Raices,Monte de Sajama 14,Jardines en la Montaña,Tlalpan,"59,890,000",MXN,Casa,medium,2,sale
+CUN-766,Quatre Bienes Raices,"Prolongación Hidalgo, Cuajimalpa de Morelos",Cuajimalpa,Cuajimalpa de Morelos,"8,708,000",MXN,Casa en condominio,medium,2,sale
+CWS-513,Quatre Bienes Raices,Cañada null,Jardines del Pedregal,Alvaro Obregón,"35,880,000",MXN,Casa,medium,2,sale
+DAG-623,Quatre Bienes Raices,Adolfo Prieto 1308,Del Valle Centro,Benito Juárez,"9,980,000",MXN,Departamento,medium,2,sale
+DFE-728,Quatre Bienes Raices,Vasco de Quiroga 3735,Santa Fe,Alvaro Obregón,"10,990,000",MXN,Departamento,medium,2,sale
+DFW-907,Quatre Bienes Raices,Ocelotl,Pueblo de San Pablo Tepetlapa,Coyoacán,"4,650,000",MXN,Departamento,medium,2,sale
+DGM-048,Quatre Bienes Raices,Anillo Periferico 4271,Fuentes del Pedregal,Tlalpan,"16,000,000",MXN,Departamento,medium,2,sale
+DHO-484,Quatre Bienes Raices,Av. Baja California,Roma Sur,Cuauhtémoc,"4,904,000",MXN,Departamento,medium,2,sale
+DHV-422,Quatre Bienes Raices,Lomas del Encanto null,Lomas Country Club,Huixquilucan,"17,500,000",MXN,Departamento,medium,2,sale
+DJO-486,Quatre Bienes Raices,Av México 359,Manzanastitla,Cuajimalpa de Morelos,"4,800,000",MXN,Departamento,medium,2,sale
+DJX-218,Quatre Bienes Raices,Cerrada Empresa 4,Insurgentes Mixcoac,Benito Juárez,"6,980,000",MXN,Departamento,medium,2,sale
+DMK-784,Quatre Bienes Raices,Del Valle Centro,Del Valle Centro,Benito Juárez,"4,695,000",MXN,Departamento,medium,2,sale
+DNI-268,Quatre Bienes Raices,Pico de Turquino 10 - 500,Jardines en la Montaña,Tlalpan,"11,000,000",MXN,Departamento,medium,2,sale
+DOC-044,Quatre Bienes Raices,La Enramada Lomas Country Club,Lomas Country Club,Huixquilucan,"11,000,000",MXN,Departamento,medium,2,sale
+DRP-941,Quatre Bienes Raices,PALACIO ESCORIAL 30,Lomas de Reforma,Miguel Hidalgo,"15,200,000",MXN,Departamento,medium,2,sale
+DSL-754,Quatre Bienes Raices,Av. Baja California,Roma Sur,Cuauhtémoc,"6,433,000",MXN,Departamento,medium,2,sale
+DTU-299,Quatre Bienes Raices,Av. Baja California,Roma Sur,Cuauhtémoc,"7,309,500",MXN,Departamento,medium,2,sale
+DVK-084,Quatre Bienes Raices,Av. Baja California,Roma Sur,Cuauhtémoc,"9,606,000",MXN,Departamento,medium,2,sale
+DWY-432,Quatre Bienes Raices,Av. Baja California,Roma Sur,Cuauhtémoc,"9,829,230",MXN,Departamento,medium,2,sale
+OLZ-119,Quatre Bienes Raices,Nápoles,Nápoles,Benito Juárez,"5,862,877",MXN,Oficina,medium,2,sale
+TAR-617,Quatre Bienes Raices,Pueblo Tequesquitengo,Pueblo Tequesquitengo,Jojutla,"731,000,000",MXN,Terreno residencial,medium,2,sale
+TDB-892,Quatre Bienes Raices,Paseo del Pedregral null,Jardines del Pedregal,Alvaro Obregón,"120,000,000",MXN,Terreno residencial,medium,2,sale
+TDS-125,Quatre Bienes Raices,Laja,Jardines del Pedregal,Alvaro Obregón,"28,800,000",MXN,Terreno residencial,medium,2,sale
+TMW-879,Quatre Bienes Raices,"AV. TLAHUAC 509 COLONIA EL ROSARIO, IZTAPALAPA",El Rosario,Tláhuac,"30,000,000",MXN,Terreno comercial,medium,2,sale
+TTG-445,Quatre Bienes Raices,Los Tepozanes s/n,Xochimilco Corporación,Xochimilco,"12,250,000",MXN,Terreno residencial,medium,2,sale
+CBF-715,Reset Living,Patricio Sanz 1155,Insurgentes San Borja,Benito Juárez,"22,000,000",MXN,Casa,high,3,sale
+CCR-916,Reset Living,Cádiz Norte 24,Extremadura Insurgentes,Benito Juárez,"11,900,000",MXN,Casa,medium,2,sale
+CFQ-131,Reset Living,Patricio Sanz 1155,Insurgentes San Borja,Benito Juárez,"22,000,000",MXN,Casa,medium,2,sale
+CHL-901,Reset Living,Circuito Novelistas 720,Ciudad Satélite,Naucalpan de Juárez,"16,800,000",MXN,Casa,medium,2,sale
+CVV-207,Reset Living,Bosque de Quiroga 78 Bosques de la Herradura Huixquilucan,Bosques de la Herradura,Huixquilucan,"8,499,000",MXN,Casa en condominio,medium,2,sale
+DBS-805,Reset Living,Berlín 19 BIS,Juárez,Cuauhtémoc,"13,400,000",MXN,Departamento,medium,2,sale
+DCK-581,Reset Living,Sor Juana Inés de la Cruz 237 Tlanepantla de baz,Tlalnepantla  Centro,Tlalnepantla de Baz,"5,300,000",MXN,Departamento,medium,2,sale
+DCM-144,Reset Living,Avenida Universidad 1005,Del Valle Sur,Benito Juárez,"4,850,000",MXN,Departamento,medium,2,sale
+DDE-386,Reset Living,Av. Santa Fe 498,Contadero,Cuajimalpa de Morelos,"9,500,000",MXN,Departamento,high,3,sale
+DHT-965,Reset Living,Sor Juana Inés de la Cruz 237,Tlalnepantla  Centro,Tlalnepantla de Baz,"4,950,000",MXN,Departamento,medium,2,sale
+DIQ-619,Reset Living,Sor Juana Inés de la Cruz 237,Tlalnepantla  Centro,Tlalnepantla de Baz,"7,050,000",MXN,Departamento,medium,2,sale
+DJP-073,Reset Living,"Blvd. F.M. 13, ",Interlomas,Huixquilucan,"7,650,000",MXN,Departamento,medium,2,sale
+DKD-736,Reset Living,Cofre de Perote,Lomas de Chapultepec,Miguel Hidalgo,"10,700,000",MXN,Departamento,medium,2,sale
+DKM-296,Reset Living,Avenida Universidad 1005,Del Valle Sur,Benito Juárez,"9,200,000",MXN,Departamento,medium,2,sale
+DLU-011,Reset Living,Rincón del Bosque 33,Polanco,Miguel Hidalgo,"12,900,000",MXN,Departamento,medium,2,sale
+DMF-325,Reset Living,Avenida Paseo de las Palmas 705,Lomas de Chapultepec,Miguel Hidalgo,"16,000,000",MXN,Departamento,medium,2,sale
+DPH-176,Reset Living,Blvd. F.M. 13,Interlomas,Huixquilucan,"6,495,000",MXN,Departamento,medium,2,sale
+DSR-781,Reset Living,Sierra Candela 57,Lomas de Chapultepec,Miguel Hidalgo,"11,000,000",MXN,Departamento,medium,2,sale
+DTL-996,Reset Living,Saltillo 66,Condesa,Cuauhtémoc,"10,650,000",MXN,Departamento,medium,2,sale
+DUK-835,Reset Living,Vasco de Quiroga 3833 Santa Fe Cuajimalpa,Santa Fe Cuajimalpa,Cuajimalpa de Morelos,"15,500,000",MXN,Departamento,medium,2,sale
+DXC-171,Reset Living,Calle Casas Grandes 26,Narvarte Oriente,Benito Juárez,"5,100,000",MXN,Departamento,medium,2,sale
+DZL-022,Reset Living,Avenida Universidad 1005,Del Valle Sur,Benito Juárez,"6,500,000",MXN,Departamento,medium,2,sale
+ETM-366,Reset Living,Víctor Hugo 72,Anzures,Miguel Hidalgo,"38,000,000",MXN,Edificio,medium,2,sale
+OMJ-952,Reset Living,Avenida Paseo de las Palmas 735,Lomas de Chapultepec,Miguel Hidalgo,"9,600,000",MXN,Oficina,medium,2,sale
+OZJ-463,Reset Living,Avenida Cordillera de Los Andes 105,Lomas de Chapultepec,Miguel Hidalgo,"16,000,000",MXN,Oficina,medium,2,sale
+TCM-424,Reset Living,Rancho Cortes,Pueblo Tetela del Monte,Cuernavaca,"3,100,000",MXN,Terreno residencial,medium,2,sale
+TXO-759,Reset Living,Cerro Gordo,Cerro Gordo,Valle de Bravo,"1,800,000",MXN,Terreno residencial,high,3,sale
+BQW-467,Ricoy Bienes Raíces,Libramiento Sur Poniente Km27 Queretaro,Rancho o rancheria Tlacote El Bajo,Querétaro,"5,669,778",MXN,Bodega comercial,high,3,sale
+CCX-875,Ricoy Bienes Raíces,Bosque de Versalles 15,Fraccionamiento Colinas del Bosque,Corregidora,"10,900,000",MXN,Casa,high,3,sale
+CHK-954,Ricoy Bienes Raíces,Berlín 65,Del Carmen,Coyoacán,"24,900,000",MXN,Casa,medium,2,sale
+CJV-564,Ricoy Bienes Raíces,Av. Puerta Real 302,Fraccionamiento Puerta Real,Corregidora,"5,986,000",MXN,Casa en condominio,medium,2,sale
+CLL-177,Ricoy Bienes Raíces,Calzada de las Brujas 192,Real del Sur,Tlalpan,"9,200,000",MXN,Casa en condominio,medium,2,sale
+CMW-635,Ricoy Bienes Raíces,Camino Fuentes Brotantes 14,Fuentes Brotantes,Tlalpan,"7,800,000",MXN,Casa,medium,2,sale
+CPA-246,Ricoy Bienes Raíces,La Escondida 123,Jardines de Ahuatepec,Cuernavaca,"39,000,000",MXN,Casa,medium,2,sale
+CQA-294,Ricoy Bienes Raíces,Dos Peñas 1031,Fraccionamiento Residencial El Refugio,Querétaro,"6,750,000",MXN,Casa,high,3,sale
+CQH-625,Ricoy Bienes Raíces,Reserva Limba,Grand Preserve,Querétaro,"4,100,000",MXN,Casa,high,3,sale
+CQO-778,Ricoy Bienes Raíces,Torre de Piedra Jacarandas,Fraccionamiento Residencial El Refugio,Querétaro,"3,762,887",MXN,Casa,medium,2,sale
+CQZ-235,Ricoy Bienes Raíces,Virrey de Cataluña IV,El Campanario,Querétaro,"4,250,000",MXN,Casa en condominio,medium,2,sale
+CRE-825,Ricoy Bienes Raíces,Torre de Piedra Jacarandas,Fraccionamiento Residencial El Refugio,Querétaro,"3,400,000",MXN,Casa en condominio,medium,2,sale
+CRG-584,Ricoy Bienes Raíces,Av. Puerta Real 5,Fraccionamiento Puerta Real,Corregidora,"5,100,000",MXN,Casa,medium,2,sale
+CSA-657,Ricoy Bienes Raíces,Av. Puerta Real 300,Fraccionamiento Puerta Real,Corregidora,"3,655,000",MXN,Casa en condominio,medium,2,sale
+CSI-796,Ricoy Bienes Raíces,La Serena Residencial,Villa de los Frailes,San Miguel de Allende,"3,900,000",MXN,Casa,high,3,sale
+CUF-249,Ricoy Bienes Raíces,ZARU,Zákia,El Marqués,"3,041,237",MXN,Casa en condominio,medium,2,sale
+CWY-385,Ricoy Bienes Raíces,Av. Puerta Real 301,Fraccionamiento Puerta Real,Corregidora,"4,382,000",MXN,Casa en condominio,medium,2,sale
+CXO-566,Ricoy Bienes Raíces,ZARU,Zibatá,El Marqués,"3,972,701",MXN,Casa,medium,2,sale
+DIM-307,Ricoy Bienes Raíces,Avenida Emilio Carranza 32,Zacahuitzco,Benito Juárez,"3,837,000",MXN,Departamento,high,3,sale
+DLD-506,Ricoy Bienes Raíces,Naranjo 381,Atlampa,Cuauhtémoc,"1,800,000",MXN,Departamento,medium,2,sale
+DNJ-647,Ricoy Bienes Raíces,Regency Club Jurica,Jurica,Querétaro,"6,950,000",MXN,Departamento,medium,2,sale
+DQT-226,Ricoy Bienes Raíces,Av. Campanario Norte 2001,El Campanario,Querétaro,"4,679,000",MXN,Departamento,medium,2,sale
+DSC-644,Ricoy Bienes Raíces,Prolongación Corregidora Norte 1001,Centro,Querétaro,"4,190,000",MXN,Departamento,medium,2,sale
+ETK-376,Ricoy Bienes Raíces,Av. Adolfo Lopez Mateoz 48,Magisterial Vista Bella,Tlalnepantla de Baz,"22,000,000",MXN,Edificio,medium,2,sale
+LVY-554,Ricoy Bienes Raíces,Prolongación Bernardo Quintana 7001,Centro Sur,Querétaro,"12,900,000",MXN,Local en centro comercial,medium,2,sale
+TCX-291,Ricoy Bienes Raíces,Blvd. Paseos del Pedregal,Juriquilla,Querétaro,"13,900,000",MXN,Terreno comercial,medium,2,sale
+THC-348,Ricoy Bienes Raíces,Cañadas del Valle,Arroyo Hondo,Huimilpan,"945,183",MXN,Terreno residencial,high,3,sale
+THR-313,Ricoy Bienes Raíces,Zirándaro,Zirándaro,San Miguel de Allende,"1,000,000",MXN,Terreno residencial,medium,2,sale
+TJP-545,Ricoy Bienes Raíces,Nuevo Refugio,Fraccionamiento Residencial El Refugio,Querétaro,"1,290,000",MXN,Terreno residencial,medium,2,sale
+TLL-291,Ricoy Bienes Raíces,La Cuesta,Juriquilla,Querétaro,"731,000",MXN,Terreno residencial,medium,2,sale
+TMS-214,Ricoy Bienes Raíces,Misioneros,Juriquilla,Querétaro,"849,000",MXN,Terreno residencial,medium,2,sale
+TPA-221,Ricoy Bienes Raíces,Calle Cristóbal Colón,Ezequiel Montes Centro,Ezequiel Montes,"4,650,000",MXN,Terreno residencial,medium,2,sale
+TQD-486,Ricoy Bienes Raíces,Cascada De Las Flores 5,Juriquilla,Querétaro,"1,349,000",MXN,Terreno residencial,medium,2,sale
+TQD-947,Ricoy Bienes Raíces,Cañadas La Porta,Fraccionamiento Cuesta Bonita,Querétaro,"2,284,728",MXN,Terreno residencial,medium,2,sale
+TWD-206,Ricoy Bienes Raíces,Cañadas by Mirador,Fraccionamiento El Mirador,El Marqués,"1,288,000",MXN,Terreno residencial,medium,2,sale
+TZA-758,Ricoy Bienes Raíces,Bosque de Chapultepec 213 ,Bosques de las Lomas,Querétaro,"3,800,000",MXN,Terreno residencial,high,3,sale
+CGK-056,Rubí Inmobiliaria,Marella Residencial by BUME,Pueblo Chicxulub Puerto,Chicxulub Pueblo,"5,900,000",MXN,Casa en condominio,medium,2,sale
+CKX-183,Rubí Inmobiliaria,Olinalá Princesa,Granjas del Marqués,Acapulco de Juárez,"4,500,000",MXN,Casa,medium,2,sale
+CMR-987,Rubí Inmobiliaria,Villas palmeto,Brisas del Marqués,Acapulco de Juárez,"11,000,000",MXN,Casa en condominio,medium,2,sale
+CNE-186,Rubí Inmobiliaria,La Herradura,La Herradura,Huixquilucan,"14,000,000",MXN,Casa,medium,2,sale
+CVO-359,Rubí Inmobiliaria,Condominio Residencial Diamante,Granjas del Marqués,Acapulco de Juárez,"3,021,000",MXN,Casa,medium,2,sale
+D1L-224,Rubí Inmobiliaria,Polanco V Sección,Polanco,Miguel Hidalgo,"580,000",USD,Departamento,medium,2,sale
+DAA-724,Rubí Inmobiliaria,Condominio Las Olas,Fraccionamiento Playa Diamante,Acapulco de Juárez,"10,000,000",MXN,Departamento,medium,2,sale
+DAE-229,Rubí Inmobiliaria,Santa Fe,Santa Fe,Alvaro Obregón,"30,000,000",MXN,Departamento,medium,2,sale
+DAK-066,Rubí Inmobiliaria,Bosque Real,Bosque Alto,Naucalpan de Juárez,1,MXN,Departamento,medium,2,sale
+DAK-363,Rubí Inmobiliaria,Acapulco Diamante,Granjas del Marqués,Acapulco de Juárez,"1,950,000",MXN,Departamento,medium,2,sale
+DAK-554,Rubí Inmobiliaria,La Isla Residences,Fraccionamiento Playa Diamante,Acapulco de Juárez,"10,000,000",MXN,Departamento,medium,2,sale
+DAO-495,Rubí Inmobiliaria,Condominio Velera,Fraccionamiento Playa Diamante,Acapulco de Juárez,"12,500,000",MXN,Departamento,medium,2,sale
+DAQ-767,Rubí Inmobiliaria,Vidamar Residencial,Alfredo V Bonfil,Acapulco de Juárez,"4,990,000",MXN,Departamento,medium,2,sale
+DAV-143,Rubí Inmobiliaria,Torres Armando's Le club,Acapulco de Juárez Centro,Acapulco de Juárez,"8,000,000",MXN,Departamento,medium,2,sale
+DBF-312,Rubí Inmobiliaria,Calle Texas 127,Nápoles,Benito Juárez,"7,200,000",MXN,Departamento,medium,2,sale
+DBL-902,Rubí Inmobiliaria,Polanco,Polanco,Miguel Hidalgo,"800,000",USD,Departamento,medium,2,sale
+DDM-066,Rubí Inmobiliaria,Polanco,Polanco,Miguel Hidalgo,"501,000",USD,Departamento,medium,2,sale
+DDT-917,Rubí Inmobiliaria,Polanco,Polanco,Miguel Hidalgo,"796,000",USD,Departamento,medium,2,sale
+DFG-112,Rubí Inmobiliaria,Be Grand Nuevo Polanco,Granada,Miguel Hidalgo,"10,000,000",MXN,Departamento,medium,2,sale
+DHJ-383,Rubí Inmobiliaria,Bosque Real,Bosque Real,Huixquilucan,"8,006,218",MXN,Departamento,medium,2,sale
+DHW-022,Rubí Inmobiliaria,Avenida Jesús del Monte 163,Interlomas,Huixquilucan,"17,799,200",MXN,PH,medium,2,sale
+DIJ-891,Rubí Inmobiliaria,Fraccionamiento Marina Diamante,Fraccionamiento Marina Diamante,Acapulco de Juárez,"2,000,000",MXN,Departamento,medium,2,sale
+DJE-446,Rubí Inmobiliaria,Avenida Jesús del Monte 163,Interlomas,Huixquilucan,"7,296,720",MXN,Departamento,medium,2,sale
+DMB-402,Rubí Inmobiliaria,Cervantes 101,Granada,Miguel Hidalgo,"15,276,000",MXN,Departamento,medium,2,sale
+DMM-005,Rubí Inmobiliaria,Rincón Polanco,Polanco,Miguel Hidalgo,"20,000,000",MXN,Departamento,medium,2,sale
+DOM-223,Rubí Inmobiliaria,VILLAS KIMBERLEY,Villas Princess,Acapulco de Juárez,"3,848,000",MXN,Departamento,medium,2,sale
+DTJ-191,Rubí Inmobiliaria,"Brooklyn Towers, Hacienda el Ciervo 31, Los Olivos, 52763 Estado de México, Méx., México ",Hacienda de las Palmas,Huixquilucan,"9,500,000",MXN,Departamento,medium,2,sale
+DTJ-317,Rubí Inmobiliaria,Bosque Real,Bosque Alto,Naucalpan de Juárez,"10,000,000",MXN,Departamento,medium,2,sale
+DZH-584,Rubí Inmobiliaria,Residencial Banús,Fraccionamiento Playa Diamante,Acapulco de Juárez,"2,650,000",MXN,Departamento,medium,2,sale
+PCH-565,Rubí Inmobiliaria,Maranta Bosques,Lomas de Vista Hermosa,Ciudad de México,"30,323,436",MXN,PH,medium,2,sale
+TAB-616,Rubí Inmobiliaria,Playa de Barra Vieja,Fraccionamiento Puente del Mar,Acapulco de Juárez,"17,000,000",MXN,Terreno residencial,medium,2,sale
+TAM-466,Rubí Inmobiliaria,"Bosque Real, Huixquilucan, Estado De México",Bosque Real,Huixquilucan,"9,500,000",MXN,Casa en condominio,medium,2,sale
+TEG-277,Rubí Inmobiliaria,Las Fincas,Campestre,Cancún,"163,296",MXN,Terreno residencial,medium,2,sale
+TGZ-876,Rubí Inmobiliaria,Amanthia Residencial By BUME,Pueblo Yaxkukul,Yaxkukul,"1,051,830",MXN,Terreno residencial,medium,2,sale
+TMQ-502,Rubí Inmobiliaria,Ampliación Granada,Ampliación Granada,Miguel Hidalgo,"2,000,000",USD,Terreno comercial,medium,2,sale
+DBI-714,VALENTINOS HOME SA DE CV,Atypique,Guadalupe Inn,Alvaro Obregón,"3,900,000",MXN,Departamento,medium,2,sale
+DBS-759,VALENTINOS HOME SA DE CV,Puebla 18,Roma Norte,Cuauhtémoc,"3,925,000",MXN,Departamento,medium,2,sale
+DEZ-185,VALENTINOS HOME SA DE CV,Avenida Ribera de San Cosme 45,Cuauhtémoc,Cuauhtémoc,"5,295,000",MXN,Departamento,medium,2,sale
+DFK-053,VALENTINOS HOME SA DE CV,Heriberto Frías 250,Narvarte Poniente,Benito Juárez,"5,095,000",MXN,Departamento,medium,2,sale
+DFM-071,VALENTINOS HOME SA DE CV,Puebla 18,Roma Norte,Cuauhtémoc,"3,495,000",MXN,Departamento,medium,2,sale
+DFT-347,VALENTINOS HOME SA DE CV,Tlaxcala 46,Roma Sur,Cuauhtémoc,"7,590,000",MXN,Departamento,medium,2,sale
+DGM-879,VALENTINOS HOME SA DE CV,Avenida Ribera de San Cosme 45,Cuauhtémoc,Cuauhtémoc,"4,460,000",MXN,Departamento,medium,2,sale
+DGU-177,VALENTINOS HOME SA DE CV,Heriberto Frías 250,Narvarte Poniente,Benito Juárez,"5,695,000",MXN,Departamento,medium,2,sale
+DHG-679,VALENTINOS HOME SA DE CV,Santa María la Ribera,Santa María la Ribera,Cuauhtémoc,"3,349,000",MXN,Departamento,medium,2,sale
+DHO-429,VALENTINOS HOME SA DE CV,Calzada México-Tacuba 269,Un Hogar Para Nosotros,Miguel Hidalgo,"4,250,000",MXN,Departamento,medium,2,sale
+DHR-695,VALENTINOS HOME SA DE CV,Heriberto Frías 250,Narvarte Poniente,Benito Juárez,"5,695,000",MXN,Departamento,medium,2,sale
+DIK-794,VALENTINOS HOME SA DE CV,Puebla 18,Roma Norte,Cuauhtémoc,"3,785,000",MXN,Departamento,medium,2,sale
+DJD-968,VALENTINOS HOME SA DE CV,Santa María la Ribera,Santa María la Ribera,Cuauhtémoc,"3,945,000",MXN,Departamento,medium,2,sale
+DJS-478,VALENTINOS HOME SA DE CV,Heriberto Frías 250,Narvarte Poniente,Benito Juárez,"3,895,000",MXN,Departamento,medium,2,sale
+DKH-246,VALENTINOS HOME SA DE CV,Heriberto Frías 250,Narvarte Poniente,Benito Juárez,"7,495,000",MXN,Departamento,medium,2,sale
+DKL-388,VALENTINOS HOME SA DE CV,Puebla 18,Roma Norte,Cuauhtémoc,"3,945,000",MXN,Departamento,medium,2,sale
+DKO-404,VALENTINOS HOME SA DE CV,Puebla 18,Roma Norte,Cuauhtémoc,"3,495,000",MXN,Departamento,medium,2,sale
+DLD-193,VALENTINOS HOME SA DE CV,Boulevard Adolfo López Mateos 2113,Los Alpes,Alvaro Obregón,"7,700,000",MXN,Departamento,medium,2,sale
+DLH-294,VALENTINOS HOME SA DE CV,Tlaxcala 46,Roma Sur,Cuauhtémoc,"8,990,000",MXN,Departamento,medium,2,sale
+DME-034,VALENTINOS HOME SA DE CV,Heriberto Frías 250,Narvarte Poniente,Benito Juárez,"3,895,000",MXN,Departamento,medium,2,sale
+DNQ-459,VALENTINOS HOME SA DE CV,Francisco del Paso y Troncoso 944,Tlazintla,Iztacalco,"2,995,000",MXN,Departamento,medium,2,sale
+DPJ-685,VALENTINOS HOME SA DE CV,Puebla 18,Roma Norte,Cuauhtémoc,"3,785,000",MXN,Departamento,medium,2,sale
+DPW-523,VALENTINOS HOME SA DE CV,Atypique,Guadalupe Inn,Alvaro Obregón,"4,099,000",MXN,Departamento,medium,2,sale
+DQH-378,VALENTINOS HOME SA DE CV,Santa María la Ribera,Santa María la Ribera,Cuauhtémoc,"5,054,000",MXN,Departamento,medium,2,sale
+DQH-795,VALENTINOS HOME SA DE CV,Avenida Ribera de San Cosme 45,Cuauhtémoc,Cuauhtémoc,"3,045,000",MXN,Departamento,medium,2,sale
+DQZ-751,VALENTINOS HOME SA DE CV,Calle Río Lerma 277,Cuauhtémoc,Cuauhtémoc,"10,998,680",MXN,Departamento,medium,2,sale
+DRS-357,VALENTINOS HOME SA DE CV,Riber de san Cosme 45,Santa María la Ribera,Cuauhtémoc,"4,386,000",MXN,Departamento,medium,2,sale
+DSD-872,VALENTINOS HOME SA DE CV,Tlaxcala 46,Roma Sur,Cuauhtémoc,"6,590,000",MXN,Departamento,medium,2,sale
+DTB-176,VALENTINOS HOME SA DE CV,Carretera México Toluca 5228,La Campiña,Cuajimalpa de Morelos,"7,090,000",MXN,Departamento,medium,2,sale
+DTG-442,VALENTINOS HOME SA DE CV,Santa María la Ribera,Santa María la Ribera,Cuauhtémoc,"4,429,000",MXN,Departamento,medium,2,sale
+DTZ-701,VALENTINOS HOME SA DE CV,Avenida Ribera de San Cosme 45,Cuauhtémoc,Cuauhtémoc,"3,995,000",MXN,Departamento,high,3,sale
+DUY-856,VALENTINOS HOME SA DE CV,San cosme null,Santa María la Ribera,Cuauhtémoc,"3,995,000",MXN,Departamento,medium,2,sale
+DWB-942,VALENTINOS HOME SA DE CV,Heriberto Frías 250,Narvarte Poniente,Benito Juárez,"4,795,000",MXN,Departamento,medium,2,sale
+DXJ-158,VALENTINOS HOME SA DE CV,Puebla 18,Roma Norte,Cuauhtémoc,"6,900,000",MXN,Departamento,medium,2,sale
+DXV-785,VALENTINOS HOME SA DE CV,Carretera México Toluca 3115,Granjas Palo Alto,Cuajimalpa de Morelos,"5,200,000",MXN,Departamento,medium,2,sale
+DYF-956,VALENTINOS HOME SA DE CV,Alba 39,Insurgentes Cuicuilco,Coyoacán,"5,500,000",MXN,Departamento,medium,2,sale
+DZB-505,VALENTINOS HOME SA DE CV,Puebla 18,Roma Norte,Cuauhtémoc,"6,995,000",MXN,Departamento,medium,2,sale
+DZE-338,VALENTINOS HOME SA DE CV,Icazbalceta 80,San Rafael,Cuauhtémoc,"6,790,000",MXN,Departamento,medium,2,sale
+FCQ-685,VALENTINOS HOME SA DE CV,Pueblo Santo Domingo Ocotitlán,Pueblo Santo Domingo Ocotitlán,Tepoztlán,"48,000,000",MXN,Casa,medium,2,sale
+LQT-192,VALENTINOS HOME SA DE CV,Avenida Ribera de San Cosme 45,Santa María la Ribera,Cuauhtémoc,"5,500,000",MXN,Local,medium,2,sale
+PJC-007,VALENTINOS HOME SA DE CV,Heriberto Frías 250,Narvarte Poniente,Benito Juárez,"5,995,000",MXN,PH,medium,2,sale
+PPT-794,VALENTINOS HOME SA DE CV,Heriberto Frías 250,Narvarte Poniente,Benito Juárez,"7,445,000",MXN,PH,medium,2,sale
+PXU-134,VALENTINOS HOME SA DE CV,Crepúsculo 71,Insurgentes Cuicuilco,Coyoacán,"9,200,000",MXN,PH,medium,2,sale
+TDK-063,VALENTINOS HOME SA DE CV,Santa María Magdalena Cahuacán,Segundo Barrio CahuacAn,Nicolás Romero,"2,600,000",MXN,Terreno residencial,medium,2,sale
+TEZ-456,VALENTINOS HOME SA DE CV,Mixquiahuala de Juárez,Rancho o rancheria El Durazno,Mixquiahuala de Juárez,"100,000,000",MXN,Terreno comercial,medium,2,sale
+TMC-928,VALENTINOS HOME SA DE CV,Lomas de la Herradura,Las Huertas,Naucalpan de Juárez,"63,990,000",MXN,Terreno residencial,medium,2,sale
+TXF-441,VALENTINOS HOME SA DE CV,Emana Tulum,Francisco Uh-May,Tulum,"329,000",MXN,Terreno residencial,medium,2,sale
+CCM-559,Vamos a Vender,Avenida Paseo de la Reforma 2600,Lomas Altas,Ciudad de México,"40,000,000",MXN,Casa en condominio,medium,2,sale
+CDW-206,Vamos a Vender,Jacarandas,Jurica,Querétaro,"11,500,000",MXN,Casa,medium,2,sale
+CEB-382,Vamos a Vender,Avenida de los Bosques 150,Lomas de Tecamachalco,Naucalpan de Juárez,"13,000,000",MXN,Casa,high,3,sale
+CFK-279,Vamos a Vender,Altavista 21,Paseo de las Lomas,Alvaro Obregón,"45,000,000",MXN,Casa,medium,2,sale
+CHF-686,Vamos a Vender,Bosque de Lerma 50,Bosques de la Herradura,Huixquilucan,"15,500,000",MXN,Casa,medium,2,sale
+CHK-613,Vamos a Vender,Bosques de centenario ,Bosques de la Herradura,Huixquilucan,"13,850,000",MXN,Casa,high,3,sale
+CIA-571,Vamos a Vender,Lomas Altas,Lomas Altas,Miguel Hidalgo,"62,000,000",MXN,Casa,medium,2,sale
+CMD-557,Vamos a Vender,La Fontaine ,Polanco,Miguel Hidalgo,"35,000,000",MXN,Casa,medium,2,sale
+CMR-174,Vamos a Vender,Sierra Vertientes,Lomas de Chapultepec,Miguel Hidalgo,"30,000,000",MXN,Casa,high,3,sale
+CMR-593,Vamos a Vender,Avenida Miguel Ángel de Quevedo 292,Barrio Santa Catarina,Coyoacán,"48,000,000",MXN,Casa,medium,2,sale
+CNY-433,Vamos a Vender,Calle Lucas Alamán y Escalada 120,Lomas Verdes,Naucalpan de Juárez,"14,000,000",MXN,Casa en condominio,high,3,sale
+CSL-594,Vamos a Vender,Fontana Luz,Avándaro,Valle de Bravo,"18,000,000",MXN,Casa,medium,2,sale
+CVE-509,Vamos a Vender,Camino Sin nombre a Cuadrilla de Dolores ,Cuadrilla de Dolores,Valle de Bravo,"18,300,000",MXN,Casa,medium,2,sale
+CWF-272,Vamos a Vender,Bosque de Moras 65,Bosque de las Lomas,Miguel Hidalgo,"24,000,000",MXN,Casa,medium,2,sale
+CYV-484,Vamos a Vender,Bosque de Tilos,Bosque de las Lomas,Miguel Hidalgo,"29,500,000",MXN,Casa,medium,2,sale
+DAA-185,Vamos a Vender,"Diagonal Norte, Gonzalo Guerrero, Playa del Carmen, Q.R., México",Playa del Carmen,Solidaridad,"4,356,000",MXN,Departamento,medium,2,sale
+DAA-317,Vamos a Vender,PlayaMar Residencial,Granjas del Marqués,Acapulco de Juárez,"25,000,000",MXN,Departamento,high,3,sale
+DAN-413,Vamos a Vender,Carretera Al Olivo 94,Lomas de Vista Hermosa,Cuajimalpa de Morelos,"23,500,000",MXN,Departamento,medium,2,sale
+DAQ-246,Vamos a Vender,Francisco I. Madero 65,San Lucas Tepetlacalco,Tlalnepantla de Baz,"4,994,906",MXN,Departamento,medium,2,sale
+DAR-409,Vamos a Vender,"Blvrd Bosque Real, Bosque Real ",Bosque Real,Apodaca,"11,500,000",MXN,Departamento,medium,2,sale
+DAY-342,Vamos a Vender,Boulevard Adolfo López Mateos 1970,Los Alpes,Alvaro Obregón,"4,986,117",MXN,Departamento,medium,2,sale
+DBE-464,Vamos a Vender,Loma del Jagüey,Lomas de Vista Hermosa,Cuajimalpa de Morelos,"23,000,000",MXN,Departamento,medium,2,sale
+DBT-496,Vamos a Vender,Avenida Primero de Mayo 145,San Pedro de los Pinos,Benito Juárez,"5,350,000",MXN,Departamento,medium,2,sale
+DCG-697,Vamos a Vender,Avenida Santa Fe 482,Contadero,Cuajimalpa de Morelos,"11,500,000",MXN,Departamento,high,3,sale
+DCP-893,Vamos a Vender,Avenida Santa Fe 486,Santa Fe Cuajimalpa,Cuajimalpa de Morelos,"5,100,000",MXN,Departamento,medium,2,sale
+DCU-306,Vamos a Vender,Av Nuevo León 215,Hipódromo,Cuauhtémoc,"9,162,400",MXN,Departamento,high,3,sale
+DCV-016,Vamos a Vender,Sadi Carnot,San Rafael,Cuauhtémoc,"9,611,850",MXN,Departamento,medium,2,sale
+DCX-873,Vamos a Vender,Santa Fe Cuajimalpa,Santa Fe Cuajimalpa,Cuajimalpa de Morelos,"11,192,126",MXN,Departamento,medium,2,sale
+DCY-768,Vamos a Vender,Nova Lifestyle Bosques,Lomas de Vista Hermosa,Cuajimalpa de Morelos,"23,945,699",MXN,Departamento,high,3,sale
+DCZ-315,Vamos a Vender,Av Paseo de la Reforma ,Delegación Política Cuauhtémoc,Cuauhtémoc,"4,496,800",MXN,Departamento,high,3,sale
+DGF-914,Vamos a Vender,General Miguel Miramon  ,Lomas Verdes 5a Sección,Naucalpan de Juárez,"11,150,000",MXN,Departamento,high,3,sale
+DHX-468,Vamos a Vender,Villa Florence,Jesús del Monte,Huixquilucan,"12,900,000",MXN,Departamento,medium,2,sale
+DMG-467,Vamos a Vender,Rubén Darío 43,Polanco,Miguel Hidalgo,"35,197,200",MXN,Departamento,high,3,sale
+DMH-155,Vamos a Vender,Palacio Versalles 255,Real de las Lomas,Miguel Hidalgo,"88,000,000",MXN,Departamento,high,3,sale
+DMI-257,Vamos a Vender,Lago Andromaco ,Ampliación Granada,Miguel Hidalgo,"6,962,000",MXN,Departamento,high,3,sale
+DMM-148,Vamos a Vender,Prolongación Vista Hermosa 79,Portales Sur,Cuajimalpa de Morelos,"44,000,000",MXN,Departamento,high,3,sale
+DMM-598,Vamos a Vender,Carr. México-Toluca 2822,Lomas de Bezares,Miguel Hidalgo,"12,000,000",MXN,Departamento,medium,2,sale
+DMQ-036,Vamos a Vender,Alcázar de Toledo  - 10-A,Lomas Altas,Miguel Hidalgo,"33,440,000",MXN,Departamento,high,3,sale
+DMR-746,Vamos a Vender,Avenida Paseo de la Reforma 2742,Lomas Altas,Miguel Hidalgo,"11,850,000",MXN,Casa en condominio,medium,2,sale
+DMT-187,Vamos a Vender,Privada de las Plazas 10,Bosque Real,Huixquilucan,"10,000,000",MXN,Departamento,medium,2,sale
+DNU-472,Vamos a Vender,Belmont,Lomas Hipódromo,Naucalpan de Juárez,"40,000,000",MXN,Casa,high,3,sale
+DPM-189,Vamos a Vender,Francisco I. Madero 65,San Lucas Tepetlacalco,Tlalnepantla de Baz,"5,519,796",MXN,Departamento,medium,2,sale
+DRJ-571,Vamos a Vender,Francisco I. Madero 65,San Lucas Tepetlacalco,Tlalnepantla de Baz,"5,600,000",MXN,Departamento,medium,2,sale
+DRQ-167,Vamos a Vender,Hacienda del Ciervo 1,Hacienda de las Palmas,Huixquilucan,"8,800,000",MXN,Departamento,medium,2,sale
+DSD-944,Vamos a Vender,Carlos Echanove,Lomas de Vista Hermosa,Cuajimalpa de Morelos,"16,700,000",MXN,Departamento,medium,2,sale
+DXH-417,Vamos a Vender,Bosque de Canelos,Bosques de las Lomas,Cuajimalpa de Morelos,"16,500,000",MXN,Departamento,medium,2,sale
+DYR-173,Vamos a Vender,Calle Arquímedes 11,Polanco,Miguel Hidalgo,"29,800,000",MXN,Departamento,medium,2,sale
+DZD-494,Vamos a Vender,Santa Fe Cuajimalpa,Santa Fe Cuajimalpa,Cuajimalpa de Morelos,"7,810,411",MXN,Departamento,medium,2,sale
+DZQ-266,Vamos a Vender,Av. Secretaría de Marina 840-mz 051,Lomas del Chamizal,Cuajimalpa de Morelos,"12,000,000",MXN,Departamento,medium,2,sale
+EHF-657,Vamos a Vender,Avenida Benjamín Franklin,Hipódromo,Cuauhtémoc,"70,560,000",MXN,Edificio,medium,2,sale
+EHI-244,Vamos a Vender,Chihuahua 9,Roma Norte,Cuauhtémoc,"36,000,000",MXN,Edificio,medium,2,sale
+FAI-198,Vamos a Vender,Arroyo Zarco null,San Antonio Arroyo Zarco,Aculco,"50,000,000",MXN,Finca,high,3,sale
+TCY-553,Vamos a Vender,Camino al Olivo 2000,Lomas de Vista Hermosa,Cuajimalpa de Morelos,"4,000,000",USD,Terreno residencial,medium,2,sale
+TEI-819,Vamos a Vender,LA JOYA,Bosque Real,Huixquilucan,"19,500,000",MXN,Terreno residencial,medium,2,sale
+TUH-982,Vamos a Vender,Carlos Echanove 3002,El Yaqui,Cuajimalpa de Morelos,"11,000,000",MXN,Terreno residencial,medium,2,sale
+DBI-895,Vive Capital BR,Xola 621,Del Valle Centro,Benito Juárez,"6,225,000",MXN,Departamento,medium,2,sale
+DBR-683,Vive Capital BR,Xola 621,Del Valle Centro,Benito Juárez,"4,681,000",MXN,Departamento,medium,2,sale
+DBZ-852,Vive Capital BR,La Morena 763,Narvarte Poniente,Ciudad de México,"8,340,000",MXN,Departamento,medium,2,sale
+DHZ-333,Vive Capital BR,Via Villa Florence 4,Jesús del Monte,Huixquilucan,"9,200,000",MXN,Departamento,medium,2,sale
+DME-366,Vive Capital BR,Polanco I Sección,Polanco,Miguel Hidalgo,"10,250,000",MXN,Departamento,medium,2,sale
+CAD-028,iElement inmobiliaria,La Quemada 362,Narvarte Oriente,Benito Juárez,"29,500,000",MXN,Terreno residencial,high,3,sale
+CAW-117,iElement inmobiliaria,Desierto de los Leones 4882,Tetelpan,Alvaro Obregón,"15,500,000",MXN,Casa,high,3,sale
+CAY-641,iElement inmobiliaria,Desierto de los Leones 4882,Tetelpan,Alvaro Obregón,"15,500,000",MXN,Terreno residencial,high,3,sale
+CBD-412,iElement inmobiliaria,Mayorazgo de Luyando 7,Xoco,Benito Juárez,"13,600,000",MXN,Casa,high,3,sale
+CBD-535,iElement inmobiliaria,Rafael Checa 44,Chimalistac,Alvaro Obregón,"25,000,000",MXN,Casa,high,3,sale
+CBX-686,iElement inmobiliaria,Calle 20 43,San Pedro de los Pinos,Benito Juárez,"10,500,000",MXN,Casa,high,3,sale
+CCA-407,iElement inmobiliaria,Canadá 75,Parque San Andrés,Coyoacán,"18,500,000",MXN,Casa,high,3,sale
+CCT-573,iElement inmobiliaria,Calle 20 9,San Pedro de los Pinos,Benito Juárez,"9,000,000",MXN,Casa en condominio,medium,2,sale
+CFX-464,iElement inmobiliaria,San Jerónimo Lídice,San Jerónimo Lídice,La Magdalena Contreras,"9,200,000",MXN,Casa en condominio,high,3,sale
+CHS-589,iElement inmobiliaria,Mayorazgo de Luyando 7,Xoco,Benito Juárez,"13,600,000",MXN,Casa,high,3,sale
+CLA-613,iElement inmobiliaria,Calle Sonora 55,Héroes de Padierna,La Magdalena Contreras,"18,750,000",MXN,Casa,high,3,sale
+CLE-836,iElement inmobiliaria,Calle Sonora 1,Héroes de Padierna,La Magdalena Contreras,"14,000,000",MXN,Casa,high,3,sale
+CLL-577,iElement inmobiliaria,Ocotepec 115,San Jerónimo Lídice,La Magdalena Contreras,"19,983,000",MXN,Casa,high,3,sale
+CLP-722,iElement inmobiliaria,Río San Angel,Atlamaya,Alvaro Obregón,"18,540,000",MXN,Casa,high,3,sale
+CLY-313,iElement inmobiliaria,Calle Sonora 55,San Jerónimo Aculco,La Magdalena Contreras,"18,750,000",MXN,Casa,medium,2,sale
+CMZ-725,iElement inmobiliaria,Calle Juan Sánchez Azcona 1510,Del Valle Sur,Benito Juárez,"23,000,000",MXN,Casa,high,3,sale
+COZ-221,iElement inmobiliaria,La Quemada 362,Narvarte Oriente,Benito Juárez,"29,500,000",MXN,Casa,high,3,sale
+CPM-882,iElement inmobiliaria,Cerrada de la Soledad 12,San Bernabé Ocotepec,La Magdalena Contreras,"9,200,000",MXN,Casa en condominio,high,3,sale
+CQC-044,iElement inmobiliaria,Avenida Contreras 450,San Jerónimo Lídice,La Magdalena Contreras,"7,500,000",MXN,Casa,high,3,sale
+CQH-463,iElement inmobiliaria,Calle Sonora 55,San Jerónimo Aculco,La Magdalena Contreras,"18,750,000",MXN,Terreno residencial,medium,2,sale
+CRZ-045,iElement inmobiliaria,Ignacio Aldama 70,Santa María Tepepan,Xochimilco,"5,500,000",MXN,Casa en condominio,high,3,sale
+CSN-743,iElement inmobiliaria,Cerrada de la Iliada 18,Lomas Axomiatla,Alvaro Obregón,"15,950,000",MXN,Casa,high,3,sale
+CSZ-273,iElement inmobiliaria,Calle 20 9,San Pedro de los Pinos,Benito Juárez,"9,000,000",MXN,Casa,medium,2,sale
+CTN-461,iElement inmobiliaria,Avenida San Bernabé 568,San Jerónimo Lídice,La Magdalena Contreras,"8,100,000",MXN,Casa,medium,2,sale
+CTT-046,iElement inmobiliaria,Bosques De Cantabria,San Nicolás Tolentino,Toluca,"2,500,000",MXN,Casa,high,3,sale
+CUQ-363,iElement inmobiliaria,Río San Angel,San Ángel,Alvaro Obregón,"18,540,000",MXN,Casa,high,3,sale
+CWJ-085,iElement inmobiliaria,Avenida Pirineos 239,Santa Cruz Atoyac,Benito Juárez,"7,350,000",MXN,Casa,high,3,sale
+CXA-613,iElement inmobiliaria,Boulevard Luis Donaldo Colosio 244,Fraccionamiento Arboledas de San Javier,Pachuca,"5,200,000",MXN,Casa,high,3,sale
+CXG-668,iElement inmobiliaria,Ignacio Aldama 70,Santa María Tepepan,Xochimilco,"5,500,000",MXN,Casa,high,3,sale
+CXN-524,iElement inmobiliaria,Agustín González de Cossío 346,Del Valle Centro,Benito Juárez,"10,400,000",MXN,Casa,high,3,sale
+CXR-052,iElement inmobiliaria,Calle 5 de Mayo 312,Santa María Tepepan,Xochimilco,"8,000,000",MXN,Casa,high,3,sale
+CYZ-056,iElement inmobiliaria,Privada Reforma 22-manzana 2 lote 11,Fraccionamiento Jardines de Santa Úrsula,Yauhquemehcan,"2,450,000",MXN,Casa en condominio,high,3,sale
+DAA-771,iElement inmobiliaria,Camino Real a Tetelpan 193,Tetelpan,Alvaro Obregón,"6,023,160",MXN,Departamento,high,3,sale
+DAG-565,iElement inmobiliaria,Camino Real a Tetelpan 193,Tetelpan,Alvaro Obregón,"8,553,295",MXN,Departamento,high,3,sale
+DBB-729,iElement inmobiliaria,Nicolás San Juan 27,Del Valle Norte,Benito Juárez,"13,750,000",MXN,Departamento,high,3,sale
+DBK-068,iElement inmobiliaria,Calzada de Tlalpan 2971,El Reloj,Coyoacán,"6,200,000",MXN,Departamento,high,3,sale
+DBP-554,iElement inmobiliaria,Illinois 70,Ciudad de los Deportes,Benito Juárez,"8,670,000",MXN,Departamento,high,3,sale
+DBX-997,iElement inmobiliaria,Calle Fresas 21,Tlacoquemecatl,Benito Juárez,"17,500,000",MXN,Departamento,high,3,sale
+DBY-974,iElement inmobiliaria,Avenida Insurgentes Sur 724,Del Valle Norte,Benito Juárez,"13,800,000",MXN,Departamento,high,3,sale
+DBZ-602,iElement inmobiliaria,Avenida Insurgentes Sur 724,Del Valle Norte,Benito Juárez,"7,900,000",MXN,Departamento,high,3,sale
+DCD-867,iElement inmobiliaria,Viena 10,Juárez,Cuauhtémoc,"17,361,932",MXN,Departamento,high,3,sale
+DCK-969,iElement inmobiliaria,20 de Agosto 31,San Diego Churubusco,Coyoacán,"4,800,000",MXN,Departamento,high,3,sale
+DCM-062,iElement inmobiliaria,Altata,Cuauhtémoc,Cuauhtémoc,"11,824,400",MXN,Departamento,high,3,sale
+DCO-089,iElement inmobiliaria,Viena 10,Juárez,Cuauhtémoc,"26,465,006",MXN,Departamento,high,3,sale
+DCO-163,iElement inmobiliaria,Viena 10,Juárez,Cuauhtémoc,"12,508,513",MXN,Departamento,high,3,sale
+DCP-558,iElement inmobiliaria,Calle F 23,Alianza Popular Revolucionaria,Coyoacán,"3,600,000",MXN,Departamento,high,3,sale
+DCS-035,iElement inmobiliaria,Viena 10,Juárez,Cuauhtémoc,"15,266,570",MXN,Departamento,high,3,sale
+DCY-161,iElement inmobiliaria,Viena 10,Juárez,Cuauhtémoc,"44,755,865",MXN,Departamento,high,3,sale
+DCY-212,iElement inmobiliaria,Viena 10,Juárez,Cuauhtémoc,"16,120,608",MXN,Departamento,high,3,sale
+DHB-183,iElement inmobiliaria,Mier y Pesado 128,Del Valle Norte,Benito Juárez,"9,500,000",MXN,Departamento,high,3,sale
+DHO-107,iElement inmobiliaria,Hacienda del ciervo 14 ,Villa Florence,Huixquilucan,"9,570,000",MXN,Departamento,high,3,sale
+DJB-653,iElement inmobiliaria,Avenida H. Escuela Naval Militar 132,Paseos de Taxqueña,Coyoacán,"3,450,000",MXN,Departamento,high,3,sale
+DJG-878,iElement inmobiliaria,Rio Guadalupe 21,Tetelpan,Alvaro Obregón,"4,900,000",MXN,Departamento,high,3,sale
+DKP-274,iElement inmobiliaria,Calle Fresas 21,Tlacoquemecatl,Benito Juárez,"16,300,000",MXN,Departamento,high,3,sale
+DMO-321,iElement inmobiliaria,Amores 344,Del Valle Norte,Benito Juárez,"7,800,000",MXN,Departamento,high,3,sale
+DMS-362,iElement inmobiliaria,Rubén Darío 43,Polanco,Miguel Hidalgo,"35,197,200",MXN,Departamento,high,3,sale
+DMW-807,iElement inmobiliaria,Avenida Jaime Balmes 72,Polanco,Miguel Hidalgo,"10,000,000",MXN,Departamento,high,3,sale
+DNE-358,iElement inmobiliaria,Amores 344,Del Valle Norte,Benito Juárez,"6,600,000",MXN,Departamento,high,3,sale
+DOD-514,iElement inmobiliaria,Calle Mutualismo 79,Escandón II Sección,Miguel Hidalgo,"3,600,000",MXN,Departamento,high,3,sale
+DQN-745,iElement inmobiliaria,Calzda de Tlalpan 2971 ,Pedregal de Santa Ursula,Coyoacán,"5,100,000",MXN,Departamento,medium,2,sale
+DZN-056,iElement inmobiliaria,Camino Real a Tetelpan 193,Tetelpan,Alvaro Obregón,"7,154,000",MXN,Departamento,high,3,sale
+EWX-417,iElement inmobiliaria,Calle Río Tiber 42,Cuauhtémoc,Cuauhtémoc,"39,500,000",MXN,Edificio,high,3,sale
+PCI-018,iElement inmobiliaria,Loma del Jagüey 155,Lomas de Vista Hermosa,Cuajimalpa de Morelos,"28,900,000",MXN,PH,high,3,sale
+PCP-121,iElement inmobiliaria,Loma del Jagüey 155,Lomas de Vista Hermosa,Cuajimalpa de Morelos,"28,900,000",MXN,Departamento,high,3,sale
+TCQ-951,iElement inmobiliaria,Blvd. Adolfo López Mateos 1362,Mixcoac,Benito Juárez,"4,000,000",USD,Terreno comercial,high,3,sale
+TYO-482,iElement inmobiliaria,José María Facha,Santa Martha Acatitla Sur,Iztapalapa,"3,100,000",MXN,Terreno residencial,high,3,sale
