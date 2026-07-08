@@ -19,6 +19,8 @@ import plantillas_carruseles_inmobiliarias
 # Diccionario de plantillas disponibles
 PLANTILLAS_DISPONIBLES = {
     "Arquetipo A: Arquitectónico Minimalista": plantillas_carruseles_inmobiliarias.disenio_landscape_5fotos,
+    "Arquetipo B: Elegancia Editorial": plantillas_carruseles_inmobiliarias.disenio_editorial_5fotos,
+    "Arquetipo C: Bloque Corporativo": plantillas_carruseles_inmobiliarias.disenio_corporativo_5fotos,
 }
 
 
@@ -298,9 +300,6 @@ api_key_openrouter = st.sidebar.text_input(
 modelo_openrouter = st.sidebar.selectbox(
     "Modelo OpenRouter",
     ("openai/gpt-oss-120b", "deepseek/deepseek-v4-flash"),
-)
-api_key_metricool = st.sidebar.text_input(
-    "API Key de Metricool", type="password"
 )
 
 # =====================================================================
@@ -822,12 +821,8 @@ if st.session_state.get('fotos_descargadas', False):
         while len(fechas_calculadas) < total_propiedades:
             fechas_calculadas.extend(fechas_calculadas[:total_propiedades - len(fechas_calculadas)])
 
-        # --- 4. Determinar plantilla a usar ---
-        nombre_plantilla = st.session_state.get('plantilla_seleccionada')
-        if nombre_plantilla and nombre_plantilla in PLANTILLAS_DISPONIBLES:
-            funcion_plantilla = PLANTILLAS_DISPONIBLES[nombre_plantilla]
-        else:
-            funcion_plantilla = plantillas_carruseles_inmobiliarias.disenio_landscape_5fotos
+        # --- 4. Lista de plantillas para rotación dinámica ---
+        lista_plantillas = list(PLANTILLAS_DISPONIBLES.values())
 
         # --- 5. Bucle principal de procesamiento ---
         progress_bar = st.progress(0, text="Iniciando procesamiento...")
@@ -906,7 +901,8 @@ if st.session_state.get('fotos_descargadas', False):
             enlace_pulppo = f"https://pulppo.com/{id_largo}" if id_largo else ""
             primer_comentario = f"Conoce todos los detalles de esta propiedad haciendo clic en este enlace: {enlace_pulppo}"
 
-            # c. Renderizar plantilla y guardar master
+            # c. Renderizar plantilla ROTADA y guardar master
+            funcion_plantilla = lista_plantillas[i % len(lista_plantillas)]
             html_final = funcion_plantilla(datos_propiedad)
 
             ruta_propiedad = OUTPUT_DIR / company_clean / internal_id
