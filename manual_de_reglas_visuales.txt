@@ -19,6 +19,7 @@ ESTRUCTURA DE 3 ACTOS OBLIGATORIA (Evaluada mediante el index `i` y `total_slide
    - Diseño: Alternancia asimétrica (Ej: slide impar con texto a la izquierda y gráficos a la derecha, slide par a la inversa). NUNCA pegar el texto a los bordes superior/inferior; usar `flex-col justify-center h-full px-[100px]`.
    - Textos: Uso estricto de la función `formatear_texto_html(slide.get('texto', ''), paleta['acento'])` para procesar Markdown y viñetas automáticamente.
    - Identidad: Indicador inferior de "Desliza" acompañado de `{SVGS['flecha_larga']}`.
+   - Numeración: Si decides mostrar en el fondo un número indicador de la diapositiva, la portada no cuenta. El slide de contenido 1 (índice i=1) debe mostrar '01'. Usa `str(i).zfill(2)`.
 
 3. CTA / CIERRE (i == total_slides - 1):
    - Objetivo: Conversión y conclusión.
@@ -34,7 +35,8 @@ Para evitar romper el renderizado, el esqueleto del código devuelto DEBE ser ex
 4. Paleta de Colores Dinámica: NUNCA usar colores fijos (como `#FAFAFA` o `#000`). Siempre extraer y usar: `bg_color`, `texto_color`, `accent_color`, `secundario_color` del diccionario `paleta`. (Ej. `text-[{texto_color}]`).
 5. REGLA ESTRICTA DE COLOR SECUNDARIO: El único color secundario permitido para cualquier detalle, ícono o forma geométrica es el Teal (#009A9A). Queda estrictamente prohibido el uso de colores rojos u otros tonos no especificados en la paleta base.
 6. REGLA ESTRICTA DE CONTRASTE AMARILLO (PULPPO YELLOW): Siempre que se utilice el color de acento Amarillo Pulppo (#F6BE00 o accent_color) como COLOR DE FONDO para una caja de texto o etiqueta (ej. `bg-[{accent_color}]`), el color del texto en su interior DEBE SER ESTRICTAMENTE BLANCO (#FAFAFA). Queda absolutamente prohibido usar texto negro o carbón sobre fondos amarillos. El código HTML siempre debe ser `bg-[{accent_color}] text-[#FAFAFA]`.
-7. Tipografías: Títulos siempre en `font-garamond font-normal leading-[0.95]`. Cuerpo siempre en `font-nunito font-light text-[32px] leading-[1.4]`.
+7. Tipografías: Títulos siempre en `font-garamond font-normal`. NUNCA usar uppercase. El interlineado DEBE ser `leading-[1.1]` o `leading-tight` (jamás `leading-[0.95]` ni `leading-none` para evitar colisión de trazos). Cuerpo siempre en `font-nunito font-light text-[32px] leading-[1.4]`.
+8. Componentes Open Source: Puedes emplear la lógica estructural de HTML/Tailwind de librerías gratuitas como HyperUI, Flowbite o Aceternity UI para lograr layouts más limpios y profesionales.
 
 --- PARTE 3: BIBLIOTECA DE RECURSOS DINÁMICOS ---
 Tienes disponibles estas herramientas desde Python (debes inyectarlas en los f-strings):

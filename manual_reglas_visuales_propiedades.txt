@@ -40,7 +40,7 @@ ESTRUCTURA DE 3 ACTOS INMOBILIARIA:
    - PROHIBIDO: Usar texto carbón/negro sobre fondos amarillos o teal.
 
 4. Tipografías:
-   - Títulos, nombres de calle o frases heroicas: `font-garamond font-normal` (EB Garamond).
+   - Títulos, nombres de calle o frases heroicas: `font-garamond font-normal`. NUNCA usar uppercase. SIEMPRE usar un interlineado de `leading-[1.1]` o `leading-tight` para evitar colisiones entre letras altas y bajas.
    - Datos duros, atributos (m², recámaras), descripciones y etiquetas: `font-nunito font-light` o `font-bold` (Nunito Sans).
    - REGLA ESTRICTA: Queda PROHIBIDO usar letras mayúsculas (all caps / clase `uppercase`) en textos que utilicen la tipografía EB Garamond (`font-garamond`). Esta fuente solo debe usarse en formato normal (Sentence case o Title case) para preservar su elegancia tipográfica. Las mayúsculas solo están permitidas en textos con `font-nunito`.
 
@@ -48,6 +48,8 @@ ESTRUCTURA DE 3 ACTOS INMOBILIARIA:
 Utiliza estos micro-componentes de Tailwind para mostrar información técnica:
 - Líneas Divisorias Elegantes: Usar líneas delgadas (`border-b border-[#212322]/20` o similar) para separar listas de atributos.
 - Etiquetas de Bracket: Usar corchetes para destacar el tipo de operación inmobiliaria (Ej. `text-[#F6BE00] font-bold tracking-widest` con el texto `[ DEPARTAMENTO EN RENTA ]`).
+- Inspiración Open Source: Para estructurar la información (grids, tarjetas, divisiones), básate en la estructura de clases de librerías como HyperUI, Flowbite o Preline UI.
+- Lógica de Numeración: Si numeras los slides, omite la portada. El primer slide de contenido es el '01'.
 
 --- PARTE 4: ARQUETIPOS DE DISEÑO INMOBILIARIO ---
 Cada función en `plantillas_carruseles_inmobiliarias.py` debe basarse en uno de estos 3 estilos arquitectónicos visuales:

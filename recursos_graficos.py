@@ -1,6 +1,11 @@
 import base64
+import io
 import random
 from pathlib import Path
+
+import requests
+from PIL import Image
+
 from config import GRAFICOS_DIR, STOCK_DIR
 
 def cargar_textura_b64(nombre_archivo):
@@ -57,3 +62,44 @@ def obtener_foto_random_b64():
         return f"data:{mime};base64,{encoded}"
     except Exception:
         return ""
+
+
+def obtener_foto_pexels_b64(api_key, collection_id):
+    """
+    Obtiene una foto aleatoria de una colección de Pexels.
+    Fallback a obtener_foto_random_b64() si hay error de red o API.
+    """
+    try:
+        resp = requests.get(
+            f"https://api.pexels.com/v1/collections/{collection_id}",
+            headers={"Authorization": api_key},
+            timeout=15,
+        )
+        resp.raise_for_status()
+        data = resp.json()
+
+        media = data.get("media", [])
+        if not media:
+            return obtener_foto_random_b64()
+
+        item = random.choice(media)
+        src = item.get("src", {})
+        # Prefer large, fallback a medium
+        url = src.get("large") or src.get("medium") or src.get("large2x") or ""
+        if not url:
+            return obtener_foto_random_b64()
+
+        img_resp = requests.get(url, timeout=20)
+        img_resp.raise_for_status()
+
+        img = Image.open(io.BytesIO(img_resp.content))
+        if img.mode in ("RGBA", "P"):
+            img = img.convert("RGB")
+
+        buf = io.BytesIO()
+        img.save(buf, format="JPEG", quality=95)
+        encoded = base64.b64encode(buf.getvalue()).decode("utf-8")
+        return f"data:image/jpeg;base64,{encoded}"
+
+    except Exception:
+        return obtener_foto_random_b64()

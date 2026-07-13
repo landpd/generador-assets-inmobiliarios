@@ -613,7 +613,7 @@ def plantilla_impacto_brutalista(datos_array, paleta):
         <div class="w-full h-[2px] bg-[{texto_color}]/20 mb-8"></div>
 
         <!-- Título colosal -->
-        <h1 class="font-garamond font-normal text-[150px] leading-[0.85] text-[{texto_color}] tracking-tighter max-w-[900px]">
+        <h1 class="font-garamond font-normal text-[150px] leading-[1.1] text-[{texto_color}] tracking-tighter max-w-[900px]">
           {titulo}
         </h1>
 
@@ -636,7 +636,7 @@ def plantilla_impacto_brutalista(datos_array, paleta):
       <div class="absolute inset-0 z-20 flex flex-col justify-center px-[80px]">
 
         <!-- Título colosal -->
-        <h1 class="font-garamond font-normal text-[130px] leading-[0.85] text-[{texto_color}] tracking-tighter mb-10">
+        <h1 class="font-garamond font-normal text-[130px] leading-[1.1] text-[{texto_color}] tracking-tighter mb-10">
           {titulo}
         </h1>
 
@@ -657,7 +657,7 @@ def plantilla_impacto_brutalista(datos_array, paleta):
 """
         else:
             # ===== CONTENIDO: Número héroe + texto a la derecha =====
-            num_str = str(i + 1).zfill(2)
+            num_str = str(i).zfill(2)
             slides_html += f"""
     <!-- ========================= CONTENIDO {i+1} ========================= -->
     <div class="w-[1080px] h-full shrink-0 relative overflow-hidden z-20">
@@ -676,10 +676,10 @@ def plantilla_impacto_brutalista(datos_array, paleta):
       <div class="absolute inset-0 z-10 flex flex-col items-end justify-center text-right pl-[150px] pr-[80px]">
 
         <!-- Línea vertical divisoria -->
-        <div class="border-r-4 border-[{accent_color}] pr-8">
+        <div class="border-r-4 border-[{accent_color}] pr-8 flex flex-col items-end">
 
           <!-- Título -->
-          <h1 class="font-garamond text-[{texto_color}] text-[100px] leading-[0.95] font-normal mb-8">
+          <h1 class="font-garamond text-[{texto_color}] text-[100px] leading-[1.1] font-normal mb-8">
             {titulo}
           </h1>
 

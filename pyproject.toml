@@ -12,8 +12,11 @@ dependencies = [
     "openai>=2.44.0",
     "pandas>=3.0.4",
     "pillow>=12.2.0",
+    "python-dotenv>=1.2.2",
     "requests>=2.34.2",
     "streamlit>=1.58.0",
+    "uv>=0.11.28",
+    "watchdog>=6.0.0",
 ]
 
 [tool.uv.workspace]
