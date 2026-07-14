@@ -18,14 +18,11 @@ from plantillas_educativas import (
     plantilla_impacto_brutalista,
     plantilla_corporativo_listas,
 )
-import plantillas_educativas
-from recursos_graficos import obtener_foto_pexels_b64
+from recursos_graficos import buscar_imagen_pexels, obtener_fotos_coleccion_pexels, url_a_base64
 
 # ── Variables de entorno ──────────────────────────────────────────────
 load_dotenv()
 OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
-PEXELS_API_KEY = os.getenv("PEXELS_API_KEY")
-PEXELS_COLLECTION_ID = os.getenv("PEXELS_COLLECTION_ID")
 
 # ── Mapeo de estilos → plantillas (Patrón Estrategia) ────────────────
 MAPEO_PLANTILLAS = {
@@ -132,14 +129,6 @@ def _generar_nombre_archivo(estilo_seleccionado, tema_color_sel, etiqueta):
     return f"{arquetipo_str}_{tema_str}_{etiqueta_limpia}"
 
 
-def _configurar_fotos_pexels():
-    """Si hay credenciales de Pexels, inyecta la función de fotos como fuente."""
-    if PEXELS_API_KEY and PEXELS_COLLECTION_ID:
-        _key = PEXELS_API_KEY.strip()
-        _col = PEXELS_COLLECTION_ID.strip()
-        plantillas_educativas.obtener_foto_random_b64 = lambda: obtener_foto_pexels_b64(_key, _col)
-
-
 # =====================================================================
 # BOTÓN: GENERAR COPY Y GUARDAR EN SESSION STATE
 # =====================================================================
@@ -187,6 +176,12 @@ if st.button("🪄 Generar Copy y Previsualizar"):
             else:
                 st.session_state["json_carrusel"] = datos_json
                 st.session_state["gen_id"] = st.session_state.get("gen_id", 0) + 1
+
+                # Traer 1 textura basada en el estilo, y N fotos de la colección de Pulppo
+                keyword_textura = "halftone dots texture" if "Pop" in estilo else "dark grunge paper texture"
+                st.session_state["url_textura"] = buscar_imagen_pexels(keyword_textura, "landscape")
+                st.session_state["urls_fotos"] = obtener_fotos_coleccion_pexels("h00i8s4", num_slides)
+
                 st.success("¡Copy generado exitosamente!")
 
         except Exception as e:
@@ -224,15 +219,39 @@ if "json_carrusel" in st.session_state:
             st.session_state["json_carrusel"] = json_editado
             st.rerun()
 
+    # ── ADMINISTRADOR DE IMÁGENES ────────────────────────────────────
+    with st.expander("🖼️ Administrar Imágenes y Texturas", expanded=False):
+        if st.button("🎲 Aleatorizar imágenes de Pexels"):
+            keyword_textura = "halftone dots texture" if "Pop" in estilo else "dark grunge paper texture"
+            st.session_state["url_textura"] = buscar_imagen_pexels(keyword_textura, "landscape")
+            st.session_state["urls_fotos"] = obtener_fotos_coleccion_pexels("h00i8s4", num_slides)
+            st.rerun()
+
+        st.session_state["url_textura"] = st.text_input(
+            "URL Textura",
+            value=st.session_state.get("url_textura", ""),
+            key="input_textura",
+        )
+        for i in range(len(st.session_state.get("urls_fotos", []))):
+            st.session_state["urls_fotos"][i] = st.text_input(
+                f"URL Foto {i + 1}",
+                value=st.session_state["urls_fotos"][i],
+                key=f"input_foto_{i}",
+            )
+
     # ── RENDERIZADO DE PREVISUALIZACIÓN ──────────────────────────────
     st.markdown("### 👁️ Previsualización en Vivo")
 
     datos_array = st.session_state["json_carrusel"]
 
-    _configurar_fotos_pexels()
+    # Convertir URLs de Pexels a Base64 para inyectar en las plantillas
+    imagenes_b64 = {
+        "textura": url_a_base64(st.session_state.get("url_textura", "")),
+        "fotos": [url_a_base64(url) for url in st.session_state.get("urls_fotos", [])],
+    }
 
     renderizar = _obtener_plantilla(estilo)
-    html_crudo = renderizar(datos_array, paleta)
+    html_crudo = renderizar(datos_array, paleta, imagenes_b64=imagenes_b64)
 
     width_total = 1080 * len(datos_array)
     escala = 0.3
@@ -258,7 +277,7 @@ if "json_carrusel" in st.session_state:
         hti.output_path = str(ruta_salida)
 
         with st.spinner("Renderizando imágenes en alta calidad..."):
-            html_crudo = renderizar(datos_array, paleta)
+            html_crudo = renderizar(datos_array, paleta, imagenes_b64=imagenes_b64)
             width_total = 1080 * len(datos_array)
 
             nombre_master = f"{nombre_base}_master.png"

@@ -1,5 +1,5 @@
 import re
-from recursos_graficos import TEXTURAS, SVGS, obtener_foto_random_b64
+from recursos_graficos import SVGS
 
 
 def formatear_texto_html(texto, color_acento):
@@ -30,7 +30,7 @@ def formatear_texto_html(texto, color_acento):
     return html_resultado
 
 
-def plantilla_geometria_limpia(datos_array, paleta):
+def plantilla_geometria_limpia(datos_array, paleta, imagenes_b64=None):
     """
     Genera un carrusel panorámico estilo Geometría Corporativa Limpia (Arquetipo B).
     Uso de formas geométricas puras cortadas por los bordes, aire y limpieza extrema.
@@ -42,6 +42,7 @@ def plantilla_geometria_limpia(datos_array, paleta):
     texto_color = paleta['texto']
     accent_color = paleta['acento']
     secundario_color = paleta['secundario']
+    fotos = imagenes_b64.get('fotos', []) if imagenes_b64 else []
 
     slides_html = ""
     for i, slide in enumerate(datos_array):
@@ -53,14 +54,14 @@ def plantilla_geometria_limpia(datos_array, paleta):
 
         if es_portada:
             # ===== PORTADA: Foto de fondo + overlay =====
-            foto_fondo = obtener_foto_random_b64()
+            foto_actual = fotos[i % len(fotos)] if fotos else ''
             slides_html += f"""
     <!-- ========================= PORTADA {i+1} ========================= -->
     <div class="w-[1080px] h-full shrink-0 relative overflow-hidden z-20">
 
       <!-- Fondo fotográfico -->
       <div class="absolute inset-0 bg-cover bg-center z-0"
-           style="background-image: url('{foto_fondo}');"></div>
+           style="background-image: url('{foto_actual}');"></div>
 
       <!-- Overlay de color -->
       <div class="absolute inset-0 bg-[{bg_color}]/80 z-10"></div>
@@ -210,13 +211,14 @@ def plantilla_geometria_limpia(datos_array, paleta):
 </html>'''
 
 
-def plantilla_editorial_grunge(datos_array, paleta):
+def plantilla_editorial_grunge(datos_array, paleta, imagenes_b64=None):
     """
     Genera un carrusel panorámico en estilo Editorial Grunge (Arquetipo A).
     Uso de texturas de papel, cajas de color rotadas, contraste agresivo.
     Estructura de 3 Actos: PORTADA → CONTENIDO → CTA.
     """
-    textura = TEXTURAS.get("pizarra_rayones", "") or ""
+    textura = imagenes_b64.get('textura', '') if imagenes_b64 else ''
+    fotos = imagenes_b64.get('fotos', []) if imagenes_b64 else []
     total_slides = len(datos_array)
     ancho_total = total_slides * 1080
     bg_color = paleta['fondo']
@@ -234,7 +236,7 @@ def plantilla_editorial_grunge(datos_array, paleta):
 
         if es_portada:
             # ===== PORTADA: Foto 60% derecha + contenido flotando a la izquierda =====
-            foto_fondo = obtener_foto_random_b64()
+            foto_actual = fotos[i % len(fotos)] if fotos else ''
             slides_html += f"""
     <!-- ========================= PORTADA {i+1} ========================= -->
     <div class="w-[1080px] h-full shrink-0 relative overflow-hidden z-20">
@@ -246,7 +248,7 @@ def plantilla_editorial_grunge(datos_array, paleta):
 
       <!-- Foto de stock: 60% derecho -->
       <div class="absolute right-0 top-0 bottom-0 w-[60%] bg-cover bg-center z-0"
-           style="background-image: url('{foto_fondo}');"></div>
+           style="background-image: url('{foto_actual}');"></div>
 
       <!-- Contenido flotante (se superpone a la foto) -->
       <div class="absolute left-[80px] top-[250px] z-20 max-w-[800px]">
@@ -377,13 +379,14 @@ def plantilla_editorial_grunge(datos_array, paleta):
 </html>'''
 
 
-def plantilla_cinematografica(datos_array, paleta):
+def plantilla_cinematografica(datos_array, paleta, imagenes_b64=None):
     """
     Genera un carrusel panorámico en estilo Cinematográfico/Full Bleed (Arquetipo E).
     Fotografías a pantalla completa con viñetas, textos centrados como créditos de cine.
     Estructura de 3 Actos: PORTADA → CONTENIDO → CTA.
     """
-    textura = TEXTURAS.get("polvo_blanco", "") or ""
+    textura = imagenes_b64.get('textura', '') if imagenes_b64 else ''
+    fotos = imagenes_b64.get('fotos', []) if imagenes_b64 else []
     total_slides = len(datos_array)
     ancho_total = total_slides * 1080
     bg_color = paleta['fondo']
@@ -400,7 +403,7 @@ def plantilla_cinematografica(datos_array, paleta):
         es_cta = i == total_slides - 1
 
         # Cada slide obtiene su propia foto para efecto de escena independiente
-        foto_fondo = obtener_foto_random_b64()
+        foto_actual = fotos[i % len(fotos)] if fotos else ''
 
         if es_portada:
             # ===== PORTADA: Textos centrados tipo apertura de película =====
@@ -410,7 +413,7 @@ def plantilla_cinematografica(datos_array, paleta):
 
       <!-- Foto de fondo -->
       <div class="absolute inset-0 bg-cover bg-center z-0"
-           style="background-image: url('{foto_fondo}');"></div>
+           style="background-image: url('{foto_actual}');"></div>
 
       <!-- Gradiente viñeta -->
       <div class="absolute inset-0 bg-gradient-to-t from-[{bg_color}] via-[{bg_color}]/70 to-[{bg_color}]/40 z-10"></div>
@@ -445,7 +448,7 @@ def plantilla_cinematografica(datos_array, paleta):
 
       <!-- Foto de fondo -->
       <div class="absolute inset-0 bg-cover bg-center z-0"
-           style="background-image: url('{foto_fondo}');"></div>
+           style="background-image: url('{foto_actual}');"></div>
 
       <!-- Gradiente viñeta más oscuro para CTA -->
       <div class="absolute inset-0 bg-gradient-to-t from-[{bg_color}] via-[{bg_color}]/80 to-[{bg_color}]/60 z-10"></div>
@@ -486,7 +489,7 @@ def plantilla_cinematografica(datos_array, paleta):
 
       <!-- Foto de fondo -->
       <div class="absolute inset-0 bg-cover bg-center z-0"
-           style="background-image: url('{foto_fondo}');"></div>
+           style="background-image: url('{foto_actual}');"></div>
 
       <!-- Gradiente viñeta -->
       <div class="absolute inset-0 bg-gradient-to-t from-[{bg_color}] via-[{bg_color}]/70 to-[{bg_color}]/40 z-10"></div>
@@ -561,7 +564,7 @@ def plantilla_cinematografica(datos_array, paleta):
 </html>'''
 
 
-def plantilla_impacto_brutalista(datos_array, paleta):
+def plantilla_impacto_brutalista(datos_array, paleta, imagenes_b64=None):
     """
     Genera un carrusel panorámico en estilo Impacto Brutalista (Arquetipo C).
     Tipografía colosal, contraste agresivo, líneas de cuadrícula, números héroe de fondo.
@@ -573,6 +576,7 @@ def plantilla_impacto_brutalista(datos_array, paleta):
     texto_color = paleta['texto']
     accent_color = paleta['acento']
     secundario_color = paleta['secundario']
+    fotos = imagenes_b64.get('fotos', []) if imagenes_b64 else []
 
     slides_html = ""
     for i, slide in enumerate(datos_array):
@@ -584,14 +588,14 @@ def plantilla_impacto_brutalista(datos_array, paleta):
 
         if es_portada:
             # ===== PORTADA: Foto de fondo + overlay + minimalismo extremo =====
-            foto = obtener_foto_random_b64()
+            foto_actual = fotos[i % len(fotos)] if fotos else ''
             slides_html += f"""
     <!-- ========================= PORTADA {i+1} ========================= -->
     <div class="w-[1080px] h-full shrink-0 relative overflow-hidden z-20">
 
       <!-- Foto de fondo -->
       <div class="absolute inset-0 bg-cover bg-center z-0"
-           style="background-image: url('{foto}');"></div>
+           style="background-image: url('{foto_actual}');"></div>
 
       <!-- Overlay de color -->
       <div class="absolute inset-0 bg-[{bg_color}]/90 z-10"></div>
@@ -738,13 +742,14 @@ def plantilla_impacto_brutalista(datos_array, paleta):
 </html>'''
 
 
-def plantilla_corporativo_listas(datos_array, paleta):
+def plantilla_corporativo_listas(datos_array, paleta, imagenes_b64=None):
     """
     Genera un carrusel panorámico en estilo Corporativo de Listas (Arquetipo D).
     Tarjetas flotantes (Cards) con sombras pesadas sobre fondo fotográfico.
     Estructura de 3 Actos: PORTADA → CONTENIDO → CTA.
     """
-    foto_fondo = obtener_foto_random_b64()
+    fotos = imagenes_b64.get('fotos', []) if imagenes_b64 else []
+    foto_fondo = fotos[0] if fotos else ''
     total_slides = len(datos_array)
     ancho_total = total_slides * 1080
     bg_color = paleta['fondo']
