@@ -134,3 +134,41 @@ def obtener_foto_pexels_b64(api_key, collection_id):
 
     except Exception:
         return obtener_foto_random_b64()
+
+
+def obtener_fotos_coleccion_pexels(id_coleccion, cantidad=5):
+    import os
+    import requests
+    import random
+
+    api_key = os.getenv("PEXELS_API_KEY")
+    if not api_key:
+        return [""] * cantidad
+
+    url = f"https://api.pexels.com/v1/collections/{id_coleccion}?per_page=30"
+    headers = {"Authorization": api_key}
+
+    try:
+        response = requests.get(url, headers=headers, timeout=10)
+        response.raise_for_status()
+        data = response.json()
+
+        # Filtrar solo elementos que sean fotografías
+        media = [m for m in data.get('media', []) if m.get('type') == 'Photo']
+        if not media:
+            return [""] * cantidad
+
+        # Seleccionar fotos al azar (evitando errores si hay pocas fotos)
+        seleccion = random.choices(media, k=cantidad) if len(media) < cantidad else random.sample(media, cantidad)
+
+        # Extraer URLs y limpiarlas (Clean UI, Dirty Backend)
+        urls = []
+        for photo in seleccion:
+            raw_url = photo['src'].get('large2x') or photo['src'].get('large', '')
+            url_limpia = raw_url.split('?')[0] if raw_url else ""
+            urls.append(url_limpia)
+
+        return urls
+    except Exception as e:
+        print(f"Error al obtener colección de Pexels: {e}")
+        return [""] * cantidad
