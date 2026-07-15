@@ -1,6 +1,3 @@
-from config import DATA_DIR, OUTPUT_DIR, FOTOS_DIR, LOGOS_DIR
-
-
 def disenio_vertical_3fotos(datos):
     """ Plantilla Clásica: 1080 x 1350 con 3 fotos """
     return f"""
@@ -63,6 +60,9 @@ def disenio_vertical_3fotos(datos):
     </head>
     <body>
         <div class="container">
+            <!-- Textura de fondo dinámica -->
+            <div style="position:absolute;inset:0;background-image:url('{datos.get("textura_oscura", "")}');background-size:cover;background-position:center;z-index:0;opacity:0.4;"></div>
+
             <div class="img-box"><img src="{datos['img1']}"></div>
             <div class="img-box">
                 <img src="{datos['img2']}">
@@ -179,6 +179,9 @@ def disenio_landscape_5fotos(datos):
     </head>
     <body>
         <div class="container">
+            <!-- Textura de fondo dinámica -->
+            <div style="position:absolute;inset:0;background-image:url('{datos.get("textura_clara", "")}');background-size:cover;background-position:center;z-index:0;opacity:0.15;"></div>
+
             <!-- CAJA OSCURA LOGO -->
             <div class="logo-box">
                 <img src="{datos.get('logo', '')}">
@@ -298,6 +301,9 @@ def disenio_story_figma(datos):
     </head>
     <body>
         <div class="container">
+            <!-- Textura de fondo dinámica -->
+            <div style="position:absolute;inset:0;background-image:url('{datos.get("textura_clara", "")}');background-size:cover;background-position:center;z-index:0;opacity:0.15;"></div>
+
             <!-- CAJA OSCURA LOGO -->
             <div class="logo-box">
                 <img src="{datos.get('logo', '')}">
@@ -404,7 +410,6 @@ def disenio_carrusel_6fotos(datos):
             justify-content: flex-end; /* Alinea los textos al piso del cajón */
             gap: 15px;
             z-index: 10;
-            /* writing-mode: vertical-rl; <-- Descomenta esto si quieres que las letras giren 90 grados */
         }}
         .atributos div {{
             font-family: 'Nunito Sans', sans-serif; font-size: 28px; font-weight: 500; color: #212322; text-transform: none;
@@ -457,6 +462,9 @@ def disenio_carrusel_6fotos(datos):
     </head>
     <body>
         <div class="container">
+            <!-- Textura de fondo dinámica -->
+            <div style="position:absolute;inset:0;background-image:url('{datos.get("textura_clara", "")}');background-size:cover;background-position:center;z-index:0;opacity:0.15;"></div>
+
             <!-- Capa oscura de Slide 1 -->
             <div class="overlay"></div>
 
@@ -484,7 +492,7 @@ def disenio_carrusel_6fotos(datos):
                 </div>
             </div>
 
-            <!-- 8 Fotografías (Img 9 removida) -->
+            <!-- 8 Fotografías -->
             <div class="img-box img1"><img src="{datos.get('img1', '')}"></div>
             <div class="img-box img2"><img src="{datos.get('img2', '')}"></div>
             <div class="img-box img3"><img src="{datos.get('img3', '')}"></div>
@@ -614,7 +622,9 @@ def disenio_oferta_baja_precio(datos):
     </head>
     <body>
         <div class="container">
-            
+            <!-- Textura de fondo dinámica -->
+            <div style="position:absolute;inset:0;background-image:url('{datos.get("textura_clara", "")}');background-size:cover;background-position:center;z-index:0;opacity:0.12;"></div>
+
             <!-- Eje vertical de fondo -->
             <div class="linea-eje"></div>
 

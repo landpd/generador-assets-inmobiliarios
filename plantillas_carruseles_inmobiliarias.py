@@ -1,6 +1,3 @@
-import base64
-from pathlib import Path
-
 def disenio_landscape_5fotos(datos):
     """
     Arquetipo A: Arquitectónico Minimalista (Estilo "La Pradera")
@@ -202,6 +199,9 @@ def disenio_corporativo_5fotos(datos):
     calle = datos.get("calle", "Dirección Exclusiva")
     atributos_html = datos.get("atributos_html", "")
 
+    # Texturas dinámicas de Pexels
+    textura_oscura = datos.get("textura_oscura", "")
+
     # Paleta
     dark_bg = "#212322"
     light_bg = "#FAFAFA"
@@ -209,16 +209,6 @@ def disenio_corporativo_5fotos(datos):
     light_text = "#FAFAFA"
     accent_color = "#F6BE00"
     secondary_color = "#009A9A"
-
-    # Textura polvo_blanco para fondos oscuros
-    textura_path = Path("assets/graficos/polvo_blanco.jpg")
-    textura_b64 = ""
-    if textura_path.exists():
-        try:
-            encoded = base64.b64encode(textura_path.read_bytes()).decode("utf-8")
-            textura_b64 = f"data:image/jpeg;base64,{encoded}"
-        except Exception:
-            pass
 
     return f"""<!DOCTYPE html>
 <html lang="es">
@@ -270,7 +260,7 @@ def disenio_corporativo_5fotos(datos):
     <!-- ========================= SLIDE 1: FONDO OSCURO — PORTADA DOBLE FOTO ========================= -->
     <div class="w-[1080px] h-full shrink-0 relative bg-[{dark_bg}] text-[{light_text}] overflow-hidden">
       <!-- Textura polvo_blanco sobre fondo oscuro -->
-      <div class="absolute inset-0 bg-cover bg-center mix-blend-screen opacity-15 pointer-events-none z-[1]" style="background-image: url('{textura_b64}');"></div>
+      <div class="absolute inset-0 bg-cover bg-center mix-blend-screen opacity-15 pointer-events-none z-[1]" style="background-image: url('{textura_oscura}');"></div>
 
       <!-- Foto principal img1: mitad derecha a sangre -->
       <div class="absolute top-0 right-0 w-[540px] h-full bg-cover bg-center z-[2]" style="background-image: url('{img1}');"></div>
@@ -304,7 +294,7 @@ def disenio_corporativo_5fotos(datos):
     <!-- ========================= SLIDE 3: FONDO OSCURO — ATRIBUTOS COMPACTOS ========================= -->
     <div class="w-[1080px] h-full shrink-0 relative flex flex-row bg-[{dark_bg}] text-[{light_text}] overflow-hidden">
       <!-- Textura polvo_blanco -->
-      <div class="absolute inset-0 bg-cover bg-center mix-blend-screen opacity-15 pointer-events-none z-[1]" style="background-image: url('{textura_b64}');"></div>
+      <div class="absolute inset-0 bg-cover bg-center mix-blend-screen opacity-15 pointer-events-none z-[1]" style="background-image: url('{textura_oscura}');"></div>
 
       <!-- Atributos compactos (sin precio — precio solo en Slide 5) -->
       <div class="relative z-[2] w-[55%] h-full flex flex-col justify-center px-[80px]">
@@ -341,7 +331,7 @@ def disenio_corporativo_5fotos(datos):
     <!-- ========================= SLIDE 5: FONDO OSCURO — CTA BLOQUE COMPLETO ========================= -->
     <div class="w-[1080px] h-full shrink-0 relative flex flex-col justify-between bg-[{dark_bg}] text-[{light_text}]">
       <!-- Textura polvo_blanco -->
-      <div class="absolute inset-0 bg-cover bg-center mix-blend-screen opacity-15 pointer-events-none z-[1]" style="background-image: url('{textura_b64}');"></div>
+      <div class="absolute inset-0 bg-cover bg-center mix-blend-screen opacity-15 pointer-events-none z-[1]" style="background-image: url('{textura_oscura}');"></div>
 
       <!-- Sección superior: galería miniaturas -->
       <div class="relative z-[2] flex flex-row h-[600px]">
@@ -403,20 +393,13 @@ def disenio_corporativo_claro_5fotos(datos):
     calle = datos.get("calle", "Dirección Exclusiva")
     atributos_html = datos.get("atributos_html", "")
 
+    # Texturas dinámicas de Pexels
+    textura_clara = datos.get("textura_clara", "")
+
     light_bg = "#FAFAFA"
     dark_text = "#212322"
     accent_color = "#F6BE00"
     secondary_color = "#009A9A"
-
-    # Cargar textura papel_oscuro como base64
-    textura_path = Path("assets/graficos/papel_oscuro.jpg")
-    textura_b64 = ""
-    if textura_path.exists():
-        try:
-            encoded = base64.b64encode(textura_path.read_bytes()).decode("utf-8")
-            textura_b64 = f"data:image/jpeg;base64,{encoded}"
-        except Exception:
-            pass
 
     return f"""<!DOCTYPE html>
 <html lang="es">
@@ -462,7 +445,7 @@ def disenio_corporativo_claro_5fotos(datos):
   <div class="w-[5400px] h-[1350px] flex flex-row relative overflow-hidden bg-[{light_bg}] text-[{dark_text}]">
 
     <!-- Textura de fondo global -->
-    <div class="absolute inset-0 z-0 opacity-10 mix-blend-multiply bg-cover bg-center" style="background-image: url('{textura_b64}'); pointer-events: none;"></div>
+    <div class="absolute inset-0 z-0 opacity-10 mix-blend-multiply bg-cover bg-center" style="background-image: url('{textura_clara}'); pointer-events: none;"></div>
 
     <!-- ========================= SLIDE 1: PORTADA CORPORATIVA CLARA ========================= -->
     <div class="w-[1080px] h-full shrink-0 relative flex flex-col bg-[{light_bg}] z-20">
@@ -609,22 +592,15 @@ def disenio_dinamico_alternado_5fotos(datos):
     calle = datos.get("calle", "Dirección Exclusiva")
     atributos_html = datos.get("atributos_html", "")
 
+    # Texturas dinámicas de Pexels
+    textura_oscura = datos.get("textura_oscura", "")
+
     dark_bg = "#212322"
     light_bg = "#FAFAFA"
     dark_text = "#212322"
     light_text = "#FAFAFA"
     accent_color = "#F6BE00"
     secondary_color = "#009A9A"
-
-    # Textura polvo_blanco para fondos oscuros
-    textura_path = Path("assets/graficos/polvo_blanco.jpg")
-    textura_b64 = ""
-    if textura_path.exists():
-        try:
-            encoded = base64.b64encode(textura_path.read_bytes()).decode("utf-8")
-            textura_b64 = f"data:image/jpeg;base64,{encoded}"
-        except Exception:
-            pass
 
     return f"""<!DOCTYPE html>
 <html lang="es">
@@ -678,7 +654,7 @@ def disenio_dinamico_alternado_5fotos(datos):
 
     <!-- ========================= SLIDE 1: PORTADA — OSCURO ========================= -->
     <div class="w-[1080px] h-full shrink-0 relative bg-[{dark_bg}] text-[{light_text}] overflow-hidden">
-      <div class="absolute inset-0 bg-cover bg-center mix-blend-screen opacity-15 pointer-events-none z-[1]" style="background-image: url('{textura_b64}');"></div>
+      <div class="absolute inset-0 bg-cover bg-center mix-blend-screen opacity-15 pointer-events-none z-[1]" style="background-image: url('{textura_oscura}');"></div>
       <div class="absolute inset-0 bg-cover bg-center z-[2]" style="background-image: url('{img1}');"></div>
       <div class="absolute inset-0 bg-[{dark_bg}]/60 z-[3]"></div>
       <div class="relative z-[4] flex flex-col justify-between h-full px-[70px] py-[80px]">
@@ -725,7 +701,7 @@ def disenio_dinamico_alternado_5fotos(datos):
 
     <!-- ========================= SLIDE 3: GALERÍA 1 — OSCURO ========================= -->
     <div class="w-[1080px] h-full shrink-0 relative bg-[{dark_bg}] text-[{light_text}] overflow-hidden">
-      <div class="absolute inset-0 bg-cover bg-center mix-blend-screen opacity-15 pointer-events-none z-[1]" style="background-image: url('{textura_b64}');"></div>
+      <div class="absolute inset-0 bg-cover bg-center mix-blend-screen opacity-15 pointer-events-none z-[1]" style="background-image: url('{textura_oscura}');"></div>
       <span class="num-bg text-[{light_text}] bottom-[60px] left-[60px]">02</span>
       <div class="relative z-[2] flex flex-col p-[40px] gap-[20px] h-full">
         <div class="flex-[3] bg-cover bg-center shadow-lg" style="background-image: url('{img4}');"></div>

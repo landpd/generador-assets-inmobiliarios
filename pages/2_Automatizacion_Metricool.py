@@ -770,7 +770,7 @@ if st.button("🚀 Generar Diseños, Subir a Drive y Exportar CSV", type="primar
             ruta_propiedad.mkdir(parents=True, exist_ok=True)
             hti.output_path = str(ruta_propiedad)
 
-            nombre_master = f"{internal_id}_master.jpg"
+            nombre_master = f"{internal_id}_master.png"
             hti.screenshot(html_str=html_final, save_as=nombre_master, size=(master_width, 1350))
 
             # d. Cortar master en slides y subir a Drive
@@ -782,8 +782,8 @@ if st.button("🚀 Generar Diseños, Subir a Drive y Exportar CSV", type="primar
                 for slide_idx in range(num_slides_plantilla):
                     corte = (slide_idx * 1080, 0, (slide_idx + 1) * 1080, 1350)
                     slide_img = img_master.crop(corte)
-                    ruta_slide = ruta_propiedad / f"slide_{slide_idx + 1}.jpg"
-                    slide_img.save(ruta_slide, quality=95)
+                    ruta_slide = ruta_propiedad / f"slide_{slide_idx + 1}.png"
+                    slide_img.save(ruta_slide)
                     urls_slides.append(upload_image_to_drive(drive_service, ruta_slide, folder_id))
 
                 filas_csv.append(

@@ -1,44 +1,15 @@
 import base64
 import io
-import os
 import random
 
 import requests
+import os
 from PIL import Image
-from dotenv import load_dotenv
 
-from config import GRAFICOS_DIR
-
-load_dotenv()
-
-PEXELS_API_KEY = os.getenv("PEXELS_API_KEY", "")
-
-
-def cargar_textura_b64(nombre_archivo):
-    """Carga una textura local desde GRAFICOS_DIR y la retorna como base64 data URI."""
-    ruta = GRAFICOS_DIR / nombre_archivo
-    if not ruta.exists():
-        return ""
-    encoded = base64.b64encode(ruta.read_bytes()).decode("utf-8")
-    ext = ruta.suffix.lower()
-    mime = "image/png" if ext == ".png" else "image/jpeg"
-    return f"data:{mime};base64,{encoded}"
-
-
-# --- DICCIONARIO DE TEXTURAS LOCALES (BASE64) ---
-TEXTURAS_LOCALES = {
-    "marco_polaroid": cargar_textura_b64("marco_polaroid.jpg"),
-    "borde_roto": cargar_textura_b64("borde_roto.png"),
-    "pizarra_rayones": cargar_textura_b64("pizarra_rayones.jpg"),
-    "polvo_blanco": cargar_textura_b64("polvo_blanco.jpg"),
-    "cristal_azul": cargar_textura_b64("cristal_azul.jpg"),
-    "papel_oscuro": cargar_textura_b64("papel_oscuro.jpg"),
-    "ruido_plata": cargar_textura_b64("ruido_plata.jpg"),
-    "halftone_amarillo": cargar_textura_b64("halftone_amarillo.jpg"),
-}
-
+from config import STOCK_DIR
 
 # --- DICCIONARIO DE SVGS (INLINE PARA TAILWIND) ---
+# Usan format() para inyectar clases de Tailwind al vuelo
 SVGS = {
     "flecha_larga": '<svg class="{clases}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>',
     "casa": '<svg class="{clases}" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M2.25 11.25L12 3l9.75 8.25M3 21h18M9 21v-6h6v6"/></svg>',
@@ -52,111 +23,103 @@ SVGS = {
 }
 
 
-# =====================================================================
-# FUNCIONES DE IMÁGENES (PEXELS API + CONVERSIÓN)
-# =====================================================================
-def buscar_imagen_pexels(query="real estate", orientacion="portrait"):
-    """
-    Busca imágenes en Pexels y retorna la URL de una foto aleatoria.
-
-    Args:
-        query: Término de búsqueda (ej. 'modern interior design').
-        orientacion: 'portrait', 'landscape' o 'square'.
-
-    Returns:
-        str: URL de la imagen en calidad large2x/large, o string vacío si falla.
-    """
-    if not PEXELS_API_KEY:
+def obtener_foto_random_b64():
+    import random
+    import base64
+    if not STOCK_DIR.exists():
+        return ""
+    # Buscar fotos en el directorio
+    fotos = list(STOCK_DIR.glob('*.jpg')) + list(STOCK_DIR.glob('*.jpeg')) + list(STOCK_DIR.glob('*.png'))
+    if not fotos:
         return ""
 
+    foto_elegida = random.choice(fotos)
+    try:
+        encoded = base64.b64encode(foto_elegida.read_bytes()).decode('utf-8')
+        ext = foto_elegida.suffix.lower()
+        mime = "image/png" if ext == ".png" else "image/jpeg"
+        return f"data:{mime};base64,{encoded}"
+    except Exception:
+        return ""
+
+
+def buscar_imagen_pexels(query, orientacion="landscape"):
+    """
+    Busca una imagen en Pexels por query y retorna la URL limpia (sin parámetros HTTP).
+    Requiere la variable de entorno PEXELS_API_KEY.
+    """
+    api_key = os.getenv("PEXELS_API_KEY", "")
+    if not api_key:
+        return ""
     try:
         resp = requests.get(
             "https://api.pexels.com/v1/search",
-            headers={"Authorization": PEXELS_API_KEY},
-            params={"query": query, "orientation": orientacion, "per_page": 15},
+            headers={"Authorization": api_key},
+            params={"query": query, "orientation": orientacion, "per_page": 5},
             timeout=15,
         )
         resp.raise_for_status()
-        photos = resp.json().get("photos", [])
-
+        data = resp.json()
+        photos = data.get("photos", [])
         if not photos:
             return ""
-
         photo = random.choice(photos)
         src = photo.get("src", {})
         url = src.get("large2x") or src.get("large") or src.get("medium") or ""
         return url.split("?")[0]
-
     except Exception:
         return ""
-
-
-def obtener_fotos_coleccion_pexels(id_coleccion, cantidad=5):
-    """
-    Obtiene una lista de URLs de fotos aleatorias de una colección de Pexels.
-
-    Args:
-        id_coleccion: ID numérico de la colección de Pexels.
-        cantidad: Número exacto de URLs a retornar.
-
-    Returns:
-        list[str]: Lista de URLs en calidad large2x/large, de tamaño exacto `cantidad`.
-    """
-    if not PEXELS_API_KEY:
-        return [""] * cantidad
-
-    try:
-        resp = requests.get(
-            f"https://api.pexels.com/v1/collections/{id_coleccion}",
-            headers={"Authorization": PEXELS_API_KEY},
-            params={"per_page": 30},
-            timeout=15,
-        )
-        resp.raise_for_status()
-        media = resp.json().get("media", [])
-
-        # Filtrar solo fotos (excluir videos u otros tipos)
-        fotos = [item for item in media if item.get("type") == "Photo"]
-
-        if not fotos:
-            return [""] * cantidad
-
-        # Seleccionar sin repetición si hay suficientes, con repetición si no
-        if len(fotos) >= cantidad:
-            elegidas = random.sample(fotos, cantidad)
-        else:
-            elegidas = random.choices(fotos, k=cantidad)
-
-        urls = []
-        for foto in elegidas:
-            src = foto.get("src", {})
-            url = src.get("large2x") or src.get("large") or src.get("medium") or ""
-            urls.append(url.split("?")[0])
-
-        return urls
-
-    except Exception:
-        return [""] * cantidad
 
 
 def url_a_base64(url):
     """
     Descarga una imagen por URL y la convierte a base64 data URI.
-
-    Args:
-        url: URL pública de la imagen.
-
-    Returns:
-        str: 'data:image/jpeg;base64,...' o string vacío si falla.
+    Reinyecta parámetros optimizados de Pexels si la URL está limpia.
     """
     if not url:
         return ""
-
-    # Inyectar parámetros optimizados si es de Pexels y está "limpia"
+    # Reinyectar parámetros de Pexels si está limpia
     if "pexels.com" in url and "?" not in url:
         url = f"{url}?auto=compress&cs=tinysrgb&w=1080&h=1350&fit=crop"
-
     try:
+        img_resp = requests.get(url, timeout=20)
+        img_resp.raise_for_status()
+        img = Image.open(io.BytesIO(img_resp.content))
+        if img.mode in ("RGBA", "P"):
+            img = img.convert("RGB")
+        buf = io.BytesIO()
+        img.save(buf, format="JPEG", quality=95)
+        encoded = base64.b64encode(buf.getvalue()).decode("utf-8")
+        return f"data:image/jpeg;base64,{encoded}"
+    except Exception:
+        return ""
+
+
+def obtener_foto_pexels_b64(api_key, collection_id):
+    """
+    Obtiene una foto aleatoria de una colección de Pexels.
+    Fallback a obtener_foto_random_b64() si hay error de red o API.
+    """
+    try:
+        resp = requests.get(
+            f"https://api.pexels.com/v1/collections/{collection_id}",
+            headers={"Authorization": api_key},
+            timeout=15,
+        )
+        resp.raise_for_status()
+        data = resp.json()
+
+        media = data.get("media", [])
+        if not media:
+            return obtener_foto_random_b64()
+
+        item = random.choice(media)
+        src = item.get("src", {})
+        # Prefer large, fallback a medium
+        url = src.get("large") or src.get("medium") or src.get("large2x") or ""
+        if not url:
+            return obtener_foto_random_b64()
+
         img_resp = requests.get(url, timeout=20)
         img_resp.raise_for_status()
 
@@ -170,4 +133,4 @@ def url_a_base64(url):
         return f"data:image/jpeg;base64,{encoded}"
 
     except Exception:
-        return ""
+        return obtener_foto_random_b64()

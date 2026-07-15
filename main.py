@@ -12,6 +12,7 @@ from html2image import Html2Image
 from pathlib import Path
 
 from config import DATA_DIR, OUTPUT_DIR, LOGOS_DIR
+from recursos_graficos import buscar_imagen_pexels, url_a_base64
 
 import mis_plantillas
 
@@ -67,6 +68,13 @@ hti = Html2Image(
     custom_flags=['--disable-gpu', '--hide-scrollbars']
 )
 
+# Obtener texturas de alta calidad desde Pexels (una sola vez)
+print("🎨 Obteniendo texturas de alta calidad desde Pexels...")
+url_tex_clara = buscar_imagen_pexels("white marble texture clean", "landscape")
+url_tex_oscura = buscar_imagen_pexels("dark luxury modern texture", "landscape")
+textura_clara_b64 = url_a_base64(url_tex_clara) if url_tex_clara else ""
+textura_oscura_b64 = url_a_base64(url_tex_oscura) if url_tex_oscura else ""
+
 # ==============================================================================
 # --- 2. FUNCIONES DE AYUDA ---
 # ==============================================================================
@@ -109,7 +117,7 @@ def local_image_to_base64(filepath):
 # ==============================================================================
 # --- 3. EXTRACCIÓN DE DATOS (Encapsulada para la UI) ---
 # ==============================================================================
-def procesar_fila_a_payload(row):
+def procesar_fila_a_payload(row, textura_clara_b64="", textura_oscura_b64=""):
     """Convierte una fila de Pandas en el diccionario datos_propiedad y metadatos."""
     internal_id = str(row['InternalId']).strip()
     if internal_id == 'nan': return None, None, None, None
@@ -150,18 +158,26 @@ def procesar_fila_a_payload(row):
     else: tipo_en_operacion = ""
 
     precio_crudo = str(row.get('Listing: Price: Price', '0')).strip()
-    moneda_crudo = str(row.get('Listing: Price: Currency', 'mxn')).strip().lower()
-    if moneda_crudo in ['nan', '']: moneda_crudo = "mxn"
+    moneda_crudo = str(row.get('Listing: Price: Currency', 'MXN')).strip().upper()
+    if moneda_crudo == 'NAN' or not moneda_crudo: moneda_crudo = "MXN"
+
     precio_limpio = precio_crudo.replace(',', '').replace('$', '').replace(' ', '')
-    try: precio_formateado = f"${float(precio_limpio):,.2f} {moneda_crudo}"
-    except: precio_formateado = precio_crudo if precio_crudo.lower() != 'nan' else ""
+    try:
+        # Formato sin decimales (.00)
+        precio_formateado = f"${float(precio_limpio):,.0f}"
+        # Omitir MXN, solo agregar si es diferente (ej. USD)
+        if moneda_crudo != "MXN":
+            precio_formateado += f" {moneda_crudo}"
+    except:
+        precio_formateado = precio_crudo if precio_crudo.lower() != 'nan' else ""
 
     attr_list = []
     for val, sufijo_data in [
         (row.get('Attributes: Suites', ''), ('HABITACIÓN', 'HABITACIONES')),
         (row.get('Attributes: Bathrooms', ''), ('BAÑO', 'BAÑOS')),
+        (row.get('Attributes: Toilettes', ''), ('MEDIO BAÑO', 'MEDIOS BAÑOS')),
         (row.get('Attributes: Parkings', ''), ('ESTACIONAMIENTO', 'ESTACIONAMIENTOS')),
-        (row.get('Attributes: TotalSurface', ''), 'm² TOTALES')
+        (row.get('Attributes: TotalSurface', ''), '<span class="normal-case lowercase">m</span>² TOTALES')
     ]:
         attr = formatear_atributo(val, sufijo_data)
         if attr: attr_list.append(attr)
@@ -175,7 +191,8 @@ def procesar_fila_a_payload(row):
         "img7": url_to_base64(obtener_foto(6)), "img8": url_to_base64(obtener_foto(7)),
         "img9": url_to_base64(obtener_foto(8)), "logo": logo_b64,
         "tipo_operacion": tipo_en_operacion, "precio": precio_formateado,
-        "colonia_estado": colonia_estado, "calle": calle, "atributos_html": atributos_html
+        "colonia_estado": colonia_estado, "calle": calle, "atributos_html": atributos_html,
+        "textura_clara": textura_clara_b64, "textura_oscura": textura_oscura_b64
     }
 
     return datos_propiedad, internal_id, company_clean, company_folder
@@ -190,7 +207,7 @@ def ejecutar_pipeline(ruta_csv):
     imagenes_generadas = 0
 
     for index, row in df.iterrows():
-        datos_propiedad, internal_id, company_clean, company_folder = procesar_fila_a_payload(row)
+        datos_propiedad, internal_id, company_clean, company_folder = procesar_fila_a_payload(row, textura_clara_b64, textura_oscura_b64)
         if not datos_propiedad: continue
 
         print(f"\nPropiedad: {internal_id}...")
@@ -201,7 +218,7 @@ def ejecutar_pipeline(ruta_csv):
         for nombre_disenio, config in PLANTILLAS_A_GENERAR.items():
             if not config.get("activo", True): continue
 
-            nombre_archivo = f"{internal_id}_{company_clean}_{config['sufijo_archivo']}.jpg"
+            nombre_archivo = f"{internal_id}_{company_clean}_{config['sufijo_archivo']}.png"
             ruta_guardado = ruta_directorio / nombre_archivo
 
             if not SOBREESCRIBIR_EXISTENTES and ruta_guardado.exists():
@@ -226,8 +243,8 @@ def ejecutar_pipeline(ruta_csv):
                 for i in range(config["partes"]):
                     corte = (i * ancho_slide, 0, (i + 1) * ancho_slide, alto_slide)
                     slide = img_pano.crop(corte)
-                    nombre_slide = f"{internal_id}_{company_clean}_{config['sufijo_archivo']}_{i+1}.jpg"
-                    slide.save(ruta_directorio / nombre_slide, quality=95)
+                    nombre_slide = f"{internal_id}_{company_clean}_{config['sufijo_archivo']}_{i+1}.png"
+                    slide.save(ruta_directorio / nombre_slide)
 
             imagenes_generadas += 1
 
