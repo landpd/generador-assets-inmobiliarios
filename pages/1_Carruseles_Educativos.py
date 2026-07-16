@@ -33,20 +33,7 @@ MAPEO_PLANTILLAS = {
     "Arquetipo E: Cinematográfico": plantilla_cinematografica,
 }
 
-PALETA_DARK = {
-    "fondo": "#212322",
-    "texto": "#FAFAFA",
-    "acento": "#F6BE00",
-    "secundario": "#009A9A",
-}
-
-PALETA_LIGHT = {
-    "fondo": "#FAFAFA",
-    "texto": "#212322",
-    "acento": "#F6BE00",
-    "secundario": "#009A9A",
-}
-
+# 7 COLORES OFICIALES PULPPO: Soft black #212322, White #FFFFFF, Yellow #F6BE00, Gray #B7B7B7, Light-gray #F3F3F3, Red #A52003, Sea-green #529999.
 
 # ── Configuración de la página ───────────────────────────────────────
 st.set_page_config(page_title="Carruseles Educativos", layout="wide")
@@ -92,7 +79,25 @@ tema_color = st.sidebar.radio(
     index=0,
 )
 
-paleta = PALETA_DARK if tema_color == "Modo Oscuro" else PALETA_LIGHT
+# 7 COLORES OFICIALES PULPPO: Soft black #212322, White #FFFFFF, Yellow #F6BE00, Gray #B7B7B7, Light-gray #F3F3F3, Red #A52003, Sea-green #529999.
+if tema_color == "Modo Oscuro":
+    paleta = {
+        "fondo": "#212322",
+        "texto": "#FFFFFF",
+        "acento": "#F6BE00",     # Solo para líneas 1pt o datos clave
+        "secundario": "#529999", # Sea-green
+        "gris": "#B7B7B7",
+        "alerta": "#A52003"      # Solo funcional, no decorativo
+    }
+else:
+    paleta = {
+        "fondo": "#F3F3F3",      # Light-gray oficial en lugar de #FAFAFA
+        "texto": "#212322",
+        "acento": "#F6BE00",
+        "secundario": "#529999",
+        "gris": "#B7B7B7",
+        "alerta": "#A52003"
+    }
 
 # =====================================================================
 # ENTRADA DE TEXTO CRUDO DESDE LA UI PRINCIPAL
@@ -146,14 +151,14 @@ if st.button("🪄 Generar Copy y Previsualizar"):
             "Actúa como un Copywriter experto en storytelling y redes sociales, especializado en el sector inmobiliario y de proptech. "
             "Objetivo: transformar la información cruda proporcionada en un guion de carrusel atractivo, emocional y persuasivo. "
             "ESTILO Y TONO: Persuasivo, de autoridad y empático. Conecta el valor financiero con el impacto de vida del cliente. Lenguaje directo y minimalista. "
-            "ENFOQUE DE MARCA (PULPPO): Si el tema involucra procesos, comisiones o asesores inmobiliarios, DEBES posicionar al asesor como un aliado estratégico indispensable. Habla siempre de forma sumamente positiva de los brokers profesionales y de la red de Pulppo, incentivando al cliente a buscar su asesoría para evitar riesgos. NUNCA los presentes como un gasto negativo o evitable. "
+            "ENFOQUE DE MARCA (PULPPO): Habla de 'brokers', 'asesores inmobiliarios' o 'inmobiliarias' (NO 'agentes'). Habla de 'la plataforma' o 'el sistema' (NO 'la app'). Tono directo, profesional, austero y funcional (NO emocional). Frases cortas: Sujeto + verbo + objeto. "
             "GRAMÁTICA (ESTRICTO): Usa reglas del español. TODA oración y título DEBE iniciar con mayúscula. NO uses mayúsculas después de dos puntos (:) a menos que sea nombre propio. NO uses 'Title Case' (no capitalices la primera letra de cada palabra en los títulos). "
             "FORMATO MARKDOWN: Usa **negritas** dentro del contenido de la llave 'texto' para resaltar las palabras o frases más impactantes. "
             f"ESTRUCTURA: Genera EXACTAMENTE {num_slides} slides. "
             "1. Slide 1 (Portada): El 'titulo' DEBE ser un gancho persuasivo usando figuras retóricas (metáfora, hipérbole, pregunta) que despierte curiosidad. "
             "2. Slides intermedios: Desarrollo del contenido, 1 o 2 párrafos cortos por slide. "
             "3. Último Slide (CTA): Conclusión de valor. El llamado a la acción DEBE invitar explícitamente a 'guardar este post' y 'seguirnos' para más contenido. "
-            "Para la llave 'etiqueta', NUNCA uses palabras genéricas como 'Portada', 'Slide' o 'Introducción'. Genera siempre un micro-título conceptual, llamativo y en mayúsculas (ej. 'CONSEJO FINANCIERO', 'EL MITO DE VENDER', 'ESTRATEGIA CLAVE'). "
+            "La llave 'etiqueta' debe ser un Tag muy corto en UPPERCASE. NUNCA uses Title Case en los títulos, usa Sentence case (Solo la primera letra mayúscula) y pon un PUNTO al final del título. "
             "FORMATO DE ENTREGA: Devuelve ESTRICTAMENTE un array JSON puro, sin formato Markdown (sin ```json), donde cada objeto tenga exactamente las llaves: etiqueta, titulo, texto, numero_slide."
         )
         try:

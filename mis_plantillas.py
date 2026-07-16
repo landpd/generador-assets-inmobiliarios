@@ -3,8 +3,9 @@ def disenio_vertical_3fotos(datos):
     return f"""
     <html>
     <head>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500&family=Nunito+Sans:wght@400;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400&family=Nunito+Sans:wght@400;900&display=swap" rel="stylesheet">
     <style>
+        * { box-shadow: none !important; text-shadow: none !important; }
         body {{ margin: 0; padding: 0; width: 1080px; height: 1350px; background: #000; overflow: hidden; }}
         /* Agregado position: relative para poder anclar el logo al fondo del contenedor */
         .container {{ position: relative; display: flex; flex-direction: column; width: 1080px; height: 1350px; }}
@@ -24,7 +25,7 @@ def disenio_vertical_3fotos(datos):
         .block-bottom {{ text-align: right; width: 100%; }}
 
         .colonia {{ font-family: 'Nunito Sans', sans-serif; font-weight: 400; font-size: 18pt; text-transform: uppercase; color: #FAFAFA; margin-bottom: 5px; }}
-        .calle {{ font-family: 'EB Garamond', serif; font-weight: 500; font-size: 42pt; text-transform: none; color: #FAFAFA; margin: 0; line-height: 1.1; }}
+        .calle {{ font-family: 'EB Garamond', serif; font-weight: 400; font-size: 42pt; text-transform: none; color: #FAFAFA; margin: 0; line-height: 1.1; }}
 
         .tipo {{ font-family: 'Nunito Sans', sans-serif; font-weight: 900; font-size: 16pt; text-transform: none; color: #FAFAFA; margin-bottom: 5px; }}
         .precio {{ font-family: 'Nunito Sans', sans-serif; font-weight: 900; font-size: 16pt; text-transform: none; color: #FAFAFA; margin-bottom: 0; }}
@@ -35,18 +36,17 @@ def disenio_vertical_3fotos(datos):
         .atributos {{ font-family: 'Nunito Sans', sans-serif; font-weight: 400; font-size: 16pt; text-transform: none; color: #FAFAFA; line-height: 1.3; }}
         .atributos div::before {{ content: '/ '; color: #F6BE00; font-weight: 400; padding-right: 5px; }}
 
-        .text-shadow {{ text-shadow: 1px 1px 4px rgba(0,0,0,0.4); }}
+        /* Shadows prohibited */
 
-        /* --- LOGO INFERIOR CENTRADO --- */
+        /* --- LOGO SUPERIOR DERECHO --- */
         .logo-bottom {{
-            position: absolute; 
-            bottom: 50px; 
-            left: 50%; 
-            transform: translateX(-50%); /* Lo centra perfectamente en la horizontal */
-            width: 280px; 
+            position: absolute;
+            top: 80px;
+            right: 80px;
+            width: 280px;
             height: 100px;
-            display: flex; 
-            justify-content: center; 
+            display: flex;
+            justify-content: center;
             align-items: center;
             z-index: 20;
         }}
@@ -67,15 +67,15 @@ def disenio_vertical_3fotos(datos):
             <div class="img-box">
                 <img src="{datos['img2']}">
                 <div class="overlay">
-                    <div class="block-top text-shadow">
+                    <div class="block-top">
                         <div class="tipo"><span class="bracket">[</span> {datos['tipo_operacion']} <span class="bracket">]</span></div>
                         <div class="precio">{datos['precio']}</div>
                     </div>
-                    <div class="block-middle text-shadow">
+                    <div class="block-middle">
                         <div class="colonia">{datos['colonia_estado']}</div>
                         <h1 class="calle">{datos['calle']}</h1>
                     </div>
-                    <div class="block-bottom text-shadow">
+                    <div class="block-bottom">
                         <div class="atributos">
                             {datos['atributos_html']}
                         </div>
@@ -98,19 +98,20 @@ def disenio_landscape_5fotos(datos):
     return f"""
     <html>
     <head>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400&family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
+        * { box-shadow: none !important; text-shadow: none !important; }
         * {{ box-sizing: border-box; }}
         body {{ margin: 0; padding: 0; width: 1920px; height: 1080px; background: #FAFAFA; overflow: hidden; }}
         .container {{ position: relative; width: 1920px; height: 1080px; }}
 
         /* --- LOGO INMOBILIARIA (Cuadro oscuro superior izquierdo) --- */
         .logo-box {{
-            position: absolute; left: 0px; top: 0px;
+            position: absolute; top: 80px; right: 80px;
             width: 333px; height: 188px;
             background: #212322;
             display: flex; justify-content: center; align-items: center;
-            z-index: 20; /* Asegura que esté por encima de la foto 1 */
+            z-index: 20;
         }}
         .logo-box img {{
             max-width: 277px; max-height: 94px; 
@@ -146,8 +147,8 @@ def disenio_landscape_5fotos(datos):
             width: 1400px;
             z-index: 10;
         }}
-        .calle {{ font-family: 'EB Garamond', serif; font-weight: 500; font-size: 57px; margin: 0; line-height: 1.1; color: #212322; }}
-        .colonia {{ font-family: 'EB Garamond', serif; font-weight: 500; font-size: 57px; margin: 0; line-height: 1.2; padding-top: 10px; color: #212322; }}
+        .calle {{ font-family: 'EB Garamond', serif; font-weight: 400; font-size: 57px; margin: 0; line-height: 1.1; color: #212322; }}
+        .colonia {{ font-family: 'EB Garamond', serif; font-weight: 400; font-size: 57px; margin: 0; line-height: 1.2; padding-top: 10px; color: #212322; }}
 
         /* --- LÍNEA DIVISORIA GRIS --- */
         .divider {{
@@ -222,14 +223,15 @@ def disenio_story_figma(datos):
     return f"""
     <html>
     <head>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500&family=Nunito+Sans:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400&family=Nunito+Sans:wght@400;600;700;900&display=swap" rel="stylesheet">
     <style>
+        * { box-shadow: none !important; text-shadow: none !important; }
         body {{ margin: 0; padding: 0; width: 1080px; height: 1920px; background: #FAFAFA; overflow: hidden; }}
         .container {{ position: relative; width: 1080px; height: 1920px; }}
 
         /* --- LOGO INMOBILIARIA --- */
         .logo-box {{
-            position: absolute; left: 373px; top: 0px;
+            position: absolute; top: 80px; right: 80px;
             width: 333px; height: 188px; background: #212322;
             display: flex; justify-content: center; align-items: center;
             z-index: 20; /* Asegura que esté por encima de la foto */
@@ -341,8 +343,9 @@ def disenio_carrusel_6fotos(datos):
     return f"""
     <html>
     <head>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400&family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
+        * { box-shadow: none !important; text-shadow: none !important; }
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
         body {{ width: 6480px; height: 1350px; background: #FAFAFA; overflow: hidden; }}
         .container {{ position: relative; width: 6480px; height: 1350px; }}
@@ -369,7 +372,7 @@ def disenio_carrusel_6fotos(datos):
 
         /* --- LOGO INMOBILIARIA --- */
         .logo-box {{
-            position: absolute; left: 518px; top: 0px;
+            position: absolute; top: 80px; right: 80px;
             width: 428px; height: 255px; background: #212322;
             display: flex; justify-content: center; align-items: center; z-index: 10;
         }}
@@ -381,7 +384,7 @@ def disenio_carrusel_6fotos(datos):
         /* --- TEXTOS PRINCIPALES --- */
         .calle {{
             position: absolute; left: 67px; top: 1134px; width: 900px;
-            font-family: 'EB Garamond', serif; font-size: 40px; font-weight: 500; color: #FAFAFA; z-index: 10;
+            font-family: 'EB Garamond', serif; font-size: 40px; font-weight: 400; color: #FAFAFA; z-index: 10;
         }}
         .operacion {{
             position: absolute; left: 1181px; top: 61px;
@@ -512,8 +515,9 @@ def disenio_oferta_baja_precio(datos):
     return f"""
     <html>
     <head>
-    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400;500;600&family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@400&family=Nunito+Sans:wght@400;600;700;800;900&display=swap" rel="stylesheet">
     <style>
+        * { box-shadow: none !important; text-shadow: none !important; }
         * {{ box-sizing: border-box; margin: 0; padding: 0; }}
         body {{ width: 1080px; height: 1920px; background: #FFFFFF; overflow: hidden; }}
         .container {{ position: relative; width: 1080px; height: 1920px; }}
@@ -528,7 +532,7 @@ def disenio_oferta_baja_precio(datos):
 
         /* --- CAJÓN DEL LOGO (SUPERIOR DERECHA) --- */
         .logo-box {{
-            position: absolute; top: 92px; left: 561px;
+            position: absolute; top: 80px; right: 80px;
             width: 519px; height: 166px; background: #212322;
             display: flex; justify-content: center; align-items: center;
             z-index: 20;

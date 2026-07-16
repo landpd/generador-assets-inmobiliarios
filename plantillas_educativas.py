@@ -70,15 +70,15 @@ def plantilla_geometria_limpia(datos_array, paleta, imagenes_b64=None):
       <div class="absolute rounded-full bg-[{secundario_color}] w-[800px] h-[800px] -bottom-[400px] -right-[400px] opacity-15 z-0"></div>
 
       <!-- Logo full -->
-      <div class="absolute top-[80px] left-[80px] z-30">
+      <div class="absolute top-[80px] right-[80px] z-30">
         {SVGS['logo_pulppo_full'].format(clases=f'w-[250px] text-[{texto_color}]')}
       </div>
 
       <!-- Contenido centrado -->
-      <div class="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-[120px]">
+      <div class="absolute inset-0 z-20 flex flex-col items-center justify-center px-[120px]">
 
         <!-- Etiqueta -->
-        <div class="bg-[{accent_color}] text-[#FAFAFA] px-6 py-2 inline-block font-nunito font-bold text-[24px] tracking-widest uppercase mb-8">
+        <div class="text-[{accent_color}] border-b-2 border-[{accent_color}] px-6 py-2 inline-block font-nunito font-bold text-[24px] tracking-widest uppercase mb-8">
           {etiqueta or 'GUÍA INMOBILIARIA'}
         </div>
 
@@ -95,13 +95,13 @@ def plantilla_geometria_limpia(datos_array, paleta, imagenes_b64=None):
             # ===== CTA: Limpio, centrado, con bookmark =====
             slides_html += f"""
     <!-- ========================= CTA {i+1} ========================= -->
-    <div class="w-[1080px] h-full shrink-0 relative overflow-hidden flex flex-col items-center justify-center text-center px-[120px] z-20">
+    <div class="w-[1080px] h-full shrink-0 relative overflow-hidden flex flex-col items-center justify-center px-[120px] z-20">
 
       <!-- Forma geométrica cortada (esquina superior izquierda) -->
       <div class="absolute rounded-full bg-[{secundario_color}] w-[600px] h-[600px] -top-[300px] -left-[300px] opacity-10 z-0"></div>
 
       <!-- Logo isotipo -->
-      <div class="mb-16 z-10">
+      <div class="absolute top-[80px] right-[80px] z-30">
         {SVGS['logo_pulppo_isotipo'].format(clases=f'w-[100px] h-[100px] text-[{texto_color}]')}
       </div>
 
@@ -128,7 +128,7 @@ def plantilla_geometria_limpia(datos_array, paleta, imagenes_b64=None):
             es_impar = i % 2 == 1
             clase_forma_1 = '-top-[300px] -right-[300px]' if es_impar else '-bottom-[300px] -left-[300px]'
             clase_forma_2 = '-bottom-[200px] -left-[200px]' if es_impar else '-top-[200px] -right-[200px]'
-            align_flex = 'items-end text-right' if es_impar else 'items-start text-left'
+            align_flex = 'items-start text-left'
             justify_num = 'justify-end' if es_impar else 'justify-start'
 
             slides_html += f"""
@@ -142,7 +142,7 @@ def plantilla_geometria_limpia(datos_array, paleta, imagenes_b64=None):
       <div class="absolute rounded-full bg-[{accent_color}] w-[200px] h-[200px] opacity-15 {clase_forma_2} z-0"></div>
 
       <!-- Logo isotipo -->
-      <div class="absolute top-[80px] left-[80px] z-30">
+      <div class="absolute top-[80px] right-[80px] z-30">
         {SVGS['logo_pulppo_isotipo'].format(clases=f'w-[60px] h-[60px] text-[{texto_color}]')}
       </div>
 
@@ -197,8 +197,8 @@ def plantilla_geometria_limpia(datos_array, paleta, imagenes_b64=None):
     }}
   </script>
   <style>
-    * {{ margin: 0; padding: 0; box-sizing: border-box; }}
-    body {{ overflow: hidden; background: {bg_color}; }}
+    * { box-shadow: none !important; text-shadow: none !important; margin: 0; padding: 0; box-sizing: border-box; }
+    body { overflow: hidden; background: {bg_color}; }
   </style>
 </head>
 <body>
@@ -242,7 +242,7 @@ def plantilla_editorial_grunge(datos_array, paleta, imagenes_b64=None):
     <div class="w-[1080px] h-full shrink-0 relative overflow-hidden z-20">
 
       <!-- Logo full -->
-      <div class="absolute top-[80px] left-[80px] z-30">
+      <div class="absolute top-[80px] right-[80px] z-30">
         {SVGS['logo_pulppo_full'].format(clases=f'w-[200px] text-[{texto_color}]')}
       </div>
 
@@ -259,7 +259,7 @@ def plantilla_editorial_grunge(datos_array, paleta, imagenes_b64=None):
         </span>
 
         <!-- Título en caja rotada -->
-        <div class="bg-[{accent_color}] text-[#FAFAFA] p-8 -rotate-2 inline-block">
+        <div class="border-2 border-[{accent_color}] text-[{accent_color}] p-8 -rotate-2 inline-block">
           <h1 class="font-garamond font-normal text-[95px] leading-none">
             {titulo}
           </h1>
@@ -273,10 +273,10 @@ def plantilla_editorial_grunge(datos_array, paleta, imagenes_b64=None):
             # ===== CTA: Centrado, limpio con textura =====
             slides_html += f"""
     <!-- ========================= CTA {i+1} ========================= -->
-    <div class="w-[1080px] h-full shrink-0 relative overflow-hidden flex flex-col items-center justify-center text-center px-[120px] z-20">
+    <div class="w-[1080px] h-full shrink-0 relative overflow-hidden flex flex-col items-center justify-center px-[120px] z-20">
 
       <!-- Logo isotipo -->
-      <div class="mb-16 z-10">
+      <div class="absolute top-[80px] right-[80px] z-30">
         {SVGS['logo_pulppo_isotipo'].format(clases=f'w-[100px] h-[100px] text-[{texto_color}]')}
       </div>
 
@@ -301,14 +301,14 @@ def plantilla_editorial_grunge(datos_array, paleta, imagenes_b64=None):
         else:
             # ===== CONTENIDO: Asimetría rústica =====
             es_impar = i % 2 == 1
-            align_flex = 'items-start text-left pr-[200px]' if es_impar else 'items-end text-right pl-[200px]'
+            align_flex = 'items-start text-left'
 
             slides_html += f"""
     <!-- ========================= CONTENIDO {i+1} ========================= -->
     <div class="w-[1080px] h-full shrink-0 relative overflow-hidden z-20">
 
       <!-- Logo isotipo -->
-      <div class="absolute top-[80px] left-[80px] z-30">
+      <div class="absolute top-[80px] right-[80px] z-30">
         {SVGS['logo_pulppo_isotipo'].format(clases=f'w-[60px] h-[60px] text-[{texto_color}]')}
       </div>
 
@@ -361,8 +361,8 @@ def plantilla_editorial_grunge(datos_array, paleta, imagenes_b64=None):
     }}
   </script>
   <style>
-    * {{ margin: 0; padding: 0; box-sizing: border-box; }}
-    body {{ overflow: hidden; background: {bg_color}; }}
+    * { box-shadow: none !important; text-shadow: none !important; margin: 0; padding: 0; box-sizing: border-box; }
+    body { overflow: hidden; background: {bg_color}; }
   </style>
 </head>
 <body>
@@ -419,12 +419,12 @@ def plantilla_cinematografica(datos_array, paleta, imagenes_b64=None):
       <div class="absolute inset-0 bg-gradient-to-t from-[{bg_color}] via-[{bg_color}]/70 to-[{bg_color}]/40 z-10"></div>
 
       <!-- Logo full centrado arriba -->
-      <div class="absolute top-[80px] left-1/2 -translate-x-1/2 z-30">
+      <div class="absolute top-[80px] right-[80px] z-30">
         {SVGS['logo_pulppo_full'].format(clases=f'w-[250px] text-[{texto_color}]')}
       </div>
 
       <!-- Contenido centrado -->
-      <div class="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-[120px]">
+      <div class="absolute inset-0 z-20 flex flex-col items-center justify-center px-[120px]">
 
         <!-- Etiqueta -->
         <span class="font-nunito text-[24px] font-bold uppercase tracking-widest text-[{accent_color}] mb-8">
@@ -454,10 +454,10 @@ def plantilla_cinematografica(datos_array, paleta, imagenes_b64=None):
       <div class="absolute inset-0 bg-gradient-to-t from-[{bg_color}] via-[{bg_color}]/80 to-[{bg_color}]/60 z-10"></div>
 
       <!-- Contenido centrado tipo créditos -->
-      <div class="absolute inset-0 z-20 flex flex-col items-center justify-center text-center px-[120px]">
+      <div class="absolute inset-0 z-20 flex flex-col items-center justify-center px-[120px]">
 
         <!-- Logo isotipo -->
-        <div class="mb-12">
+        <div class="absolute top-[80px] right-[80px] z-30">
           {SVGS['logo_pulppo_isotipo'].format(clases=f'w-[100px] h-[100px] text-[{texto_color}]')}
         </div>
 
@@ -495,7 +495,7 @@ def plantilla_cinematografica(datos_array, paleta, imagenes_b64=None):
       <div class="absolute inset-0 bg-gradient-to-t from-[{bg_color}] via-[{bg_color}]/70 to-[{bg_color}]/40 z-10"></div>
 
       <!-- Textos centrados en la parte inferior (como subtítulos) -->
-      <div class="absolute inset-0 z-20 flex flex-col items-center justify-end text-center px-[120px] pb-[150px]">
+      <div class="absolute inset-0 z-20 flex flex-col items-center justify-end px-[120px] pb-[150px]">
 
         <!-- Línea decorativa -->
         <div class="w-[100px] h-[1px] bg-[{accent_color}] mb-8"></div>
@@ -513,7 +513,7 @@ def plantilla_cinematografica(datos_array, paleta, imagenes_b64=None):
       </div>
 
       <!-- Logo isotipo (esquina superior izquierda) -->
-      <div class="absolute top-[80px] left-[80px] z-30">
+      <div class="absolute top-[80px] right-[80px] z-30">
         {SVGS['logo_pulppo_isotipo'].format(clases=f'w-[60px] h-[60px] text-[{texto_color}]')}
       </div>
 
@@ -546,8 +546,8 @@ def plantilla_cinematografica(datos_array, paleta, imagenes_b64=None):
     }}
   </script>
   <style>
-    * {{ margin: 0; padding: 0; box-sizing: border-box; }}
-    body {{ overflow: hidden; background: {bg_color}; }}
+    * { box-shadow: none !important; text-shadow: none !important; margin: 0; padding: 0; box-sizing: border-box; }
+    body { overflow: hidden; background: {bg_color}; }
   </style>
 </head>
 <body>
@@ -601,7 +601,7 @@ def plantilla_impacto_brutalista(datos_array, paleta, imagenes_b64=None):
       <div class="absolute inset-0 bg-[{bg_color}]/90 z-10"></div>
 
       <!-- Logo full -->
-      <div class="absolute top-[80px] left-[80px] z-30">
+      <div class="absolute top-[80px] right-[80px] z-30">
         {SVGS['logo_pulppo_full'].format(clases=f'w-[200px] text-[{texto_color}]')}
       </div>
 
@@ -632,7 +632,7 @@ def plantilla_impacto_brutalista(datos_array, paleta, imagenes_b64=None):
     <div class="w-[1080px] h-full shrink-0 relative overflow-hidden z-20">
 
       <!-- Logo isotipo -->
-      <div class="absolute top-[80px] left-[80px] z-30">
+      <div class="absolute top-[80px] right-[80px] z-30">
         {SVGS['logo_pulppo_isotipo'].format(clases=f'w-[60px] h-[60px] text-[{texto_color}]')}
       </div>
 
@@ -667,17 +667,17 @@ def plantilla_impacto_brutalista(datos_array, paleta, imagenes_b64=None):
     <div class="w-[1080px] h-full shrink-0 relative overflow-hidden z-20">
 
       <!-- Número héroe colosal de fondo -->
-      <span class="font-garamond text-[600px] text-[{texto_color}] opacity-5 absolute -left-[100px] -bottom-[100px] z-0 leading-none">
+      <span class="font-garamond font-normal text-[600px] text-[{texto_color}] opacity-5 absolute -left-[100px] -bottom-[100px] z-0 leading-none">
         {num_str}
       </span>
 
       <!-- Logo isotipo -->
-      <div class="absolute top-[80px] left-[80px] z-30">
+      <div class="absolute top-[80px] right-[80px] z-30">
         {SVGS['logo_pulppo_isotipo'].format(clases=f'w-[60px] h-[60px] text-[{texto_color}]')}
       </div>
 
       <!-- Contenido centrado verticalmente a la derecha -->
-      <div class="absolute inset-0 z-10 flex flex-col items-end justify-center text-right pl-[150px] pr-[80px]">
+      <div class="absolute inset-0 z-10 flex flex-col items-start justify-center text-left pl-[80px] pr-[80px]">
 
         <!-- Línea vertical divisoria -->
         <div class="border-r-4 border-[{accent_color}] pr-8 flex flex-col items-end">
@@ -725,8 +725,8 @@ def plantilla_impacto_brutalista(datos_array, paleta, imagenes_b64=None):
     }}
   </script>
   <style>
-    * {{ margin: 0; padding: 0; box-sizing: border-box; }}
-    body {{ overflow: hidden; background: {bg_color}; }}
+    * { box-shadow: none !important; text-shadow: none !important; margin: 0; padding: 0; box-sizing: border-box; }
+    body { overflow: hidden; background: {bg_color}; }
   </style>
 </head>
 <body>
@@ -772,12 +772,12 @@ def plantilla_corporativo_listas(datos_array, paleta, imagenes_b64=None):
     <div class="w-[1080px] h-full shrink-0 relative overflow-hidden z-20">
 
       <!-- Logo isotipo (fuera de la tarjeta) -->
-      <div class="absolute top-[80px] left-[80px] z-30">
+      <div class="absolute top-[80px] right-[80px] z-30">
         {SVGS['logo_pulppo_full'].format(clases=f'w-[180px] text-[{texto_color}]')}
       </div>
 
       <!-- Tarjeta flotante centrada -->
-      <div class="w-[850px] bg-[{bg_color}] shadow-2xl p-[80px] border-t-8 border-[{accent_color}] relative z-20 mx-auto mt-[180px]">
+      <div class="w-[850px] bg-[{bg_color}] p-[80px] border-t-8 border-[{accent_color}] relative z-20 mx-auto mt-[180px]">
 
         <!-- Etiqueta -->
         <span class="font-nunito text-[20px] font-bold uppercase tracking-widest text-[{accent_color}] mb-6 block">
@@ -800,28 +800,28 @@ def plantilla_corporativo_listas(datos_array, paleta, imagenes_b64=None):
     <div class="w-[1080px] h-full shrink-0 relative overflow-hidden z-20">
 
       <!-- Tarjeta flotante centrada -->
-      <div class="w-[850px] bg-[{bg_color}] shadow-2xl p-[80px] border-t-8 border-[{accent_color}] relative z-20 mx-auto mt-[180px] flex flex-col items-center text-center">
+      <div class="w-[850px] bg-[{bg_color}] p-[80px] border-t-8 border-[{accent_color}] relative z-20 mx-auto mt-[180px] flex flex-col items-start">
 
         <!-- Logo isotipo -->
-        <div class="mb-10">
-          {SVGS['logo_pulppo_isotipo'].format(clases=f'w-[80px] h-[80px] text-[{texto_color}]')}
-        </div>
+      <div class="absolute top-[80px] right-[80px] z-30">
+        {SVGS['logo_pulppo_isotipo'].format(clases=f'w-[80px] h-[80px] text-[{texto_color}]')}
+      </div>
 
-        <!-- Título -->
-        <h1 class="font-garamond text-[{texto_color}] text-[90px] leading-[0.95] font-normal mb-8">
-          {titulo}
-        </h1>
+      <!-- Título -->
+      <h1 class="font-garamond text-[{texto_color}] text-[90px] leading-[0.95] font-normal mb-8">
+        {titulo}
+      </h1>
 
-        <!-- Texto formateado -->
-        <div class="font-nunito text-[{texto_color}] text-[30px] font-light leading-[1.4] max-w-[600px] opacity-80 mb-10">
-          {formatear_texto_html(texto, accent_color)}
-        </div>
+      <!-- Texto formateado -->
+      <div class="font-nunito text-[{texto_color}] text-[30px] font-light leading-[1.4] max-w-[600px] opacity-80 mb-10">
+        {formatear_texto_html(texto, accent_color)}
+      </div>
 
-        <!-- Bookmark + CTA -->
-        <div class="flex items-center gap-3">
-          <span class="font-nunito text-[{accent_color}] text-[20px] font-light tracking-widest uppercase">Guarda este post</span>
-          {SVGS['bookmark'].format(clases=f'w-[36px] h-[36px] text-[{accent_color}]')}
-        </div>
+      <!-- Bookmark + CTA -->
+      <div class="flex items-center gap-3">
+        <span class="font-nunito text-[{accent_color}] text-[20px] font-light tracking-widest uppercase">Guarda este post</span>
+        {SVGS['bookmark'].format(clases=f'w-[36px] h-[36px] text-[{accent_color}]')}
+      </div>
 
       </div>
 
@@ -837,12 +837,17 @@ def plantilla_corporativo_listas(datos_array, paleta, imagenes_b64=None):
     <div class="w-[1080px] h-full shrink-0 relative overflow-hidden z-20">
 
       <!-- Número gigante de fondo -->
-      <span class="font-garamond text-[500px] text-[{texto_color}] opacity-5 absolute leading-none {cargo_numero} z-0">
+      <span class="font-garamond font-normal text-[500px] text-[{texto_color}] opacity-5 absolute leading-none {cargo_numero} z-0">
         {num_str}
       </span>
 
+      <!-- Logo isotipo -->
+      <div class="absolute top-[80px] right-[80px] z-30">
+        {SVGS['logo_pulppo_isotipo'].format(clases=f'w-[60px] h-[60px] text-[{texto_color}]')}
+      </div>
+
       <!-- Tarjeta flotante centrada -->
-      <div class="w-[850px] bg-[{bg_color}] shadow-2xl p-[80px] border-l-8 border-[{secundario_color}] z-20 mx-auto mt-[200px]">
+      <div class="w-[850px] bg-[{bg_color}] p-[80px] border-l-8 border-[{secundario_color}] z-20 mx-auto mt-[200px]">
 
         <!-- Título -->
         <h1 class="font-garamond text-[{texto_color}] text-[90px] leading-[0.95] font-normal mb-8">
@@ -885,8 +890,8 @@ def plantilla_corporativo_listas(datos_array, paleta, imagenes_b64=None):
     }}
   </script>
   <style>
-    * {{ margin: 0; padding: 0; box-sizing: border-box; }}
-    body {{ overflow: hidden; background: {bg_color}; }}
+    * { box-shadow: none !important; text-shadow: none !important; margin: 0; padding: 0; box-sizing: border-box; }
+    body { overflow: hidden; background: {bg_color}; }
   </style>
 </head>
 <body>

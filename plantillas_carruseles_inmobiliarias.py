@@ -49,7 +49,7 @@ def disenio_landscape_5fotos(datos):
     }}
   </script>
   <style>
-    * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+    * {{ margin: 0; padding: 0; box-sizing: border-box; box-shadow: none !important; text-shadow: none !important; }}
     body {{ overflow: hidden; background: {bg_color}; }}
     
     /* Formato específico para los atributos inyectados */
@@ -91,8 +91,8 @@ def disenio_landscape_5fotos(datos):
         {colonia_estado}
       </p>
 
-      <!-- Logo Flotante Inferior -->
-      <div class="absolute bottom-[100px] left-[100px]">
+      <!-- Logo Superior Derecho -->
+      <div class="absolute top-[80px] right-[80px] z-30">
         <img src="{logo}" alt="Logo Inmobiliaria" class="max-h-[80px] max-w-[300px] object-contain opacity-80 filter grayscale brightness-0">
       </div>
     </div>
@@ -100,10 +100,10 @@ def disenio_landscape_5fotos(datos):
     <!-- ========================= SLIDE 2: HERO IMAGE ========================= -->
     <div class="w-[1080px] h-full shrink-0 relative flex z-20 p-[80px]">
       <!-- Foto gigante que respira dentro del slide -->
-      <div class="w-full h-full bg-cover bg-center shadow-2xl rounded-sm" style="background-image: url('{img1}');"></div>
+      <div class="w-full h-full bg-cover bg-center  rounded-sm" style="background-image: url('{img1}');"></div>
       
       <!-- Texto GIGANTE que atraviesa el slide por detrás -->
-      <span class="absolute top-[50%] -translate-y-1/2 -left-[200px] font-garamond text-[350px] text-[{text_color}]/5 whitespace-nowrap z-[-1] pointer-events-none">
+      <span class="absolute top-[50%] -translate-y-1/2 -left-[200px] font-garamond font-normal text-[350px] text-[{text_color}]/5 whitespace-nowrap z-[-1] pointer-events-none">
         {calle}
       </span>
     </div>
@@ -124,7 +124,7 @@ def disenio_landscape_5fotos(datos):
         </div>
 
         <!-- Columna Derecha: Foto de detalle -->
-        <div class="w-[50%] h-full bg-cover bg-center shadow-lg" style="background-image: url('{img2}');"></div>
+        <div class="w-[50%] h-full bg-cover bg-center " style="background-image: url('{img2}');"></div>
       
       </div>
 
@@ -134,33 +134,35 @@ def disenio_landscape_5fotos(datos):
     <div class="w-[1080px] h-full shrink-0 relative flex flex-col justify-center px-[100px] z-20">
       <div class="grid grid-cols-2 grid-rows-2 gap-[40px] h-[1000px]">
          <!-- Foto Superior (Ocupa las 2 columnas) -->
-         <div class="col-span-2 bg-cover bg-center shadow-md" style="background-image: url('{img3}');"></div>
+         <div class="col-span-2 bg-cover bg-center " style="background-image: url('{img3}');"></div>
          <!-- Fotos Inferiores -->
-         <div class="bg-cover bg-center shadow-md" style="background-image: url('{img4}');"></div>
-         <div class="bg-cover bg-center shadow-md" style="background-image: url('{img5}');"></div>
+         <div class="bg-cover bg-center " style="background-image: url('{img4}');"></div>
+         <div class="bg-cover bg-center " style="background-image: url('{img5}');"></div>
       </div>
     </div>
 
     <!-- ========================= SLIDE 5: CIERRE Y CTA ========================= -->
-    <div class="w-[1080px] h-full shrink-0 relative flex flex-col items-center justify-center px-[100px] text-center z-20">
-      
+    <div class="w-[1080px] h-full shrink-0 relative flex flex-col justify-center px-[100px] z-20">
+
       <!-- Etiqueta de Precio -->
       <span class="font-nunito font-bold text-[28px] tracking-[0.1em] text-[{text_color}]/50 uppercase mb-4">
         Valor de esta propiedad
       </span>
-      
+
       <!-- Precio Masivo -->
-      <h2 class="font-garamond text-[160px] leading-none mb-16 text-[{text_color}]">
+      <h2 class="font-garamond font-normal text-[160px] leading-none mb-16 text-[{text_color}]">
         {precio}
       </h2>
 
-      <!-- CTA Botón (Texto sobre fondo claro) -->
-      <div class="bg-[{text_color}] text-[#FAFAFA] px-[80px] py-[30px] font-nunito text-[32px] font-bold uppercase tracking-widest shadow-xl mb-24">
+      <!-- CTA Botón -->
+      <div class="bg-[{text_color}] text-[#FAFAFA] px-[80px] py-[30px] font-nunito text-[32px] font-bold uppercase tracking-widest inline-block">
         Agenda tu visita
       </div>
 
-      <!-- Logo Final -->
-      <img src="{logo}" alt="Logo Inmobiliaria" class="max-h-[120px] max-w-[400px] object-contain filter grayscale brightness-0">
+      <!-- Logo Superior Derecho -->
+      <div class="absolute top-[80px] right-[80px] z-30">
+        <img src="{logo}" alt="Logo Inmobiliaria" class="max-h-[80px] max-w-[300px] object-contain filter grayscale brightness-0">
+      </div>
 
     </div>
 
@@ -230,7 +232,7 @@ def disenio_corporativo_5fotos(datos):
     }}
   </script>
   <style>
-    * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+    * {{ margin: 0; padding: 0; box-sizing: border-box; box-shadow: none !important; text-shadow: none !important; }}
     body {{ overflow: hidden; }}
     .attr-dark div {{
         border-bottom: 1px solid rgba(250, 250, 250, 0.15);
@@ -280,15 +282,15 @@ def disenio_corporativo_5fotos(datos):
         </p>
       </div>
 
-      <!-- Logo -->
-      <div class="absolute bottom-[80px] left-[70px] z-[4]">
+      <!-- Logo Superior Derecho -->
+      <div class="absolute top-[80px] right-[80px] z-[4]">
         <img src="{logo}" alt="Logo" class="max-h-[70px] max-w-[280px] object-contain opacity-70 filter grayscale brightness-0 invert">
       </div>
     </div>
 
     <!-- ========================= SLIDE 2: FONDO CLARO — HERO ========================= -->
     <div class="w-[1080px] h-full shrink-0 relative bg-[{light_bg}] flex items-center justify-center p-[60px]">
-      <div class="w-full h-full bg-cover bg-center shadow-2xl" style="background-image: url('{img2}');"></div>
+      <div class="w-full h-full bg-cover bg-center " style="background-image: url('{img2}');"></div>
     </div>
 
     <!-- ========================= SLIDE 3: FONDO OSCURO — ATRIBUTOS COMPACTOS ========================= -->
@@ -344,7 +346,7 @@ def disenio_corporativo_5fotos(datos):
         <span class="font-nunito font-bold text-[22px] tracking-[0.1em] text-[{light_text}]/40 uppercase mb-2">
           Valor de esta propiedad
         </span>
-        <h2 class="font-garamond text-[130px] leading-none mb-8 text-[{light_text}]">
+        <h2 class="font-garamond font-normal text-[130px] leading-none mb-8 text-[{light_text}]">
           {precio}
         </h2>
       </div>
@@ -353,9 +355,9 @@ def disenio_corporativo_5fotos(datos):
         Agenda tu visita
       </div>
       <!-- Logo y despedida -->
-      <div class="relative z-[2] flex flex-row items-center justify-between px-[80px] py-[30px]">
-        <img src="{logo}" alt="Logo" class="max-h-[60px] max-w-[250px] object-contain filter grayscale brightness-0 invert">
+      <div class="relative z-[2] flex flex-row items-center justify-end px-[80px] py-[30px] gap-4">
         <span class="font-nunito text-[20px] text-[{light_text}]/40 tracking-widest">PULPPO</span>
+        <img src="{logo}" alt="Logo" class="max-h-[60px] max-w-[250px] object-contain filter grayscale brightness-0 invert">
       </div>
     </div>
 
@@ -421,7 +423,7 @@ def disenio_corporativo_claro_5fotos(datos):
     }}
   </script>
   <style>
-    * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+    * {{ margin: 0; padding: 0; box-sizing: border-box; box-shadow: none !important; text-shadow: none !important; }}
     body {{ overflow: hidden; background: {light_bg}; }}
     .attr-corp-light div {{
         border-bottom: 2px solid rgba(33, 35, 34, 0.12);
@@ -450,14 +452,9 @@ def disenio_corporativo_claro_5fotos(datos):
     <!-- ========================= SLIDE 1: PORTADA CORPORATIVA CLARA ========================= -->
     <div class="w-[1080px] h-full shrink-0 relative flex flex-col bg-[{light_bg}] z-20">
 
-      <!-- Barra superior: logo + etiqueta -->
-      <div class="flex items-center justify-between px-[80px] pt-[60px]">
+      <!-- Logo Superior Derecho -->
+      <div class="absolute top-[80px] right-[80px] z-30">
         <img src="{logo}" alt="Logo" class="max-h-[60px] max-w-[220px] object-contain filter grayscale brightness-0">
-        <div class="font-nunito font-bold text-[20px] tracking-[0.25em] uppercase">
-          <span class="text-[{accent_color}]">[</span>
-          <span> {tipo_operacion} </span>
-          <span class="text-[{accent_color}]">]</span>
-        </div>
       </div>
 
       <!-- Cuerpo: título + ubicación -->
@@ -485,7 +482,7 @@ def disenio_corporativo_claro_5fotos(datos):
 
       <!-- Sección superior: foto gigante centrada -->
       <div class="flex-1 flex items-center justify-center px-[60px] pt-[60px]">
-        <div class="w-[1600px] h-[800px] bg-cover bg-center shadow-xl" style="background-image: url('{img2}');"></div>
+        <div class="w-[1600px] h-[800px] bg-cover bg-center " style="background-image: url('{img2}');"></div>
       </div>
 
       <!-- Sección inferior: atributos ENORMES estilo corporativo -->
@@ -504,12 +501,12 @@ def disenio_corporativo_claro_5fotos(datos):
     <div class="w-[1080px] h-full shrink-0 relative flex flex-col bg-[{light_bg}] z-20 p-[60px] gap-[30px]">
 
       <!-- Fila superior: img3 ancha -->
-      <div class="flex-1 bg-cover bg-center shadow-md" style="background-image: url('{img3}');"></div>
+      <div class="flex-1 bg-cover bg-center " style="background-image: url('{img3}');"></div>
 
       <!-- Fila inferior: img4 + img5 lado a lado -->
       <div class="flex-1 flex flex-row gap-[30px]">
-        <div class="flex-1 bg-cover bg-center shadow-md" style="background-image: url('{img4}');"></div>
-        <div class="flex-1 bg-cover bg-center shadow-md" style="background-image: url('{img5}');"></div>
+        <div class="flex-1 bg-cover bg-center " style="background-image: url('{img4}');"></div>
+        <div class="flex-1 bg-cover bg-center " style="background-image: url('{img5}');"></div>
       </div>
 
       <!-- Overlay de galería -->
@@ -523,35 +520,30 @@ def disenio_corporativo_claro_5fotos(datos):
     <!-- ========================= SLIDE 5: CTA MASIVO ========================= -->
     <div class="w-[1080px] h-full shrink-0 relative flex flex-col bg-[{light_bg}] z-20">
 
-      <!-- Logo y operación arriba -->
-      <div class="flex items-center justify-between px-[80px] pt-[60px]">
+      <!-- Logo Superior Derecho -->
+      <div class="absolute top-[80px] right-[80px] z-30">
         <img src="{logo}" alt="Logo" class="max-h-[50px] max-w-[200px] object-contain filter grayscale brightness-0">
-        <div class="font-nunito font-bold text-[16px] tracking-[0.25em] text-[{dark_text}]/30 uppercase">
-          <span class="text-[{accent_color}]">[</span>
-          <span> {tipo_operacion} </span>
-          <span class="text-[{accent_color}]">]</span>
-        </div>
       </div>
 
       <!-- Centro: precio masivo + label -->
-      <div class="flex-1 flex flex-col items-center justify-center px-[80px] text-center">
+      <div class="flex-1 flex flex-col justify-center px-[80px]">
         <span class="font-nunito font-bold text-[24px] tracking-[0.15em] text-[{dark_text}]/30 uppercase mb-4">
           Valor de esta propiedad
         </span>
-        <h2 class="font-garamond text-[110px] leading-none mb-10 text-[{dark_text}]">
+        <h2 class="font-garamond font-normal text-[110px] leading-none mb-10 text-[{dark_text}]">
           {precio}
         </h2>
-        <div class="w-[100px] h-[2px] bg-[{accent_color}] mb-10"></div>
+        <div class="w-[100px] h-[2px] bg-[{accent_color}]"></div>
       </div>
 
       <!-- CTA GIGANTE de ancho completo -->
-      <div class="bg-[{secondary_color}] text-[{light_bg}] w-full py-[35px] text-center font-nunito text-[36px] font-bold uppercase tracking-widest shadow-xl">
+      <div class="bg-[{secondary_color}] text-[{light_bg}] w-full py-[35px] text-center font-nunito text-[36px] font-bold uppercase tracking-widest">
         Agenda tu visita
       </div>
 
       <!-- Footer -->
-      <div class="flex items-center justify-center px-[80px] py-[25px]">
-        <span class="font-nunito text-[16px] tracking-[0.3em] text-[{dark_text}]/15 uppercase">Pulppo</span>
+      <div class="flex items-center justify-end px-[80px] py-[25px]">
+        <img src="{logo}" alt="Logo" class="max-h-[50px] max-w-[200px] object-contain filter grayscale brightness-0">
       </div>
     </div>
 
@@ -622,7 +614,7 @@ def disenio_dinamico_alternado_5fotos(datos):
     }}
   </script>
   <style>
-    * {{ margin: 0; padding: 0; box-sizing: border-box; }}
+    * {{ margin: 0; padding: 0; box-sizing: border-box; box-shadow: none !important; text-shadow: none !important; }}
     body {{ overflow: hidden; }}
     .attr-light div {{
         border-bottom: 1px solid rgba(33, 35, 34, 0.12);
@@ -674,7 +666,7 @@ def disenio_dinamico_alternado_5fotos(datos):
             </p>
           </div>
         </div>
-        <div>
+        <div class="absolute top-[80px] right-[80px] z-30">
           <img src="{logo}" alt="Logo" class="max-h-[60px] max-w-[250px] object-contain opacity-70 filter grayscale brightness-0 invert">
         </div>
       </div>
@@ -704,10 +696,10 @@ def disenio_dinamico_alternado_5fotos(datos):
       <div class="absolute inset-0 bg-cover bg-center mix-blend-screen opacity-15 pointer-events-none z-[1]" style="background-image: url('{textura_oscura}');"></div>
       <span class="num-bg text-[{light_text}] bottom-[60px] left-[60px]">02</span>
       <div class="relative z-[2] flex flex-col p-[40px] gap-[20px] h-full">
-        <div class="flex-[3] bg-cover bg-center shadow-lg" style="background-image: url('{img4}');"></div>
+        <div class="flex-[3] bg-cover bg-center " style="background-image: url('{img4}');"></div>
         <div class="flex-[2] flex flex-row gap-[20px]">
-          <div class="flex-1 bg-cover bg-center shadow-lg" style="background-image: url('{img5}');"></div>
-          <div class="flex-1 bg-cover bg-center shadow-lg" style="background-image: url('{img6}');"></div>
+          <div class="flex-1 bg-cover bg-center " style="background-image: url('{img5}');"></div>
+          <div class="flex-1 bg-cover bg-center " style="background-image: url('{img6}');"></div>
         </div>
       </div>
     </div>
@@ -716,26 +708,28 @@ def disenio_dinamico_alternado_5fotos(datos):
     <div class="w-[1080px] h-full shrink-0 relative bg-[{light_bg}] text-[{dark_text}] overflow-hidden">
       <span class="num-bg text-[{dark_text}] top-[50%] -translate-y-1/2 -right-[60px]">03</span>
       <div class="relative z-[2] flex flex-row gap-[20px] p-[50px] h-full">
-        <div class="flex-1 bg-cover bg-center shadow-md" style="background-image: url('{img7}');"></div>
-        <div class="flex-1 bg-cover bg-center shadow-md" style="background-image: url('{img8}');"></div>
+        <div class="flex-1 bg-cover bg-center " style="background-image: url('{img7}');"></div>
+        <div class="flex-1 bg-cover bg-center " style="background-image: url('{img8}');"></div>
       </div>
     </div>
 
     <!-- ========================= SLIDE 5: CTA — CLARO ========================= -->
     <div class="w-[1080px] h-full shrink-0 relative bg-[{light_bg}] text-[{dark_text}] flex flex-col overflow-hidden z-20">
-      <div class="flex-1 flex flex-col items-center justify-center px-[80px] text-center">
+      <div class="absolute top-[80px] right-[80px] z-30">
+        <img src="{logo}" alt="Logo" class="max-h-[60px] max-w-[250px] object-contain filter grayscale brightness-0">
+      </div>
+      <div class="flex-1 flex flex-col justify-center px-[80px]">
         <span class="font-nunito font-bold text-[22px] tracking-[0.15em] text-[{dark_text}]/30 uppercase mb-4">
           Valor de esta propiedad
         </span>
-        <h2 class="font-garamond text-[110px] leading-[1.1] mb-10 text-[{dark_text}]">
+        <h2 class="font-garamond font-normal text-[110px] leading-[1.1] mb-10 text-[{dark_text}]">
           {precio}
         </h2>
-        <img src="{logo}" alt="Logo" class="max-h-[80px] max-w-[300px] object-contain filter grayscale brightness-0 mb-4">
       </div>
-      <div class="w-full bg-[{secondary_color}] text-[#FAFAFA] py-[40px] text-center font-nunito text-[38px] font-bold uppercase tracking-widest shadow-xl">
+      <div class="w-full bg-[{secondary_color}] text-[#FAFAFA] py-[40px] text-center font-nunito text-[38px] font-bold uppercase tracking-widest">
         Agenda tu visita
       </div>
-      <div class="flex items-center justify-center px-[80px] py-[25px]">
+      <div class="flex items-center justify-end px-[80px] py-[25px]">
         <span class="font-nunito text-[16px] tracking-[0.3em] text-[{dark_text}]/15 uppercase">Pulppo</span>
       </div>
     </div>

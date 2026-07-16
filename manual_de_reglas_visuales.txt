@@ -1,63 +1,60 @@
 ====================================================================
-MANUAL DE REGLAS VISUALES Y ARQUITECTURA DE CÓDIGO (PULPPO B2C)
+MANUAL DE DISEÑO, MARCA Y ARQUITECTURA DE CÓDIGO (WHITE-LABEL ENGINE)
 ====================================================================
-Este documento es la "Biblia" de diseño y desarrollo. Al crear nuevas plantillas HTML/Tailwind, DEBES acatar estrictamente estas reglas estructurales y estéticas para garantizar compatibilidad con nuestro motor en Python.
+Este documento es la fuente ÚNICA de verdad. Está dividido en Brand Tokens (Identidad) y Layout Engine (Estructura de Tailwind). NO INVENTES NADA QUE NO ESTÉ AQUÍ.
 
---- PARTE 1: ARQUITECTURA PANORÁMICA Y ESTRUCTURA NARRATIVA ---
-Todas las plantillas DEBEN ser un único lienzo panorámico (`flex-row`) que contiene múltiples slides de 1080x1350px.
+--------------------------------------------------------------------
+MÓDULO 1: BRAND TOKENS (CONFIGURACIÓN ACTUAL: PULPPO)
+--------------------------------------------------------------------
+Si se cambia de marca, solo se altera este módulo. Actualmente configurado para "Pulppo" (Proptech B2B/B2C).
 
-ESTRUCTURA DE 3 ACTOS OBLIGATORIA (Evaluada mediante el index `i` y `total_slides`):
-1. PORTADA (i == 0): 
-   - Objetivo: Alto impacto visual.
-   - Componentes obligatorios: Fotografía de fondo (`obtener_foto_random_b64()`) con un div de overlay (`bg-[{bg_color}]/80`) para garantizar legibilidad.
-   - Textos: Título gigante (`text-[130px]` o superior). Etiqueta en una caja de contraste.
-   - Identidad: `logo_pulppo_full` en la parte superior.
-   - PROHIBIDO: Usar números de slide o indicadores de "Desliza".
+1.1 COLORES (7 OFICIALES. PROHIBIDO USAR CUALQUIER OTRO):
+- Soft Black: `#212322` (Nunca usar #000 o grises oscuros).
+- White: `#FFFFFF`
+- Yellow: `#F6BE00` (Acento. Máximo 10% de la pantalla. NUNCA como fondo principal).
+- Gray: `#B7B7B7`
+- Light-gray: `#F3F3F3`
+- Sea Green: `#529999` (Solo feedback positivo o funcional).
+- Red: `#A52003` (Solo alertas o negativo).
+*Nota en código:* Estos colores se inyectan dinámicamente vía Python mediante el diccionario `paleta` (ej. `bg-[{paleta['fondo']}]`).
 
-2. CONTENIDO (i > 0 y i < total_slides - 1):
-   - Objetivo: Lectura dinámica y retención.
-   - Diseño: Alternancia asimétrica (Ej: slide impar con texto a la izquierda y gráficos a la derecha, slide par a la inversa). NUNCA pegar el texto a los bordes superior/inferior; usar `flex-col justify-center h-full px-[100px]`.
-   - Textos: Uso estricto de la función `formatear_texto_html(slide.get('texto', ''), paleta['acento'])` para procesar Markdown y viñetas automáticamente.
-   - Identidad: Indicador inferior de "Desliza" acompañado de `{SVGS['flecha_larga']}`.
-   - Numeración: Si decides mostrar en el fondo un número indicador de la diapositiva, la portada no cuenta. El slide de contenido 1 (índice i=1) debe mostrar '01'. Usa `str(i).zfill(2)`.
+1.2 TIPOGRAFÍA (SOLO 2 FUENTES):
+- HEADINGS (Títulos H1/H2): `EB Garamond`. 
+  *Regla Sagrada:* SIEMPRE en peso Regular (`font-garamond font-normal`). NUNCA Bold, NUNCA itálica. Si se ve débil, se sube el tamaño, no el peso. NUNCA usar Title Case (solo mayúscula inicial).
+- BODY / TAGS / CAPTIONS: `Nunito Sans` (`font-nunito`).
+  *Regla Sagrada:* Solo 3 pesos permitidos: Light (para captions), Regular (para cuerpo de texto), Bold (EXCLUSIVAMENTE para Tags/Etiquetas en UPPERCASE).
 
-3. CTA / CIERRE (i == total_slides - 1):
-   - Objetivo: Conversión y conclusión.
-   - Componentes: Diseño centrado perfecto, limpio.
-   - Identidad: Mensaje "Guarda este post" acompañado de `{SVGS['bookmark']}`. Uso de `logo_pulppo_isotipo`.
+1.3 LOGOTIPO:
+- Posición INAMOVIBLE: Esquina superior derecha (`top-[80px] right-[80px]`).
+- Prohibido rotar, recolorar o ponerle efectos.
 
---- PARTE 2: CÓDIGO HTML, TAILWIND Y ANTIALUCINACIONES ---
-Para evitar romper el renderizado, el esqueleto del código devuelto DEBE ser exactamente este:
+1.4 VOZ Y TONO (PARA LLMs COPYWRITERS):
+- Directo, profesional, austero, moderno. NO emocional, NO "startup-juguetona".
+- Sujeto + verbo + objeto. Datos duros sobre adjetivos ("+640 MDP", no "increíbles ganancias").
+- "Brokers / asesores inmobiliarios" (NO agentes). "La plataforma" (NO la app). Pulppo con doble P.
 
-1. El `<head>` debe incluir Tailwind CSS por CDN y las Google Fonts (EB Garamond y Nunito Sans), configurando `tailwind.config` con `fontFamily: { garamond: ..., nunito: ... }`.
-2. Contenedor Maestro: `<div class="w-[{ancho_total}px] h-[1350px] flex flex-row relative overflow-hidden bg-[{bg_color}]">`
-3. Cada Slide (dentro de un bucle for): `<div class="w-[1080px] h-full shrink-0 relative p-[80px] flex flex-col justify-center z-20">`
-4. Paleta de Colores Dinámica: NUNCA usar colores fijos (como `#FAFAFA` o `#000`). Siempre extraer y usar: `bg_color`, `texto_color`, `accent_color`, `secundario_color` del diccionario `paleta`. (Ej. `text-[{texto_color}]`).
-5. REGLA ESTRICTA DE COLOR SECUNDARIO: El único color secundario permitido para cualquier detalle, ícono o forma geométrica es el Teal (#009A9A). Queda estrictamente prohibido el uso de colores rojos u otros tonos no especificados en la paleta base.
-6. REGLA ESTRICTA DE CONTRASTE AMARILLO (PULPPO YELLOW): Siempre que se utilice el color de acento Amarillo Pulppo (#F6BE00 o accent_color) como COLOR DE FONDO para una caja de texto o etiqueta (ej. `bg-[{accent_color}]`), el color del texto en su interior DEBE SER ESTRICTAMENTE BLANCO (#FAFAFA). Queda absolutamente prohibido usar texto negro o carbón sobre fondos amarillos. El código HTML siempre debe ser `bg-[{accent_color}] text-[#FAFAFA]`.
-7. Tipografías: Títulos siempre en `font-garamond font-normal`. NUNCA usar uppercase. El interlineado DEBE ser `leading-[1.1]` o `leading-tight` (jamás `leading-[0.95]` ni `leading-none` para evitar colisión de trazos). Cuerpo siempre en `font-nunito font-light text-[32px] leading-[1.4]`.
-8. Componentes Open Source: Puedes emplear la lógica estructural de HTML/Tailwind de librerías gratuitas como HyperUI, Flowbite o Aceternity UI para lograr layouts más limpios y profesionales.
+--------------------------------------------------------------------
+MÓDULO 2: LAYOUT ENGINE (REGLAS GLOBALES DE TAILWIND Y HTML)
+--------------------------------------------------------------------
+Reglas de renderizado para `html2image` usando Tailwind CSS.
 
---- PARTE 3: BIBLIOTECA DE RECURSOS DINÁMICOS ---
-Tienes disponibles estas herramientas desde Python (debes inyectarlas en los f-strings):
-1. Fotos de Stock: Usa `obtener_foto_random_b64()` para obtener una imagen Base64 y usarla como `<div style="background-image: url('{foto}');">`.
-2. Texturas: Usa `TEXTURAS["nombre"]` (Opciones: marco_polaroid, borde_roto, pizarra_rayones, polvo_blanco, cristal_azul, papel_oscuro, ruido_plata, halftone_amarillo). Usa clases mix-blend de Tailwind para fusionarlas.
-3. SVGs Inline: Usa `{SVGS['nombre'].format(clases='tu-clase-tailwind')}`. (Opciones: flecha_larga, casa, llave, comillas, check_circulo, decoracion_estrellas, bookmark, logo_pulppo_full, logo_pulppo_isotipo).
+2.1 PROHIBICIONES VISUALES (ESTRICTO):
+- ❌ SIN SOMBRAS. NUNCA. Prohibido usar `shadow-sm`, `shadow-2xl`, `drop-shadow`, `text-shadow`.
+- ❌ SIN 3D O ELEVACIÓN. Prohibido glow, bevel, emboss, gradientes mezclados.
+- ❌ BODY NUNCA CENTRADO. El texto de cuerpo (`<p>`) va SIEMPRE alineado a la izquierda (`text-left`).
+- Todo `<head>` debe incluir el reset: `<style> * { box-shadow: none !important; text-shadow: none !important; } </style>`
 
---- PARTE 4: ARQUETIPOS DE DISEÑO (ESTILOS VISUALES) ---
-Al crear plantillas, inspírate en uno de estos 5 arquetipos:
+2.2 SISTEMA DE RECURSOS DINÁMICOS:
+- FOTOS: Usa `imagenes_b64.get('fotos', [])` (Array de fotos de Pexels inyectado por Python).
+- OVERLAYS: Toda foto usada como fondo DEBE llevar un overlay para legibilidad: `<div class="absolute inset-0 bg-[{bg_color}]/70 z-10"></div>`.
+- SVGS: Usa el diccionario inyectado `{SVGS['nombre']}`. (Ej: logo_pulppo_full, logo_pulppo_isotipo, flecha_larga, bookmark).
 
-A. Estilo Editorial Grunge (Protesta / Revista):
-   Uso de texturas de papel arrugado, cajas de color sólido detrás de los títulos (rotadas ligeramente con `-rotate-2`), elementos gráficos superpuestos y fuentes gigantes. Contraste muy agresivo.
+2.3 ESTRUCTURA DE COMPONENTES (Para Carruseles Educativos de 3 Actos):
+- PORTADA (Slide 0): Layout E (Hero Photo). Foto half-bleed o full-bleed con overlay 70%. Título `text-[130px]` (aprox 56pt-75pt a escala). Etiqueta/Tag en UPPERCASE y `font-bold` encima del título. Logo top-right.
+- CONTENIDO (Slides intermedios): Layout B (Title+Body+Foto). Estructura 50/50 vertical asimétrica. Contenido izquierda, foto derecha (o viceversa usando `flex-row`). Separadores de 1pt amarillos. Uso de `formatear_texto_html` para procesar Markdown.
+- CTA / CIERRE (Último slide): Layout G (Closing Dark). Fondo sólido (`surface-dark`). Mensaje final + CTA de "Guarda este post" con el icono de Bookmark.
 
-B. Geometría Corporativa Limpia (Estilo Seguro/App):
-   Uso de formas geométricas puras cortadas por los bordes (cuartos de círculo gigantes de color `bg-[{secundario_color}]` en las esquinas). Fotografías con filtros monocromáticos, mucha luz, aire y limpieza extrema.
-
-C. Impacto Brutalista (Estilo Billboard):
-   Tipografía colosal que casi se sale del lienzo. Uso agresivo del contraste oscuro/neón (`fondo` vs `acento`). Líneas de cuadrícula delgadas (`border-[{texto_color}]/20`) separando secciones. Números indicadores masivos (ej. 01, 02) en el fondo.
-
-D. Corporativo de Listas (Tarjetas Flotantes):
-   El número de slide es el héroe (gigante en opacidad baja en el fondo). El contenido vive dentro de "cajas" (Cards) con bordes sólidos y sombras pesadas (`shadow-2xl`) superpuestas sobre fotos o texturas.
-
-E. Cinematográfico (Full Bleed):
-   Fotografías a pantalla completa o texturas de ruido de película. Viñetas oscuras. Textos centrados y elegantes simulando los créditos o subtítulos de un film clásico.
+2.4 ESTRUCTURA PARA FICHAS DE PROPIEDADES INMOBILIARIAS:
+- Mantener la austeridad. Layout F (Card Grid) o Layout B. 
+- Atributos (Cuartos, Baños, m²) alineados a la izquierda, divididos por líneas Neutrales de 1pt (`border-[{paleta['gris']}]`).
+- Precio como héroe tipográfico en `font-garamond font-normal`.
