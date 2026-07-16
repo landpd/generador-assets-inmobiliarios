@@ -14,9 +14,7 @@ from config import OUTPUT_DIR
 from plantillas_educativas import (
     plantilla_geometria_limpia,
     plantilla_editorial_grunge,
-    plantilla_cinematografica,
     plantilla_impacto_brutalista,
-    plantilla_corporativo_listas,
 )
 from recursos_graficos import buscar_imagen_pexels, obtener_fotos_coleccion_pexels, url_a_base64
 
@@ -29,8 +27,6 @@ MAPEO_PLANTILLAS = {
     "Arquetipo A: Editorial Grunge": plantilla_editorial_grunge,
     "Arquetipo B: Geometría Limpia": plantilla_geometria_limpia,
     "Arquetipo C: Impacto Brutalista": plantilla_impacto_brutalista,
-    "Arquetipo D: Corporativo Listas": plantilla_corporativo_listas,
-    "Arquetipo E: Cinematográfico": plantilla_cinematografica,
 }
 
 # 7 COLORES OFICIALES PULPPO: Soft black #212322, White #FFFFFF, Yellow #F6BE00, Gray #B7B7B7, Light-gray #F3F3F3, Red #A52003, Sea-green #529999.

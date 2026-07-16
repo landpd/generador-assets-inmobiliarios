@@ -18,6 +18,7 @@ from Descarga_fotos_propiedades import process_and_save_image
 from google_drive_manager import get_drive_service, upload_image_to_drive, get_or_create_folder
 import plantillas_carruseles_inmobiliarias
 from main import procesar_fila_a_payload
+from utils import formatear_atributo
 
 # ── Variables de entorno ──────────────────────────────────────────────
 load_dotenv()
@@ -109,15 +110,7 @@ def local_image_to_base64(filepath):
         return ""
 
 
-def formatear_atributo(valor, sufijos):
-    """Formatea un atributo numérico con su sufijo correspondiente."""
-    val_str = str(valor).strip()
-    if val_str.lower() in ("nan", "none", "", "0", "0.0"):
-        return ""
-    if val_str.endswith(".0"):
-        val_str = val_str[:-2]
-    sufijo = sufijos[0] if val_str == "1" and isinstance(sufijos, tuple) else (sufijos[1] if isinstance(sufijos, tuple) else sufijos)
-    return f"{val_str} {sufijo}"
+# formatear_atributo importado desde utils.py
 
 
 def procesar_fila_a_payload_local(row):

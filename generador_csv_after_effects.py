@@ -6,6 +6,7 @@ import re
 import pandas as pd
 
 from config import DATA_DIR, OUTPUT_DIR
+from utils import formatear_atributo
 
 # --- 1. Buscar el CSV de Pulppo más reciente en DATA_DIR ---
 csv_files = sorted(DATA_DIR.glob("propiedades_1_5_10_con_fotos_*.csv"))
@@ -18,38 +19,8 @@ print(f"📄 Procesando base de datos: {latest_csv.name}\n")
 df = pd.read_csv(latest_csv)
 
 
-# --- 2. Funciones de ayuda para formatear plurales y vacíos ---
-def formatear_plural(valor, singular, plural):
-    val_str = str(valor).strip()
-    if val_str.lower() in ['nan', 'none', '', '0', '0.0']:
-        return ""
-    try:
-        v_float = float(val_str)
-        if v_float == 0:
-            return ""
-        if v_float.is_integer():
-            v_int = int(v_float)
-            return f"{v_int} {singular}" if v_int == 1 else f"{v_int} {plural}"
-        else:
-            return f"{v_float} {singular}" if v_float == 1 else f"{v_float} {plural}"
-    except:
-        return ""
-
-
 def formatear_metros(valor):
-    val_str = str(valor).strip()
-    if val_str.lower() in ['nan', 'none', '', '0', '0.0']:
-        return ""
-    try:
-        v_float = float(val_str)
-        if v_float == 0:
-            return ""
-        if v_float.is_integer():
-            return f"{int(v_float)} m² TOTALES"
-        else:
-            return f"{v_float} m² TOTALES"
-    except:
-        return ""
+    return formatear_atributo(valor, "m² TOTALES")
 
 
 # --- 3. Preparar la lista de datos ---
@@ -120,10 +91,10 @@ for index, row in df.iterrows():
         precio_formateado = precio_crudo if precio_crudo.lower() != 'nan' else ""
 
     # --- ATRIBUTOS FORMATEADOS ---
-    habitaciones = formatear_plural(row.get('Attributes: Suites', ''), "HABITACIÓN", "HABITACIONES")
-    banos = formatear_plural(row.get('Attributes: Bathrooms', ''), "BAÑO", "BAÑOS")
-    estacionamientos = formatear_plural(row.get('Attributes: Parkings', ''), "ESTACIONAMIENTO", "ESTACIONAMIENTOS")
-    metros = formatear_metros(row.get('Attributes: TotalSurface', ''))
+    habitaciones = formatear_atributo(row.get('Attributes: Suites', ''), ("HABITACIÓN", "HABITACIONES"))
+    banos = formatear_atributo(row.get('Attributes: Bathrooms', ''), ("BAÑO", "BAÑOS"))
+    estacionamientos = formatear_atributo(row.get('Attributes: Parkings', ''), ("ESTACIONAMIENTO", "ESTACIONAMIENTOS"))
+    metros = formatear_atributo(row.get('Attributes: TotalSurface', ''), "m² TOTALES")
 
     # --- RECONSTRUIR NOMBRES DE ARCHIVOS MULTIMEDIA ---
     pictures_raw = str(row['Pictures'])

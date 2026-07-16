@@ -4,7 +4,6 @@
 
 import re
 import base64
-import importlib
 import requests
 import pandas as pd
 from PIL import Image
@@ -13,17 +12,13 @@ from pathlib import Path
 
 from config import DATA_DIR, OUTPUT_DIR, LOGOS_DIR
 from recursos_graficos import buscar_imagen_pexels, url_a_base64
+from utils import formatear_atributo
 
 import mis_plantillas
-
-# OBLIGA A LEER EL ARCHIVO ACTUALIZADO CADA VEZ
-importlib.reload(mis_plantillas)
 
 # ==============================================================================
 # --- 1. CONFIGURACIÓN DEL GENERADOR ---
 # ==============================================================================
-SOBREESCRIBIR_EXISTENTES = False
-
 PLANTILLAS_A_GENERAR = {
     "Landscape_5Fotos": {
         "activo": True,
@@ -78,28 +73,6 @@ textura_oscura_b64 = url_a_base64(url_tex_oscura) if url_tex_oscura else ""
 # ==============================================================================
 # --- 2. FUNCIONES DE AYUDA ---
 # ==============================================================================
-def formatear_atributo(valor, sufijos):
-    val_str = str(valor).strip()
-    if val_str.lower() in ['nan', 'none', '', '0', '0.0']: return ""
-    if val_str.endswith('.0'): val_str = val_str[:-2]
-
-    if isinstance(sufijos, tuple):
-        sufijo_final = sufijos[0] if val_str == "1" else sufijos[1]
-    else:
-        sufijo_final = sufijos
-
-    return f"{val_str} {sufijo_final}"
-
-def url_to_base64(url):
-    if not url: return ""
-    try:
-        resp = requests.get(url, timeout=10)
-        resp.raise_for_status()
-        encoded = base64.b64encode(resp.content).decode('utf-8')
-        return f"data:image/jpeg;base64,{encoded}"
-    except:
-        return ""
-
 def local_image_to_base64(filepath):
     path = Path(filepath)
     if not path.exists():
@@ -185,11 +158,11 @@ def procesar_fila_a_payload(row, textura_clara_b64="", textura_oscura_b64=""):
     atributos_html = "".join([f"<div>{a}</div>" for a in attr_list])
 
     datos_propiedad = {
-        "img1": url_to_base64(obtener_foto(0)), "img2": url_to_base64(obtener_foto(1)),
-        "img3": url_to_base64(obtener_foto(2)), "img4": url_to_base64(obtener_foto(3)),
-        "img5": url_to_base64(obtener_foto(4)), "img6": url_to_base64(obtener_foto(5)),
-        "img7": url_to_base64(obtener_foto(6)), "img8": url_to_base64(obtener_foto(7)),
-        "img9": url_to_base64(obtener_foto(8)), "logo": logo_b64,
+        "img1": url_a_base64(obtener_foto(0)), "img2": url_a_base64(obtener_foto(1)),
+        "img3": url_a_base64(obtener_foto(2)), "img4": url_a_base64(obtener_foto(3)),
+        "img5": url_a_base64(obtener_foto(4)), "img6": url_a_base64(obtener_foto(5)),
+        "img7": url_a_base64(obtener_foto(6)), "img8": url_a_base64(obtener_foto(7)),
+        "img9": url_a_base64(obtener_foto(8)), "logo": logo_b64,
         "tipo_operacion": tipo_en_operacion, "precio": precio_formateado,
         "colonia_estado": colonia_estado, "calle": calle, "atributos_html": atributos_html,
         "textura_clara": textura_clara_b64, "textura_oscura": textura_oscura_b64
@@ -221,7 +194,7 @@ def ejecutar_pipeline(ruta_csv):
             nombre_archivo = f"{internal_id}_{company_clean}_{config['sufijo_archivo']}.png"
             ruta_guardado = ruta_directorio / nombre_archivo
 
-            if not SOBREESCRIBIR_EXISTENTES and ruta_guardado.exists():
+            if not False and ruta_guardado.exists():
                 print(f"     ✅ El diseño {nombre_archivo} ya existe. Omitiendo...")
                 continue
 

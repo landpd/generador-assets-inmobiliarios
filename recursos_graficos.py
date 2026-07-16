@@ -23,26 +23,6 @@ SVGS = {
 }
 
 
-def obtener_foto_random_b64():
-    import random
-    import base64
-    if not STOCK_DIR.exists():
-        return ""
-    # Buscar fotos en el directorio
-    fotos = list(STOCK_DIR.glob('*.jpg')) + list(STOCK_DIR.glob('*.jpeg')) + list(STOCK_DIR.glob('*.png'))
-    if not fotos:
-        return ""
-
-    foto_elegida = random.choice(fotos)
-    try:
-        encoded = base64.b64encode(foto_elegida.read_bytes()).decode('utf-8')
-        ext = foto_elegida.suffix.lower()
-        mime = "image/png" if ext == ".png" else "image/jpeg"
-        return f"data:{mime};base64,{encoded}"
-    except Exception:
-        return ""
-
-
 def buscar_imagen_pexels(query, orientacion="landscape"):
     """
     Busca una imagen en Pexels por query y retorna la URL limpia (sin parámetros HTTP).
@@ -95,52 +75,7 @@ def url_a_base64(url):
         return ""
 
 
-def obtener_foto_pexels_b64(api_key, collection_id):
-    """
-    Obtiene una foto aleatoria de una colección de Pexels.
-    Fallback a obtener_foto_random_b64() si hay error de red o API.
-    """
-    try:
-        resp = requests.get(
-            f"https://api.pexels.com/v1/collections/{collection_id}",
-            headers={"Authorization": api_key},
-            timeout=15,
-        )
-        resp.raise_for_status()
-        data = resp.json()
-
-        media = data.get("media", [])
-        if not media:
-            return obtener_foto_random_b64()
-
-        item = random.choice(media)
-        src = item.get("src", {})
-        # Prefer large, fallback a medium
-        url = src.get("large") or src.get("medium") or src.get("large2x") or ""
-        if not url:
-            return obtener_foto_random_b64()
-
-        img_resp = requests.get(url, timeout=20)
-        img_resp.raise_for_status()
-
-        img = Image.open(io.BytesIO(img_resp.content))
-        if img.mode in ("RGBA", "P"):
-            img = img.convert("RGB")
-
-        buf = io.BytesIO()
-        img.save(buf, format="JPEG", quality=95)
-        encoded = base64.b64encode(buf.getvalue()).decode("utf-8")
-        return f"data:image/jpeg;base64,{encoded}"
-
-    except Exception:
-        return obtener_foto_random_b64()
-
-
 def obtener_fotos_coleccion_pexels(id_coleccion, cantidad=5):
-    import os
-    import requests
-    import random
-
     api_key = os.getenv("PEXELS_API_KEY")
     if not api_key:
         return [""] * cantidad

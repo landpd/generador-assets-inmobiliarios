@@ -6,22 +6,12 @@ import re
 import time
 import google.generativeai as genai
 
+from utils import formatear_atributo
+
 # --- ACTUALIZACIÓN DE MODELO ---
 model = genai.GenerativeModel('gemini-3.1-flash-lite')
 
 # --- FUNCIONES DE AYUDA ---
-def formatear_atributo(valor, sufijos):
-    val_str = str(valor).strip()
-    if val_str.lower() in ['nan', 'none', '', '0', '0.0']: return ""
-    if val_str.endswith('.0'): val_str = val_str[:-2]
-
-    if isinstance(sufijos, tuple):
-        sufijo_final = sufijos[0] if val_str == "1" else sufijos[1]
-    else:
-        sufijo_final = sufijos
-
-    return f"{val_str} {sufijo_final}"
-
 def obtener_emoji_propiedad(tipo_str):
     t = tipo_str.lower()
     if 'condominio' in t: return '🏘️'

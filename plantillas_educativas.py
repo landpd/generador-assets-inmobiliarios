@@ -3,11 +3,14 @@ from recursos_graficos import SVGS
 
 
 def formatear_texto_html(texto, color_acento):
-    """Convierte texto plano con saltos de línea y viñetas en HTML formateado."""
+    """Convierte texto plano con saltos de línea en HTML formateado.
+    Negritas **texto** -> span con color de acento. Viñetas -> bullet con color.
+    Todo texto queda alineado a la izquierda (text-left).
+    """
     if not texto:
         return ""
     lineas = texto.split('\n')
-    html_resultado = '<div class="space-y-4">'
+    html_resultado = '<div class="space-y-4 text-left">'
     for linea in lineas:
         linea = linea.strip()
         if not linea:
@@ -16,18 +19,39 @@ def formatear_texto_html(texto, color_acento):
         # Reemplazar negritas **texto** por un span con el color de acento
         linea = re.sub(r'\*\*(.*?)\*\*', f'<span class="text-[{color_acento}] font-bold">\\1</span>', linea)
 
-        # Detectar si la línea empieza con viñeta (•, -, *)
+        # Detectar si la línea empieza con viñeta
         if re.match(r'^[•\-*]\s*', linea):
             texto_limpio = re.sub(r'^[•\-*]\s*', '', linea)
             html_resultado += f'''
-            <div class="flex items-start gap-4">
-                <span class="text-[{color_acento}] font-bold mt-1 flex-shrink-0">•</span>
+            <div class="flex items-start gap-4 text-left">
+                <span class="text-[{color_acento}] font-bold mt-1 flex-shrink-0">·</span>
                 <span>{texto_limpio}</span>
             </div>'''
         else:
-            html_resultado += f'<p>{linea}</p>'
+            html_resultado += f'<p class="text-left">{linea}</p>'
     html_resultado += '</div>'
     return html_resultado
+
+
+# ── Helper de cobranding (logo Pulppo + logo inmobiliaria) ─────────────────
+def _logo_header(texto_color, logo_inmo, es_portada=False):
+    """Genera el bloque de cobranding con logo Pulppo + logo inmobiliaria.
+    Posición inamovible: top-[80px] right-[80px].
+    """
+    svg_key = 'logo_pulppo_full' if es_portada else 'logo_pulppo_isotipo'
+    svg_size = 'w-[250px]' if es_portada else 'w-[80px] h-[80px]'
+    svg_html = SVGS[svg_key].format(clases=f'{svg_size} text-[{texto_color}]')
+
+    if logo_inmo:
+        return f'''<div class="absolute top-[80px] right-[80px] z-30 flex items-center gap-4">
+          {svg_html}
+          <div class="w-[1px] h-[40px] bg-[{texto_color}]/20"></div>
+          <img src="{logo_inmo}" class="h-[40px] object-contain">
+        </div>'''
+    else:
+        return f'''<div class="absolute top-[80px] right-[80px] z-30">
+          {svg_html}
+        </div>'''
 
 
 def plantilla_geometria_limpia(datos_array, paleta, imagenes_b64=None):
@@ -43,6 +67,7 @@ def plantilla_geometria_limpia(datos_array, paleta, imagenes_b64=None):
     accent_color = paleta['acento']
     secundario_color = paleta['secundario']
     fotos = imagenes_b64.get('fotos', []) if imagenes_b64 else []
+    logo_inmo = imagenes_b64.get('logo_inmobiliaria') if imagenes_b64 else None
 
     slides_html = ""
     for i, slide in enumerate(datos_array):
@@ -69,10 +94,8 @@ def plantilla_geometria_limpia(datos_array, paleta, imagenes_b64=None):
       <!-- Forma geométrica cortada (esquina inferior derecha) -->
       <div class="absolute rounded-full bg-[{secundario_color}] w-[800px] h-[800px] -bottom-[400px] -right-[400px] opacity-15 z-0"></div>
 
-      <!-- Logo full -->
-      <div class="absolute top-[80px] right-[80px] z-30">
-        {SVGS['logo_pulppo_full'].format(clases=f'w-[250px] text-[{texto_color}]')}
-      </div>
+      <!-- Logo cobranding -->
+      {_logo_header(texto_color, logo_inmo, es_portada=True)}
 
       <!-- Contenido centrado -->
       <div class="absolute inset-0 z-20 flex flex-col items-center justify-center px-[120px]">
@@ -100,10 +123,8 @@ def plantilla_geometria_limpia(datos_array, paleta, imagenes_b64=None):
       <!-- Forma geométrica cortada (esquina superior izquierda) -->
       <div class="absolute rounded-full bg-[{secundario_color}] w-[600px] h-[600px] -top-[300px] -left-[300px] opacity-10 z-0"></div>
 
-      <!-- Logo isotipo -->
-      <div class="absolute top-[80px] right-[80px] z-30">
-        {SVGS['logo_pulppo_isotipo'].format(clases=f'w-[100px] h-[100px] text-[{texto_color}]')}
-      </div>
+      <!-- Logo cobranding -->
+      {_logo_header(texto_color, logo_inmo, es_portada=False)}
 
       <!-- Título -->
       <h1 class="font-garamond text-[{texto_color}] text-[120px] leading-[0.95] font-normal mb-12 z-10">
@@ -142,9 +163,7 @@ def plantilla_geometria_limpia(datos_array, paleta, imagenes_b64=None):
       <div class="absolute rounded-full bg-[{accent_color}] w-[200px] h-[200px] opacity-15 {clase_forma_2} z-0"></div>
 
       <!-- Logo isotipo -->
-      <div class="absolute top-[80px] right-[80px] z-30">
-        {SVGS['logo_pulppo_isotipo'].format(clases=f'w-[60px] h-[60px] text-[{texto_color}]')}
-      </div>
+      {_logo_header(texto_color, logo_inmo, es_portada=False)}
 
       <!-- Contenido alineado asimétricamente -->
       <div class="absolute inset-0 z-10 flex flex-col justify-center h-full px-[100px] {align_flex}">
@@ -197,8 +216,8 @@ def plantilla_geometria_limpia(datos_array, paleta, imagenes_b64=None):
     }}
   </script>
   <style>
-    * { box-shadow: none !important; text-shadow: none !important; margin: 0; padding: 0; box-sizing: border-box; }
-    body { overflow: hidden; background: {bg_color}; }
+    * {{ box-shadow: none !important; text-shadow: none !important; margin: 0; padding: 0; box-sizing: border-box; }}
+    body {{ overflow: hidden; background: {bg_color}; }}
   </style>
 </head>
 <body>
@@ -225,6 +244,7 @@ def plantilla_editorial_grunge(datos_array, paleta, imagenes_b64=None):
     texto_color = paleta['texto']
     accent_color = paleta['acento']
     secundario_color = paleta['secundario']
+    logo_inmo = imagenes_b64.get('logo_inmobiliaria') if imagenes_b64 else None
 
     slides_html = ""
     for i, slide in enumerate(datos_array):
@@ -241,10 +261,8 @@ def plantilla_editorial_grunge(datos_array, paleta, imagenes_b64=None):
     <!-- ========================= PORTADA {i+1} ========================= -->
     <div class="w-[1080px] h-full shrink-0 relative overflow-hidden z-20">
 
-      <!-- Logo full -->
-      <div class="absolute top-[80px] right-[80px] z-30">
-        {SVGS['logo_pulppo_full'].format(clases=f'w-[200px] text-[{texto_color}]')}
-      </div>
+      <!-- Logo cobranding -->
+      {_logo_header(texto_color, logo_inmo, es_portada=True)}
 
       <!-- Foto de stock: 60% derecho -->
       <div class="absolute right-0 top-0 bottom-0 w-[60%] bg-cover bg-center z-0"
@@ -275,10 +293,8 @@ def plantilla_editorial_grunge(datos_array, paleta, imagenes_b64=None):
     <!-- ========================= CTA {i+1} ========================= -->
     <div class="w-[1080px] h-full shrink-0 relative overflow-hidden flex flex-col items-center justify-center px-[120px] z-20">
 
-      <!-- Logo isotipo -->
-      <div class="absolute top-[80px] right-[80px] z-30">
-        {SVGS['logo_pulppo_isotipo'].format(clases=f'w-[100px] h-[100px] text-[{texto_color}]')}
-      </div>
+      <!-- Logo cobranding -->
+      {_logo_header(texto_color, logo_inmo, es_portada=False)}
 
       <!-- Título -->
       <h1 class="font-garamond text-[{texto_color}] text-[120px] leading-[0.95] font-normal mb-12 z-10">
@@ -308,9 +324,7 @@ def plantilla_editorial_grunge(datos_array, paleta, imagenes_b64=None):
     <div class="w-[1080px] h-full shrink-0 relative overflow-hidden z-20">
 
       <!-- Logo isotipo -->
-      <div class="absolute top-[80px] right-[80px] z-30">
-        {SVGS['logo_pulppo_isotipo'].format(clases=f'w-[60px] h-[60px] text-[{texto_color}]')}
-      </div>
+      {_logo_header(texto_color, logo_inmo, es_portada=False)}
 
       <!-- Contenido asimétrico -->
       <div class="absolute inset-0 z-10 flex flex-col justify-center h-full px-[100px] {align_flex}">
@@ -361,8 +375,8 @@ def plantilla_editorial_grunge(datos_array, paleta, imagenes_b64=None):
     }}
   </script>
   <style>
-    * { box-shadow: none !important; text-shadow: none !important; margin: 0; padding: 0; box-sizing: border-box; }
-    body { overflow: hidden; background: {bg_color}; }
+    * {{ box-shadow: none !important; text-shadow: none !important; margin: 0; padding: 0; box-sizing: border-box; }}
+    body {{ overflow: hidden; background: {bg_color}; }}
   </style>
 </head>
 <body>
@@ -370,191 +384,6 @@ def plantilla_editorial_grunge(datos_array, paleta, imagenes_b64=None):
 
     <!-- ===== TEXTURA GLOBAL: Pizarra Rayones (efecto grunge) ===== -->
     <div class="absolute inset-0 z-0 opacity-30 {blend_mode}"
-         style="background-image: url('{textura}'); background-size: cover; background-repeat: repeat;"></div>
-
-    {slides_html}
-
-  </div>
-</body>
-</html>'''
-
-
-def plantilla_cinematografica(datos_array, paleta, imagenes_b64=None):
-    """
-    Genera un carrusel panorámico en estilo Cinematográfico/Full Bleed (Arquetipo E).
-    Fotografías a pantalla completa con viñetas, textos centrados como créditos de cine.
-    Estructura de 3 Actos: PORTADA → CONTENIDO → CTA.
-    """
-    textura = imagenes_b64.get('textura', '') if imagenes_b64 else ''
-    fotos = imagenes_b64.get('fotos', []) if imagenes_b64 else []
-    total_slides = len(datos_array)
-    ancho_total = total_slides * 1080
-    bg_color = paleta['fondo']
-    texto_color = paleta['texto']
-    accent_color = paleta['acento']
-    secundario_color = paleta['secundario']
-
-    slides_html = ""
-    for i, slide in enumerate(datos_array):
-        titulo = slide.get('titulo', '')
-        texto = slide.get('texto', '')
-        etiqueta = slide.get('etiqueta', '')
-        es_portada = i == 0
-        es_cta = i == total_slides - 1
-
-        # Cada slide obtiene su propia foto para efecto de escena independiente
-        foto_actual = fotos[i % len(fotos)] if fotos else ''
-
-        if es_portada:
-            # ===== PORTADA: Textos centrados tipo apertura de película =====
-            slides_html += f"""
-    <!-- ========================= PORTADA {i+1} ========================= -->
-    <div class="w-[1080px] h-full shrink-0 relative overflow-hidden z-20">
-
-      <!-- Foto de fondo -->
-      <div class="absolute inset-0 bg-cover bg-center z-0"
-           style="background-image: url('{foto_actual}');"></div>
-
-      <!-- Gradiente viñeta -->
-      <div class="absolute inset-0 bg-gradient-to-t from-[{bg_color}] via-[{bg_color}]/70 to-[{bg_color}]/40 z-10"></div>
-
-      <!-- Logo full centrado arriba -->
-      <div class="absolute top-[80px] right-[80px] z-30">
-        {SVGS['logo_pulppo_full'].format(clases=f'w-[250px] text-[{texto_color}]')}
-      </div>
-
-      <!-- Contenido centrado -->
-      <div class="absolute inset-0 z-20 flex flex-col items-center justify-center px-[120px]">
-
-        <!-- Etiqueta -->
-        <span class="font-nunito text-[24px] font-bold uppercase tracking-widest text-[{accent_color}] mb-8">
-          {etiqueta or 'GUÍA INMOBILIARIA'}
-        </span>
-
-        <!-- Título gigante -->
-        <h1 class="font-garamond text-[{texto_color}] text-[120px] leading-[0.9] font-normal max-w-[900px]">
-          {titulo}
-        </h1>
-
-      </div>
-
-    </div>
-"""
-        elif es_cta:
-            # ===== CTA: Modo créditos de película =====
-            slides_html += f"""
-    <!-- ========================= CTA {i+1} ========================= -->
-    <div class="w-[1080px] h-full shrink-0 relative overflow-hidden z-20">
-
-      <!-- Foto de fondo -->
-      <div class="absolute inset-0 bg-cover bg-center z-0"
-           style="background-image: url('{foto_actual}');"></div>
-
-      <!-- Gradiente viñeta más oscuro para CTA -->
-      <div class="absolute inset-0 bg-gradient-to-t from-[{bg_color}] via-[{bg_color}]/80 to-[{bg_color}]/60 z-10"></div>
-
-      <!-- Contenido centrado tipo créditos -->
-      <div class="absolute inset-0 z-20 flex flex-col items-center justify-center px-[120px]">
-
-        <!-- Logo isotipo -->
-        <div class="absolute top-[80px] right-[80px] z-30">
-          {SVGS['logo_pulppo_isotipo'].format(clases=f'w-[100px] h-[100px] text-[{texto_color}]')}
-        </div>
-
-        <!-- Título -->
-        <h1 class="font-garamond text-[{texto_color}] text-[100px] leading-[0.95] font-normal mb-10">
-          {titulo}
-        </h1>
-
-        <!-- Texto formateado -->
-        <div class="font-nunito text-[{texto_color}] text-[32px] font-light leading-[1.4] max-w-[700px] opacity-80 mb-12">
-          {formatear_texto_html(texto, accent_color)}
-        </div>
-
-        <!-- Indicador: Guarda este post + bookmark -->
-        <div class="flex items-center gap-3">
-          <span class="font-nunito text-[{accent_color}] text-[20px] font-light tracking-widest uppercase">Guarda este post</span>
-          {SVGS['bookmark'].format(clases=f'w-[36px] h-[36px] text-[{accent_color}]')}
-        </div>
-
-      </div>
-
-    </div>
-"""
-        else:
-            # ===== CONTENIDO: Subtítulos de cine (parte inferior) =====
-            slides_html += f"""
-    <!-- ========================= CONTENIDO {i+1} ========================= -->
-    <div class="w-[1080px] h-full shrink-0 relative overflow-hidden z-20">
-
-      <!-- Foto de fondo -->
-      <div class="absolute inset-0 bg-cover bg-center z-0"
-           style="background-image: url('{foto_actual}');"></div>
-
-      <!-- Gradiente viñeta -->
-      <div class="absolute inset-0 bg-gradient-to-t from-[{bg_color}] via-[{bg_color}]/70 to-[{bg_color}]/40 z-10"></div>
-
-      <!-- Textos centrados en la parte inferior (como subtítulos) -->
-      <div class="absolute inset-0 z-20 flex flex-col items-center justify-end px-[120px] pb-[150px]">
-
-        <!-- Línea decorativa -->
-        <div class="w-[100px] h-[1px] bg-[{accent_color}] mb-8"></div>
-
-        <!-- Título -->
-        <h1 class="font-garamond text-[{texto_color}] text-[90px] leading-[0.95] font-normal mb-8 max-w-[800px]">
-          {titulo}
-        </h1>
-
-        <!-- Texto formateado -->
-        <div class="font-nunito text-[{texto_color}] text-[32px] font-light leading-[1.4] max-w-[700px] opacity-85">
-          {formatear_texto_html(texto, accent_color)}
-        </div>
-
-      </div>
-
-      <!-- Logo isotipo (esquina superior izquierda) -->
-      <div class="absolute top-[80px] right-[80px] z-30">
-        {SVGS['logo_pulppo_isotipo'].format(clases=f'w-[60px] h-[60px] text-[{texto_color}]')}
-      </div>
-
-      <!-- Indicador: Desliza -->
-      <div class="absolute bottom-[80px] right-[80px] flex items-center gap-3 z-10">
-        <span class="font-nunito text-[{accent_color}] text-[20px] font-light tracking-widest uppercase">Desliza</span>
-        {SVGS['flecha_larga'].format(clases=f'w-[80px] text-[{accent_color}]')}
-      </div>
-
-    </div>
-"""
-
-    return f'''<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {{
-      theme: {{
-        extend: {{
-          fontFamily: {{
-            garamond: ['"EB Garamond"', 'serif'],
-            nunito: ['"Nunito Sans"', 'sans-serif'],
-          }}
-        }}
-      }}
-    }}
-  </script>
-  <style>
-    * { box-shadow: none !important; text-shadow: none !important; margin: 0; padding: 0; box-sizing: border-box; }
-    body { overflow: hidden; background: {bg_color}; }
-  </style>
-</head>
-<body>
-  <div class="w-[{ancho_total}px] h-[1350px] flex flex-row relative overflow-hidden bg-[{bg_color}]">
-
-    <!-- ===== TEXTURA GLOBAL: Polvo Blanco (look de película) ===== -->
-    <div class="absolute inset-0 z-0 opacity-30 mix-blend-screen"
          style="background-image: url('{textura}'); background-size: cover; background-repeat: repeat;"></div>
 
     {slides_html}
@@ -577,6 +406,7 @@ def plantilla_impacto_brutalista(datos_array, paleta, imagenes_b64=None):
     accent_color = paleta['acento']
     secundario_color = paleta['secundario']
     fotos = imagenes_b64.get('fotos', []) if imagenes_b64 else []
+    logo_inmo = imagenes_b64.get('logo_inmobiliaria') if imagenes_b64 else None
 
     slides_html = ""
     for i, slide in enumerate(datos_array):
@@ -600,10 +430,8 @@ def plantilla_impacto_brutalista(datos_array, paleta, imagenes_b64=None):
       <!-- Overlay de color -->
       <div class="absolute inset-0 bg-[{bg_color}]/90 z-10"></div>
 
-      <!-- Logo full -->
-      <div class="absolute top-[80px] right-[80px] z-30">
-        {SVGS['logo_pulppo_full'].format(clases=f'w-[200px] text-[{texto_color}]')}
-      </div>
+      <!-- Logo cobranding -->
+      {_logo_header(texto_color, logo_inmo, es_portada=True)}
 
       <!-- Contenido -->
       <div class="absolute inset-0 z-20 flex flex-col justify-center px-[80px]">
@@ -631,10 +459,8 @@ def plantilla_impacto_brutalista(datos_array, paleta, imagenes_b64=None):
     <!-- ========================= CTA {i+1} ========================= -->
     <div class="w-[1080px] h-full shrink-0 relative overflow-hidden z-20">
 
-      <!-- Logo isotipo -->
-      <div class="absolute top-[80px] right-[80px] z-30">
-        {SVGS['logo_pulppo_isotipo'].format(clases=f'w-[60px] h-[60px] text-[{texto_color}]')}
-      </div>
+      <!-- Logo cobranding -->
+      {_logo_header(texto_color, logo_inmo, es_portada=False)}
 
       <!-- Contenido -->
       <div class="absolute inset-0 z-20 flex flex-col justify-center px-[80px]">
@@ -671,10 +497,8 @@ def plantilla_impacto_brutalista(datos_array, paleta, imagenes_b64=None):
         {num_str}
       </span>
 
-      <!-- Logo isotipo -->
-      <div class="absolute top-[80px] right-[80px] z-30">
-        {SVGS['logo_pulppo_isotipo'].format(clases=f'w-[60px] h-[60px] text-[{texto_color}]')}
-      </div>
+      <!-- Logo cobranding -->
+      {_logo_header(texto_color, logo_inmo, es_portada=False)}
 
       <!-- Contenido centrado verticalmente a la derecha -->
       <div class="absolute inset-0 z-10 flex flex-col items-start justify-center text-left pl-[80px] pr-[80px]">
@@ -725,8 +549,8 @@ def plantilla_impacto_brutalista(datos_array, paleta, imagenes_b64=None):
     }}
   </script>
   <style>
-    * { box-shadow: none !important; text-shadow: none !important; margin: 0; padding: 0; box-sizing: border-box; }
-    body { overflow: hidden; background: {bg_color}; }
+    * {{ box-shadow: none !important; text-shadow: none !important; margin: 0; padding: 0; box-sizing: border-box; }}
+    body {{ overflow: hidden; background: {bg_color}; }}
   </style>
 </head>
 <body>
@@ -734,175 +558,6 @@ def plantilla_impacto_brutalista(datos_array, paleta, imagenes_b64=None):
 
     <!-- ===== LÍNEA DE CUADRÍCULA GLOBAL ===== -->
     <div class="absolute top-[200px] left-0 w-full h-[2px] bg-[{texto_color}]/10 z-0"></div>
-
-    {slides_html}
-
-  </div>
-</body>
-</html>'''
-
-
-def plantilla_corporativo_listas(datos_array, paleta, imagenes_b64=None):
-    """
-    Genera un carrusel panorámico en estilo Corporativo de Listas (Arquetipo D).
-    Tarjetas flotantes (Cards) con sombras pesadas sobre fondo fotográfico.
-    Estructura de 3 Actos: PORTADA → CONTENIDO → CTA.
-    """
-    fotos = imagenes_b64.get('fotos', []) if imagenes_b64 else []
-    foto_fondo = fotos[0] if fotos else ''
-    total_slides = len(datos_array)
-    ancho_total = total_slides * 1080
-    bg_color = paleta['fondo']
-    texto_color = paleta['texto']
-    accent_color = paleta['acento']
-    secundario_color = paleta['secundario']
-
-    slides_html = ""
-    for i, slide in enumerate(datos_array):
-        titulo = slide.get('titulo', '')
-        texto = slide.get('texto', '')
-        etiqueta = slide.get('etiqueta', '')
-        es_portada = i == 0
-        es_cta = i == total_slides - 1
-
-        if es_portada:
-            # ===== PORTADA: Tarjeta con borde superior =====
-            slides_html += f"""
-    <!-- ========================= PORTADA {i+1} ========================= -->
-    <div class="w-[1080px] h-full shrink-0 relative overflow-hidden z-20">
-
-      <!-- Logo isotipo (fuera de la tarjeta) -->
-      <div class="absolute top-[80px] right-[80px] z-30">
-        {SVGS['logo_pulppo_full'].format(clases=f'w-[180px] text-[{texto_color}]')}
-      </div>
-
-      <!-- Tarjeta flotante centrada -->
-      <div class="w-[850px] bg-[{bg_color}] p-[80px] border-t-8 border-[{accent_color}] relative z-20 mx-auto mt-[180px]">
-
-        <!-- Etiqueta -->
-        <span class="font-nunito text-[20px] font-bold uppercase tracking-widest text-[{accent_color}] mb-6 block">
-          {etiqueta or 'GUÍA INMOBILIARIA'}
-        </span>
-
-        <!-- Título -->
-        <h1 class="font-garamond text-[{texto_color}] text-[100px] leading-[0.95] font-normal">
-          {titulo}
-        </h1>
-
-      </div>
-
-    </div>
-"""
-        elif es_cta:
-            # ===== CTA: Tarjeta centrada + bookmark =====
-            slides_html += f"""
-    <!-- ========================= CTA {i+1} ========================= -->
-    <div class="w-[1080px] h-full shrink-0 relative overflow-hidden z-20">
-
-      <!-- Tarjeta flotante centrada -->
-      <div class="w-[850px] bg-[{bg_color}] p-[80px] border-t-8 border-[{accent_color}] relative z-20 mx-auto mt-[180px] flex flex-col items-start">
-
-        <!-- Logo isotipo -->
-      <div class="absolute top-[80px] right-[80px] z-30">
-        {SVGS['logo_pulppo_isotipo'].format(clases=f'w-[80px] h-[80px] text-[{texto_color}]')}
-      </div>
-
-      <!-- Título -->
-      <h1 class="font-garamond text-[{texto_color}] text-[90px] leading-[0.95] font-normal mb-8">
-        {titulo}
-      </h1>
-
-      <!-- Texto formateado -->
-      <div class="font-nunito text-[{texto_color}] text-[30px] font-light leading-[1.4] max-w-[600px] opacity-80 mb-10">
-        {formatear_texto_html(texto, accent_color)}
-      </div>
-
-      <!-- Bookmark + CTA -->
-      <div class="flex items-center gap-3">
-        <span class="font-nunito text-[{accent_color}] text-[20px] font-light tracking-widest uppercase">Guarda este post</span>
-        {SVGS['bookmark'].format(clases=f'w-[36px] h-[36px] text-[{accent_color}]')}
-      </div>
-
-      </div>
-
-    </div>
-"""
-        else:
-            # ===== CONTENIDO: Número gigante de fondo + tarjeta =====
-            num_str = str(i + 1)
-            es_impar = i % 2 == 1
-            cargo_numero = '-right-[250px] -top-[200px]' if es_impar else '-left-[250px] -bottom-[200px]'
-            slides_html += f"""
-    <!-- ========================= CONTENIDO {i+1} ========================= -->
-    <div class="w-[1080px] h-full shrink-0 relative overflow-hidden z-20">
-
-      <!-- Número gigante de fondo -->
-      <span class="font-garamond font-normal text-[500px] text-[{texto_color}] opacity-5 absolute leading-none {cargo_numero} z-0">
-        {num_str}
-      </span>
-
-      <!-- Logo isotipo -->
-      <div class="absolute top-[80px] right-[80px] z-30">
-        {SVGS['logo_pulppo_isotipo'].format(clases=f'w-[60px] h-[60px] text-[{texto_color}]')}
-      </div>
-
-      <!-- Tarjeta flotante centrada -->
-      <div class="w-[850px] bg-[{bg_color}] p-[80px] border-l-8 border-[{secundario_color}] z-20 mx-auto mt-[200px]">
-
-        <!-- Título -->
-        <h1 class="font-garamond text-[{texto_color}] text-[90px] leading-[0.95] font-normal mb-8">
-          {titulo}
-        </h1>
-
-        <!-- Texto formateado -->
-        <div class="font-nunito text-[{texto_color}] text-[32px] font-light leading-[1.4] opacity-85">
-          {formatear_texto_html(texto, accent_color)}
-        </div>
-
-      </div>
-
-      <!-- Indicador: Desliza -->
-      <div class="absolute bottom-[80px] right-[80px] flex items-center gap-3 z-10">
-        <span class="font-nunito text-[{accent_color}] text-[20px] font-light tracking-widest uppercase">Desliza</span>
-        {SVGS['flecha_larga'].format(clases=f'w-[80px] text-[{accent_color}]')}
-      </div>
-
-    </div>
-"""
-
-    return f'''<!DOCTYPE html>
-<html lang="es">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
-  <script>
-    tailwind.config = {{
-      theme: {{
-        extend: {{
-          fontFamily: {{
-            garamond: ['"EB Garamond"', 'serif'],
-            nunito: ['"Nunito Sans"', 'sans-serif'],
-          }}
-        }}
-      }}
-    }}
-  </script>
-  <style>
-    * { box-shadow: none !important; text-shadow: none !important; margin: 0; padding: 0; box-sizing: border-box; }
-    body { overflow: hidden; background: {bg_color}; }
-  </style>
-</head>
-<body>
-  <div class="w-[{ancho_total}px] h-[1350px] flex flex-row relative overflow-hidden bg-[{bg_color}]">
-
-    <!-- ===== FONDO FOTOGRÁFICO CORPORATIVO ===== -->
-    <div class="absolute inset-0 bg-cover bg-center z-0"
-         style="background-image: url('{foto_fondo}');"></div>
-
-    <!-- ===== OVERLAY PESADO ===== -->
-    <div class="absolute inset-0 bg-[{bg_color}]/95 z-0"></div>
 
     {slides_html}
 
