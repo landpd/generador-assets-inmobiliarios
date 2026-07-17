@@ -13,8 +13,9 @@ from dotenv import load_dotenv
 from config import OUTPUT_DIR
 from plantillas_educativas import (
     plantilla_geometria_limpia,
-    plantilla_editorial_grunge,
     plantilla_impacto_brutalista,
+    plantilla_data_driven,
+    plantilla_hero_minimalista,
 )
 from recursos_graficos import buscar_imagen_pexels, obtener_fotos_coleccion_pexels, url_a_base64
 
@@ -24,9 +25,10 @@ OPENROUTER_API_KEY = os.getenv("OPENROUTER_API_KEY")
 
 # ── Mapeo de estilos → plantillas (Patrón Estrategia) ────────────────
 MAPEO_PLANTILLAS = {
-    "Arquetipo A: Editorial Grunge": plantilla_editorial_grunge,
-    "Arquetipo B: Geometría Limpia": plantilla_geometria_limpia,
+    "Arquetipo A: Geometría Limpia": plantilla_geometria_limpia,
     "Arquetipo C: Impacto Brutalista": plantilla_impacto_brutalista,
+    "Arquetipo D: Data-Driven Analítico": plantilla_data_driven,
+    "Arquetipo E: Hero Minimalista": plantilla_hero_minimalista,
 }
 
 # 7 COLORES OFICIALES PULPPO: Soft black #212322, White #FFFFFF, Yellow #F6BE00, Gray #B7B7B7, Light-gray #F3F3F3, Red #A52003, Sea-green #529999.
@@ -179,7 +181,7 @@ if st.button("🪄 Generar Copy y Previsualizar"):
                 st.session_state["gen_id"] = st.session_state.get("gen_id", 0) + 1
 
                 # Traer 1 textura basada en el estilo, y N fotos de la colección de Pulppo
-                keyword_textura = "halftone dots texture" if "Pop" in estilo else "dark grunge paper texture"
+                keyword_textura = "texture monochrome white detail" if "Pop" in estilo else "dark grunge paper texture"
                 st.session_state["url_textura"] = buscar_imagen_pexels(keyword_textura, "landscape")
                 st.session_state["urls_fotos"] = obtener_fotos_coleccion_pexels("h00i8s4", num_slides)
 
@@ -223,7 +225,7 @@ if "json_carrusel" in st.session_state:
     # ── ADMINISTRADOR DE IMÁGENES ────────────────────────────────────
     with st.expander("🖼️ Administrar Imágenes y Texturas", expanded=False):
         if st.button("🎲 Aleatorizar imágenes de Pexels"):
-            keyword_textura = "halftone dots texture" if "Pop" in estilo else "dark grunge paper texture"
+            keyword_textura = "texture monochrome white detail" if "Pop" in estilo else "dark grunge paper texture"
             st.session_state["url_textura"] = buscar_imagen_pexels(keyword_textura, "landscape")
             st.session_state["urls_fotos"] = obtener_fotos_coleccion_pexels("h00i8s4", num_slides)
             st.rerun()
